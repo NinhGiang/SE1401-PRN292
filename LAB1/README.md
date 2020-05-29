@@ -19,7 +19,7 @@
 2. Sử dụng công nghệ GIT để quản mã nguồn, ứng với mỗi hàm được viết mới hoặc cập nhật, học viên được yêu cầu phải thực hiện commit. Mã nguồn phải được xuất bản trên Github và lịch sử phát triển của mã nguồn phải thể hiện được quá trình liên tục. 
 3. Ứng dụng cung cấp giao diện dòng lệnh cơ bản CLI, hổ trợ các cú pháp sau:
 
-```bash
+```
 # Khởi tạo database trường học với sinh viên và số phòng học ngẫu nhiên, nằm trong yêu cầu ràng buộc của đề bài
 ./schoolDatabaseGenerator
 Succesful: You have a new school database with 1023 students and 32 rooms
@@ -54,18 +54,18 @@ Succesful: You have a new school database with 2000 students and 40 rooms
 
 3. Đầu ra của ứng dụng là **thư mục** ứng với giá trị nhập vào của agrument `<<school_name>>`, bao gồm các File sau: `<<school_name>>.json` chuẩn json chứa toàn bộ data được tạo ứng với các thực thể (Entity) có trong lược đồ, các file .csv với tên file là tên các thực thể tương ứng và nội dung là các bảng dữ liệu.
 
-```json
+```
 // File json sẽ có chuẩn như sau:
 {
   "Rooms": [
     {
       "UUID": "e8e3db08-dc39-48ea-a3db-08dc3958eafb",
-      "Class": "0f75d295-9a88-462b-b3a3-e9f192d1fec7"
+      "Class": "0f75d295-9a88-462b-b3a3-e9f192d1fec7",
       "No": 1
     },
     {
       "UUID": "037d4f5a-7053-45e1-be34-6e7e9bfec293",
-      "Class": "bf8b109d-ba34-40a9-8219-e6d6aa41d692"
+      "Class": "bf8b109d-ba34-40a9-8219-e6d6aa41d692",
       "No": 2
     },
     ...
@@ -75,9 +75,9 @@ Succesful: You have a new school database with 2000 students and 40 rooms
       "UUID": "2ed0346b-1569-4bca-bd7d-011e42aa0d81",
       "Name": "10"
     },
-		...
+    ...
   ],
-	...
+  ...
 }
 ```
 
