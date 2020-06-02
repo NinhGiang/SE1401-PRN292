@@ -18,7 +18,7 @@ public class Student
 	}
 	public Student(string id, string Name)
 	{
-		_id = ID;
+		_id = id;
 		_name = Name;
 	}
 }
