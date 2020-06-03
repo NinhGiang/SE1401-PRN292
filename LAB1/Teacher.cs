@@ -4,17 +4,17 @@ using System.Text;
 
 namespace LAB1
 {
-    public class Student
+    public class Teacher
     {
         protected String _id;
         protected String _name;
-        protected DateTime _birthdate;
         protected bool _gender;
-        protected String _class;
+        protected String _field;
 
         public String id
         {
             get { return _id; }
+            set { _id = value; }
         }
 
         public String name
@@ -23,32 +23,26 @@ namespace LAB1
             set { _name = value; }
         }
 
-        public DateTime birthdate
-        {
-            get { return _birthdate; }
-            set { _birthdate = value; }
-        }
         public bool gender
         {
             get { return _gender; }
-            set { _gender = value; }
+            set { gender = value; }
         }
-        public String classInfo
+
+        public String field
         {
-            get { return _class; }
-            set { _class = value; }
+            get { return _field; }
+            set { _field = value; }
         }
 
-        public Student() { }
+        public Teacher() { }
 
-        public Student(String id, String name, DateTime birthdate, bool gender, String classInfo )
+        public Teacher(String id, String name, bool gender, String field)
         {
             _id = id;
             _name = name;
-            _birthdate = birthdate;
             _gender = gender;
-            _class = classInfo;
+            _field = field;
         }
-
     }
 }
