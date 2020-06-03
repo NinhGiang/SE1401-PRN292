@@ -8,7 +8,7 @@ namespace LAB1
         {
             Console.WriteLine("Hello World!");
             Console.ReadLine();
-            //test commit
+            //test commit ahuhu
         }
     }
 }
