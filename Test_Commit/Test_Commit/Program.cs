@@ -6,7 +6,7 @@ namespace choHuy
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Test commit");
+            Console.WriteLine("Test commit tiep ne");
         }
     }
 }
