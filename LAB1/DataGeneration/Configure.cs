@@ -1,5 +1,5 @@
 ﻿using System;
-
+namespace DataGeneration { 
  class Configure
 {
 	public NameDataSet NameDataSet {get; set;}
@@ -29,4 +29,5 @@ class BirthdayDataSet
     public string[] DaySet { get; set; }
     public string[] MonthSet { get; set; }
     public string[] YearSet { get; set; }
+}
 }

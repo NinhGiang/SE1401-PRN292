@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LAB1
+namespace DataGeneration
 {
     class Program
     {
@@ -8,6 +8,7 @@ namespace LAB1
         {
             Console.WriteLine("Hello World! hihi");
             Console.ReadLine();
+            
         }
     }
 }
