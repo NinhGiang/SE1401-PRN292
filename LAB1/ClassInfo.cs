@@ -4,30 +4,30 @@ namespace LAB1
 {
     public class ClassInfo
     {
-        protected String _level;
-        protected String _room;
-        protected String _name;
+        protected string _level;
+        protected string _room;
+        protected string _name;
 
-        public String level
+        public string level
         {
             get { return _level; }
             set { _level = value; }
         }
 
-        public String room
+        public string room
         {
             get { return _room; }
             set { _room = value; }
         }
 
-        public String name
+        public string name
         {
             get { return _name; }
             set { _name = value; }
         }
         public ClassInfo() { }
 
-        public ClassInfo(String level, String room, String name)
+        public ClassInfo(string level, string room, string name)
         {
             _level = level;
             _room = room;

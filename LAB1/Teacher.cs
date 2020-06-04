@@ -6,18 +6,18 @@ namespace LAB1
 {
     public class Teacher
     {
-        protected String _id;
-        protected String _name;
+        protected string _id;
+        protected string _name;
         protected bool _gender;
-        protected String _field;
+        protected string _field;
 
-        public String id
+        public string id
         {
             get { return _id; }
             set { _id = value; }
         }
 
-        public String name
+        public string name
         {
             get { return _name; }
             set { _name = value; }
@@ -29,7 +29,7 @@ namespace LAB1
             set { gender = value; }
         }
 
-        public String field
+        public string field
         {
             get { return _field; }
             set { _field = value; }
@@ -37,7 +37,7 @@ namespace LAB1
 
         public Teacher() { }
 
-        public Teacher(String id, String name, bool gender, String field)
+        public Teacher(string id, string name, bool gender, string field)
         {
             _id = id;
             _name = name;

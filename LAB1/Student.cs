@@ -6,18 +6,18 @@ namespace LAB1
 {
     public class Student
     {
-        protected String _id;
-        protected String _name;
+        protected string _id;
+        protected string _name;
         protected DateTime _birthdate;
         protected bool _gender;
-        protected String _class;
+        protected string _class;
 
-        public String id
+        public string id
         {
             get { return _id; }
         }
 
-        public String name
+        public string name
         {
             get { return _name; }
             set { _name = value; }
@@ -33,7 +33,7 @@ namespace LAB1
             get { return _gender; }
             set { _gender = value; }
         }
-        public String classInfo
+        public string classInfo
         {
             get { return _class; }
             set { _class = value; }
@@ -41,7 +41,7 @@ namespace LAB1
 
         public Student() { }
 
-        public Student(String id, String name, DateTime birthdate, bool gender, String classInfo )
+        public Student(string id, string name, DateTime birthdate, bool gender, string classInfo )
         {
             _id = id;
             _name = name;
@@ -50,5 +50,10 @@ namespace LAB1
             _class = classInfo;
         }
 
+        public static Student[] create(uint numberOfStudent)
+        {
+            Student[] result = new Student[numberOfStudent];
+            string
+        }
     }
 }

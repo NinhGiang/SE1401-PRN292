@@ -6,16 +6,16 @@ namespace LAB1
 {
     public class Level
     {
-        protected String _id;
-        protected String _name;
+        protected string _id;
+        protected string _name;
 
-        public String id
+        public string id
         {
             get { return _id; }
             set { _id = value; }
         }
 
-        public String name
+        public string name
         {
             get { return _name; }
             set { _name = value; }
@@ -23,7 +23,7 @@ namespace LAB1
 
         public Level() { }
 
-        public Level(String id, String name)
+        public Level(string id, string name)
         {
             _id = id;
             _name = name;

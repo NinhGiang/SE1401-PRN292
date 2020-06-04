@@ -6,17 +6,17 @@ namespace LAB1
 {
     public class Room
     {
-        protected String _id;
-        protected String _class;
+        protected string _id;
+        protected string _class;
         protected int _no;
 
-        public String id
+        public string id
         {
             get { return _id; }
             set { _id = value; }
         }
 
-        public String classInfo
+        public string classInfo
         {
             get { return _class; }
             set { _class = value; }
@@ -30,7 +30,7 @@ namespace LAB1
 
         public Room() { }
 
-        public Room(String id,  String classInfo, int no)
+        public Room(string id,  string classInfo, int no)
         {
             _id = id;
             _class = classInfo;
