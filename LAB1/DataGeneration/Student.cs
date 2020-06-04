@@ -95,7 +95,7 @@ public class Student
 				string DOB = birthdayDB.DaySet[day_index] + "/";
 				DOB += birthdayDB.MonthSet[month_index] + "/";
 				DOB += birthdayDB.YearSet[year_index] + " ";
-				result[i] =
+				result[i] = 
 				new Student(i.ToString(), fullname, DOB, genderDB.GenderSet[gender_index], classDB.ClassSet[class_index]);
 			} //create a female student
 		}
