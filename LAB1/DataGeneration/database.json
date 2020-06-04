@@ -1,0 +1,105 @@
+﻿{
+  "ClassDataSet": {
+    "ClassSet": [
+      "10",
+      "11",
+      "12"
+    ]
+  },
+  "GenderDataSet": {
+    "GenderSet": [
+      "Male",
+      "Female"
+    ]
+  },
+  "NameDataSet": {
+    "FemaleFirstNameSet": [
+      "Phuong",
+      "Thu",
+      "Vy",
+      "Trang",
+      "Thy",
+      "Ngoc",
+      "Mai"
+    ],
+    "MaleFirstNameSet": [
+      "Anh",
+      "Bao",
+      "Khoa",
+      "Huy",
+      "Hiep",
+      "Thanh",
+      "Thang"
+    ],
+    "MiddleNameSet": [
+      "Ngoc",
+      "Thanh",
+      "Quang",
+      "Van",
+      "Trung",
+      "Hoang",
+      "Thao"
+    ],
+    "LastNameSet": [
+      "Le",
+      "Nguyen",
+      "Bui",
+      "Tran",
+      "Ly",
+      "Ngo",
+      "Dinh"
+    ]
+  },
+  "BirthdayDataSet": {
+    "DaySet": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30"
+    ],
+    "MonthSet": [
+      "01",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12"
+    ],
+    "YearSet": [
+      "2003",
+      "2004",
+      "2005"
+    ]
+  }
+} 
