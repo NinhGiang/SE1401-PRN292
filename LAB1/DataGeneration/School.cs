@@ -1,6 +1,9 @@
 ﻿using System;
-namespace DataGeneration
-{
+using System.Collections;
+using System.IO;
+
+
+
 	 class School
 	{
         protected List<Student> _student_list;
@@ -22,5 +25,18 @@ namespace DataGeneration
             }
             File.WriteAllText(filename, content);
         }
+        public void load(String filename)
+        {
+            Student curr_stu = null;
+            String content = File.ReadAllText(filename);
+            foreach (string line in content.Split('\n', StringSplitOptions.RemoveEmptyEntries))
+            {
+                string[] cells = line.Split(',');
+                for (uint i = 0; i < cellss.Length; i += 5){
+                    curr_stu = new Student(cells[i].Trim(), cells[i+1].Trim(), cells[i+2].Trim(), cells[i+3].Trim());
+                }
+            }
+
+        }
     }
-}
+

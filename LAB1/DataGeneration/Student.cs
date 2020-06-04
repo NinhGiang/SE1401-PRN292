@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.IO;
 
-namespace DataGeneration { 
+ 
 public class Student
 {
 	protected string _uuid;
@@ -102,4 +102,4 @@ public class Student
 		return result;
 	}
 }
-}
+
