@@ -8,23 +8,24 @@ namespace LAB1
         protected string _room;
         protected string _name;
 
-        public string level
-        {
-            get { return _level; }
-            set { _level = value; }
-        }
+        public string GetLevel()
+        { return _level; }
 
-        public string room
-        {
-            get { return _room; }
-            set { _room = value; }
-        }
+        public void SetLevel(string value)
+        { _level = value; }
 
-        public string name
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
+        public string GetRoom()
+        { return _room; }
+
+        public void SetRoom(string value)
+        { _room = value; }
+
+        public string GetName()
+        { return _name; }
+
+        public void SetName(string value)
+        { _name = value; }
+
         public ClassInfo() { }
 
         public ClassInfo(string level, string room, string name)
@@ -33,5 +34,7 @@ namespace LAB1
             _room = room;
             _name = name;
         }
+
+
     }
 }

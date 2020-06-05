@@ -28,5 +28,27 @@
       "Uyên",
       "Phương"
     ]
+  },
+
+  "LevelNameConfig": {
+    "name_set": [
+      "10",
+      "11",
+      "12"
+    ]
+  },
+
+  "FieldNameConfig": {
+    "name_set": [
+      "Maths",
+      "Physics",
+      "Chemistry",
+      "Literature",
+      "Language",
+      "History",
+      "Geography",
+      "Art",
+      "Music"
+    ]
   }
 }

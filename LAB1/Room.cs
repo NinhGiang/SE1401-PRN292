@@ -10,23 +10,23 @@ namespace LAB1
         protected string _class;
         protected int _no;
 
-        public string id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
+        public string GetId()
+        { return _id; }
 
-        public string classInfo
-        {
-            get { return _class; }
-            set { _class = value; }
-        }
+        public void SetId(string value)
+        { _id = value; }
 
-        public int no
-        {
-            get { return _no; }
-            set { _no = value; }
-        }
+        public string GetClassInfo()
+        { return _class; }
+
+        public void SetClassInfo(string value)
+        { _class = value; }
+
+        public int GetNo()
+        { return _no; }
+
+        public void SetNo(int value)
+        { _no = value; }
 
         public Room() { }
 
@@ -36,5 +36,6 @@ namespace LAB1
             _class = classInfo;
             _no = no;
         }
+
     }
 }
