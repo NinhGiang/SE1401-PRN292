@@ -42,7 +42,7 @@ namespace StudentGeneration
         }
         public void print()
         {
-            Console.WriteLine(_id + " " + _fullname);
+            Console.WriteLine(_id+1 + " " + _fullname);
         }
     }
 }
