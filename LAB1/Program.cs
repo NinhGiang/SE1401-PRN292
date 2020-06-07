@@ -23,6 +23,10 @@ namespace LAB1
             school.SetRoomList(room_list);
             school.SaveRoom(@"..\..\..\Room.csv");
 
+            ClassInfo[] class_list = ClassInfo.Create();
+            school.SetClassList(class_list);
+            school.SaveClass(@"..\..\..\Class.csv");
+
             Student[] student_list = Student.Create(20);
             school.SetStudentList(student_list);            
             school.SaveStudent(@"..\..\..\Student.csv");

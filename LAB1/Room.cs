@@ -56,7 +56,7 @@ namespace LAB1
                 string classInfo = "tempClass";
 
                 //no
-                int no = (int)i;
+                int no = (int)i + 1;
 
                 result[i] = new Room(uuid, classInfo, no);
             }

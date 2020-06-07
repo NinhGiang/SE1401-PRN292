@@ -1,12 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
 
 namespace LAB1
 {
     public class ClassInfo
     {
+        protected string _id;
         protected string _level;
         protected string _room;
         protected string _name;
+
+        public string GetId()
+        { return _id; }
+
+        public void SetId(string value)
+        { _id = value; }
 
         public string GetLevel()
         { return _level; }
@@ -28,13 +38,78 @@ namespace LAB1
 
         public ClassInfo() { }
 
-        public ClassInfo(string level, string room, string name)
+        public ClassInfo(string id, string level, string room, string name)
         {
+            _id = id;
             _level = level;
             _room = room;
             _name = name;
         }
 
+        public static ClassInfo[] Create()
+        {
+            List<string> listOfRoom = GetListOfRoom();
+            int numberOfRoom = listOfRoom.Count;
+            ClassInfo[] result = new ClassInfo[numberOfRoom];
 
+            List<string> listOfLevel = GetListOfLevel();
+            
+            string content = File.ReadAllText(@"..\..\..\Configure.json");
+            Configure config = JsonSerializer.Deserialize<Configure>(content);
+
+            Random rnd = new Random();
+
+            for (uint i = 0; i < numberOfRoom; i++)
+            {
+                //id
+                string uuid = Guid.NewGuid().ToString();
+
+                //level
+                int levelIndex = rnd.Next(listOfLevel.Count);
+                string[] level = listOfLevel[levelIndex].Split(',');
+                string levelId = level[0];
+
+                //room
+                int roomIndex = rnd.Next(listOfRoom.Count);
+                string room = listOfRoom[roomIndex];
+
+                //name
+                string levelName = level[1];
+
+                result[i] = new ClassInfo(uuid, levelId, room, levelName);
+            }
+
+            return result;
+        }
+
+        private static List<string> GetListOfRoom()
+        {
+            List<string> list = new List<string>();
+            StreamReader sr = new StreamReader(@"..\..\..\Room.csv");
+
+            sr.ReadLine();
+            while (!sr.EndOfStream)
+            {
+                string[] splits = sr.ReadLine().Split(',');
+                list.Add(splits[0]);
+            }
+            sr.Close();
+            return list;
+        }
+
+        private static List<string> GetListOfLevel()
+        {
+            List<string> list = new List<string>();
+            StreamReader sr = new StreamReader(@"..\..\..\Level.csv");
+
+            sr.ReadLine();  //skip first line
+            while (!sr.EndOfStream)
+            {
+                string line = sr.ReadLine();
+                list.Add(line);
+            }
+            sr.Close();
+            return list;
+        }
     }
 }

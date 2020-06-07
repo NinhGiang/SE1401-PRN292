@@ -11,6 +11,7 @@ namespace LAB1
         private List<Level> _level_list;
         private List<Field> _field_list;
         private List<Room> _room_list;
+        private List<ClassInfo> _class_list;
 
         public School() { }
 
@@ -37,6 +38,12 @@ namespace LAB1
 
         public void SetRoomList(Room[] rooms)
         { _room_list = new List<Room>(rooms); }
+
+        public List<ClassInfo> GetClassList()
+        { return _class_list; }
+
+        public void SetClassList(ClassInfo[] classes)
+        { _class_list = new List<ClassInfo>(classes); }
 
         public void SaveStudent(string filename)
         {
@@ -89,6 +96,19 @@ namespace LAB1
                 content += room.GetId() + ", ";
                 content += room.GetClassInfo() + ", ";
                 content += room.GetNo() + "\n";
+            }
+            File.WriteAllText(filename, content);
+        }
+
+        public void SaveClass(String filename)
+        {
+            string content = "ID, Level, Room, Name\n";
+            foreach (ClassInfo classInfo in _class_list)
+            {
+                content += classInfo.GetId() + ", ";
+                content += classInfo.GetLevel() + ", ";
+                content += classInfo.GetRoom() + ", ";
+                content += classInfo.GetName() + "\n";
             }
             File.WriteAllText(filename, content);
         }
