@@ -1,21 +1,21 @@
 ID, Name, Birthday, Gender, Class
-06da643d-568d-4466-b16c-b1521b2fcad2, Lê Hoàng Bảo Hòa, 2/24/2004 12:00:00 AM, True, tempClass
-bd8b594f-d442-4809-a7d3-994b199ed718, Nguyễn Thị Khánh, 5/11/2003 12:00:00 AM, True, tempClass
-4f4f7e19-6338-45e0-ab23-941dd47b952c, Lý Minh Minh, 6/9/2003 12:00:00 AM, True, tempClass
-5af0ad6c-7cc7-4cf7-9c3e-eda8fc14b730, Nguyễn Thúy Đạt, 8/22/2004 12:00:00 AM, True, tempClass
-ce11b821-53bc-47cd-8629-a16349606739, Trần Minh Anh, 3/19/2004 12:00:00 AM, True, tempClass
-5263e59f-0b0b-4984-8399-35abb15de916, Lý Hoàng Bảo Trang, 5/20/2004 12:00:00 AM, True, tempClass
-76b6ab2e-1b51-4119-bbbb-76e3f4d92b2b, Lê Văn Khánh, 8/17/2003 12:00:00 AM, True, tempClass
-5174bc16-2a6d-4a23-91b0-93c931598c5b, Lý Hoàng Bảo Hòa, 3/6/2003 12:00:00 AM, True, tempClass
-7d10b5c0-6cd8-47cc-b88c-8035c663c6d0, Trần Văn Thành, 8/23/2004 12:00:00 AM, True, tempClass
-9ca098e9-0b47-4962-bf9f-c7c331ffefcf, Hồ Thúy Long, 3/23/2003 12:00:00 AM, True, tempClass
-f47c38c3-e90d-4c75-a6c9-29ccef0bbf94, Lê Thúy Phương, 10/17/2004 12:00:00 AM, True, tempClass
-1249b754-9f02-4915-9a00-81dfdcfef52a, Võ Thúy Phương, 12/23/2004 12:00:00 AM, True, tempClass
-87e7894c-db8a-452d-a396-1faa58887a34, Nguyễn Minh Phương, 9/16/2004 12:00:00 AM, True, tempClass
-1b98e8ff-1842-4a55-ac71-12e761cf7d39, Lê Thị Anh, 3/29/2004 12:00:00 AM, True, tempClass
-7e4affda-7ae5-4cfb-9a8e-c7962e78e2b5, Lê Minh Phương, 7/3/2004 12:00:00 AM, True, tempClass
-f7fa03fc-0a48-4ae0-94fc-c62e8adb8397, Lê Văn Thành, 6/26/2004 12:00:00 AM, True, tempClass
-eea31592-b0d0-4468-acf9-0864ebfb72b5, Nguyễn Hoàng Bảo Trang, 2/11/2004 12:00:00 AM, True, tempClass
-a8b6e6f8-7d48-48b7-a97e-966d1eaa7449, Lê Thị Vân, 8/27/2004 12:00:00 AM, True, tempClass
-b47b2234-ea83-491d-8196-355ca9a2c707, Lý Minh Khánh, 2/2/2003 12:00:00 AM, True, tempClass
-c4413556-2b0a-4a45-bf35-2e6795a14135, Trần Thị Anh, 6/8/2003 12:00:00 AM, True, tempClass
+7de3830a-1c42-4841-a61b-09b7fb863f51, Hồ Văn Khánh, 26/06/2004, True, tempClass
+0746cff9-9567-4fef-83f3-09324ef3fce0, Trần Văn Thành, 12/04/2004, True, tempClass
+2e4e914a-6147-429f-b606-13f144367ac1, Lý Thị Vân, 07/02/2004, False, tempClass
+e53f277b-999a-4f3c-bfda-5336c7957b09, Lý Anh Long, 09/11/2003, True, tempClass
+dc278f66-e809-4e52-9820-f8346870bb9f, Nguyễn Anh Khánh, 08/01/2004, True, tempClass
+447dbc63-2319-47c0-9e8b-72b219f32c64, Trần Thúy Đạt, 13/10/2003, True, tempClass
+87dc11df-540a-4d8f-b9f2-65810b3db4ee, Nguyễn Thúy Thành, 22/07/2004, True, tempClass
+ddea0e69-5451-4403-8c45-83051dff9270, Võ Hoàng Bảo Thành, 06/12/2003, True, tempClass
+9bafd775-21be-43bc-b529-4c85036e65e4, Nguyễn Minh Long, 02/02/2004, True, tempClass
+de924b81-4505-40f3-8caa-36dd2e22e645, Võ Hoàng Bảo Thành, 24/07/2003, True, tempClass
+8e2914ea-c2c8-4787-8314-04b782af327e, Hồ Anh Long, 18/10/2004, True, tempClass
+2fc064d3-d737-4124-8f2d-8a223a725c85, Võ Anh Long, 06/11/2003, True, tempClass
+234b9533-a222-448e-a0ff-d8c6e3cb908e, Lê Thúy Khánh, 29/03/2004, False, tempClass
+a2b63b13-b8ac-445e-a43e-a26381a8f14b, Võ Minh Đạt, 19/09/2004, True, tempClass
+627abee2-57fc-42c8-aebf-223a3704867a, Nguyễn Anh Hòa, 18/09/2004, True, tempClass
+d9ef6d7e-4bc4-47bd-82bb-596384be9634, Võ Minh Trang, 23/02/2004, False, tempClass
+4d5dcc07-6ca8-4a3c-a35b-567202a2b743, Nguyễn Anh Anh, 11/03/2003, True, tempClass
+6435bb7a-964b-48ca-a39c-7d5b4bcf30ca, Võ Văn Hòa, 06/05/2004, True, tempClass
+d2db60d1-e7cf-4d98-a7e7-bbe77d43488d, Võ Thị Phương, 29/07/2004, False, tempClass
+1d8c4cd8-b314-4cc6-9254-4df33556b1ea, Trần Minh Minh, 16/10/2004, False, tempClass

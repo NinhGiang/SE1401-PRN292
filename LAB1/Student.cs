@@ -97,12 +97,13 @@ namespace LAB1
                 DateTime birthdate = GetRandomDate(year);
 
                 //Class
-                string classInfo = "tempClass";
+                string classInfo = "tempC" +
+                    "lass";
 
                 result[i] = new Student();
                 result[i].SetId(uuid);
                 result[i].SetName(fullName);
-                result[i].SetGender(true);
+                result[i].SetGender(gender);
                 result[i].SetBirthdate(birthdate);
                 result[i].SetClassInfo(classInfo);
             }
@@ -116,41 +117,6 @@ namespace LAB1
             DateTime end = new DateTime(year, 12, 31);
             int range = (end - start).Days;
             return start.AddDays(rnd.Next(range));
-        }
-
-        private static Student CreateMale()
-        {
-            Student result = new Student();
-            string content = File.ReadAllText(@"..\..\..\Configure.json");
-            Configure config = JsonSerializer.Deserialize<Configure>(content);
-            Random rnd = new Random();
-
-            //id
-            String uuid = Guid.NewGuid().ToString();
-
-            //name
-            StudentNameConfig _ = config.StudentNameConfig;
-            int lastNameIndex = rnd.Next(_.last_name_set.Length);
-            int firstNameIndex = rnd.Next(_.male_first_name_set.Length);
-            int middleNameIndex = rnd.Next(_.middle_name_set.Length);
-            string fullName = _.last_name_set[lastNameIndex] + " ";
-            fullName = _.last_name_set[middleNameIndex] + " ";
-            fullName = _.last_name_set[firstNameIndex];
-
-            //birthdate
-            int year = rnd.Next(2003, 2005);
-            DateTime birthdate = GetRandomDate(year);
-
-            //Class
-            string classInfo = "tempClass";
-
-            result.SetId(uuid);
-            result.SetName(fullName);
-            result.SetGender(true);
-            result.SetBirthdate(birthdate);
-            result.SetClassInfo(classInfo);
-
-            return result;
         }
     }
 }

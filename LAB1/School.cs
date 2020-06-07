@@ -22,7 +22,7 @@ namespace LAB1
                 //content += student.ID + ", " + student.FullName + "\n";
                 content += student.GetId() + ", ";
                 content += student.GetName() + ", ";
-                content += student.GetBirthdate() + ", ";
+                content += student.GetBirthdate().ToString("dd/MM/yyyy") + ", ";
                 content += student.GetGender() + ", ";
                 content += student.GetClassInfo() + "\n";
             }
