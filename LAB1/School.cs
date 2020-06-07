@@ -23,7 +23,14 @@ namespace LAB1
                 content += student.GetId() + ", ";
                 content += student.GetName() + ", ";
                 content += student.GetBirthdate().ToString("dd/MM/yyyy") + ", ";
-                content += student.GetGender() + ", ";
+                if (student.GetGender() == true)
+                {
+                    content += "M" + ", ";
+                }
+                else
+                {
+                    content += "F" + ", ";
+                }
                 content += student.GetClassInfo() + "\n";
             }
             File.WriteAllText(filename, content);
