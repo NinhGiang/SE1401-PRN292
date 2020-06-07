@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Text.Json;
 
 namespace LAB1
 {
@@ -37,5 +39,29 @@ namespace LAB1
             _no = no;
         }
 
+        public static Room[] Create(int numberOfRoom)
+        {
+            Room[] result = new Room[numberOfRoom];
+            string content = File.ReadAllText(@"..\..\..\Configure.json");
+            Configure config = JsonSerializer.Deserialize<Configure>(content);
+
+            Random rnd = new Random();
+
+            for (uint i = 0; i < numberOfRoom; i++)
+            {
+                //id
+                string uuid = Guid.NewGuid().ToString();
+
+                //class
+                string classInfo = "tempClass";
+
+                //no
+                int no = (int)i;
+
+                result[i] = new Room(uuid, classInfo, no);
+            }
+
+            return result;
+        }
     }
 }

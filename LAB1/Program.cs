@@ -11,10 +11,6 @@ namespace LAB1
 
             School school = new School();
 
-            Student[] student_list = Student.Create(20);
-            school.SetStudentList(student_list);            
-            school.SaveStudent(@"..\..\..\Student.csv");
-
             Level[] level_list = Level.Create();
             school.SetLevelList(level_list);
             school.SaveLevel(@"..\..\..\Level.csv");
@@ -22,6 +18,15 @@ namespace LAB1
             Field[] field_list = Field.Create();
             school.SetFieldList(field_list);
             school.SaveField(@"..\..\..\Field.csv");
+
+            Room[] room_list = Room.Create(20);
+            school.SetRoomList(room_list);
+            school.SaveRoom(@"..\..\..\Room.csv");
+
+            Student[] student_list = Student.Create(20);
+            school.SetStudentList(student_list);            
+            school.SaveStudent(@"..\..\..\Student.csv");
+
 
             Console.ReadLine();
         }
