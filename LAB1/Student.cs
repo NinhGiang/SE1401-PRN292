@@ -97,8 +97,7 @@ namespace LAB1
                 DateTime birthdate = GetRandomDate(year);
 
                 //Class
-                string classInfo = "tempC" +
-                    "lass";
+                string classInfo = "tempClass";
 
                 result[i] = new Student();
                 result[i].SetId(uuid);

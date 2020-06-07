@@ -8,9 +8,17 @@ namespace LAB1
         {
             Console.WriteLine("Test Test!!!");
             Console.ReadLine();
+
+            School school = new School();
+
             Student[] student_list = Student.Create(20);
-            School school = new School(student_list);
+            school.SetStudentList(student_list);            
             school.SaveStudent(@"..\..\..\Student.csv");
+            Console.ReadLine();
+
+            Level[] level_list = Level.Create();
+            school.SetLevelList(level_list);
+            school.SaveLevel(@"..\..\..\Level.csv");
             Console.ReadLine();
         }
     }
