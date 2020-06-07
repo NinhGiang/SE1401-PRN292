@@ -33,13 +33,16 @@ namespace LAB1
 
         public static Level[] Create()
         {
-            Level[] result = new Level[3];
+            
             string content = File.ReadAllText(@"..\..\..\Configure.json");
             Configure config = JsonSerializer.Deserialize<Configure>(content);
+            LevelNameConfig _ = config.LevelNameConfig;
 
-            for (int i = 0; i < 3; i++)
+            int size = _.level_name_set.Length;
+            Level[] result = new Level[size];
+
+            for (int i = 0; i < size; i++)
             {
-                LevelNameConfig _ = config.LevelNameConfig;
                 string name = _.level_name_set[i].ToString();
                 string id = Guid.NewGuid().ToString();
                 result[i] = new Level(id, name);

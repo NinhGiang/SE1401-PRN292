@@ -41,7 +41,7 @@ namespace LAB1
 
     public class FieldNameConfig
     {
-        public string[] name_set { get; set; }
+        public string[] field_name_set { get; set; }
     }
 
 }

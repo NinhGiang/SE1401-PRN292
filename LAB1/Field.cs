@@ -39,18 +39,21 @@ namespace LAB1
             _name = name;
         }
 
-        public static Level[] Create()
+        public static Field[] Create()
         {
-            Level[] result = new Level[3];
+
             string content = File.ReadAllText(@"..\..\..\Configure.json");
             Configure config = JsonSerializer.Deserialize<Configure>(content);
+            FieldNameConfig _ = config.FieldNameConfig;
 
-            for (int i = 0; i < 3; i++)
+            int size = _.field_name_set.Length;
+            Field[] result = new Field[size];
+
+            for (int i = 0; i < size; i++)
             {
-                FieldNameConfig _ = config.FieldNameConfig;
-                string name = _.name_set[i].ToString();
+                string name = _.field_name_set[i].ToString();
                 string id = Guid.NewGuid().ToString();
-                result[i] = new Level(id, name);
+                result[i] = new Field(id, name);
             }
             return result;
         }

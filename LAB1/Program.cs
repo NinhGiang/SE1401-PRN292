@@ -14,11 +14,15 @@ namespace LAB1
             Student[] student_list = Student.Create(20);
             school.SetStudentList(student_list);            
             school.SaveStudent(@"..\..\..\Student.csv");
-            Console.ReadLine();
 
             Level[] level_list = Level.Create();
             school.SetLevelList(level_list);
             school.SaveLevel(@"..\..\..\Level.csv");
+
+            Field[] field_list = Field.Create();
+            school.SetFieldList(field_list);
+            school.SaveField(@"..\..\..\Field.csv");
+
             Console.ReadLine();
         }
     }
