@@ -47,7 +47,7 @@ namespace LAB1
 
         public void SaveLevel(string filename)
         {
-            String content = "ID, Name";
+            String content = "ID, Name\n";
             foreach (Level level in _level_list)
             {
                 content += level.GetId() + ", ";
