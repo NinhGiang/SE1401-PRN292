@@ -16,22 +16,29 @@
       "Minh",
       "Thúy"
     ],
-    "first_name_set": [
-      "Đạt",
+    "fem_first_name_set": [
       "Trang",
+      "Minh",
+      "Anh",
+      "Khánh",
+      "Uyên",
+      "Phương",
+      "Vân"
+    ],
+    "male_first_name_set": [
+      "Đạt",
       "Long",
       "Thành",
       "Minh",
       "Anh",
       "Hòa",
       "Khánh",
-      "Uyên",
       "Phương"
     ]
   },
 
   "LevelNameConfig": {
-    "name_set": [
+    "level_name_set": [
       "10",
       "11",
       "12"
@@ -39,7 +46,7 @@
   },
 
   "FieldNameConfig": {
-    "name_set": [
+    "field_name_set": [
       "Maths",
       "Physics",
       "Chemistry",

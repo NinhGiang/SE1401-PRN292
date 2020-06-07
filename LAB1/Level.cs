@@ -40,7 +40,7 @@ namespace LAB1
             for (int i = 0; i < 3; i++)
             {
                 LevelNameConfig _ = config.LevelNameConfig;
-                string name = _.name_set[i].ToString();
+                string name = _.level_name_set[i].ToString();
                 string id = Guid.NewGuid().ToString();
                 result[i] = new Level(id, name);
             }
