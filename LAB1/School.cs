@@ -14,7 +14,7 @@ namespace LAB1
             _students_list = new List<Student>(students);
         }
 
-        public void Save(string filename)
+        public void SaveStudent(string filename)
         {
             String content = "ID, Name, Birthday, Gender, Class\n";
             foreach (Student student in _students_list)

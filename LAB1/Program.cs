@@ -10,7 +10,7 @@ namespace LAB1
             Console.ReadLine();
             Student[] student_list = Student.Create(20);
             School school = new School(student_list);
-            school.Save(@"..\..\..\School.csv");
+            school.SaveStudent(@"..\..\..\Student.csv");
             Console.ReadLine();
         }
     }
