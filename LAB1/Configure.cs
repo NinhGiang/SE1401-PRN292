@@ -6,7 +6,7 @@ namespace LAB1
 {
     public class Configure
     {
-        public StudentNameConfig StudentNameConfig
+        public NameConfig NameConfig
         { get; set; }
 
         public BirthdateConfig BirthdateConfig
@@ -19,7 +19,7 @@ namespace LAB1
         { get; set; }
     }
 
-    public class StudentNameConfig
+    public class NameConfig
     {
         public string[] last_name_set { get; set; }
         public string[] middle_name_set { get; set; }

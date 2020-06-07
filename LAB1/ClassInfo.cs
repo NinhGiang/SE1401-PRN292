@@ -67,16 +67,16 @@ namespace LAB1
                 //level
                 int levelIndex = rnd.Next(listOfLevel.Count);
                 string[] level = listOfLevel[levelIndex].Split(',');
-                string levelId = level[0];
+                string levelId = level[0].Trim();
 
                 //room
                 int roomIndex = rnd.Next(listOfRoom.Count);
                 string[] room = listOfRoom[roomIndex].Split(',');
-                string roomId = room[0];
+                string roomId = room[0].Trim();
 
                 //name
-                string levelName = level[1];
-                string roomName = room[2];
+                string levelName = level[1].Trim();
+                string roomName = room[2].Trim();
                 string name = levelName + "-" + roomName;
 
                 result[i] = new ClassInfo(uuid, levelId, roomId, name);

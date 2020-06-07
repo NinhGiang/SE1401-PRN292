@@ -72,7 +72,7 @@ namespace LAB1
                 bool gender = rnd.Next(2) == 1;
 
                 //name
-                StudentNameConfig _ = config.StudentNameConfig;
+                NameConfig _ = config.NameConfig;
                 int lastNameIndex = rnd.Next(_.last_name_set.Length);
                 int firstNameIndex;
                 string firstname;
