@@ -71,12 +71,15 @@ namespace LAB1
 
                 //room
                 int roomIndex = rnd.Next(listOfRoom.Count);
-                string room = listOfRoom[roomIndex];
+                string[] room = listOfRoom[roomIndex].Split(',');
+                string roomId = room[0];
 
                 //name
                 string levelName = level[1];
+                string roomName = room[2];
+                string name = levelName + "-" + roomName;
 
-                result[i] = new ClassInfo(uuid, levelId, room, levelName);
+                result[i] = new ClassInfo(uuid, levelId, roomId, name);
             }
 
             return result;
@@ -87,11 +90,11 @@ namespace LAB1
             List<string> list = new List<string>();
             StreamReader sr = new StreamReader(@"..\..\..\Room.csv");
 
-            sr.ReadLine();
+            sr.ReadLine();  //skip first line
             while (!sr.EndOfStream)
             {
-                string[] splits = sr.ReadLine().Split(',');
-                list.Add(splits[0]);
+                string line = sr.ReadLine();
+                list.Add(line);
             }
             sr.Close();
             return list;
