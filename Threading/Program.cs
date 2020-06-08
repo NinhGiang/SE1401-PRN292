@@ -1,61 +1,98 @@
 ﻿using System;
 using System.Threading;
-using System.Runtime.Remoting.Messaging;
 
 namespace Threading
 {
     class Program
     {
-
-
-        public delegate int BinaryOp(int x, int y);
-        static void Main(string[] args)
+        static void Ex1()
         {
-            Console.WriteLine("***** Synch Delegate Review *****");
-            // Print out the ID of the executing thread.
-            Console.WriteLine("Main() invoked on thread {0}.", Thread.CurrentThread.GetHashCode());
-
-            // Invoke Add() in a synchronous manner.
-            BinaryOp b = new BinaryOp(Add);
-            bool flag = true;
-            IAsyncResult iftAR = b.BeginInvoke(10, 10, AddComplete, "Main() thanks you for adding these numbers.");
-
-            while (!iftAR.IsCompleted && flag)
+            Console.WriteLine("***** The Amazing Thread App *****\n");
+            Console.Write("Do you want [1] or [2] threads? ");
+            string threadCount = Console.ReadLine();
+            // Name the current thread.
+            Thread primaryThread = Thread.CurrentThread;
+            primaryThread.Name = "Primary";
+            // Display Thread info.
+            Console.WriteLine("-> {0} is executing Main()", Thread.CurrentThread.Name);
+            // Make worker class.
+            Printer p = new Printer();
+            switch (threadCount)
             {
-                Console.WriteLine("Doing more work in Main()");
-                flag = false;
+                case "2":
+                    // Now make the thread.
+                    Thread backgroundThread = new Thread(new ThreadStart(p.PrintNumbers));
+                    backgroundThread.Name = "Secondary";
+                    backgroundThread.Start();
+                    break;
+                case "1":
+                    p.PrintNumbers();
+                    break;
+                default:
+                    Console.WriteLine("I don't know what you want...you get 1 thread.");
+                    goto case "1";
             }
-
-            // Obtain the result of the Add()
-            // method when ready.
-            //int answer = b(10, 10);
-            //int answer = b.EndInvoke(iftAR);
-
-            //Console.WriteLine("10 + 10 is {0}.", answer);
-
+            // Do some additional work.
+            Console.WriteLine("Work on main thread...");
             Console.ReadLine();
         }
-        static int Add(int x, int y)
+        static void Ex2()
         {
-            // Print out the ID of the executing thread.
-            Console.WriteLine("Add() invoked on thread {0}.", Thread.CurrentThread.GetHashCode());
-            // Pause to simulate a lengthy operation.
-            Thread.Sleep(5000);
-            return x + y;
+            Console.WriteLine("*****Synchronizing Threads *****\n");
+            Printer p = new Printer();
+            // Make 10 threads that are all pointing to the same // method on the same object.
+            Thread[] threads = new Thread[10];
+            for (int i = 0; i < 10; i++)
+            {
+                threads[i] = new Thread(new ThreadStart(p.PrintNumbers)); 
+                threads[i].Name = string.Format("Worker thread #{0}", i);
+            }
+            // Now start each one.
+            foreach (Thread t in threads) t.Start();
+            Console.ReadLine();
+
         }
-        static void AddComplete(IAsyncResult itfAR)
+        static void Ex3()
         {
-            Console.WriteLine("AddComplete() invoked on thread {0}.", Thread.CurrentThread.GetHashCode());
-            Console.WriteLine("Your addition is complete");
+            Console.WriteLine("***** Working with Timer type *****\n");
+            // Create the delegate for the Timer type.
+            TimerCallback timeCB = new TimerCallback(PrintTime);
+            // Establish timer settings.
+            Timer t = new Timer(
+                timeCB, // The TimerCallback delegate type.
+                "Hi", // Any info to pass into the called method (null for no info). 
+                0, // Amount of time to wait before starting.
+                1000 // Interval of time between calls (in milliseconds).
+            );
+            Console.WriteLine("Hit key to terminate...");
+            Console.ReadLine();
 
- 
-            AsyncResult ar = (AsyncResult)itfAR;
-            BinaryOp b = (BinaryOp)ar.AsyncDelegate; 
-            Console.WriteLine("10 + 10 is {0}.", b.EndInvoke(itfAR));
-
-            string msg = (string)itfAR.AsyncState;
-            Console.WriteLine(msg);
         }
-
+        static void Ex4()
+        {
+            Console.WriteLine("Main thread started. ThreadID = {0}", Thread.CurrentThread.GetHashCode());
+            Printer p = new Printer();
+            WaitCallback workItem = new WaitCallback(PrintTheNumbers);
+            // Queue the method 10 times
+            for (int i = 0; i < 10; i++)
+            {
+                ThreadPool.QueueUserWorkItem(workItem, p);
+            }
+            Console.WriteLine("All tasks queued");
+            Console.ReadLine();
+        }
+        static void Main(string[] args)
+        {
+            Ex4();
+        }
+        static void PrintTime(object state)
+        {
+            Console.WriteLine("Time is: {0}, Param is: {1}", DateTime.Now.ToLongTimeString(), state.ToString());
+        }
+        static void PrintTheNumbers(object state)
+        {
+            Printer task = (Printer)state;
+            task.PrintNumbers();
+        }
     }
 }
