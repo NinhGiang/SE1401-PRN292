@@ -11,14 +11,27 @@ namespace StudentGeneration
     {
         protected string _id;
         protected string _fullname;
+        protected string _sex;
+        protected int _age;
+        protected string _class;
         public string ID { get { return _id; } }
         public string FullName { get { return _fullname; } }
+        public string Sex { get {return _sex;}}
+        public int Age {get{return _age;}}
+        public string Class {get{return _class;}}
 
-        protected Student(string ID, string FullName)
+
+
+        protected Student(string ID, string FullName, string Sex, int Age, string Class)
         {
             _id = ID;
             _fullname = FullName;
+            _sex = Sex;
+            _age = Age;
+            _class = Class;
         }
+
+
 
         public static Student[] Create(uint number_student)
         {
@@ -36,7 +49,7 @@ namespace StudentGeneration
                 string full_name = _.last_name_set[last_name_index] + " ";
                 full_name += _.middle_name_set[middle_name_index] + " ";
                 full_name += _.first_name_set[first_name_index];
-                result[i] = new Student(i.ToString(), full_name);
+                result[i] = new Student(i.ToString(), full_name, "M", 20, "12");
             }
             return result;
         }

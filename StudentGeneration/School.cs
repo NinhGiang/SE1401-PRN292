@@ -14,10 +14,10 @@ namespace StudentGeneration
         }
         public void save(string filename)
         {
-            String content = "ID, Fullname\n";
+            String content = "ID, Fullname, Sex, Age, Class\n";
             foreach(Student student in _students_list)
             {
-                content += student.ID + ", " + student.FullName + "\n";
+                content += student.ID + ", " + student.FullName + ", " + student.Sex + ", " + student.Age + ", " + student.Class + "\n";
             }
             File.WriteAllText(filename, content);
         }

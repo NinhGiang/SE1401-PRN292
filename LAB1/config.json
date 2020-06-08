@@ -1,0 +1,81 @@
+﻿{
+  "nameConfig": { //file lưu trữ dữ liệu tên, năm, lớp, môn
+    "last_Name_Set": [
+      "Phạm",
+      "Lữ",
+      "Lê",
+      "Nguyễn",
+      "Trần",
+      "Huỳnh"
+    ],
+    "middle_Name_Set": [
+      "Thị",
+      "Phan",
+      "Khánh",
+      "Thùy",
+      "Thiên"
+    ],
+    "male_Name_Set": [
+      "Ân",
+      "Khôi",
+      "Huy",
+      "Cường",
+      "Long",
+      "Tuấn"
+    ],
+    "female_Name_Set": [
+      "Vân",
+      "Tuyên",
+      "Ngọc",
+      "Phương",
+      "Uyên",
+      "Tú"
+    ]
+  },
+
+  "levelConfig": {
+    "level_Set": [
+      "10",
+      "11",
+      "12"
+    ]
+  },
+
+  "fieldConfig": {
+    "field_Name_Set": [
+      "Toán",
+      "Lý",
+      "Hóa",
+      "Văn",
+      "Anh",
+      "Sử",
+      "Địa",
+      "GDCD",
+      "TDTC"
+    ]
+  },
+
+  "ageConfig": {
+    "level_10_Set": [
+      "15",
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "level_11_Set": [
+      "20",
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "level_12_Set": [
+      "20",
+      "21",
+      "17",
+      "18",
+      "19"
+    ]
+  }
+}
