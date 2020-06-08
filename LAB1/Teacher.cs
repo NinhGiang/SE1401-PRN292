@@ -99,6 +99,9 @@ namespace LAB1
             return result;
         }
 
+        /**
+         * 
+         */
         private static List<string> GetListOfField()
         {
             List<string> list = new List<string>();

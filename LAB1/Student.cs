@@ -60,6 +60,7 @@ namespace LAB1
             Student[] result = new Student[numberOfStudent];
             string content = File.ReadAllText(@"..\..\..\Configure.json");
             Configure config = JsonSerializer.Deserialize<Configure>(content);
+            List<string> listOfClasses = GetListOfClass();
 
             Random rnd = new Random();
 
@@ -88,16 +89,18 @@ namespace LAB1
                 }
 
                 int middleNameIndex = rnd.Next(_.middle_name_set.Length);
-                string fullName = _.last_name_set[lastNameIndex] + " ";
-                fullName += _.middle_name_set[middleNameIndex] + " ";
-                fullName += firstname;
+                string fullName = _.last_name_set[lastNameIndex].Trim() + " ";
+                fullName += _.middle_name_set[middleNameIndex].Trim() + " ";
+                fullName += firstname.Trim();
 
                 //birthdate
                 int year = rnd.Next(2003, 2005);
                 DateTime birthdate = GetRandomDate(year);
 
                 //Class
-                string classInfo = "tempClass";
+                int index = rnd.Next(listOfClasses.Count);
+                string[] classes = listOfClasses[index].Split(',');
+                string classInfo = classes[0].Trim();
 
                 result[i] = new Student();
                 result[i].SetId(uuid);
@@ -116,6 +119,21 @@ namespace LAB1
             DateTime end = new DateTime(year, 12, 31);
             int range = (end - start).Days;
             return start.AddDays(rnd.Next(range));
+        }
+
+        private static List<string> GetListOfClass()
+        {
+            List<string> list = new List<string>();
+            StreamReader sr = new StreamReader(@"..\..\..\Class.csv");
+
+            sr.ReadLine();  //skip first line
+            while (!sr.EndOfStream)
+            {
+                string line = sr.ReadLine();
+                list.Add(line);
+            }
+            sr.Close();
+            return list;
         }
     }
 }
