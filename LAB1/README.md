@@ -8,7 +8,7 @@
 2. Một trường cấp có tối đa 100 phòng học (Room), mỗi phòng học được đánh số thứ tự từ 1 đến N.
 3. Các phòng học được chia đều cho 3 khối (Level), bao gồm khối 10, 11 và 12. Thông thường số phòng sẽ giảm từ 1 đến 2 phòng do khi học viên được chuyển lên các khối cao hơn.
 4. Mỗi khối (Level) có từ 8 đến 10 môn học (Subject), các môn học thuộc về một lĩnh vực (Field) nào đó bao gồm Toán, Lý, Hóa, Ngữ Văn, Thể Dục...
-5. Với mỗi phòng học sẽ có một lớp học (Class), mỗi lớp học thuộc về một khối và có sỉ số khoảng từ 30 đến 50 học viên (Student).
+5. Với mỗi phòng học sẽ có duy nhất một lớp học (Class), mỗi lớp học thuộc về một khối và có sỉ số khoảng từ 30 đến 50 học viên (Student).
 6. Mỗi học viên có các thông tin bao gồm Họ tên, Ngày tháng năm sinh, Giới tính và phải thuộc về một lớp học nào đó. Số tuổi đối với học sinh khối 10 phải nằm trong khoảng từ 15 đến 19, khối 11 từ 16 đến 20 và khối 12 từ 17 đến 21.
 7. Mỗi giáo viên phải có một lĩnh vực (Field) giảng dạy, giảng dạy các môn học (Subject) thuộc một hoặc nhiều khối và buộc phải tham dự (Attendance) từ 4 đến 10 lớp (Class).
 8. Trong từng môn học, học sinh sẽ có điểm số riêng (Grade).
