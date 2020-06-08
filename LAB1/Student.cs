@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Text.Json;
 
 namespace LAB1
@@ -60,7 +59,7 @@ namespace LAB1
             Student[] result = new Student[numberOfStudent];
             string content = File.ReadAllText(@"..\..\..\Configure.json");
             Configure config = JsonSerializer.Deserialize<Configure>(content);
-            List<string> listOfClasses = GetListOfClass();
+            List<string> listOfClasses = DataHelper.GetListOfClass();
 
             Random rnd = new Random();
 
@@ -95,7 +94,7 @@ namespace LAB1
 
                 //birthdate
                 int year = rnd.Next(2003, 2005);
-                DateTime birthdate = GetRandomDate(year);
+                DateTime birthdate = DataHelper.GetRandomDateInYear(year);
 
                 //Class
                 int index = rnd.Next(listOfClasses.Count);
@@ -112,28 +111,5 @@ namespace LAB1
             return result;
         }
 
-        private static DateTime GetRandomDate(int year)
-        {
-            Random rnd = new Random();
-            DateTime start = new DateTime(year, 1, 1);
-            DateTime end = new DateTime(year, 12, 31);
-            int range = (end - start).Days;
-            return start.AddDays(rnd.Next(range));
-        }
-
-        private static List<string> GetListOfClass()
-        {
-            List<string> list = new List<string>();
-            StreamReader sr = new StreamReader(@"..\..\..\Class.csv");
-
-            sr.ReadLine();  //skip first line
-            while (!sr.EndOfStream)
-            {
-                string line = sr.ReadLine();
-                list.Add(line);
-            }
-            sr.Close();
-            return list;
-        }
     }
 }

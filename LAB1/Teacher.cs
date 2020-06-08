@@ -53,7 +53,7 @@ namespace LAB1
             string content = File.ReadAllText(@"..\..\..\Configure.json");
             Configure config = JsonSerializer.Deserialize<Configure>(content);
 
-            List<string> listOfField = GetListOfField();
+            List<string> listOfField = DataHelper.GetListOfField();
             Random rnd = new Random();
 
             for (uint i = 0; i < numberOfTeacher; i++)
@@ -98,24 +98,5 @@ namespace LAB1
             }
             return result;
         }
-
-        /**
-         * 
-         */
-        private static List<string> GetListOfField()
-        {
-            List<string> list = new List<string>();
-            StreamReader sr = new StreamReader(@"..\..\..\Field.csv");
-
-            sr.ReadLine();  //skip first line
-            while (!sr.EndOfStream)
-            {
-                string line = sr.ReadLine();
-                list.Add(line);
-            }
-            sr.Close();
-            return list;
-        }
-
     }
 }
