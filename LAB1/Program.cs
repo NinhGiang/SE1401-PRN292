@@ -32,6 +32,11 @@ namespace LAB1
             school.SaveClass(@"..\..\..\Class.csv");
             Console.WriteLine("ClassInfo");
 
+            Subject[] subject_list = Subject.Create();
+            school.SetSubjectList(subject_list);
+            school.SaveSubject(@"..\..\..\Subject.csv");
+            Console.WriteLine("Subject");
+
             Student[] student_list = Student.Create(20);
             school.SetStudentList(student_list);            
             school.SaveStudent(@"..\..\..\Student.csv");
