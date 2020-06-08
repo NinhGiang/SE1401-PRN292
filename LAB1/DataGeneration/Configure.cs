@@ -10,7 +10,7 @@ class NameDataSet
 {
     public string[] MaleFirstNameSet { get; set; }
 
-    public string[] FeMaleFirstNameSet { get; set; }
+    public string[] FemaleFirstNameSet { get; set; }
     public string[] MiddleNameSet { get; set; }
 
     public string[] LastNameSet { get; set; }

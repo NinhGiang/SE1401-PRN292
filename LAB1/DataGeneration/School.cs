@@ -31,7 +31,7 @@ using System.IO;
             {
                 string[] cells = line.Split(',');
                 for (uint i = 0; i < cells.Length; i += 5){
-                    curr_stu = new Student(cells[i].Trim(), cells[i+1].Trim(), cells[i+2].Trim(), cells[i+3].Trim(), cells[i + 4].Trim());
+                    //curr_stu = new Student(cells[i].Trim(), cells[i+1].Trim(), cells[i+2].Trim(), cells[i+3].Trim(), cells[i + 4].Trim());
                 }
             }
 
