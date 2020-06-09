@@ -6,6 +6,10 @@ using System.Text.Json;
 
 namespace LAB1
 {
+    /// <summary>
+    /// The DataHelper class
+    /// Contains all methods related to .csv file and methods that generate random data 
+    /// </summary>
     class DataHelper
     {
         private static Random rnd = new Random();

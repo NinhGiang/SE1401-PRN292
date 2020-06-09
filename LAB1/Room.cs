@@ -6,10 +6,25 @@ using System.Text.Json;
 
 namespace LAB1
 {
+    /// <summary>
+    /// The Room class
+    /// Contains create method and properties of Room. 
+    /// </summary>
     public class Room
     {
+        /// <summary>
+        /// Id of room
+        /// </summary>
         protected string _id;
+
+        /// <summary>
+        /// Class of room
+        /// </summary>
         protected string _class;
+
+        /// <summary>
+        /// Room number
+        /// </summary>
         protected int _no;
 
         public string GetId()
@@ -41,9 +56,7 @@ namespace LAB1
 
         public static Room[] Create(int numberOfRoom)
         {
-            Room[] result = new Room[numberOfRoom];
-            string content = File.ReadAllText(@"..\..\..\Configure.json");
-            Configure config = JsonSerializer.Deserialize<Configure>(content);
+            List<Room> result = new List<Room>();
 
             Random rnd = new Random();
 
@@ -58,10 +71,10 @@ namespace LAB1
                 //no
                 int no = (int)i + 1;
 
-                result[i] = new Room(uuid, classInfo, no);
+                result.Add(new Room(uuid, classInfo, no));
             }
 
-            return result;
+            return result.ToArray();
         }
     }
 }

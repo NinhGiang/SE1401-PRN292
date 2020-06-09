@@ -6,39 +6,100 @@ using System.Text.Json;
 
 namespace LAB1
 {
+    /// <summary>
+    /// The ClassInfo class
+    /// Contains create method and properties of ClassInfo. 
+    /// </summary>
     public class ClassInfo
     {
+        /// <summary>
+        /// Id of class
+        /// </summary>
         protected string _id;
+
+        /// <summary>
+        /// Level of class
+        /// </summary>
         protected string _level;
+
+        /// <summary>
+        /// Room of class
+        /// </summary>
         protected string _room;
+
+        /// <summary>
+        /// Name of class
+        /// </summary>
         protected string _name;
 
+        /// <summary>
+        /// Gets Id of class
+        /// </summary>
+        /// <returns>The Id of class</returns>
         public string GetId()
         { return _id; }
 
+        /// <summary>
+        /// Sets Id of class
+        /// </summary>
+        /// <param name="value">A string value</param>
         public void SetId(string value)
         { _id = value; }
 
+        /// <summary>
+        /// Gets level of class
+        /// </summary>
+        /// <returns>The level of class</returns>
         public string GetLevel()
         { return _level; }
 
+        /// <summary>
+        /// Sets level of class
+        /// </summary>
+        /// <param name="value">A string value</param>
         public void SetLevel(string value)
         { _level = value; }
 
+        /// <summary>
+        /// Gets room of class
+        /// </summary>
+        /// <returns>The room of class</returns>
         public string GetRoom()
         { return _room; }
 
+        /// <summary>
+        /// Sets room of class
+        /// </summary>
+        /// <param name="value">A string value</param>
         public void SetRoom(string value)
         { _room = value; }
 
+        /// <summary>
+        /// Gets name of class
+        /// </summary>
+        /// <returns>The name of class</returns>
         public string GetName()
         { return _name; }
 
+        /// <summary>
+        /// Sets name of class
+        /// </summary>
+        /// <param name="value">A string value</param>
         public void SetName(string value)
         { _name = value; }
 
+        /// <summary>
+        /// An empty constructor for class
+        /// </summary>
         public ClassInfo() { }
 
+        /// <summary>
+        /// A constructor for class
+        /// </summary>
+        /// <param name="id">A string value</param>
+        /// <param name="level">A string value</param>
+        /// <param name="room">A string value</param>
+        /// <param name="name">A string value</param>
         public ClassInfo(string id, string level, string room, string name)
         {
             _id = id;
@@ -47,20 +108,20 @@ namespace LAB1
             _name = name;
         }
 
+        /// <summary>
+        /// Creates a random list of classes and returns the result
+        /// </summary>
+        /// <returns>An array of classes</returns>
         public static ClassInfo[] Create()
         {
             List<string> listOfRoom = DataHelper.GetListOfRoom();
-            int numberOfRoom = listOfRoom.Count;
-            ClassInfo[] result = new ClassInfo[numberOfRoom];
+            List<ClassInfo> result = new List<ClassInfo>();
 
             List<string> listOfLevel = DataHelper.GetListOfLevel();
 
-            string content = File.ReadAllText(@"..\..\..\Configure.json");
-            Configure config = JsonSerializer.Deserialize<Configure>(content);
-
             Random rnd = new Random();
 
-            for (uint i = 0; i < numberOfRoom; i++)
+            for (uint i = 0; i < listOfRoom.Count; i++)
             {
                 //id
                 string uuid = Guid.NewGuid().ToString();
@@ -81,12 +142,10 @@ namespace LAB1
                 string roomName = room[2].Trim();
                 name = levelName + "-" + roomName;
 
-                result[i] = new ClassInfo(uuid, levelId, roomId, name);
+                result.Add(new ClassInfo(uuid, levelId, roomId, name));
             }
 
-            return result;
+            return result.ToArray();
         }
-
-        
     }
 }
