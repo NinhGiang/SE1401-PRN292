@@ -1,13 +1,22 @@
-﻿using System;
-using System.Text.RegularExpressions;
+﻿
+using System;
+using System.Text;
 
-namespace LAB1_SE140056
+namespace LAB1
 {
-    class schoolDatabaseGenerator
+    /// <summary>
+    /// The main SchoolDatabaseGenerator class.
+    /// Contains all methods for generating a school database.
+    /// </summary>
+    class SchoolDatabaseGenerator
     {
-        static void Main(string[] args)
-        {      
-            bool valid;
+        /// <summary>
+        /// Used to test method.
+        /// </summary>
+        /// <param name="args">A string array contains command from command-line.</param>
+        public static void Main(string[] args)
+        {
+            /*bool valid;
             if (args.Length < 5)
             {
                 valid = true;
@@ -49,6 +58,13 @@ namespace LAB1_SE140056
             else
             {
                 Console.WriteLine("Invalid command!");
+            }*/
+            Console.OutputEncoding = Encoding.UTF8;
+            //Test Create method in Student class
+            Student.Create(10);
+            foreach (var student in Student.StudentList)
+            {
+                Console.WriteLine(student.UUID + ", " + student.Name + ", " + student.Birthday + ", " + student.Gender + ", " + student.ClassUUID);
             }
         }
     }

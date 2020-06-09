@@ -1,6 +1,6 @@
 ﻿{
     "NameConfig": {
-        "last_name_set": [
+        "LastNameSet": [
             "Nguyễn",
             "Lý",
             "Lê",
@@ -9,41 +9,74 @@
             "Võ",
             "Quách",
             "Dư",
-            "Thái"
-        ], //end last_name_set
-        "male_middle_name_set": [
+            "Thái",
+            "Chu",
+            "Cao",
+            "Triệu",
+            "Ngô",
+            "Đinh",
+            "Bùi"
+        ],
+        "MaleMiddleNameSet": [
             "Văn",
             "Hoàng",
             "Bảo",
             "Anh",
-            "Minh"
-        ], //end male_middle_name_set
-        "male_first_name_set": [
+            "Minh",
+            "Đoàn",
+            "Bá",
+            "Đức",
+            "Dương",
+            "Thế"
+        ],
+        "MaleFirstNameSet": [
             "Đạt",
             "Long",
             "Thành",
             "Tuấn",
             "Hưng",
-            "Hiếu"
-        ], //end male_first_name_set
-        "female_middle_name_set": [
+            "Hiếu",
+            "Dương",
+            "Sơn",
+            "Khánh",
+            "Hòa",
+            "Hùng",
+            "Thịnh",
+            "Việt",
+            "Thông",
+            "Huy"
+        ],
+        "FemaleMiddleNameSet": [
             "Thị",
             "Thanh",
             "Hoàng",
             "Ngọc",
-            "Thúy"
-        ], //end female_middle_name_set
-        "female_first_name_set": [
+            "Thúy",
+            "Thu",
+            "Đặng",
+            "Diệu",
+            "Kim",
+            "Nhật"
+        ],
+        "FemaleFirstNameSet": [
             "Vy",
             "Châu",
             "Giang",
             "Mai",
             "Hà",
-            "Lan"
-        ] //end female_first_name_set
-    }, //end NameConfig
+            "Lan",
+            "Kiều",
+            "Thy",
+            "Thi",
+            "Linh",
+            "Yến",
+            "Hoa",
+            "Vân",
+            "Thảo"
+        ]
+    },
     "SubjectConfig": {
-        "subject_set": [
+        "SubjectSet": [
             "Toán",
             "Lý",
             "Hóa",
@@ -54,13 +87,18 @@
             "GDCD",
             "Tin",
             "Anh"
-        ] //end subject_set
-    }, //end SubjectConfig
+        ]
+    },
     "LevelConfig": {
-        "level_set": [
+        "LevelSet": [
             "10",
             "11",
             "12"
-        ] //end level_set
-    } //end LevelConfig
+        ],
+        "LevelNameSet": [
+            "10th-grade",
+            "11th-grade",
+            "12th-grade"
+        ]
+    }
 }

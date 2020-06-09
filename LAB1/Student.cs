@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 
-namespace LAB1_SE140056
+namespace LAB1
 {
     /// <summary>
     /// The main Student class.
@@ -15,18 +16,25 @@ namespace LAB1_SE140056
         private DateTime birthday;
         private bool gender;
         private string classUUID;
-        public string UUID { 
-            get 
-            { 
-                return uuid; 
-            } 
+        private static List<Student> studentList;
+
+        /// <value>Gets the value of UUID.</value>
+        public string UUID
+        {
+            get
+            {
+                return uuid;
+            }
         }
-        public string Name { 
-            get 
-            { 
-                return name; 
-            } 
+        /// <value>Gets the value of Name.</value>
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
         }
+        /// <value>Gets the value of Birthday.</value>
         public DateTime Birthday
         {
             get
@@ -34,6 +42,7 @@ namespace LAB1_SE140056
                 return birthday;
             }
         }
+        /// <value>Gets the value of Gender.</value>
         public bool Gender
         {
             get
@@ -41,11 +50,20 @@ namespace LAB1_SE140056
                 return gender;
             }
         }
+        /// <value>Gets the value of ClassUUID.</value>
         public string ClassUUID
         {
             get
             {
                 return classUUID;
+            }
+        }
+        /// <value>Gets the value of StudentList.</value>
+        public static List<Student> StudentList
+        {
+            get
+            {
+                return studentList;
             }
         }
         public Student(string newUUID, string newName, DateTime newBirthday, bool newGender, string newClassUUID)
@@ -59,57 +77,96 @@ namespace LAB1_SE140056
         /// <summary>
         /// Generate random birthday of students.
         /// </summary>
-        public static DateTime RandomBirthday()
+        /// <returns>
+        /// A random date in range 1/1/2003-12/12/2005.
+        /// </returns>
+        private static DateTime GenerateRandomBirthday()
         {
             Random rnd = new Random();
-            DateTime start = new DateTime(2002, 1, 1);
-            int range = (DateTime.Today - start).Days;
+            DateTime start = new DateTime(2003, 1, 1);
+            DateTime end = new DateTime(2005, 12, 12);
+            int range = (end - start).Days;
             return start.AddDays(rnd.Next(range));
         }
         /// <summary>
         /// Generate random number of students.
         /// </summary>
-        public static Student[] Create(uint noOfStudents)
+        /// <param name="noOfStudents">A positive integer number.</param>
+        /// <returns>
+        /// A list of students
+        /// </returns>
+        /// <exception cref="System.NullReferenceException">
+        /// Thrown when the object in Json file does not exist or has no data.
+        /// </exception>
+        public static List<Student> Create(int noOfStudents)
         {
-            if (noOfStudents >= 500 && noOfStudents <= 3000)
+            try
             {
-                Student[] result = new Student[noOfStudents];
+                //if (noOfStudents >= 500 && noOfStudents <= 3000)
+                //{
+                if (studentList == null)
+                {
+                    studentList = new List<Student>(noOfStudents);
+                }
                 string content = File.ReadAllText(@"..\..\..\SchoolConfigure.json");
                 SchoolConfigure config = JsonSerializer.Deserialize<SchoolConfigure>(content);
-
                 Random rnd = new Random();
-                for (uint i = 0; i < noOfStudents; i++)
+                for (int i = 0; i < noOfStudents; i++)
                 {
                     NameConfig randomName = config.NameConfig;
                     int lastNameIndex = rnd.Next(randomName.LastNameSet.Length);
+                    int noOfMiddleName = rnd.Next(3);
                     string fullName = randomName.LastNameSet[lastNameIndex] + " ";
-                    DateTime birthday = RandomBirthday();
+                    DateTime birthday = GenerateRandomBirthday();
                     bool gender;
+
                     if (rnd.NextDouble() > 0.5)
                     {
                         gender = false;
                         int femaleFirstNameIndex = rnd.Next(randomName.FemaleFirstNameSet.Length);
-                        int femaleMiddleNameIndex = rnd.Next(randomName.FemaleMiddleNameSet.Length);
-                        fullName += randomName.FemaleMiddleNameSet[femaleMiddleNameIndex] + " ";
+                        if (noOfMiddleName > 0)
+                        {
+                            for (int j = 0; j < noOfMiddleName; j++)
+                            {
+                                int femaleMiddleNameIndex = rnd.Next(randomName.FemaleMiddleNameSet.Length);
+                                fullName += randomName.FemaleMiddleNameSet[femaleMiddleNameIndex] + " ";
+                            }
+                        }                                                                                             
                         fullName += randomName.FemaleFirstNameSet[femaleFirstNameIndex];
-                        result[i] = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, Guid.NewGuid().ToString());
+                        Class newClass = Class.Create();
+                        Student newStudent = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, newClass.UUID);
+                        studentList.Add(newStudent);
                     } //end if gender is false
                     else
                     {
                         gender = true;
                         int maleFirstNameIndex = rnd.Next(randomName.MaleFirstNameSet.Length);
-                        int maleMiddleNameIndex = rnd.Next(randomName.MaleMiddleNameSet.Length);
-                        fullName += randomName.FemaleMiddleNameSet[maleMiddleNameIndex] + " ";
-                        fullName += randomName.FemaleFirstNameSet[maleFirstNameIndex];
-                        result[i] = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, Guid.NewGuid().ToString());
+                        if (noOfMiddleName > 0)
+                        {
+                            for (int j = 0; j < noOfMiddleName; j++)
+                            {
+                                int maleMiddleNameIndex = rnd.Next(randomName.MaleMiddleNameSet.Length);
+                                fullName += randomName.MaleMiddleNameSet[maleMiddleNameIndex] + " ";
+                            }
+                        }                       
+                        fullName += randomName.MaleFirstNameSet[maleFirstNameIndex];
+                        Student newStudent = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, Guid.NewGuid().ToString());
+                        studentList.Add(newStudent);
                     } //end if gender is true
                 } //end for each index in result array
-                return result;
-            } //end if noOfStudents in range 500-3000
-            else
+
+                //} //end if noOfStudents in range 500-3000
+                /*else
+                {
+                    return null;
+                } //end if noOfStudents is out-of-range*/
+                //}
+            }
+            catch (NullReferenceException ex)
             {
-                return null;
-            } //end if noOfStudents is out-of-range
+                Console.WriteLine("Student _ NullReference: " + ex.Message);
+            }
+            return studentList;
         }
     }
 }
