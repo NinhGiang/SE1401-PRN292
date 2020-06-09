@@ -40,14 +40,11 @@ namespace LAB1
         {
             Random rnd = new Random();
             List<string> listOfTeacher = DataHelper.GetListOfTeacher();
-            int numberOfTeacher = listOfTeacher.Count;
-            //Attendance[] result = new Attendance[numberOfTeacher];
             List<Attendance> list = new List<Attendance>();
             int index;
 
-            for(int i = 0; i < listOfTeacher.Count; i++)
+            for (int i = 0; i < listOfTeacher.Count; i++)
             {
-                //int count = 0;
                 //teacher
                 string[] teacherInfo = listOfTeacher[i].Split(',');
                 string teacher = teacherInfo[0].Trim();
@@ -69,12 +66,8 @@ namespace LAB1
                     string[] classes = listOfClass[index].Split(',');
                     string classInfo = classes[0];
 
-                    list.Add(new Attendance(teacher + " (" + teacherInfo[1] + ")"
-                        , classInfo + " (" + classes[3] + ")"
-                        , subject + " (" + subjectInfo[3] + ")"
-                        ));
+                    list.Add(new Attendance(teacher, classInfo, subject));
                 }
-
             }
             return list.ToArray();
         }

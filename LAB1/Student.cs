@@ -72,9 +72,11 @@ namespace LAB1
                 //name
                 string fullName = DataHelper.GetRandomNameByGender(gender);
 
+                //grade
+                string level = DataHelper.GetRandomLevel();
+
                 //birthdate
-                int year = rnd.Next(2003, 2005);
-                DateTime birthdate = DataHelper.GetRandomDateInYear(year);
+                DateTime birthdate = DataHelper.GetRandomBirthdayByLevel(level);
 
                 //Class
                 int index = rnd.Next(listOfClasses.Count);

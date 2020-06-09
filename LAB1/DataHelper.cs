@@ -9,6 +9,8 @@ namespace LAB1
     class DataHelper
     {
         private static Random rnd = new Random();
+        private static string content = File.ReadAllText(@"..\..\..\Configure.json");
+        private static Configure config = JsonSerializer.Deserialize<Configure>(content);
 
         private static List<string> GetCsvData(string path)
         {
@@ -104,12 +106,7 @@ namespace LAB1
             return GetCsvData(@"..\..\..\Teacher.csv");
         }
 
-        public static int GetRandomInt(int min, int max)
-        {
-            return rnd.Next(min, max);
-        }
-
-        public static DateTime GetRandomDateInYear(int year)
+        private static DateTime GetRandomDateInYear(int year)
         {
             DateTime start = new DateTime(year, 1, 1);
             DateTime end = new DateTime(year, 12, 31);
@@ -117,11 +114,20 @@ namespace LAB1
             return start.AddDays(rnd.Next(range));
         }
 
+        public static DateTime GetRandomBirthdayByLevel(string level)
+        {
+            Int32.TryParse(level, out int levelNumber);
+            int currentYear = DateTime.Now.Year;
+            int maxYear = currentYear - 15 + (levelNumber - 10);
+            int minYear = currentYear - 19 + (levelNumber - 10);
+
+            int year = rnd.Next(minYear, maxYear);
+            return GetRandomDateInYear(year);
+        }
+
         public static string GetRandomNameByGender(bool gender)
         {
             string fullName;
-            string content = File.ReadAllText(@"..\..\..\Configure.json");
-            Configure config = JsonSerializer.Deserialize<Configure>(content);
 
             NameConfig _ = config.NameConfig;
             int lastNameIndex = rnd.Next(_.last_name_set.Length);
@@ -144,7 +150,18 @@ namespace LAB1
             fullName += _.middle_name_set[middleNameIndex] + " ";
             fullName += firstname;
 
-            return fullName;
+            return fullName.Trim();
+        }
+
+        public static string GetRandomLevel()
+        {
+            string level;
+
+            LevelNameConfig _ = config.LevelNameConfig;
+            int index = rnd.Next(_.level_name_set.Length);
+            level = _.level_name_set[index].ToString();
+
+            return level.Trim();
         }
     }
 }
