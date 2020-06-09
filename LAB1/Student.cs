@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Text.RegularExpressions;
+using System.Dynamic;
+using System.IO;
+
 
 namespace LAB1
 {
@@ -22,6 +25,12 @@ namespace LAB1
             this._class = _class;
         }
 
-
+        public static Student[] Create(uint number_student)
+        {
+            Student[] result = new Student[number_student];
+            String content = File.ReadAllText(@"..\..\..\StudentConfigure.json");
+            StudentConfigure config = Jsons
+            return result;
+        }
     }
 }
