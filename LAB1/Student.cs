@@ -67,42 +67,49 @@ namespace LAB1_SE140056
             return start.AddDays(rnd.Next(range));
         }
         /// <summary>
-        /// Generate random amount of students.
+        /// Generate random number of students.
         /// </summary>
-        public static Student[] Create(uint number_student)
+        public static Student[] Create(uint noOfStudents)
         {
-            Student[] result = new Student[number_student];
-            string content = File.ReadAllText(@"..\..\..\SchoolConfigure.json");
-            SchoolConfigure config = JsonSerializer.Deserialize<SchoolConfigure>(content);
-
-            Random rnd = new Random();
-            for (uint i = 0; i < number_student; i++)
+            if (noOfStudents >= 500 && noOfStudents <= 3000)
             {
-                NameConfig randomName = config.NameConfig;
-                int lastNameIndex = rnd.Next(randomName.LastNameSet.Length);
-                string fullName = randomName.LastNameSet[lastNameIndex] + " ";
-                DateTime birthday = RandomBirthday();
-                bool gender;
-                if (rnd.NextDouble() > 0.5)
+                Student[] result = new Student[noOfStudents];
+                string content = File.ReadAllText(@"..\..\..\SchoolConfigure.json");
+                SchoolConfigure config = JsonSerializer.Deserialize<SchoolConfigure>(content);
+
+                Random rnd = new Random();
+                for (uint i = 0; i < noOfStudents; i++)
                 {
-                    gender = false;
-                    int femaleFirstNameIndex = rnd.Next(randomName.FemaleFirstNameSet.Length);
-                    int femaleMiddleNameIndex = rnd.Next(randomName.FemaleMiddleNameSet.Length);
-                    fullName += randomName.FemaleMiddleNameSet[femaleMiddleNameIndex] + " ";
-                    fullName += randomName.FemaleFirstNameSet[femaleFirstNameIndex];
-                    result[i] = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, Guid.NewGuid().ToString());
-                }
-                else
-                {
-                    gender = true;
-                    int maleFirstNameIndex = rnd.Next(randomName.MaleFirstNameSet.Length);
-                    int maleMiddleNameIndex = rnd.Next(randomName.MaleMiddleNameSet.Length);
-                    fullName += randomName.FemaleMiddleNameSet[maleMiddleNameIndex] + " ";
-                    fullName += randomName.FemaleFirstNameSet[maleFirstNameIndex];
-                    result[i] = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, Guid.NewGuid().ToString());
-                }                
-            }
-            return result;
+                    NameConfig randomName = config.NameConfig;
+                    int lastNameIndex = rnd.Next(randomName.LastNameSet.Length);
+                    string fullName = randomName.LastNameSet[lastNameIndex] + " ";
+                    DateTime birthday = RandomBirthday();
+                    bool gender;
+                    if (rnd.NextDouble() > 0.5)
+                    {
+                        gender = false;
+                        int femaleFirstNameIndex = rnd.Next(randomName.FemaleFirstNameSet.Length);
+                        int femaleMiddleNameIndex = rnd.Next(randomName.FemaleMiddleNameSet.Length);
+                        fullName += randomName.FemaleMiddleNameSet[femaleMiddleNameIndex] + " ";
+                        fullName += randomName.FemaleFirstNameSet[femaleFirstNameIndex];
+                        result[i] = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, Guid.NewGuid().ToString());
+                    } //end if gender is false
+                    else
+                    {
+                        gender = true;
+                        int maleFirstNameIndex = rnd.Next(randomName.MaleFirstNameSet.Length);
+                        int maleMiddleNameIndex = rnd.Next(randomName.MaleMiddleNameSet.Length);
+                        fullName += randomName.FemaleMiddleNameSet[maleMiddleNameIndex] + " ";
+                        fullName += randomName.FemaleFirstNameSet[maleFirstNameIndex];
+                        result[i] = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, Guid.NewGuid().ToString());
+                    } //end if gender is true
+                } //end for each index in result array
+                return result;
+            } //end if noOfStudents in range 500-3000
+            else
+            {
+                return null;
+            } //end if noOfStudents is out-of-range
         }
     }
 }
