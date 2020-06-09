@@ -17,13 +17,6 @@ namespace StudentGeneration
 		public String[] FirstNameSet { get; set; }
 	}
 
-	class DateDataSet
-	{
-		public String[] Day_set { get; set; }
-		public String[] Month_set { get; set; }
-		public String[] Year_set { get; set; }
-	}
-
 	class ClassDataSet
     {
 		public String[] Class_set { get; set; }
