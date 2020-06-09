@@ -70,7 +70,7 @@ namespace LAB1
                     string classInfo = classes[0];
 
                     list.Add(new Attendance(teacher + " (" + teacherInfo[1] + ")"
-                        , classInfo + " (" + classes[2] + ")"
+                        , classInfo + " (" + classes[3] + ")"
                         , subject + " (" + subjectInfo[3] + ")"
                         ));
                 }
