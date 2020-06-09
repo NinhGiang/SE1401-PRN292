@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
+using System.Text;
 using System.Dynamic;
 using System.IO;
+using System.Text.
+
 
 
 namespace LAB1
@@ -29,7 +31,7 @@ namespace LAB1
         {
             Student[] result = new Student[number_student];
             String content = File.ReadAllText(@"..\..\..\StudentConfigure.json");
-            StudentConfigure config = Jsons
+            
             return result;
         }
     }
