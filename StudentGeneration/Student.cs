@@ -11,6 +11,10 @@ namespace StudentGeneration
     {
         protected string _id;
         protected string _fullname;
+        protected DateTime _birthday;
+        protected bool _gender;
+        protected string _classID;
+
         public string ID { get { return _id; } }
         public string FullName { get { return _fullname; } }
 
