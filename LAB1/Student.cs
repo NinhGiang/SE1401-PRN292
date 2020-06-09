@@ -57,6 +57,16 @@ namespace LAB1_SE140056
             classUUID = newClassUUID;
         }
         /// <summary>
+        /// Generate random birthday of students.
+        /// </summary>
+        public static DateTime RandomBirthday()
+        {
+            Random rnd = new Random();
+            DateTime start = new DateTime(2002, 1, 1);
+            int range = (DateTime.Today - start).Days;
+            return start.AddDays(rnd.Next(range));
+        }
+        /// <summary>
         /// Generate random amount of students.
         /// </summary>
         public static Student[] Create(uint number_student)
@@ -71,7 +81,7 @@ namespace LAB1_SE140056
                 NameConfig randomName = config.NameConfig;
                 int lastNameIndex = rnd.Next(randomName.LastNameSet.Length);
                 string fullName = randomName.LastNameSet[lastNameIndex] + " ";
-                DateTime birthday = new DateTime(1999, 1, 1);
+                DateTime birthday = RandomBirthday();
                 bool gender;
                 if (rnd.NextDouble() > 0.5)
                 {
