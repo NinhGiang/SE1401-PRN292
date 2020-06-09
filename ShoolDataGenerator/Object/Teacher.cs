@@ -4,13 +4,11 @@ using System.Text;
 
 namespace LAB1
 {
-    class Student
+    class Teacher
     {
         public string UUID { get; set; }
         public string Name { get; set; }
-        public int Birthday { get; set; }
-        public string Gender { get; set; }
-        public Class Class { get; set; }
-        
+        public Boolean Gender { get; set; }
+        public Field Field { get; set; }
     }
 }
