@@ -51,35 +51,30 @@ public class Student
 
     }
 
-    static public Student[] Create(uint number_student)
+    static public Student[] createStudent(uint number_student)
     {
 
         Student[] result = new Student[number_student];
-        Configure config = JsonSerializer.Deserialize<Configure>(File.ReadAllText(@"E:/FPT/VS C# & .NET/tieuminh2510/SE1401-PRN292/LAB1/DataGeneration/database.json"));
         Random rnd = new Random();
         for (uint i = 0; i < number_student; i++)
         {
-            String uuID = Guid.NewGuid().ToString();
-            //generate random uuid
-            GenderDataSet genderDB = config.GenderDataSet;
+            String uuID = Guid.NewGuid().ToString(); //generate random uuid
+            String gender = RandomGenerator.GetRandomGender(); //generate random gender
 
-            int gender_index = rnd.Next(genderDB.GenderSet.Length);
-            if (gender_index == 0)
+            if (gender.Equals("Male"))
             {
                 String fullname = RandomGenerator.GetRadomFullName(); //generate random name
                 String classInfo = RandomGenerator.GetRandomClass();//generate random class
-                String gender = genderDB.GenderSet[gender_index];
-
+                
                 int year = rnd.Next(2003, 2005);
                 DateTime birthdate = RandomGenerator.GetRandomDate(year);//generate random DOB
                 result[i] = new Student(uuID, fullname, birthdate, gender, classInfo);
             }//generate a male student
-            else if (gender_index == 1)
+            else if (gender.Equals("Female"))
             {
                 String fullname = RandomGenerator.GetRadomFullName();//generate random name
                 String classInfo = RandomGenerator.GetRandomClass();//generate random class
-                String gender = genderDB.GenderSet[gender_index];
-
+                
                 int year = rnd.Next(2003, 2005);
                 DateTime birthdate = RandomGenerator.GetRandomDate(year); //generate random DOB
                 result[i] = new Student(uuID, fullname, birthdate, gender, classInfo);

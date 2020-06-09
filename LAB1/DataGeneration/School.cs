@@ -1,18 +1,21 @@
-﻿using System;
+﻿using LAB1.DataGeneration;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
 class School
 {
     private List<Student> _student_list;
-
+    private List<Room> _room_list; 
     public School()
     {
         _student_list = new List<Student>();
+        _room_list = new List<Room>();
     }
-    public School(Student[] student_list)
+    public School(Student[] student_list, Room[] room_list)
     {
         _student_list = new List<Student>(student_list);
+        _room_list = new List<Room>(room_list);
     }
     public List<Student> GetStudents()
     {
@@ -21,6 +24,14 @@ class School
     public void setStudents(Student[] students)
     {
         _student_list = new List<Student>(students);
+    }
+    public List<Room> getRooms()
+    {
+        return _room_list;
+    }
+    public void setRoom(Room[] rooms)
+    {
+        _room_list = new List<Room>(rooms);
     }
     public void saveStudent(string filename)
     {
@@ -35,19 +46,18 @@ class School
         }
         File.WriteAllText(filename, content);
     }
-    public void load(String filename)
+
+    public void saveRoom(string filename)
     {
-
-        String content = File.ReadAllText(filename);
-        foreach (string line in content.Split('\n', StringSplitOptions.RemoveEmptyEntries))
+        string content = "ID, Class, No\n";
+        foreach (Room room in _room_list)
         {
-            string[] cells = line.Split(',');
-            for (uint i = 0; i < cells.Length; i += 5)
-            {
-                //curr_stu = new Student(cells[i].Trim(), cells[i+1].Trim(), cells[i+2].Trim(), cells[i+3].Trim(), cells[i + 4].Trim());
-            }
+            content += room.Uuid + ", ";
+            content += room.Class_info + ", ";
+            content += room.No +"\n";     
         }
-
+        File.WriteAllText(filename, content);
     }
+
 }
 
