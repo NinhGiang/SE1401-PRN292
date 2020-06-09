@@ -1,30 +1,31 @@
-﻿using System;
+﻿using LAB1.StudentGeneration;
+using System;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using StudentGeneration.Configure;
 
 namespace StudentGeneration
 {
     public class Student
     {
-        protected int _UUID;
+        protected Guid _UUID;
         protected String _name;
-        protected String _birthday;
-        protected Boolean _gender;
-        protected String _class;
+        DateTime _birthday;
+        protected String _gender;
+        //protected String _class;
 
-        public Student(int UUID, String name, String birthday, Boolean gender, String currentClass)
+        public Student(String name, String gender, DateTime birthday)
         {
-            this._UUID = UUID;
+            //, String birthday, String currentClass
+            this._UUID = System.Guid.NewGuid();
             this._name = name;
             this._birthday = birthday;
             this._gender = gender;
-            this._class = currentClass;
+            //this._class = currentClass;
         }
 
-        public int ID
+        public Guid ID
         {
             get{ return _UUID; }
         }
@@ -35,68 +36,81 @@ namespace StudentGeneration
             set{ _name = value; }
         }
 
-        public String Birthday 
+        public DateTime Birthday 
         {
             get{ return _birthday; }
             set{ _birthday = value; }
         }
 
-        public Boolean Gender  
+        public String Gender  
         {
             get{ return _gender; }
             set{ _gender = value; }
         }
 
-        public String Class 
-        {
-            get{ return _class; }
-            set{ _class = value; }
-        }
+        //public String Class 
+        //{
+        //    get{ return _class; }
+        //    set{ _class = value; }
+        //}
 
         static public Student[] CreateStudentRandomly(uint number_of_students)
         {
-            Student[] students = new Student[numberOfStudents];
-            Configure config = JsonSerializer.Deserialize<Configure>(File.ReadAllText(@"../../../dataset.json"));
+            Student[] students = new Student[number_of_students];
+            String content = File.ReadAllText(@"..\..\..\StudentGeneration\dataset.json");
+            Configure config = JsonSerializer.Deserialize<Configure>(content);
 
-            Random rd = new Random();
             for (int i = 0; i < number_of_students; i++) 
             {
                 //generate name
-                NameDataSet name_config = config.NameDataSet;
-                int last_name_index = rd.Next(name_config.last_name_set.Length);
-                int middle_name_index = rd.Next(name_config.middle_name_set.Length);
-                int first_name_index = rd.Next(name_config.first_name_set.Length);
-                String fullname = name_config.last_name_set[last_name_index] + " ";
-                fullname += name_config.middle_name_set[middle_name_index] + " ";
-                fullname += name_config.first_name_set[first_name_index];
+                string fullname = createFullnameRandomly(config);
 
                 //generate gender
-                Boolean gender_gen = true;
-                int gender_int = rd.Next(0, 1);
-                if(gender_int == 0)
-                {
-                    gender_gen = false; 
-                }
+                string gender_gen = createGenderRandomly();
 
                 //generate birthday
-                String birthday_gen;
-                DateDataSet birthday_config = config.DateDataSet;
-                int day_index = rd.Next(birthday_config.day_set.Length);
-                int month_index = rd.Next(birthday_config.month_set.Length);
-                int year_index = rd.Next(birthday_config.year_set.Length);
-                birthday_gen = birthday_config.day_set[day_index] + "/";
-                birthday_gen += birthday_config.month_set[month_index] + "/";
-                birthday_gen += birthday_config.year_set[year_index];
+                int year = Generator.getRandomInteger(2004, 2007);
+                DateTime dob = Generator.getRandomDate(year);
 
                 //generate class
-                String class_gen;
-                ClassDataSet class_config = config.ClassDataSet;
-                int class_index = rd.Next(class_config.class_set.Length);
-                class_gen = class_config.class_set[class_index];
+                //String class_gen;
+                //ClassDataSet class_config = new ClassDataSet();
+                //int class_index = rd.Next(class_config.class_set.Length);
+                //class_gen = class_config.class_set[class_index];
 
-                students[i] = new Student(i, fullname, birthday_gen, gender_gen, class_gen);
+                students[i] = new Student(fullname, gender_gen, dob);
+                //, class_gen
             }
             return students;
         }
+
+        private static string createFullnameRandomly(Configure config)
+        {
+            NameDataSet name_config = config.NameDataSet;
+            int lastname_length_inDB = name_config.LastNameSet.Length;
+            int middelname_length_inDB = name_config.MiddleNameSet.Length;
+            int firstname_length_inDB = name_config.FirstNameSet.Length;
+
+            int last_name_index = Generator.getRandomInteger(lastname_length_inDB);
+            int middle_name_index = Generator.getRandomInteger(middelname_length_inDB);
+            int first_name_index = Generator.getRandomInteger(firstname_length_inDB);
+            String fullname = name_config.LastNameSet[last_name_index] + " ";
+            fullname += name_config.MiddleNameSet[middle_name_index] + " ";
+            fullname += name_config.FirstNameSet[first_name_index];
+
+            return fullname;
+        }
+
+        private static string createGenderRandomly()
+        {
+            String gender_gen = "Female";
+            int gender_int = Generator.getRandomInteger(0, 2);
+            if (gender_int == 0)
+            {
+                gender_gen = "Male";
+            }
+            return gender_gen;
+        }
     }
+
 }

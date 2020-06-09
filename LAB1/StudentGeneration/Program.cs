@@ -7,13 +7,27 @@ namespace StudentGeneration
     {
         static void Main(string[] args)
         {
-            List<Student> student_list = new List<Student>();
-            student_list = Student.CreateStudentRandomly(10);
-            foreach(Student student in student_list)
-            {
-                Console.WriteLine("{0}, {1}, {2}, {3}, {4}", student.ID, student.Name, student.Birthday, student.Gender, student.Class);
-            }
+            Student[] student_list;
+            student_list = Student.CreateStudentRandomly(20);
+
+            string input = Console.ReadLine();
             
+            switch (input)
+            {
+                case "s":
+                    foreach (Student student in student_list)
+                    {
+                        Console.WriteLine("{0}, {1}, {2}, {3}",
+                            student.ID, student.Name, student.Gender, student.Birthday.ToString("d"));
+                        //, {2}, {3}, {4}
+                        //, student.Birthday, student.Gender, student.Class
+                    }
+                    break;
+
+            }
+
+            
+
             Console.ReadLine();
         }
     }

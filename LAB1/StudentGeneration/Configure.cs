@@ -7,26 +7,26 @@ namespace StudentGeneration
 {
 	class Configure
 	{
-		public NameDataSet nameConfig { get; set; }
+		public NameDataSet NameDataSet { get; set; }
 	}
 
 	class NameDataSet
 	{
-		public String[] last_name_set { get; set; }
-		public String[] middle_name_set { get; set; }
-		public String[] first_name_set { get; set; }
+		public String[] LastNameSet { get; set; }
+		public String[] MiddleNameSet { get; set; }
+		public String[] FirstNameSet { get; set; }
 	}
 
 	class DateDataSet
 	{
-		public String[] day_set { get; set; }
-		public String[] month_set { get; set; }
-		public String[] year_set { get; set; }
+		public String[] Day_set { get; set; }
+		public String[] Month_set { get; set; }
+		public String[] Year_set { get; set; }
 	}
 
 	class ClassDataSet
     {
-		public String[] class_set { get; set; }
+		public String[] Class_set { get; set; }
     }
 }
 
