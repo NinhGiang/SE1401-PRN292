@@ -29,5 +29,11 @@ namespace LAB1.DataGeneration
             fullname += nameDB.MaleFirstNameSet[firstname_index] + " ";
             return fullname;
         }//generate a random fullname;
+        public static string GetRandomClass()
+        {
+            ClassDataSet classDB = config.ClassDataSet;
+            int class_index = rnd.Next(classDB.ClassSet.Length);
+            return classDB.ClassSet[class_index];
+        }//generate a random Class
     }
 }

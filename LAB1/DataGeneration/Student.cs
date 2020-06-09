@@ -62,29 +62,27 @@ public class Student
             String uuID = Guid.NewGuid().ToString();
             //generate random uuid
             GenderDataSet genderDB = config.GenderDataSet;
-            ClassDataSet classDB = config.ClassDataSet;
 
             int gender_index = rnd.Next(genderDB.GenderSet.Length);
             if (gender_index == 0)
             {
-                String fullname = RandomGenerator.GetRadomFullName();
-                int class_index = rnd.Next(classDB.ClassSet.Length);
+                String fullname = RandomGenerator.GetRadomFullName(); //generate random name
+                String classInfo = RandomGenerator.GetRandomClass();//generate random class
+                String gender = genderDB.GenderSet[gender_index];
 
                 int year = rnd.Next(2003, 2005);
-                DateTime birthdate = RandomGenerator.GetRandomDate(year);
-                result[i] =
-                new Student(uuID, fullname, birthdate, genderDB.GenderSet[gender_index], classDB.ClassSet[class_index]);
+                DateTime birthdate = RandomGenerator.GetRandomDate(year);//generate random DOB
+                result[i] = new Student(uuID, fullname, birthdate, gender, classInfo);
             }//generate a male student
             else if (gender_index == 1)
             {
-                String fullname = RandomGenerator.GetRadomFullName();
-                int class_index = rnd.Next(classDB.ClassSet.Length);
+                String fullname = RandomGenerator.GetRadomFullName();//generate random name
+                String classInfo = RandomGenerator.GetRandomClass();//generate random class
+                String gender = genderDB.GenderSet[gender_index];
 
                 int year = rnd.Next(2003, 2005);
-                DateTime birthdate = RandomGenerator.GetRandomDate(year);
-
-                result[i] =
-                new Student(uuID, fullname, birthdate, genderDB.GenderSet[gender_index], classDB.ClassSet[class_index]);
+                DateTime birthdate = RandomGenerator.GetRandomDate(year); //generate random DOB
+                result[i] = new Student(uuID, fullname, birthdate, gender, classInfo);
             } //create a female student
         }
         return result;
