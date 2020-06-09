@@ -118,8 +118,8 @@ namespace LAB1
         {
             Int32.TryParse(level, out int levelNumber);
             int currentYear = DateTime.Now.Year;
-            int maxYear = currentYear - 15 + (levelNumber - 10);
-            int minYear = currentYear - 19 + (levelNumber - 10);
+            int maxYear = currentYear - 15 - (levelNumber - 10);
+            int minYear = currentYear - 19 - (levelNumber - 10);
 
             int year = rnd.Next(minYear, maxYear);
             return GetRandomDateInYear(year);
