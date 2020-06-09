@@ -8,6 +8,6 @@ namespace LAB1
     {
         public Subject Subject { get; set; }
         public Student Student { get; set; }
-        public int Grade { get; set; }
+        public int Mark { get; set; }
     }
 }
