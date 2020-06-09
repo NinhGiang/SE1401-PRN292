@@ -14,6 +14,7 @@ namespace LAB1
         private List<Room> _room_list;
         private List<ClassInfo> _class_list;
         private List<Subject> _subject_list;
+        private List<Attendance> _attendance_list;
 
         public School() { }
 
@@ -58,6 +59,9 @@ namespace LAB1
 
         public void SetSubjectList(Subject[] subject)
         { _subject_list = new List<Subject>(subject); }
+
+        public void SetAttendanceList(Attendance[] attendance)
+        { _attendance_list = new List<Attendance>(attendance); }
 
         public void SaveStudent(string filename)
         {
@@ -155,6 +159,18 @@ namespace LAB1
                 content += subject.GetLevel() + ", ";
                 content += subject.GetField() + ", ";
                 content += subject.GetName() + "\n";
+            }
+            File.WriteAllText(filename, content);
+        }
+
+        public void SaveAttendance(String filename)
+        {
+            string content = "Teacher, Class, Subject\n";
+            foreach (Attendance attendance in _attendance_list)
+            {
+                content += attendance.GetTeacher() + ", ";
+                content += attendance.GetClassInfo() + ", ";
+                content += attendance.GetSubject() + "\n";
             }
             File.WriteAllText(filename, content);
         }

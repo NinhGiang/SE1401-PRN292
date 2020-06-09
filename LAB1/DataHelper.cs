@@ -25,6 +25,55 @@ namespace LAB1
             return list;
         }
 
+        private static List<string> GetDataByInfo(string path, string info, int column)
+        {
+            List<string> list = new List<string>();
+            StreamReader sr = new StreamReader(path);
+            sr.ReadLine();  //skip first line
+            while (!sr.EndOfStream)
+            {
+                string line = sr.ReadLine();
+                string[] split = line.Split(',');
+                if (split[column].Trim().Equals(info.Trim()))
+                {
+                    list.Add(line);
+                }
+            }
+            sr.Close();
+            return list;
+        }
+
+        private static int GetColumn(string path, string info)
+        {
+            StreamReader sr = new StreamReader(path);
+
+            string line = sr.ReadLine();
+            string[] split = line.Split(',');
+            for (int i = 0; i < split.Length; i++)
+            {
+                if (split[i].Trim().Equals(info.Trim()))
+                {
+                    return i;
+                }
+            }
+            sr.Close();
+            return -1;
+        }
+
+        public static List<string> GetListOfSubjectByField(string field)
+        {
+            string path = @"..\..\..\Subject.csv";
+            int column = GetColumn(path, "Field");
+            return GetDataByInfo(path, field, column);
+        }
+
+        public static List<string> GetListOfClassByLevel(string level)
+        {
+            string path = @"..\..\..\Class.csv";
+            int column = GetColumn(path, "Level");
+            return GetDataByInfo(path, level, column);
+        }
+
         public static List<string> GetListOfClass()
         {
             return GetCsvData(@"..\..\..\Class.csv");
@@ -53,6 +102,11 @@ namespace LAB1
         public static List<string> GetListOfTeacher()
         {
             return GetCsvData(@"..\..\..\Teacher.csv");
+        }
+
+        public static int GetRandomInt(int min, int max)
+        {
+            return rnd.Next(min, max);
         }
 
         public static DateTime GetRandomDateInYear(int year)
@@ -85,7 +139,7 @@ namespace LAB1
             }
 
             int middleNameIndex = rnd.Next(_.middle_name_set.Length);
-            
+
             fullName = _.last_name_set[lastNameIndex] + " ";
             fullName += _.middle_name_set[middleNameIndex] + " ";
             fullName += firstname;

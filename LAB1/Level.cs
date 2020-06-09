@@ -33,7 +33,6 @@ namespace LAB1
 
         public static Level[] Create()
         {
-            
             string content = File.ReadAllText(@"..\..\..\Configure.json");
             Configure config = JsonSerializer.Deserialize<Configure>(content);
             LevelNameConfig _ = config.LevelNameConfig;

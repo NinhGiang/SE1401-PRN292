@@ -47,6 +47,11 @@ namespace LAB1
             school.SaveTeacher(@"..\..\..\Teacher.csv");
             Console.WriteLine("Teacher");
 
+            Attendance[] attendance_list = Attendance.Create();
+            school.SetAttendanceList(attendance_list);
+            school.SaveTeacher(@"..\..\..\Attendance.csv");
+            Console.WriteLine("Attendance");
+
             Console.ReadLine();
         }
     }
