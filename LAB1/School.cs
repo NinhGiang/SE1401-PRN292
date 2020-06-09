@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace StudentGeneration
+namespace LAB1
 {
     class School
     {

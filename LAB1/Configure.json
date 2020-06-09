@@ -1,0 +1,53 @@
+{
+  "NameConfig": {
+    "LastNameSet": [
+      "Nguyễn",
+      "Lý",
+      "Lê",
+      "Trần",
+      "Hồ",
+      "Võ",
+      "Lê",
+      "Lương"
+    ],
+    "MiddleNameSet": [
+      "Văn",
+      "Thị",
+      "Hoàng Bảo",
+      "Anh",
+      "Minh",
+      "Hoàng",
+      "Trung"
+    ],
+    "MaleFirstNameSet": [
+      "Tân",
+      "Thắng",
+      "Bách",
+      "Thành",
+      "Long",
+      "Khôi"
+    ],
+    "FemaleFirstNameSet": [
+      "Khanh",
+      "Thy",
+      "Vy",
+      "Linh",
+      "Kiều"
+    ]
+  },
+
+  "LevelNameConfig": {
+    "LevelSet": [
+      "10",
+      "11",
+      "12"
+    ]
+  },
+
+  "GenderConfig": {
+    "GenderSet": [
+      "Male",
+      "Female"
+    ]
+  }
+}
