@@ -50,8 +50,6 @@ namespace LAB1
         public static Teacher[] Create(int numberOfTeacher)
         {
             Teacher[] result = new Teacher[numberOfTeacher];
-            string content = File.ReadAllText(@"..\..\..\Configure.json");
-            Configure config = JsonSerializer.Deserialize<Configure>(content);
 
             List<string> listOfField = DataHelper.GetListOfField();
             Random rnd = new Random();
@@ -65,25 +63,7 @@ namespace LAB1
                 bool gender = rnd.Next(2) == 1;
 
                 //name
-                NameConfig _ = config.NameConfig;
-                int lastNameIndex = rnd.Next(_.last_name_set.Length);
-                int firstNameIndex;
-                string firstname;
-                if (gender == true)
-                {
-                    firstNameIndex = rnd.Next(_.male_first_name_set.Length);
-                    firstname = _.male_first_name_set[firstNameIndex];
-                }
-                else
-                {
-                    firstNameIndex = rnd.Next(_.fem_first_name_set.Length);
-                    firstname = _.fem_first_name_set[firstNameIndex];
-                }
-
-                int middleNameIndex = rnd.Next(_.middle_name_set.Length);
-                string fullName = _.last_name_set[lastNameIndex] + " ";
-                fullName += _.middle_name_set[middleNameIndex] + " ";
-                fullName += firstname;
+                string fullName = DataHelper.GetRandomNameByGender(gender);
 
                 //Field
                 int index = rnd.Next(listOfField.Count);

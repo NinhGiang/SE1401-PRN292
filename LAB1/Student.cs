@@ -57,8 +57,6 @@ namespace LAB1
         public static Student[] Create(uint numberOfStudent)
         {
             Student[] result = new Student[numberOfStudent];
-            string content = File.ReadAllText(@"..\..\..\Configure.json");
-            Configure config = JsonSerializer.Deserialize<Configure>(content);
             List<string> listOfClasses = DataHelper.GetListOfClass();
 
             Random rnd = new Random();
@@ -72,25 +70,7 @@ namespace LAB1
                 bool gender = rnd.Next(2) == 1;
 
                 //name
-                NameConfig _ = config.NameConfig;
-                int lastNameIndex = rnd.Next(_.last_name_set.Length);
-                int firstNameIndex;
-                string firstname;
-                if (gender == true)
-                {
-                    firstNameIndex = rnd.Next(_.male_first_name_set.Length);
-                    firstname = _.male_first_name_set[firstNameIndex];
-                }
-                else
-                {
-                    firstNameIndex = rnd.Next(_.fem_first_name_set.Length);
-                    firstname = _.fem_first_name_set[firstNameIndex];
-                }
-
-                int middleNameIndex = rnd.Next(_.middle_name_set.Length);
-                string fullName = _.last_name_set[lastNameIndex].Trim() + " ";
-                fullName += _.middle_name_set[middleNameIndex].Trim() + " ";
-                fullName += firstname.Trim();
+                string fullName = DataHelper.GetRandomNameByGender(gender);
 
                 //birthdate
                 int year = rnd.Next(2003, 2005);
