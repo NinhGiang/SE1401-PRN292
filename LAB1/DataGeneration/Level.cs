@@ -25,12 +25,12 @@ namespace LAB1.DataGeneration
         }
         public static Level[] createLevel()
         {
-            int level_size = RandomGenerator.GetLevelLength();
+            int level_size = DataGenerator.GetLevelLength();
             Level[] result = new Level[level_size];
             for (int i = 0; i < level_size; i++)
             {
                 string uuid = Guid.NewGuid().ToString();
-                string name = RandomGenerator.GetLevelData(i);
+                string name = DataGenerator.GetLevelData(i);
                 result[i] = new Level(uuid, name);
             }
             return result;

@@ -2,6 +2,7 @@
 using System.Text.Json;
 using System.IO;
 using LAB1.DataGeneration;
+using System.Collections.Generic;
 
 public class Student
 {
@@ -64,7 +65,8 @@ public class Student
             if (gender.Equals("Male"))
             {
                 String fullname = RandomGenerator.GetRadomFullName(); //generate random name
-                String classInfo = RandomGenerator.GetRandomClass();//generate random class
+                string classInfo = DataGenerator.getClass(DataGenerator.getLevel());
+                //String classInfo = RandomGenerator.GetRandomClass();//generate random class
                 
                 int year = rnd.Next(2003, 2005);
                 DateTime birthdate = RandomGenerator.GetRandomDate(year);//generate random DOB
@@ -73,7 +75,8 @@ public class Student
             else if (gender.Equals("Female"))
             {
                 String fullname = RandomGenerator.GetRadomFullName();//generate random name
-                String classInfo = RandomGenerator.GetRandomClass();//generate random class
+                string classInfo = DataGenerator.getClass(DataGenerator.getLevel());
+                //String classInfo = RandomGenerator.GetRandomClass();//generate random class
                 
                 int year = rnd.Next(2003, 2005);
                 DateTime birthdate = RandomGenerator.GetRandomDate(year); //generate random DOB
