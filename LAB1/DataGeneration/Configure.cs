@@ -4,7 +4,6 @@
 	public NameDataSet NameDataSet {get; set;}
     public GenderDataSet GenderDataSet { get; set; }
     public ClassDataSet ClassDataSet { get; set; }
-    public BirthdayDataSet BirthdayDataSet { get; set; }
 }
 class NameDataSet
 {
@@ -22,10 +21,4 @@ class GenderDataSet
 class ClassDataSet
 {
     public string[] ClassSet { get; set; }
-}
-class BirthdayDataSet
-{
-    public string[] DaySet { get; set; }
-    public string[] MonthSet { get; set; }
-    public string[] YearSet { get; set; }
 }
