@@ -1,0 +1,66 @@
+﻿{
+    "NameConfig": {
+        "last_name_set": [
+            "Nguyễn",
+            "Lý",
+            "Lê",
+            "Trần",
+            "Hồ",
+            "Võ",
+            "Quách",
+            "Dư",
+            "Thái"
+        ], //end last_name_set
+        "male_middle_name_set": [
+            "Văn",
+            "Hoàng",
+            "Bảo",
+            "Anh",
+            "Minh"
+        ], //end male_middle_name_set
+        "male_first_name_set": [
+            "Đạt",
+            "Long",
+            "Thành",
+            "Tuấn",
+            "Hưng",
+            "Hiếu"
+        ], //end male_first_name_set
+        "female_middle_name_set": [
+            "Thị",
+            "Thanh",
+            "Hoàng",
+            "Ngọc",
+            "Thúy"
+        ], //end female_middle_name_set
+        "female_first_name_set": [
+            "Vy",
+            "Châu",
+            "Giang",
+            "Mai",
+            "Hà",
+            "Lan"
+        ] //end female_first_name_set
+    }, //end NameConfig
+    "SubjectConfig": {
+        "subject_set": [
+            "Toán",
+            "Lý",
+            "Hóa",
+            "Sinh",
+            "Văn",
+            "Sử",
+            "Địa",
+            "GDCD",
+            "Tin",
+            "Anh"
+        ] //end subject_set
+    }, //end SubjectConfig
+    "LevelConfig": {
+        "level_set": [
+            "10",
+            "11",
+            "12"
+        ] //end level_set
+    } //end LevelConfig
+}
