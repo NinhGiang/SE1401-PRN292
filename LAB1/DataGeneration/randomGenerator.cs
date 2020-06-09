@@ -13,7 +13,7 @@ namespace LAB1.DataGeneration
         public static DateTime GetRandomDate(int year)
         {
             DateTime start = new DateTime(year, 1, 1);
-            DateTime end = new DateTime(year, 12, 31);
+            DateTime end = new DateTime(year +1, 12, 31);
             int range = (end - start).Days;
             return start.AddDays(rnd.Next(range));
         }

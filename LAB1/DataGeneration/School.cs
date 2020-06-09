@@ -29,7 +29,7 @@ class School
         {
             content += student.Uuid + ", ";
             content += student.Name + ", ";
-            content += student.Birthday.ToString("dd/mm/yyyy") + ", ";
+            content += student.Birthday.ToString("d") + ", ";
             content += student.Gender + ", ";
             content += student.Class + "\n";
         }
