@@ -6,16 +6,18 @@ using System.IO;
 class School
 {
     private List<Student> _student_list;
-    private List<Room> _room_list; 
+    private List<Room> _room_list;
+    private List<Level> _level_list;
     public School()
     {
         _student_list = new List<Student>();
         _room_list = new List<Room>();
     }
-    public School(Student[] student_list, Room[] room_list)
+    public School(Student[] student_list, Room[] room_list, Level[] level_list)
     {
         _student_list = new List<Student>(student_list);
         _room_list = new List<Room>(room_list);
+        _level_list = new List<Level>(level_list);
     }
     public List<Student> GetStudents()
     {
@@ -54,7 +56,17 @@ class School
         {
             content += room.Uuid + ", ";
             content += room.Class_info + ", ";
-            content += room.No +"\n";     
+            content += room.No + "\n";
+        }
+        File.WriteAllText(filename, content);
+    }
+    public void saveLevel(string filename)
+    {
+        string content = "ID, Name\n";
+        foreach (Level level in _level_list)
+        {
+            content += level.Uuid + ", ";
+            content += level.Name + "\n";
         }
         File.WriteAllText(filename, content);
     }

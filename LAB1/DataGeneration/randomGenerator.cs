@@ -42,7 +42,13 @@ namespace LAB1.DataGeneration
             int gender_index = rnd.Next(genderDB.GenderSet.Length);
             return genderDB.GenderSet[gender_index];
         }//generate random Gender
-
-        
+        public static int GetLevelLength()
+        {
+            return classDB.ClassSet.Length;
+        }
+        public static string GetLevelData(int index)
+        {
+            return classDB.ClassSet[index];
+        }
     }
 }

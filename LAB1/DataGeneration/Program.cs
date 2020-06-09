@@ -21,10 +21,12 @@ namespace LAB1
 
             Student[] _student_list = Student.createStudent(initial);
             Room[] _room_list = Room.createRoom(initial/40);
-            School ABC = new School(_student_list, _room_list);
+            Level[] _level_list = Level.createLevel();
+            School ABC = new School(_student_list, _room_list, _level_list);
 
             ABC.saveStudent(@"..\..\..\DataGeneration\FPT大学.csv");
             ABC.saveRoom(@"..\..\..\DataGeneration\Room.csv");
+            ABC.saveLevel(@"..\..\..\DataGeneration\Level.csv");
             Console.WriteLine("Succeed!!!!!!!!");
             Console.ReadLine();
 
