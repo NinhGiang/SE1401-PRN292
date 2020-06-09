@@ -57,9 +57,9 @@ namespace LAB1
         public static Student[] Create(uint numberOfStudent)
         {
             Student[] result = new Student[numberOfStudent];
-            List<string> listOfClasses = DataHelper.GetListOfClass();
 
             Random rnd = new Random();
+            int index;
 
             for (uint i = 0; i < numberOfStudent; i++)
             {
@@ -73,22 +73,24 @@ namespace LAB1
                 string fullName = DataHelper.GetRandomNameByGender(gender);
 
                 //grade
-                string level = DataHelper.GetRandomLevel();
+                List<string> levelList = DataHelper.GetListOfLevel();
+                index = rnd.Next(levelList.Count);
+                string[] levelInfo = levelList[index].Split(',');
+                string level = levelInfo[1].Trim();
+                string levelId = levelInfo[0].Trim();
 
                 //birthdate
                 DateTime birthdate = DataHelper.GetRandomBirthdayByLevel(level);
 
                 //Class
-                int index = rnd.Next(listOfClasses.Count);
+                List<string> listOfClasses = DataHelper.GetListOfClassByLevel(levelId);
+                index = rnd.Next(listOfClasses.Count);
                 string[] classes = listOfClasses[index].Split(',');
                 string classInfo = classes[0].Trim();
 
-                int currentYear = DateTime.Now.Year;
-                int age = currentYear - birthdate.Year;
-
                 result[i] = new Student();
                 result[i].SetId(uuid);
-                result[i].SetName(fullName + "; grade (" + level.Trim() + "); age (" + age +")");
+                result[i].SetName(fullName);
                 result[i].SetGender(gender);
                 result[i].SetBirthdate(birthdate);
                 result[i].SetClassInfo(classInfo + " (" + classes[3].Trim() +")");

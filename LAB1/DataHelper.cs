@@ -62,18 +62,18 @@ namespace LAB1
             return -1;
         }
 
-        public static List<string> GetListOfSubjectByField(string field)
+        public static List<string> GetListOfSubjectByField(string fieldId)
         {
             string path = @"..\..\..\Subject.csv";
             int column = GetColumn(path, "Field");
-            return GetDataByInfo(path, field, column);
+            return GetDataByInfo(path, fieldId, column);
         }
 
-        public static List<string> GetListOfClassByLevel(string level)
+        public static List<string> GetListOfClassByLevel(string levelId)
         {
             string path = @"..\..\..\Class.csv";
             int column = GetColumn(path, "Level");
-            return GetDataByInfo(path, level, column);
+            return GetDataByInfo(path, levelId, column);
         }
 
         public static List<string> GetListOfClass()
@@ -118,8 +118,10 @@ namespace LAB1
         {
             Int32.TryParse(level, out int levelNumber);
             int currentYear = DateTime.Now.Year;
-            int maxYear = currentYear - 15 - (levelNumber - 10);
-            int minYear = currentYear - 19 - (levelNumber - 10);
+            int minAge = 15 + (levelNumber - 10);
+            int maxAge = 19 + (levelNumber - 10);
+            int maxYear = currentYear - minAge;
+            int minYear = currentYear - maxAge;
 
             int year = rnd.Next(minYear, maxYear);
             return GetRandomDateInYear(year);
@@ -151,17 +153,6 @@ namespace LAB1
             fullName += firstname;
 
             return fullName.Trim();
-        }
-
-        public static string GetRandomLevel()
-        {
-            string level;
-
-            LevelNameConfig _ = config.LevelNameConfig;
-            int index = rnd.Next(_.level_name_set.Length);
-            level = _.level_name_set[index].ToString();
-
-            return level.Trim();
         }
     }
 }
