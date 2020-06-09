@@ -40,8 +40,19 @@ namespace LAB1
         public void SetNo(int value)
         { _no = value; }
 
-        
+        public static Room[] Create(int number_room)
+        {
+            List<Room> result = new List<Room>();
+            Random rd = new Random();
+            for (uint i = 0; i < number_room; i++)
+            {
+                int no = (int)i + 1;
+                string id = Guid.NewGuid().ToString(P); // Generate random UUID V4 (32 bits) start with '{' and end with '}'
+                string classInfo = "N/A";
+                result.Add(new Room(id, classInfo, no));
+            }
+            return result.ToArray();
+        }
 
-        
     }
 }
