@@ -1,0 +1,80 @@
+﻿{
+    "Student_Name_Set": {
+        "FamilyNameSet": [
+            "Lê",
+            "Nguyễn",
+            "Trần",
+            "Hồ",
+            "Mạc",
+            "Lý",
+            "Triệu",
+            "Trương",
+            "Hồ"
+        ],
+        "FemaleMiddleNameSet": [
+            "Thị",
+            "Thảo",
+            "Mai",
+            "Hiền",
+            "Thanh",
+            "Anh"
+        ],
+        "MaleMiddleNameSet": [
+            "Văn",
+            "Võ",
+            "Thanh",
+            "Trọng",
+            "Anh"
+        ],
+        "FemaleNameSet": [
+            "Thảo",
+            "Ngân",
+            "Thuý",
+            "Vân",
+            "Kiều",
+            "Thanh",
+            "Thư",
+            "Tâm",
+            "Phương",
+            "Giang",
+            "Tiên",
+            "Ái",
+            "Anh",
+            "Ánh",
+            "Bình",
+            "Dao",
+            "Vy",
+            "Minh",
+            "Nguyên",
+            "Thy",
+            "Ngân",
+            "Quyên",
+            "Uyên",
+            "Dung",
+            "Hương"
+        ],
+        "MaleNameSet": [
+            "Anh",
+            "Bình",
+            "Bảo",
+            "Công",
+            "Danh",
+            "Dự",
+            "Hùng",
+            "Thành",
+            "Long",
+            "Hưng",
+            "Thịnh",
+            "Nhân",
+            "Tân",
+            "Nguyên",
+            "Ân",
+            "Khôi",
+            "Bách",
+            "Kiên",
+            "Thắng",
+            "Đức"
+        ]
+    }
+
+}
