@@ -90,7 +90,7 @@ namespace LAB1
 
                 result[i] = new Student();
                 result[i].SetId(uuid);
-                result[i].SetName(fullName);
+                result[i].SetName(fullName + " (" + level +")");
                 result[i].SetGender(gender);
                 result[i].SetBirthdate(birthdate);
                 result[i].SetClassInfo(classInfo + " (" + classes[3].Trim() +")");
