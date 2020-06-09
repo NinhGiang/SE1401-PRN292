@@ -88,7 +88,7 @@ namespace LAB1
                 result[i].SetName(fullName);
                 result[i].SetGender(gender);
                 result[i].SetBirthdate(birthdate);
-                result[i].SetClassInfo(classInfo + " (" + classes[2].Trim() +")");
+                result[i].SetClassInfo(classInfo + " (" + classes[3].Trim() +")");
             }
             return result;
         }
