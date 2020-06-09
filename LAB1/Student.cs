@@ -5,7 +5,7 @@ using System.IO;
 
 namespace LAB1
 {
-    class Student
+    public class Student
     {
         private string id;
         private string name;
