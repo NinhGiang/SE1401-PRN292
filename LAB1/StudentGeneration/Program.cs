@@ -17,8 +17,10 @@ namespace StudentGeneration
             input = Console.ReadLine();
             string school_name = SupportTools.getSchoolName(input);
             int number_of_students = SupportTools.getStudentAmount(input);
+            int number_of_rooms = SupportTools.getRoomAmount(input);
 
-            Console.WriteLine("{0}, {1}", school_name, number_of_students);
+            Console.WriteLine("{0}, {1}, {2}", 
+                school_name, number_of_students, number_of_rooms);
 
             /*while (true)
             {

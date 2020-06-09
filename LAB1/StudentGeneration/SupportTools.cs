@@ -32,7 +32,7 @@ namespace LAB1.StudentGeneration
                 {
                     int number_of_char = index_of_r - index_of_student_amount;
                     number_of_students = IntegerType.FromString(
-                        input.Substring(index_of_student_amount, index_of_r));
+                        input.Substring(index_of_student_amount, number_of_char));
                 } 
                 else
                 {
@@ -43,8 +43,25 @@ namespace LAB1.StudentGeneration
                 return number_of_students;
             }
             return -1;
-        }
+        }  
 
-        
+        public static int getRoomAmount(string input)
+        {
+            int index_of_r = input.IndexOf(" -r ");
+            int number_of_rooms;
+
+            if (index_of_r > 0)
+            {
+                int index_of_room_amount = index_of_r + 4;
+                int number_of_chars = input.Length - index_of_room_amount;
+                if (number_of_chars > 0)
+                {
+                    number_of_rooms = IntegerType.FromString(
+                                        input.Substring(index_of_room_amount, number_of_chars));
+                    return number_of_rooms;
+                }
+            }
+            return -1;
+        }
     }
 }
