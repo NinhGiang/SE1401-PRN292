@@ -83,9 +83,12 @@ namespace LAB1
                 string[] classes = listOfClasses[index].Split(',');
                 string classInfo = classes[0].Trim();
 
+                int currentYear = DateTime.Now.Year;
+                int age = currentYear - birthdate.Year;
+
                 result[i] = new Student();
                 result[i].SetId(uuid);
-                result[i].SetName(fullName + " grade (" + level.Trim() + ")");
+                result[i].SetName(fullName + "; grade (" + level.Trim() + "); age (" + age +")");
                 result[i].SetGender(gender);
                 result[i].SetBirthdate(birthdate);
                 result[i].SetClassInfo(classInfo + " (" + classes[3].Trim() +")");
