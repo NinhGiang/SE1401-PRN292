@@ -74,34 +74,39 @@ namespace LAB1
             gender = newGender;
             classUUID = newClassUUID;
         }
+
         /// <summary>
         /// Generate random birthday for a student.
         /// </summary>
         /// <returns>
         /// A random date in range depends on student's level.
         /// </returns>
+        /// <param name="start">A Datatime date.</param>
+        /// <param name="end">A Datetime date.</param>
         private static DateTime GenerateRandomBirthday(DateTime start, DateTime end)
         {
             Random rnd = new Random();
             int range = (end - start).Days;
             return start.AddDays(rnd.Next(range));
         }
+
         /// <summary>
-        /// Generate random number of students.
+        /// Generate random information of a student.
         /// </summary>
-        /// <param name="noOfStudents">A positive integer number.</param>
-        /// <returns>
-        /// A list of Student objects
-        /// </returns>
         /// <exception cref="System.NullReferenceException">
-        /// Thrown when the object in Json file does not exist or has no data.
+        /// Thrown when an object does not exist but it is used.
         /// </exception>
-        public static void Create(int noOfStudents, Class classObject)
+        /// <exception cref="System.IO.FileNotFoundException">
+        /// Thrown when the file is not found (wrong path, wrong filename or file is not existed).
+        /// </exception>
+        /// <exception cref="System.Text.Json.JsonException">
+        /// Thrown when cannot parse a value in Json file into an instance.
+        /// </exception>
+        /// <param name="classObject">A Class object.</param>
+        public static void Create(Class classObject)
         {
             try
             {
-                //if (noOfStudents >= 500 && noOfStudents <= 3000)
-                //{
                 if (studentList == null)
                 {
                     studentList = new List<Student>();
@@ -147,9 +152,7 @@ namespace LAB1
                             fullName += randomName.FemaleMiddleNameSet[femaleMiddleNameIndex] + " ";
                         }
                     }
-                    fullName += randomName.FemaleFirstNameSet[femaleFirstNameIndex];
-                    Student newStudent = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, classObject.UUID);
-                    studentList.Add(newStudent);
+                    fullName += randomName.FemaleFirstNameSet[femaleFirstNameIndex];                   
                 } //end if gender is false
                 else
                 {
@@ -164,23 +167,24 @@ namespace LAB1
                         }
                     }
                     fullName += randomName.MaleFirstNameSet[maleFirstNameIndex];
-                    Student newStudent = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, classObject.UUID);
-                    studentList.Add(newStudent);
                 } //end if gender is true
-                //} //end for each index in result array
-
-                //} //end if noOfStudents in range 500-3000
-                /*else
-                {
-                    return null;
-                } //end if noOfStudents is out-of-range*/
-                //}
+                Student newStudent = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, classObject.UUID);
+                studentList.Add(newStudent);
             }
             catch (NullReferenceException ex)
             {
                 Console.WriteLine("Student _ NullReference: " + ex.Message);
             }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("Student _ FileNotFound: " + ex.Message);
+            }
+            catch (JsonException ex)
+            {
+                Console.WriteLine("Student _ Json: " + ex.Message);
+            }
         }
+
         /// <summary>
         /// Used to write data into file.
         /// </summary>

@@ -67,6 +67,7 @@ namespace LAB1
             uint noOfClassPerLevel = (uint) Math.Ceiling((double) noOfClass / 3);
             uint roomNo = 1;
             int count = 0; //used when create class (add RoomUUID to Class object)
+            uint noOfTeacher = (uint)Math.Ceiling((double) noOfClass / rnd.Next(4, 11));
             //Test Create method in Level class
             Level.Create();
             //Test Create method in Class class
@@ -87,11 +88,15 @@ namespace LAB1
             {               
                 for (int i = 0; i < noOfStudentInClass; i++)
                 {
-                    Student.Create(1000, classObject);
+                    Student.Create(classObject);
                 }
             }
             //Test Create method in Field class
             Field.Create();
+            for (int i = 0; i < noOfTeacher; i++)
+            {
+                Teacher.Create(Field.FieldList[rnd.Next(10)]);
+            }
 
             Level.SaveLevels(@"..\..\..\Levels.csv");
             Class.SaveClasses(@"..\..\..\Classes.csv");
