@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Text.Json;
 
 namespace LAB1
@@ -10,7 +9,7 @@ namespace LAB1
     /// The main Level class.
     /// Contains all methods for generating a level information.
     /// </summary>
-    class Level
+    public class Level
     {
         private string uuid;
         private string name;

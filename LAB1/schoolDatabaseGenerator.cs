@@ -66,6 +66,7 @@ namespace LAB1
             uint noOfClass = (uint) Math.Ceiling((double) 1000 / noOfStudentInClass);
             uint noOfClassPerLevel = (uint) Math.Ceiling((double) noOfClass / 3);
             uint roomNo = 1;
+            int count = 0; //used when create class (add RoomUUID to Class object)
             //Test Create method in Level class
             Level.Create();
             //Test Create method in Class class
@@ -75,11 +76,9 @@ namespace LAB1
                 {
                     Class.Create(level, "", i);
                     Room.Create(Class.ClassList[i], roomNo);
+                    Class.ClassList[count].RoomUUID = Room.RoomList[count].UUID;
+                    count++;
                     roomNo++;
-                }
-                for (int i = 0; i < noOfClassPerLevel; i++)
-                {
-                    Class.ClassList[i].RoomUUID = Room.RoomList[i].UUID;
                 }
             }
           

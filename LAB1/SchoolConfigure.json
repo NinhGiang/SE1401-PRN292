@@ -27,7 +27,10 @@
             "Bá",
             "Đức",
             "Dương",
-            "Thế"
+            "Thế",
+            "Trường",
+            "Xuân",
+            "Trọng"
         ],
         "MaleFirstNameSet": [
             "Đạt",
@@ -56,7 +59,13 @@
             "Đặng",
             "Diệu",
             "Kim",
-            "Nhật"
+            "Nhật",
+            "Tiểu",
+            "Tử",
+            "Bảo",
+            "Xuân",
+            "Như",
+            "Quỳnh"
         ],
         "FemaleFirstNameSet": [
             "Vy",
@@ -72,11 +81,12 @@
             "Yến",
             "Hoa",
             "Vân",
-            "Thảo"
+            "Thảo",
+            "Ý"
         ]
     },
-    "SubjectConfig": {
-        "SubjectSet": [
+    "FieldConfig": {
+        "FieldSet": [
             "Toán",
             "Lý",
             "Hóa",

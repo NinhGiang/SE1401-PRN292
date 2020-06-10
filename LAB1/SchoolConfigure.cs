@@ -5,7 +5,7 @@ namespace LAB1
     /// The main SchoolConfigure class.
     /// Contains all methods for getting/setting information related to Json's objects.
     /// </summary>
-    class SchoolConfigure
+    public class SchoolConfigure
     {
         /// <value>Gets the value of NameConfig.</value>
         /// <value>Sets the value of NameConfig.</value>
@@ -16,12 +16,15 @@ namespace LAB1
         /// <value>Gets the value of ClassConfig.</value>
         /// <value>Sets the value of ClassConfig.</value>
         public ClassConfig ClassConfig { get; set; }
+        /// <value>Gets the value of FieldConfig.</value>
+        /// <value>Sets the value of FieldConfig.</value>
+        public FieldConfig FieldConfig { get; set; }
     }
     /// <summary>
     /// The main NameConfig class.
     /// Contains all methods for getting/setting information related to people's name.
     /// </summary>
-    class NameConfig
+    public class NameConfig
     {
         /// <value>Gets the value of LastNameSet.</value>
         /// <value>Sets the value of LastNameSet.</value>
@@ -39,16 +42,34 @@ namespace LAB1
         /// <value>Sets the value of FemaleFirstNameSet.</value>
         public string[] FemaleFirstNameSet { get; set; }
     }
-    class LevelConfig
+    /// <summary>
+    /// The main LevelConfig class.
+    /// Contains all methods for getting/setting information related to level.
+    /// </summary>
+    public class LevelConfig
     {
         /// <value>Gets the value of LevelNameSet.</value>
         /// <value>Sets the value of LevelNameSet.</value>
         public string[] LevelNameSet { get; set; }
     }
-    class ClassConfig
+    /// <summary>
+    /// The main ClassConfig class.
+    /// Contains all methods for getting/setting information related to class.
+    /// </summary>
+    public class ClassConfig
     {
         /// <value>Gets the value of ClassNameSet.</value>
         /// <value>Sets the value of ClassNameSet.</value>
         public string[] ClassNameSet { get; set; }
+    }
+    /// <summary>
+    /// The main FieldConfig class.
+    /// Contains all methods for getting/setting information related to field.
+    /// </summary>
+    public class FieldConfig
+    {
+        /// <value>Gets the value of FieldSet.</value>
+        /// <value>Sets the value of FieldSet.</value>
+        public string[] FieldSet { get; set; }
     }
 }

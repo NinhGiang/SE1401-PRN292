@@ -9,7 +9,7 @@ namespace LAB1
     /// The main Student class.
     /// Contains all methods for generating a student information.
     /// </summary>
-    class Student
+    public class Student
     {
         private string uuid;
         private string name;

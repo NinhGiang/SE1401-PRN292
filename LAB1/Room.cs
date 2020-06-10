@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace LAB1
 {
@@ -9,7 +8,7 @@ namespace LAB1
     /// The main Room class.
     /// Contains all methods for generating a room information.
     /// </summary>
-    class Room
+    public class Room
     {
         private string uuid;
         private string classUUID;
