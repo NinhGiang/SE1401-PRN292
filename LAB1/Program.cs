@@ -7,8 +7,8 @@ namespace LAB1
         static void Main(string[] args)
         {
             Student[] student_list = Student.Create(20);
-            School FPT = new School(student_list);
-            FPT.save(@"..\..\..\FPT.csv");
+            School ABC = new School(student_list);
+            ABC.save(@"..\..\..\ABC.csv");
             Console.ReadLine();
 
         }
