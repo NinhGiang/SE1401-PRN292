@@ -59,7 +59,7 @@ namespace LAB1
             {
                 //student id
                 string[] info = student.Split(',');
-                string id = info[0].Trim();
+                string id = info[0].Trim() + " (" + info[2].Trim() + ")";
 
                 //subjects
                 List<string> subjects = GetSubjectsByStudent(student);
@@ -67,7 +67,7 @@ namespace LAB1
                 {
                     //subject id
                     string[] sInfo = subject.Split(',');
-                    string sId = sInfo[0].Trim();
+                    string sId = sInfo[2].Trim();
 
                     //random grade
                     int grade = rnd.Next(0, 100);
