@@ -1,17 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Text.Json;
 
 namespace LAB1
 {
     class Utils
     {
-        private static Configure configure = Json
+        private static String content = File.ReadAllText(@"..\..\..\Configuration.json");
+        private static Configuration config = JsonSerializer.Deserialize<Configuration>(content);
         private static Random rand = new Random();
-        public static DateTime GetRandomDateTime()
+        public static String getRandomFullName(Boolean gender)
         {
-            
-            return;
+            String name;
+            int lastNameIndex = rand.Next(config.NameConfig.last_name_set.Length);
+            int middleNameIndex = rand.Next(config.NameConfig.middle_name_set.Length);
+
+            int firstNameIndex = rand.Next(config.NameConfig.first_male_name_set.Length);
+            if (gender)
+            {
+                name = config.NameConfig.last_name_set[lastNameIndex] + " "
+                    + config.NameConfig.middle_name_set[middleNameIndex] + " "
+                    + config.NameConfig.first_male_name_set[firstNameIndex];
+            }
+            else
+            {
+                firstNameIndex = rand.Next(config.NameConfig.first_female_name_set.Length);
+                name = config.NameConfig.last_name_set[lastNameIndex] + " "
+                    + config.NameConfig.middle_name_set[middleNameIndex] + " "
+                    + config.NameConfig.first_female_name_set[firstNameIndex];
+            }
+            return name;
         }
     }
 }
