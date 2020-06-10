@@ -9,6 +9,9 @@ namespace Lab_1
     class Student
     {
         protected string _id;
+
+
+
         protected string _fullname;
         protected bool _gender;
         protected DateTime _birthday;
