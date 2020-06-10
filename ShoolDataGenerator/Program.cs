@@ -35,7 +35,7 @@ namespace ShoolDataGenerator
             /*string[] listClassName = Class.GenerateClassName(12, 20);
             Console.WriteLine(listClassName);*/
 
-            int[] listLevel = Level.GenerateLevelName(30);
+            /*int[] listLevel = Level.GenerateLevelName(30);
             foreach (var level in listLevel)
             {
                 if (level == 10)
@@ -48,6 +48,13 @@ namespace ShoolDataGenerator
                 else{
                     Console.WriteLine("12");
                 }
+            }*/
+
+            
+            string[] listFeildName = Field.GenerateFieldName(9, 50);
+            foreach (var field in listFeildName)
+            {
+                Console.WriteLine(field);
             }
         }
 
