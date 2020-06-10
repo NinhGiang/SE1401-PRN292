@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LAB1
+namespace SchoolGenerating
 {
     class StudentConfigure
     {
-        public NameConfig NamCongfig { get; set; }
+        public NameConfig NameCongfig { get; set; }
     }
     class NameConfig
     {

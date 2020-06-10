@@ -6,7 +6,13 @@ namespace SchoolGenerating
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Student[] student_list = Student.Create(100);
+            foreach (var Student in student_list)
+            {
+                Student.print();
+            }
+            Console.ReadLine();
+            
         }
     }
 }

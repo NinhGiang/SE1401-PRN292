@@ -10,6 +10,7 @@ namespace SchoolGeneration
     {
         static void Main(string[] args)
         {
+           
         }
     }
 }
