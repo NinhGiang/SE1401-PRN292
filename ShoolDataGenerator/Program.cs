@@ -13,12 +13,14 @@ namespace ShoolDataGenerator
              {
                  Console.WriteLine(name);
              }*/
+
             /*DateTime[] listBirthDay = Student.GenerateRandomBirthday(5000, 11);
             foreach (var date in listBirthDay)
             {
                     Console.WriteLine(date.ToString("dd/MM/yyyy"));
             }*/
-            bool[] listGender = Student.GenerateGender(10);
+
+            /*bool[] listGender = Student.GenerateGender(10);
             foreach (var male in listGender)
             {
                 if (male)
@@ -29,8 +31,12 @@ namespace ShoolDataGenerator
                 {
                     Console.WriteLine("female");
                 }
-            }
+            }*/
+            string[] listClassName = Class.GenerateClassName(12, 20);
+            Console.WriteLine(listClassName);
 
         }
+
+
     }
 }
