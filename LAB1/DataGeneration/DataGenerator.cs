@@ -30,11 +30,21 @@ namespace LAB1.DataGeneration
         }
         public static string getClassByLevelID(string levelId)
         {
-            List<string> listOfClasses = ListStorage.GetListOfClassByLevel(levelId);
-            int index = rnd.Next(listOfClasses.Count);
-            string[] classes = listOfClasses[index].Split(',');
-            string classInfo = classes[0].Trim();
-            return classInfo;
+            string[] classes = null;
+           // try
+          //  {
+
+
+                List<string> listOfClasses = ListStorage.GetListOfClassByLevel(levelId);
+                int index = rnd.Next(listOfClasses.Count);
+                classes = listOfClasses[index].Split(',');
+                string classInfo = classes[0].Trim();
+                return classInfo;
+           // } catch (ArgumentOutOfRangeException ex)
+           // {
+           //     Console.WriteLine("The current array: " + classes);
+           // }
+           // return classes.ToString();
         }
         public static string[] getRoomInfo()
         {

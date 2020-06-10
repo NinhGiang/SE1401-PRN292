@@ -41,6 +41,10 @@ namespace LAB1.DataGeneration
         {
             List<string> list = new List<string>();
             StreamReader sr = new StreamReader(link);
+            try
+            {
+
+            
             sr.ReadLine();
             while (!sr.EndOfStream)
             {
@@ -53,6 +57,12 @@ namespace LAB1.DataGeneration
             }
             sr.Close();
             return list;
+            }
+            catch (EndOfStreamException ex)
+            {
+                Console.WriteLine("Error in GetDataInColumn : " + ex.Message);
+            }
+            return null;
         }
         public static List<string> GetListOfClassByLevel(string levelId)
         {

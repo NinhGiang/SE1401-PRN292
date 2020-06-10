@@ -14,10 +14,7 @@ public class Student
 
     public string Uuid
     {
-        get
-        {
-            return _uuid;
-        }
+        get { return _uuid; }
     }
     public string Name
     {
@@ -49,12 +46,10 @@ public class Student
     }
     public Student()
     {
-
     }
 
     static public Student[] createStudent(uint number_student)
     {
-
         Student[] result = new Student[number_student];
         Random rnd = new Random();
         for (uint i = 0; i < number_student; i++)

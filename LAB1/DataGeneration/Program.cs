@@ -24,7 +24,7 @@ namespace LAB1
             ABC.setLevels(_level_list);
             ABC.saveLevel(@"..\..\..\DataGeneration\Level.csv");
             Console.WriteLine("Level saved!");
-
+          
             Room[] _room_list = Room.createRoom(initial / 40);
             ABC.setRooms(_room_list);
             ABC.saveRoom(@"..\..\..\DataGeneration\Room.csv");
@@ -44,8 +44,6 @@ namespace LAB1
 
             Console.WriteLine("Succeed!!!!!!!!");
             Console.ReadLine();
-
-
         }
     }
 }
