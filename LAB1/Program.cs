@@ -10,6 +10,7 @@ namespace LAB1
             School FPT = new School(student_list);
             FPT.save(@"..\..\..\FPT.csv");
             Console.ReadLine();
+
         }
     }
 }
