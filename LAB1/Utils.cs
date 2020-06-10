@@ -36,7 +36,7 @@ namespace LAB1
         public static bool getRandomGender()
         {
             bool gender = false;
-            int randomGender = rand.Next(1, 2);
+            int randomGender = rand.Next(1, 3);//random 1 and 2
             if (randomGender == 1)
             {
                 gender = true;

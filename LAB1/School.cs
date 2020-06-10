@@ -120,7 +120,7 @@ namespace LAB1
                         content += "M" + ", ";
                     }
                     else content += "F" + ", ";
-                    content += teacher.Field + ", ";
+                    content += teacher.Field + "\n";
                 }
                 File.WriteAllText(filename, content);
             }
