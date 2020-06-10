@@ -38,37 +38,71 @@ class School
     public void saveStudent(string filename)
     {
         String content = "ID, Name, DOB, Gender, Class\n";
-        foreach (Student student in _student_list)
+        try
         {
-            content += student.Uuid + ", ";
-            content += student.Name + ", ";
-            content += student.Birthday.ToString("d") + ", ";
-            content += student.Gender + ", ";
-            content += student.Class + "\n";
+            if (_student_list == null)
+            {
+                _student_list = new List<Student>();
+            }
+
+            foreach (Student student in _student_list)
+            {
+                content += student.Uuid + ", ";
+                content += student.Name + ", ";
+                content += student.Birthday.ToString("d") + ", ";
+                content += student.Gender + ", ";
+                content += student.Class + "\n";
+            }
+            File.WriteAllText(filename, content);
+        }catch(NullReferenceException ex)
+        {
+            Console.WriteLine("Error in saveStudent: " + ex.Message);
         }
-        File.WriteAllText(filename, content);
-    }
+        }
+        
 
     public void saveRoom(string filename)
     {
         string content = "ID, Class, No\n";
-        foreach (Room room in _room_list)
+
+        try
         {
-            content += room.Uuid + ", ";
-            content += room.Class_info + ", ";
-            content += room.No + "\n";
+            if (_room_list == null)
+            {
+                _room_list = new List<Room>();
+            }
+            foreach (Room room in _room_list)
+            {
+                content += room.Uuid + ", ";
+                content += room.Class_info + ", ";
+                content += room.No + "\n";
+            }
+            File.WriteAllText(filename, content);
+        }catch(NullReferenceException ex)
+        {
+            Console.WriteLine("Error in saveRoom: " + ex.Message);
         }
-        File.WriteAllText(filename, content);
     }
     public void saveLevel(string filename)
     {
         string content = "ID, Name\n";
-        foreach (Level level in _level_list)
+        try
         {
-            content += level.Uuid + ", ";
-            content += level.Name + "\n";
+            if (_level_list == null)
+            {
+                _level_list = new List<Level>();
+            }
+            foreach (Level level in _level_list)
+            {
+                content += level.Uuid + ", ";
+                content += level.Name + "\n";
+            }
+            File.WriteAllText(filename, content);
+        }catch(NullReferenceException ex)
+        {
+            Console.WriteLine("Error in saveLevel:" + ex.Message);
         }
-        File.WriteAllText(filename, content);
+        
     }
 
 }

@@ -31,5 +31,30 @@ namespace LAB1.DataGeneration
             get { return _name; }
             set { _name = value; }
         }
+        public Classes(string uuid, string level, string room, string name)
+        {
+            _uuid = uuid;
+            _level = level;
+            _room = room;
+            _name = name;
+        }
+        public static Classes[] createClasses(uint nummber_classes)
+        {
+            List<Classes> result = new List<Classes>();
+            List<string> roomList = ListStorage.GetRoomList();
+            
+            for (int i = 0; i < roomList.Count; i++)
+            {
+                string uuid = Guid.NewGuid().ToString(); //generate random uuid
+                string levelID = DataGenerator.getLevelInfo()[0].Trim();
+                string roomID = DataGenerator.getRoomInfo()[0].Trim();
+
+                string levelName = DataGenerator.getLevelInfo()[1].Trim();
+                string roomNo = DataGenerator.getRoomInfo()[2].Trim();
+                string className = levelName + "A" + roomNo;
+                result.Add(new Classes(uuid, levelID, roomID, className));              
+            }
+            return result.ToArray();
+        }
     }
 }

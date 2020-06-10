@@ -41,7 +41,6 @@ namespace LAB1.DataGeneration
         public static Room[] createRoom(uint number_room)
         {
             Room[] result = new Room[number_room];
-            //string content = File.ReadAllText(@"..\..\..\DataGeneration.database.json");
             for (int i = 0; i < number_room; i++)
             {
                 String uuid = Guid.NewGuid().ToString();

@@ -65,7 +65,7 @@ public class Student
             if (gender.Equals("Male"))
             {
                 String fullname = RandomGenerator.GetRadomFullName(); //generate random name
-                string classInfo = DataGenerator.getClass(DataGenerator.getLevel());
+                string classInfo = DataGenerator.getClassByLevelID(DataGenerator.getLevelInfo()[0].Trim());
                 //String classInfo = RandomGenerator.GetRandomClass();//generate random class
                 
                 int year = rnd.Next(2003, 2005);
@@ -75,9 +75,9 @@ public class Student
             else if (gender.Equals("Female"))
             {
                 String fullname = RandomGenerator.GetRadomFullName();//generate random name
-                string classInfo = DataGenerator.getClass(DataGenerator.getLevel());
+                string classInfo = DataGenerator.getClassByLevelID(DataGenerator.getLevelInfo()[0].Trim());
                 //String classInfo = RandomGenerator.GetRandomClass();//generate random class
-                
+
                 int year = rnd.Next(2003, 2005);
                 DateTime birthdate = RandomGenerator.GetRandomDate(year); //generate random DOB
                 result[i] = new Student(uuID, fullname, birthdate, gender, classInfo);

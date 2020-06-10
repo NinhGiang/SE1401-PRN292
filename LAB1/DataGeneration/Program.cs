@@ -25,8 +25,11 @@ namespace LAB1
             School ABC = new School(_student_list, _room_list, _level_list);
 
             ABC.saveStudent(@"..\..\..\DataGeneration\FPT大学.csv");
+            Console.WriteLine("Student saved!");
             ABC.saveRoom(@"..\..\..\DataGeneration\Room.csv");
+            Console.WriteLine("Room saved!");
             ABC.saveLevel(@"..\..\..\DataGeneration\Level.csv");
+            Console.WriteLine("Level saved!");
             Console.WriteLine("Succeed!!!!!!!!");
             Console.ReadLine();
 

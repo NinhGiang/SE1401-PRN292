@@ -19,22 +19,32 @@ namespace LAB1.DataGeneration
         {
             return classDB.ClassSet[index];
         }
-        public static string getLevel()
+        public static string[] getLevelInfo()
         {
             List<string> levelList = ListStorage.GetLevelList();
             int index = rnd.Next(levelList.Count);
             string[] levelInfo = levelList[index].Split(',');
-            string level = levelInfo[1].Trim();
-            string levelId = levelInfo[0].Trim();
-            return levelId;
+           // string level = levelInfo[1].Trim();
+           // string levelId = levelInfo[0].Trim();
+            return levelInfo;
         }
-        public static string getClass(string levelId)
+        public static string getClassByLevelID(string levelId)
         {
             List<string> listOfClasses = ListStorage.GetListOfClassByLevel(levelId);
             int index = rnd.Next(listOfClasses.Count);
             string[] classes = listOfClasses[index].Split(',');
             string classInfo = classes[0].Trim();
             return classInfo;
+        }
+        public static string[] getRoomInfo()
+        {
+            List<string> listOfRooms = ListStorage.GetRoomList();
+            int roomIndex = rnd.Next(listOfRooms.Count);
+            string[] roomInfo = listOfRooms[roomIndex].Split(',');
+            // string roomId = room[0].Trim();
+            // string roomClass = room[1].Trim();
+            // string romNo = room[2].Trim();
+            return roomInfo;
         }
 
     }

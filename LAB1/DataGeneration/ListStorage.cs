@@ -12,7 +12,7 @@ namespace LAB1.DataGeneration
             List<string> curr_list = new List<string>();
             StreamReader sr = new StreamReader(link);
 
-            sr.ReadLine(); 
+            sr.ReadLine();
             while (!sr.EndOfStream)
             {
                 string line = sr.ReadLine();
@@ -41,7 +41,7 @@ namespace LAB1.DataGeneration
         {
             List<string> list = new List<string>();
             StreamReader sr = new StreamReader(link);
-            sr.ReadLine();  
+            sr.ReadLine();
             while (!sr.EndOfStream)
             {
                 string line = sr.ReadLine();
@@ -64,5 +64,7 @@ namespace LAB1.DataGeneration
         {
             return CsvReader(@"..\..\..\DataGeneration\Level.csv");
         }
+        public static List<string> GetRoomList()
+        {
+            return CsvReader(@"..\..\..\DataGeneration\Room.csv");        }
     }
-}
