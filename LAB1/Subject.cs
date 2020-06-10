@@ -45,7 +45,7 @@ namespace LAB1
             int size = 0;
             for (int i = 0; i < fieldList.Length; i++)
             {
-                for (int j = 0; j < levelList.Length; i++)
+                for (int j = 0; j < levelList.Length; j++)
                 {
                     string id = Guid.NewGuid().ToString();
                     string name = fieldList[i].Name + " " + levelList[j].Name;
