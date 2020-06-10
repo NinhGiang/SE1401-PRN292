@@ -150,7 +150,8 @@ namespace LAB1
                             }
                         }                       
                         fullName += randomName.MaleFirstNameSet[maleFirstNameIndex];
-                        Student newStudent = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, Guid.NewGuid().ToString());
+                        Class newClass = Class.Create();
+                        Student newStudent = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, newClass.UUID);
                         studentList.Add(newStudent);
                     } //end if gender is true
                 } //end for each index in result array
@@ -167,6 +168,19 @@ namespace LAB1
                 Console.WriteLine("Student _ NullReference: " + ex.Message);
             }
             return studentList;
+        }
+        /// <summary>
+        /// Used to write data into file.
+        /// </summary>
+        /// <param name="filename">A file used to store data.</param>
+        public static void SaveStudents(string filename)
+        {
+            String content = "UUID, Name, Birthday, Gender, ClassUUID\n";
+            foreach (Student student in studentList)
+            {
+                content += student.UUID + ", " + student.Name + ", " + student.Birthday + ", " + student.Gender + ", " + student.ClassUUID + "\n";
+            }
+            File.WriteAllText(filename, content);
         }
     }
 }

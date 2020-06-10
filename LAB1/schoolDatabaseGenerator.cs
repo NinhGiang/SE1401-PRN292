@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.IO;
 using System.Text;
 
 namespace LAB1
@@ -9,7 +10,7 @@ namespace LAB1
     /// Contains all methods for generating a school database.
     /// </summary>
     class SchoolDatabaseGenerator
-    {
+    {       
         /// <summary>
         /// Used to test method.
         /// </summary>
@@ -61,11 +62,16 @@ namespace LAB1
             }*/
             Console.OutputEncoding = Encoding.UTF8;
             //Test Create method in Student class
-            Student.Create(10);
-            foreach (var student in Student.StudentList)
+            Student.Create(100);
+            Student.SaveStudents(@"..\..\..\Students.csv");
+            /*foreach (var student in Student.StudentList)
             {
                 Console.WriteLine(student.UUID + ", " + student.Name + ", " + student.Birthday + ", " + student.Gender + ", " + student.ClassUUID);
             }
+            foreach (var classObject in Class.ClassList)
+            {
+                Console.WriteLine(classObject.UUID);
+            }*/
         }
     }
 }
