@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Text.Json;
 
@@ -54,19 +55,23 @@ namespace LAB1
             _no = no;
         }
 
-        public static Room[] Create(int numberOfRoom)
+        /// <summary>
+        /// Creates a random list of rooms and returns the result
+        /// </summary>
+        /// <param name="list">A dictionary value</param>
+        /// <returns>An array of rooms</returns>
+        public static Room[] Create(Dictionary<string, string> list)
         {
             List<Room> result = new List<Room>();
+            int size = list.Count;
 
-            Random rnd = new Random();
-
-            for (uint i = 0; i < numberOfRoom; i++)
+            for (uint i = 0; i < size; i++)
             {
                 //id
-                string uuid = Guid.NewGuid().ToString();
+                string uuid = list.ElementAt((int)i).Key;
 
                 //class
-                string classInfo = "tempClass";
+                string classInfo = list.ElementAt((int)i).Value;
 
                 //no
                 int no = (int)i + 1;

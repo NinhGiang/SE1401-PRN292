@@ -157,7 +157,7 @@ namespace LAB1
                 //name
                 string fullName = DataHelper.GetRandomNameByGender(gender);
 
-                //grade
+                //level
                 List<string> levelList = DataHelper.GetListOfLevel();
                 index = rnd.Next(levelList.Count);
                 string[] levelInfo = levelList[index].Split(',');

@@ -48,13 +48,36 @@ namespace LAB1
         }
 
         /// <summary>
-        /// Search for list of lines from a specific .csv file that contains search info
+        /// Search for line from a specific .csv file by primary key
         /// </summary>
         /// <param name="path">A string value</param>
-        /// <param name="info">A string value</param>
+        /// <param name="primaryKey">A string value</param>
+        /// <returns>A string from a specific .csv file</returns>
+        private static string GetDataByPrimaryKey(string path, string primaryKey)
+        {
+            StreamReader sr = new StreamReader(path);
+            sr.ReadLine();  //skip first line
+            while (!sr.EndOfStream)
+            {
+                string line = sr.ReadLine();
+                string[] split = line.Split(',');
+                if (split[0].Trim().Equals(primaryKey.Trim()))
+                {
+                    return line;
+                }
+            }
+            sr.Close();
+            return null;
+        }
+
+        /// <summary>
+        /// Search for list of lines from a specific .csv file that foreign key contains search info
+        /// </summary>
+        /// <param name="path">A string value</param>
+        /// <param name="foreignKey">A string value</param>
         /// <param name="column">An integer value</param>
-        /// <returns>List of lines from a specific .csv file that contains search info</returns>
-        private static List<string> GetDataByInfo(string path, string info, int column)
+        /// <returns>List of strings from a specific .csv file that contains search info</returns>
+        private static List<string> GetDataByForeignKey(string path, string foreignKey, int column)
         {
             List<string> list = new List<string>();
             StreamReader sr = new StreamReader(path);
@@ -63,7 +86,7 @@ namespace LAB1
             {
                 string line = sr.ReadLine();
                 string[] split = line.Split(',');
-                if (split[column].Trim().Equals(info.Trim()))
+                if (split[column].Trim().Equals(foreignKey.Trim()))
                 {
                     list.Add(line);
                 }
@@ -96,6 +119,17 @@ namespace LAB1
         }
 
         /// <summary>
+        /// Get room info by id
+        /// </summary>
+        /// <param name="roomId">A string value</param>
+        /// <returns>Room info</returns>
+        public static string GetRoomByPrimaryKey(string roomId)
+        {
+            string path = @"..\..\..\Room.csv";
+            return GetDataByPrimaryKey(path, roomId);
+        }
+
+        /// <summary>
         /// Get list of subject by field id
         /// </summary>
         /// <param name="fieldId">A string value</param>
@@ -104,7 +138,7 @@ namespace LAB1
         {
             string path = @"..\..\..\Subject.csv";
             int column = GetColumn(path, "Field");
-            return GetDataByInfo(path, fieldId, column);
+            return GetDataByForeignKey(path, fieldId, column);
         }
 
         /// <summary>
@@ -116,7 +150,14 @@ namespace LAB1
         {
             string path = @"..\..\..\Class.csv";
             int column = GetColumn(path, "Level");
-            return GetDataByInfo(path, levelId, column);
+            return GetDataByForeignKey(path, levelId, column);
+        }
+
+        public static List<string> GetListOfSubjectByClass(string classId)
+        {
+            string path = @"..\..\..\Attendance.csv";
+            int column = GetColumn(path, "Class");
+            return GetDataByForeignKey(path, classId, column);
         }
 
         /// <summary>
@@ -235,6 +276,25 @@ namespace LAB1
             fullName += firstname;
 
             return fullName.Trim();
+        }
+
+        /// <summary>
+        /// Create Id for both Room and Class
+        /// </summary>
+        /// <param name="size">A positive integer number</param>
+        /// <returns>A dictionary which roomId is key and classId is value</returns>
+        public static Dictionary<string, string> CreateIdForRoomAndClass(int size)
+        {
+            Dictionary<string, string> result = new Dictionary<string, string>();
+
+            for (int i = 0; i < size; i++)
+            {
+                string room = Guid.NewGuid().ToString();
+                string classinfo = Guid.NewGuid().ToString();
+                result.Add(room, classinfo);
+            }
+
+            return result;
         }
     }
 }

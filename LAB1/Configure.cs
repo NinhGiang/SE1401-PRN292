@@ -17,12 +17,6 @@ namespace LAB1
         { get; set; }
 
         /// <summary>
-        /// A property for BirthdateConfig class
-        /// </summary>
-        public BirthdateConfig BirthdateConfig
-        { get; set; }
-
-        /// <summary>
         /// A property for LevelNameConfig class
         /// </summary>
         public LevelNameConfig LevelNameConfig

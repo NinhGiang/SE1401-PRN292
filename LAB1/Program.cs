@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LAB1
 {
@@ -22,12 +23,14 @@ namespace LAB1
             school.SaveField(@"..\..\..\Field.csv");
             Console.WriteLine("Field");
 
-            Room[] room_list = Room.Create(20);
+            Dictionary<string, string> ids = DataHelper.CreateIdForRoomAndClass(20);
+
+            Room[] room_list = Room.Create(ids);
             school.SetRoomList(room_list);
             school.SaveRoom(@"..\..\..\Room.csv");
             Console.WriteLine("Room");
 
-            ClassInfo[] class_list = ClassInfo.Create();
+            ClassInfo[] class_list = ClassInfo.Create(ids);
             school.SetClassList(class_list);
             school.SaveClass(@"..\..\..\Class.csv");
             Console.WriteLine("ClassInfo");
@@ -51,6 +54,11 @@ namespace LAB1
             school.SetAttendanceList(attendance_list);
             school.SaveAttendance(@"..\..\..\Attendance.csv");
             Console.WriteLine("Attendance");
+
+            Grade[] grade_list = Grade.Create();
+            school.SetGradeList(grade_list);
+            school.SaveGrade(@"..\..\..\Grade.csv");
+            Console.WriteLine("Grade");
 
             Console.ReadLine();
         }

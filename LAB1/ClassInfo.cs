@@ -111,41 +111,51 @@ namespace LAB1
         /// <summary>
         /// Creates a random list of classes and returns the result
         /// </summary>
+        /// <param name="list">A dictionary value</param>
         /// <returns>An array of classes</returns>
-        public static ClassInfo[] Create()
+        public static ClassInfo[] Create(Dictionary<string, string> list)
         {
-            List<string> listOfRoom = DataHelper.GetListOfRoom();
             List<ClassInfo> result = new List<ClassInfo>();
 
             List<string> listOfLevel = DataHelper.GetListOfLevel();
 
             Random rnd = new Random();
 
-            for (uint i = 0; i < listOfRoom.Count; i++)
+            for (uint i = 0; i < list.Count; i++)
             {
                 //id
-                string uuid = Guid.NewGuid().ToString();
-                
-                string levelId, roomId, name;
+                string uuid = list.ElementAt((int)i).Value;
 
+                //level
                 int levelIndex = rnd.Next(listOfLevel.Count);
                 string[] level = listOfLevel[levelIndex].Split(',');
-                levelId = level[0].Trim();
+                string levelId = level[0].Trim();
 
                 //room
-                int roomIndex = rnd.Next(listOfRoom.Count);
-                string[] room = listOfRoom[roomIndex].Split(',');
-                roomId = room[0].Trim();
+                string roomId = list.ElementAt((int)i).Key;
 
                 //name
                 string levelName = level[1].Trim();
-                string roomName = room[2].Trim();
-                name = levelName + "-" + roomName;
+                string roomName = GetRoomNameById(roomId);
+                string name = levelName + "-" + roomName;
 
                 result.Add(new ClassInfo(uuid, levelId, roomId, name));
             }
 
             return result.ToArray();
+        }
+
+        /// <summary>
+        /// Get room name by room id
+        /// </summary>
+        /// <param name="id">A string value</param>
+        /// <returns>The name of room</returns>
+        private static string GetRoomNameById(string id)
+        {
+            string room = DataHelper.GetRoomByPrimaryKey(id);
+            string[] info = room.Split(',');
+            string name = info[2].Trim();
+            return name;
         }
     }
 }

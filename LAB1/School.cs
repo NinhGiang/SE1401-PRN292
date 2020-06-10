@@ -15,47 +15,27 @@ namespace LAB1
         private List<ClassInfo> _class_list;
         private List<Subject> _subject_list;
         private List<Attendance> _attendance_list;
+        private List<Grade> _grade_list;
 
         public School() { }
-
-        public List<Student> GetStudentList()
-        { return _students_list; }
 
         public void SetStudentList(Student[] students)
         { _students_list = new List<Student>(students); }
 
-        public List<Teacher> GetTeacherList()
-        { return _teacher_list; }
-
         public void SetTeacherList(Teacher[] teachers)
         { _teacher_list = new List<Teacher>(teachers); }
-
-        public List<Level> GetLevelList()
-        { return _level_list; }
 
         public void SetLevelList(Level[] levels)
         { _level_list = new List<Level>(levels); }
 
-        public List<Field> GetFieldList()
-        { return _field_list; }
-
         public void SetFieldList(Field[] fields)
         { _field_list = new List<Field>(fields); }
-
-        public List<Room> GetRoomList()
-        { return _room_list; }
 
         public void SetRoomList(Room[] rooms)
         { _room_list = new List<Room>(rooms); }
 
-        public List<ClassInfo> GetClassList()
-        { return _class_list; }
-
         public void SetClassList(ClassInfo[] classes)
         { _class_list = new List<ClassInfo>(classes); }
-
-        public List<Subject> GetSubjectList()
-        { return _subject_list; }
 
         public void SetSubjectList(Subject[] subject)
         { _subject_list = new List<Subject>(subject); }
@@ -63,9 +43,12 @@ namespace LAB1
         public void SetAttendanceList(Attendance[] attendance)
         { _attendance_list = new List<Attendance>(attendance); }
 
+        public void SetGradeList(Grade[] grade)
+        { _grade_list = new List<Grade>(grade); }
+
         public void SaveStudent(string filename)
         {
-            string content = "ID, Name, Birthday, Gender, Class\n";
+            string content = "UUID, Name, Birthday, Gender, Class\n";
             foreach (Student student in _students_list)
             {
                 content += student.GetId() + ", ";
@@ -85,7 +68,7 @@ namespace LAB1
         }
         public void SaveTeacher(string filename)
         {
-            string content = "ID, Name, Gender, Field\n";
+            string content = "UUID, Name, Gender, Field\n";
             foreach (Teacher teacher in _teacher_list)
             {
                 content += teacher.GetId() + ", ";
@@ -105,7 +88,7 @@ namespace LAB1
 
         public void SaveLevel(string filename)
         {
-            string content = "ID, Name\n";
+            string content = "UUID, Name\n";
             foreach (Level level in _level_list)
             {
                 content += level.GetId() + ", ";
@@ -116,7 +99,7 @@ namespace LAB1
 
         public void SaveField(string filename)
         {
-            string content = "ID, Name\n";
+            string content = "UUID, Name\n";
             foreach (Field field in _field_list)
             {
                 content += field.GetId() + ", ";
@@ -127,7 +110,7 @@ namespace LAB1
 
         public void SaveRoom(String filename)
         {
-            string content = "ID, Class, No.\n";
+            string content = "UUID, Class, No.\n";
             foreach (Room room in _room_list)
             {
                 content += room.GetId() + ", ";
@@ -139,7 +122,7 @@ namespace LAB1
 
         public void SaveClass(String filename)
         {
-            string content = "ID, Level, Room, Name\n";
+            string content = "UUID, Level, Room, Name\n";
             foreach (ClassInfo classInfo in _class_list)
             {
                 content += classInfo.GetId() + ", ";
@@ -152,7 +135,7 @@ namespace LAB1
 
         public void SaveSubject(String filename)
         {
-            string content = "ID, Level, Field, Name\n";
+            string content = "UUID, Level, Field, Name\n";
             foreach (Subject subject in _subject_list)
             {
                 content += subject.GetId() + ", ";
@@ -171,6 +154,18 @@ namespace LAB1
                 content += attendance.GetTeacher() + ", ";
                 content += attendance.GetClassInfo() + ", ";
                 content += attendance.GetSubject() + "\n";
+            }
+            File.WriteAllText(filename, content);
+        }
+
+        public void SaveGrade(String filename)
+        {
+            string content = "Subject, Student, Grade\n";
+            foreach (Grade grade in _grade_list)
+            {
+                content += grade.GetSubject() + ", ";
+                content += grade.GetStudent() + ", ";
+                content += grade.GetGrade() + "\n";
             }
             File.WriteAllText(filename, content);
         }
