@@ -32,9 +32,23 @@ namespace ShoolDataGenerator
                     Console.WriteLine("female");
                 }
             }*/
-            string[] listClassName = Class.GenerateClassName(12, 20);
-            Console.WriteLine(listClassName);
+            /*string[] listClassName = Class.GenerateClassName(12, 20);
+            Console.WriteLine(listClassName);*/
 
+            int[] listLevel = Level.GenerateLevelName(30);
+            foreach (var level in listLevel)
+            {
+                if (level == 10)
+                {
+                    Console.WriteLine("10");
+                }else if (level == 11)
+                {
+                    Console.WriteLine("11");
+                }
+                else{
+                    Console.WriteLine("12");
+                }
+            }
         }
 
 
