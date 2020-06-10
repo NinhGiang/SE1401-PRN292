@@ -18,18 +18,24 @@ namespace LAB1
               Console.ReadLine();
            */
             uint initial = 160;
-
-            Student[] _student_list = Student.createStudent(initial);
-            Room[] _room_list = Room.createRoom(initial/40);
             Level[] _level_list = Level.createLevel();
-            School ABC = new School(_student_list, _room_list, _level_list);
+            Classes[] _classes_list = Classes.createClasses(initial / 40);
+            Room[] _room_list = Room.createRoom(initial / 40);
+            Student[] _student_list = Student.createStudent(initial);
+ 
+            School ABC = new School(_student_list, _room_list, _level_list, _classes_list);
 
-            ABC.saveStudent(@"..\..\..\DataGeneration\FPT大学.csv");
-            Console.WriteLine("Student saved!");
-            ABC.saveRoom(@"..\..\..\DataGeneration\Room.csv");
-            Console.WriteLine("Room saved!");
             ABC.saveLevel(@"..\..\..\DataGeneration\Level.csv");
             Console.WriteLine("Level saved!");
+            ABC.saveClasses(@"..\..\..\DataGeneration\Class.csv");
+            Console.WriteLine("Class saved!");
+            ABC.saveRoom(@"..\..\..\DataGeneration\Room.csv");
+            Console.WriteLine("Room saved!");
+            ABC.saveStudent(@"..\..\..\DataGeneration\FPT大学.csv");
+            Console.WriteLine("Student saved!");
+            
+           
+
             Console.WriteLine("Succeed!!!!!!!!");
             Console.ReadLine();
 

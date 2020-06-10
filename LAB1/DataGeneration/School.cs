@@ -8,16 +8,18 @@ class School
     private List<Student> _student_list;
     private List<Room> _room_list;
     private List<Level> _level_list;
+    private List<Classes> _classes_list;
     public School()
     {
         _student_list = new List<Student>();
         _room_list = new List<Room>();
     }
-    public School(Student[] student_list, Room[] room_list, Level[] level_list)
+    public School(Student[] student_list, Room[] room_list, Level[] level_list, Classes[] classes_list)
     {
         _student_list = new List<Student>(student_list);
         _room_list = new List<Room>(room_list);
         _level_list = new List<Level>(level_list);
+        _classes_list = new List<Classes>(classes_list);
     }
     public List<Student> GetStudents()
     {
@@ -102,7 +104,25 @@ class School
         {
             Console.WriteLine("Error in saveLevel:" + ex.Message);
         }
-        
+    }
+    public void saveClasses(string filename)
+    {
+        string content = "ID, Level, Room, Name\n";
+        try
+        {
+            if (_classes_list == null)
+                _classes_list = new List<Classes>();
+            foreach (Classes classs in _classes_list)
+            {
+                content += classs.Uuid + ", ";
+                content += classs.Level + ", ";
+                content += classs.Room + ", ";
+                content += classs.Name + "\n";
+            }
+            File.WriteAllText(filename, content);
+        }catch(NullReferenceException ex){
+            Console.WriteLine("Error in saveClasses: "+ ex.Message);
+        }
     }
 
 }

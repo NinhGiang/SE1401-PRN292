@@ -66,5 +66,8 @@ namespace LAB1.DataGeneration
         }
         public static List<string> GetRoomList()
         {
-            return CsvReader(@"..\..\..\DataGeneration\Room.csv");        }
+            return CsvReader(@"..\..\..\DataGeneration\Room.csv");
+        }
     }
+}
+    
