@@ -1,43 +1,25 @@
 ﻿{
   "NameConfig": {
-    "male_last_name_set": [
-      "Lý",
-      "Lâm Kha",
+    "last_name_set": [
       "Nguyễn",
+      "Lý",
       "Lâm",
-      "Lưu"
+      "Kha",
+      "Lê"
     ],
-    "male_mid_name_set": [
-      "Tự",
-      "Thành",
-      "Ngọc",
+    "middle_name_set": [
       "Trung",
+      "Ngọc",
+      "Thành",
+      "Hồng",
       "Thanh"
     ],
-    "male_first_name_set": [
-      "Trọng",
-      "Công",
-      "Tân",
+    "first_name_set": [
       "Cường",
-      "Phong"
-    ],
-    "female_last_name_set": [
-      "Nguyễn",
-      "Đỗ Thị",
-      "Lê Thị",
-      "Phạm"
-    ],
-    "female_mid_name_set": [
-      "Tuyết",
-      "Hồng",
-      "Thanh",
-      "Thúy"
-    ],
-    "female_first_name_set": [
-      "Tiên",
-      "Gấm",
+      "Công",
+      "Hân",
       "Mai",
-      "Tiên"
+      "Phương"
     ]
   }
 }

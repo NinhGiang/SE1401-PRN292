@@ -6,14 +6,12 @@ namespace LAB1
 {
     class Configure
     {
+        public NameConfig NameConfig { get; set; }
     }
     class NameConfig
     {
-        public String[] male_last_name_set { get; set; }
-        public String[] male_mid_name_set { get; set; }
-        public String[] male_first_name_set { get; set; }
-        public String[] female_last_name_set { get; set; }
-        public String[] female_mid_name_set { get; set; }
-        public String[] female_first_name_set { get; set; }
+        public String[] last_name_set { get; set; }
+        public String[] middle_name_set { get; set; }
+        public String[] first_name_set { get; set; }
     }
 }

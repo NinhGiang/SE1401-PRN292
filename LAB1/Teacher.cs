@@ -8,17 +8,19 @@ namespace LAB1
     {
         protected String _tcuuid;
         protected String _tcfullname;
-        protected Boolean _tcgender;
+        protected String _tcgender;
+        protected String _field;
 
         public String StUUID { get { return _tcuuid; } }
         public String StFullName { get { return _tcfullname; } }
-        public Boolean StGender { get { return _tcgender; } }
-
-        public Teacher(String StUUID, String StFullName, Boolean StGender)
+        public String StGender { get { return _tcgender; } }
+        public String Field { get { return _field; } }
+        public Teacher(String TcUUID, String TcFullName, String TcGender, String Field)
         {
             _tcuuid = StUUID;
             _tcfullname = StFullName;
             _tcgender = StGender;
+            _field = Field;
         }
 
         public void print()
