@@ -1,0 +1,31 @@
+﻿{
+  "NameConfig": {
+    "Last_name_set": [
+      "Nguyễn",
+      "Lý",
+      "Lê",
+      "Trần",
+      "Hồ",
+      "Võ",
+      "Huynh"
+    ],
+    "Middle_name_set": [
+      "Văn",
+      "Thị",
+      "Hoàng Bảo",
+      "Anh",
+      "Minh",
+      "Thúy",
+      "Nhat"
+    ],
+    "First_name_set": [
+      "Đạt",
+      "Trang",
+      "Long",
+      "Thành",
+      "Thanh",
+      "Sora",
+      "Nhat"
+    ]
+  }
+}
