@@ -1,5 +1,5 @@
 {
-  "NameConfig" : {
+  "NameConfig": {
     "first_male_name_set": [
       "Tan",
       "Son",
@@ -39,6 +39,18 @@
       "10",
       "11",
       "12"
+    ]
+  },
+  "FieldConfig": {
+    "field_set": [
+      "Math",
+      "PE",
+      "Literature",
+      "History",
+      "Chemistry",
+      "Physics",
+      "Biology",
+      "English"
     ]
   }
 }

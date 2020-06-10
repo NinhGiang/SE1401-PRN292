@@ -8,6 +8,7 @@ namespace LAB1
     {
         public NameConfig NameConfig { get; set; }
         public LevelConfig LevelConfig { get; set; }
+        public FieldConfig FieldConfig { get; set; }
         
     }
     class NameConfig
@@ -20,5 +21,9 @@ namespace LAB1
     class LevelConfig
     {
         public String[] level_set { get; set; }
+    }
+    class FieldConfig
+    {
+        public String[] field_set { get; set; }
     }
 }
