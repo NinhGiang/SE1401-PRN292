@@ -1,6 +1,7 @@
 ﻿using LAB1.StudentGeneration;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace StudentGeneration
 {
@@ -11,20 +12,21 @@ namespace StudentGeneration
         {
             Student[] student_list;
             createHelper();
-           
+            int i = 0; //số lượng school đã được tạo
             string input;
 
-            input = Console.ReadLine();
+            /*input = Console.ReadLine();
             string school_name = SupportTools.getSchoolName(input);
             int number_of_students = SupportTools.getStudentAmount(input);
             int number_of_rooms = SupportTools.getRoomAmount(input);
 
             Console.WriteLine("{0}, {1}, {2}", 
-                school_name, number_of_students, number_of_rooms);
+                school_name, number_of_students, number_of_rooms);*/
 
-            /*while (true)
+            List<School> schools = new List<School>();
+            while (true)
             {
-                input = Console.ReadLine(); 
+                input = Console.ReadLine();
                 switch (input)
                 {
                     case "h":
@@ -32,15 +34,21 @@ namespace StudentGeneration
                         break;
 
                     case "s":
-                        student_list = Student.CreateStudentRandomly(20);
-                        foreach (Student student in student_list)
-                        {
-                            Console.WriteLine("{0}, {1}, {2}, {3}",
-                                student.ID, student.Name, student.Gender, student.Birthday.ToString("d"));
-                        }
+                        input = Console.ReadLine();
+                        string school_name = SupportTools.getSchoolName(input);
+                        int number_of_students = SupportTools.getStudentAmount(input);
+                        int number_of_rooms = SupportTools.getRoomAmount(input);
+
+                        student_list = Student.CreateStudentRandomly(number_of_students);
+
+                        schools.Add(new School(student_list));
+                        /*string filename_csv = school_name + ".csv";
+                        Directory.CreateDirectory(@"..\..\..\StudentGeneration\" + school_name);
+                        //string filepath = "..\..\..\StudentGeneration\"" + school_name + ".csv";*/
+                        schools[i].save(school_name);
                         break;
                 }
-            }*/
+            }
             //Console.ReadLine();
         }
 

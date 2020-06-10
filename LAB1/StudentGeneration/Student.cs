@@ -54,7 +54,7 @@ namespace StudentGeneration
         //    set{ _class = value; }
         //}
 
-        static public Student[] CreateStudentRandomly(uint number_of_students)
+        static public Student[] CreateStudentRandomly(int number_of_students)
         {
             Student[] students = new Student[number_of_students];
             String content = File.ReadAllText(@"..\..\..\StudentGeneration\dataset.json");
