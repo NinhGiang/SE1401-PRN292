@@ -10,15 +10,16 @@ namespace LAB1
         protected string _name;
         protected DateTime _birthday;
         protected bool _gender;
+        protected string _class;
 
-        protected Student(String id, String name, DateTime birthday , bool gender)
+        public Student(string id, string name, DateTime birthday, bool gender, string @class)
         {
             _id = id;
             _name = name;
             _birthday = birthday;
             _gender = gender;
+            _class = @class;
         }
-
 
         public String GetID()
         { return _id; }
@@ -36,5 +37,20 @@ namespace LAB1
         { return _gender; }
         public void SetGender(bool gender)
         { _gender = gender; }
+        public String GetClass()
+        { return _class; }
+        public void SetClass(String classID)
+        { _class = classID; }
+        public void Create(int numberOfStudent)
+        {
+            List<Student> list = new List<Student>();
+            for (int i = 0; i < numberOfStudent; i++)
+            {
+                String id = Guid.NewGuid().ToString();
+                String name = ;
+
+            }
+            
+        }
     }
 }
