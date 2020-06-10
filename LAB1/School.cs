@@ -7,10 +7,16 @@ namespace LAB1
 {
     class School
     {
+        private string _school_name;
         private List<Level> _level_list;
 
         public School()
         {
+        }
+        public string SchoolName
+        {
+            get { return _school_name; }
+            set { _school_name = value; }
         }
         public List<Level> LevelList
         {

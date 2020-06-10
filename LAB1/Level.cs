@@ -24,7 +24,7 @@ namespace LAB1
             get { return _name; }
             set { _name = value; }
         }
-        public Level[] CreateLevel()
+        public static Level[] CreateLevel()
         {
             String[] data = Utils.getLevelData();
             Level[] list = new Level[data.Length];
