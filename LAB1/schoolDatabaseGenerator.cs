@@ -65,6 +65,7 @@ namespace LAB1
             uint noOfStudentInClass = (uint) rnd.Next(30, 51);
             uint noOfClass = (uint) 100 / noOfStudentInClass;
             uint noOfClassPerLevel = (uint)noOfClass / 3;
+            uint roomNo = 1;
             //Test Create method in Level class
             Level.Create();
             //Test Create method in Class class
@@ -72,24 +73,31 @@ namespace LAB1
             {
                 for (int i = 0; i < noOfClassPerLevel; i++)
                 {
-                    Class.Create(level);
-                    Room.Create(Class.ClassList[i].UUID);
+                    Class.Create(level, "");
+                    Room.Create(Class.ClassList[i], roomNo);
+                    roomNo++;
+                }
+                for (int i = 0; i < noOfClassPerLevel; i++)
+                {
+                    Class.ClassList[i].RoomUUID = Room.RoomList[i].UUID;
                 }
             }
           
             //Test Create method in Student class
             foreach (var classObject in Class.ClassList)
-            {
-                
+            {               
                 for (int i = 0; i < noOfStudentInClass; i++)
                 {
                     Student.Create(100, classObject);
                 }
             }
-            
-            Student.SaveStudents(@"..\..\..\Students.csv");
-            Class.SaveClasses(@"..\..\..\Classes.csv");
+
             Level.SaveLevels(@"..\..\..\Levels.csv");
+            Class.SaveClasses(@"..\..\..\Classes.csv");
+            Room.SaveRooms(@"..\..\..\Rooms.csv");
+            Student.SaveStudents(@"..\..\..\Students.csv");
+            
+            
             /*foreach (var student in Student.StudentList)
             {
                 Console.WriteLine(student.UUID + ", " + student.Name + ", " + student.Birthday + ", " + student.Gender + ", " + student.ClassUUID);

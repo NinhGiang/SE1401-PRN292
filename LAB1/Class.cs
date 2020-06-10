@@ -40,6 +40,10 @@ namespace LAB1
             {
                 return roomUUID;
             }
+            set
+            {
+                roomUUID = value;
+            }
         }
         /// <value>Gets the value of Name.</value>
         public string Name
@@ -70,20 +74,14 @@ namespace LAB1
         /// <returns>
         /// A Class object.
         /// </returns>
-        public static Class Create(Level level)
+        public static Class Create(Level level, string roomUUID)
         {
             if (classList == null)
             {
                 classList = new List<Class>();
             }
-            /*if (no == 0)
-            {
-                Random rnd = new Random();
-                no = (uint) rnd.Next(1, 101);
-            }*/
             string uuid = Guid.NewGuid().ToString();
-            Room newRoom = Room.Create(uuid);
-            Class newClass = new Class(uuid, level.UUID, newRoom.UUID, "Classname");
+            Class newClass = new Class(uuid, level.UUID, roomUUID, "Classname");
             classList.Add(newClass);
             return newClass;
         }

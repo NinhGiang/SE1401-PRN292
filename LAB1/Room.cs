@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace LAB1
@@ -12,7 +13,7 @@ namespace LAB1
     {
         private string uuid;
         private string classUUID;
-        private static uint no = 1;
+        private uint no;
         private static List<Room> roomList;
         /// <value>Gets the value of UUID.</value>
         public string UUID
@@ -39,7 +40,7 @@ namespace LAB1
             }
         }
         /// <value>Gets the value of RoomList.</value>
-        public List<Room> RoomList
+        public static List<Room> RoomList
         {
             get
             {
@@ -58,16 +59,28 @@ namespace LAB1
         /// <returns>
         /// A Room object.
         /// </returns>
-        public static Room Create(string classUUID)
+        public static Room Create(Class classObject, uint no)
         {
             if (roomList == null)
             {
                 roomList = new List<Room>();
             }
-            Room newRoom = new Room(Guid.NewGuid().ToString(), classUUID, no);
+            Room newRoom = new Room(Guid.NewGuid().ToString(), classObject.UUID, no);
             roomList.Add(newRoom);
-            no++;
             return newRoom;
+        }
+        /// <summary>
+        /// Used to write data into file.
+        /// </summary>
+        /// <param name="filename">A file used to store data.</param>
+        public static void SaveRooms(string filename)
+        {
+            String content = "UUID, ClassUUID, No\n";
+            foreach (Room room in roomList)
+            {
+                content += room.UUID + ", " + room.ClassUUID + ", " + room.No + "\n";
+            }
+            File.WriteAllText(filename, content);
         }
     }
 }
