@@ -1,101 +1,11 @@
 UUID, Name, Birthday, Gender, ClassUUID
-66c1e003-47b7-4ac3-8638-7a603a0edd80, Lê Ngọc Châu, 12/4/2003 12:00:00 AM, False, 3f967437-1ffb-487b-842b-cd4b05bc3de3
-e820aded-8a01-4a44-9fbe-4827fe372e12, Dư Việt, 12/18/2003 12:00:00 AM, True, b800c564-0ad2-4c81-9610-48c868ea0d57
-6654510f-5397-4bd1-a0a4-a1099960c632, Chu Hoàng Thịnh, 3/3/2003 12:00:00 AM, True, 21bcb471-eef3-4dde-bdc4-32fd7f32c9d1
-3a806fa7-93b1-47f2-9d6a-c67de8cbe4d4, Bùi Đức Thịnh, 10/9/2003 12:00:00 AM, True, e0e06ee1-bc64-4c4b-8e59-85c78788f864
-9ab54f02-a416-4ca2-a247-5eabec5429c3, Lý Kiều, 9/30/2004 12:00:00 AM, False, 1fdcfc54-51d9-4cdd-a776-411543082fb9
-e7f919ce-3be8-42cf-8d44-baad5c20a9c8, Thái Nhật Linh, 5/25/2004 12:00:00 AM, False, b25a62c8-e35f-4d52-8a4d-bd62ec5f8b74
-aec68963-4451-498d-8a4d-5ec9967ddfcd, Quách Châu, 10/1/2004 12:00:00 AM, False, 161fd687-c6f2-472d-ad93-bfa850ced165
-444bd092-3e97-47e7-aade-c501c6c94393, Bùi Hà, 3/23/2005 12:00:00 AM, False, 61f47183-038a-4fa8-91c0-65dbe8f70225
-2d682e85-b552-4c9e-a5c8-5f48e6924d29, Nguyễn Nhật Yến, 10/5/2005 12:00:00 AM, False, bfc34e53-1010-4a0e-83e3-06525a492fd2
-9e91af14-0726-4bcb-8af5-deb873db24b9, Võ Thanh Vy, 1/1/2003 12:00:00 AM, False, 53e66266-82e3-44f8-b636-e563427cbda9
-24a4cc18-5c21-479e-a64e-1c6005690530, Triệu Anh Tuấn, 2/11/2003 12:00:00 AM, True, a196a580-b385-4faf-bea7-d6e3c4bea431
-cc8aa73d-473b-4e79-b948-047a2c9d8859, Trần Bá Văn Long, 3/6/2004 12:00:00 AM, True, eedc2e65-d57d-4bc8-8f20-29a71fe5aed7
-99d1a3fb-6adb-41ed-94f1-e6a4090cc19c, Trần Bảo Việt, 3/24/2003 12:00:00 AM, True, 7023a0da-8ef4-4c29-b3f9-eaf41c46a61f
-c227e16e-494f-4eab-a2a7-92530b84c33f, Bùi Minh Hiếu, 2/22/2005 12:00:00 AM, True, ec211cba-beed-4249-b465-2901a58b70bd
-b04e6be9-3063-494d-ae8f-807c1f2ee6ee, Triệu Kim Thi, 7/13/2004 12:00:00 AM, False, 279f26b3-9704-4205-acde-bda17d056c88
-a05bc72b-4b8b-4378-8fc2-a98d8dfa79e0, Hồ Thông, 10/1/2005 12:00:00 AM, True, 8f73d90d-87f9-47f3-a6c1-b3853aa6e40f
-bf1ccc76-550d-4e58-aac5-b7b1c3b70d5c, Lý Thanh Hoàng Lan, 4/25/2005 12:00:00 AM, False, e1e8a54c-992d-4299-8b5a-03c63562aa13
-994f0ffd-7a05-4488-8b4d-676cc1f13190, Đinh Hà, 9/12/2004 12:00:00 AM, False, e3146596-22a0-4f7c-9168-6fccdf3e9067
-8d127123-c840-4354-9cbb-f5e0799bf879, Quách Hoàng Kim Vân, 1/31/2005 12:00:00 AM, False, bc113336-3997-47b6-8b00-6f0d4b9a3844
-98099f93-acec-4331-89d4-9fbcb14c7e6c, Đinh Yến, 4/9/2004 12:00:00 AM, False, f60aa98b-8fc2-421c-ad71-2b667da167d7
-f69bf41f-a847-4347-850d-827b709b972e, Quách Bá Văn Hòa, 9/9/2004 12:00:00 AM, True, 0e234a5a-338c-4f19-8bb9-259e5dd6c09c
-4757919a-e2d5-436f-ba26-2c8f24b26bf1, Đinh Nhật Thy, 4/9/2005 12:00:00 AM, False, 0436089a-3f39-413c-97d3-647a268841ec
-61ea03cc-2013-466a-9787-a5bf0bee3663, Cao Khánh, 11/24/2005 12:00:00 AM, True, a8ba38bc-134f-4fe0-9c33-52fbd72b9364
-4ce747e7-cac9-4a96-922f-fdf3dedb52bb, Lê Đoàn Anh Hưng, 7/29/2003 12:00:00 AM, True, da479c83-6965-4586-aa9e-44c6048127d8
-17f5a9e0-af4a-4860-bccb-8da59ae0f0f2, Triệu Đặng Kim Thảo, 5/6/2003 12:00:00 AM, False, 8d61efb3-4eed-4c12-8806-0a62171d26c1
-6fe51363-6170-43da-bf81-aef68e60b216, Cao Hoàng Thảo, 10/12/2004 12:00:00 AM, False, c4ad4d6f-73e2-4463-a05f-159c8c1e43b1
-982ffe41-65c8-48aa-9a19-f8487cd75090, Nguyễn Minh Hưng, 10/17/2003 12:00:00 AM, True, 53740d35-ebe7-4da2-8640-553d6765481b
-3ad59b94-5ecc-4d6f-b5a2-0ba47a3e6070, Đinh Minh Đoàn Hưng, 2/16/2003 12:00:00 AM, True, d453c947-2cbb-478e-b55e-b91737362497
-aac34c77-206e-4c7a-aecc-f0c9eebd60ff, Võ Đặng Yến, 4/9/2004 12:00:00 AM, False, 5b36beb0-1407-47b1-b983-63664777b242
-d8306c93-175b-4967-b55c-1ad9b05d1cfa, Hồ Hòa, 5/13/2004 12:00:00 AM, True, f0cbc544-53af-41c4-94b7-ef51e2001981
-0f8b4a78-afa4-4614-88f7-57387a2b0bfd, Triệu Văn Hùng, 7/18/2005 12:00:00 AM, True, d6dbe728-433a-438f-a855-6af2679c82fc
-57dbc629-7c2f-4555-8f01-56213d463b58, Cao Thanh Châu, 3/30/2005 12:00:00 AM, False, 36c9df19-76f9-493f-ba6a-09c174518212
-a3987b95-b499-404e-9359-9029d5debfa0, Nguyễn Đặng Đặng Linh, 5/23/2003 12:00:00 AM, False, 67229448-d27f-4f4e-9302-7ab7ac57ac54
-44a5dffa-c82a-44ca-8a27-066895239c18, Triệu Hoa, 1/28/2003 12:00:00 AM, False, e1b6c001-3ba9-48ce-a572-c09a26b60c06
-e98e25d2-20a3-4c09-8665-04f2b874ea2f, Dư Huy, 5/20/2003 12:00:00 AM, True, 254008cf-3049-4f8e-afcc-fc31fd11f307
-b8bd216a-5931-42a7-90ba-6cabf3c75913, Lê Thế Hưng, 2/22/2003 12:00:00 AM, True, dbf7abe3-15de-4a74-98dd-4ca67e7f9ead
-a328ef08-223b-4a36-884f-394fa3a29994, Trần Anh Khánh, 4/8/2003 12:00:00 AM, True, eb8f6ed1-5a5f-4279-8002-c0b304d1ee3f
-5dc76566-77d6-46b2-ae04-6e3356413477, Quách Bảo Đức Việt, 6/27/2005 12:00:00 AM, True, 1fea36f9-f1ab-4be4-b3b6-c341cb99afe1
-dafe5781-5c9a-4695-aef1-f2b79f969867, Trần Anh Đức Thành, 9/20/2003 12:00:00 AM, True, 962add18-ea86-43d2-8f22-cd926c7693ba
-00965674-2a8c-4f82-b748-78be0ee853d5, Ngô Dương Văn Long, 9/14/2004 12:00:00 AM, True, cf2679d2-d0b1-4aa4-ab5c-0204b25fec09
-18dd775d-d02f-47f6-b87d-1604bfdde57a, Võ Văn Hùng, 1/21/2005 12:00:00 AM, True, d30cd912-7bd6-4ac0-a77f-462383e186d6
-8ca487bc-ef8d-42b4-99b9-13c7173e3f91, Quách Ngọc Lan, 10/20/2005 12:00:00 AM, False, f05603aa-2e81-418f-99d0-34dd17fbcf49
-4f6e9011-0a3d-4987-8a5d-99db7d765e71, Nguyễn Hoàng Thanh Yến, 6/22/2004 12:00:00 AM, False, 5338fd2b-98d8-4be3-addd-9b17f8d1e85b
-f29e3ddd-0c96-4fd8-aab0-ccd9da0764d3, Hồ Thị Nhật Thảo, 7/11/2004 12:00:00 AM, False, 6487390c-212d-4690-acff-76dd916e34f3
-3d4c7eab-862f-4c70-9fdf-9874dbb6871c, Thái Đoàn Minh Long, 2/20/2005 12:00:00 AM, True, 0fe8724d-e30b-46ff-b6fc-e5442395fed8
-fd330996-9629-49af-aada-3b88b057c994, Thái Anh Việt, 9/8/2003 12:00:00 AM, True, 8a393a96-47b1-488f-9e74-12b968127ed3
-9a576c5c-c613-4626-9609-099bf22ade6e, Hồ Đức Bá Hưng, 1/20/2004 12:00:00 AM, True, 701ed057-68c1-45dd-8476-30d2d9c504a3
-9ee77759-a0b9-4d42-bf70-5447559dbe86, Thái Lan, 1/8/2003 12:00:00 AM, False, 0ac094f6-3ce9-4899-a9f3-692c8aaf4e8b
-f7cb6dcc-2075-4124-aa09-79f77ae81076, Ngô Bá Minh Hiếu, 7/29/2004 12:00:00 AM, True, 3e133ff5-02df-4681-a12d-dcd727d3166c
-41aabb8b-e17e-42c4-ac2c-ad975e5e5a66, Cao Dương Dương, 11/29/2003 12:00:00 AM, True, cf74df7e-67e6-406a-8a62-a9016f7064b7
-3d33ed96-8840-45ae-ae71-202b5eb1c109, Nguyễn Thu Hà, 9/23/2005 12:00:00 AM, False, 4e705fea-52da-42be-95d0-de23cac44cdb
-c6c1530c-2078-4220-b83d-6fc05aff69b6, Bùi Đức Bảo Thành, 7/23/2003 12:00:00 AM, True, 73d3ed9a-0788-4a0b-a9e7-05d7a076cbce
-c59fbc1f-9d8f-4b78-9baf-412f9c20c11c, Lê Văn Thịnh, 2/27/2003 12:00:00 AM, True, dfeac9db-2d42-4feb-9b76-57efa66ffb35
-3fba9498-be90-48fd-bfd7-ce35bbdb82f4, Ngô Bá Long, 4/10/2004 12:00:00 AM, True, d89c1ea5-8826-46e6-b3e9-50acb4a75041
-9c6e5661-1442-4eb0-b85b-e073d2027a7e, Thái Thị Thảo, 12/2/2003 12:00:00 AM, False, ead32273-e7a3-417e-9d6f-7f91d99d5eb4
-2121f8d1-b2d9-4e7f-895e-7463bc69a230, Cao Bảo Thế Việt, 10/18/2003 12:00:00 AM, True, 46f44887-222f-455a-b775-3c7f6172b246
-9ebb3c49-f871-4a80-b977-d1fb0d104027, Quách Minh Sơn, 3/16/2003 12:00:00 AM, True, f00c647b-28ea-45b9-b99e-becd52a182d1
-a2f81ae5-51b8-4c4b-87ee-1218042e3765, Bùi Linh, 9/24/2004 12:00:00 AM, False, 52995ab7-958a-43d9-a517-a07071939456
-f3847707-a263-414e-96f7-8db254d9e790, Lê Đặng Thi, 7/27/2005 12:00:00 AM, False, 910e9470-092e-44ea-a4a6-d051fb33a5a5
-78d4806d-339f-42ee-a0a8-97bc85e8dfb0, Thái Kim Kim Hà, 2/7/2005 12:00:00 AM, False, 2beca0a3-bce1-46b8-9a3f-9f8bde02d6d5
-6c129585-598b-44ca-a0d0-2c1181c48e30, Ngô Thế Sơn, 9/29/2005 12:00:00 AM, True, 462d469e-86fd-441a-8fe9-4d28bb32e896
-7496d1c3-68b7-470e-a575-11a7dfa5072e, Nguyễn Nhật Mai, 10/26/2003 12:00:00 AM, False, 890546f5-dd19-4f0e-8d05-6a6c954df7f0
-2aad6ad6-d38f-40e0-a349-1cda6291629f, Nguyễn Tuấn, 2/23/2003 12:00:00 AM, True, 37f509a5-ccdc-47bb-afbd-216b6cfdc5f7
-923faef8-2bc2-4f13-8cc4-638e8cd7ad2b, Triệu Hưng, 8/5/2003 12:00:00 AM, True, a4ad5012-c23e-4784-91b0-49836e508638
-aa81c85d-aee3-4102-860f-437fb2d26692, Chu Anh Minh Hùng, 7/17/2005 12:00:00 AM, True, 7d9d6b61-67b8-44ea-9350-84a2b380fa65
-ec77ce6b-f656-47c7-b9eb-62ecc6346339, Lê Minh Đức Hiếu, 1/4/2003 12:00:00 AM, True, 48a1e536-c3b1-471f-aa62-113208f796c3
-36b2a8aa-5c7e-4e60-87e7-cce0187029c5, Lý Thanh Thị Lan, 12/5/2005 12:00:00 AM, False, a201c73f-8740-4933-9e28-5c022c011a5f
-fd7dc897-5fc5-46c7-8d6c-52a068957956, Hồ Thu Đặng Kiều, 4/16/2005 12:00:00 AM, False, 98b0e382-7087-43d0-b637-1d8b6d05aac4
-46067445-8e10-4c04-ad5a-696c704389ea, Võ Hoàng Anh Đạt, 12/16/2003 12:00:00 AM, True, 4a2237b1-54d7-46e0-821c-623bda16d17e
-c91fdf48-2d94-44c4-a55f-29f1abc55ae2, Đinh Diệu Thy, 7/31/2003 12:00:00 AM, False, 249e4c50-6722-4854-9490-16935d0feff3
-4c2686c1-2e3e-457f-8787-f223c5ec77ed, Nguyễn Đức Huy, 9/3/2004 12:00:00 AM, True, 255dd2b6-4449-47a9-a82d-4e6acbe4be08
-db456a7a-623c-4309-ba45-4c6401d987d6, Hồ Vy, 12/19/2004 12:00:00 AM, False, d2742e71-a8b8-421e-8ab3-640f2405b6a5
-7bbba5d0-e841-47eb-9ce3-001395325a6e, Lý Ngọc Lan, 3/5/2003 12:00:00 AM, False, 6e045e5e-c544-441c-9a89-f4329626126b
-8b0bbc15-987d-487c-b87f-a0217fca0695, Lý Yến, 7/9/2005 12:00:00 AM, False, 0958532c-6327-48b9-8d64-6d1f2d0ec66a
-22f86e12-fcdf-4a6d-b39e-dbd6f1c5caf5, Hồ Bá Anh Hưng, 5/9/2004 12:00:00 AM, True, ab36dd90-b3f1-452a-ae3f-de178bfd5553
-4af957b9-4271-4fd5-8305-fec30bbe431d, Chu Đức Hùng, 1/11/2004 12:00:00 AM, True, 6101c594-924e-4fea-9453-81d80fcd7c42
-f570aea3-d647-4720-b5e3-cc1775a749f3, Dư Nhật Nhật Thy, 12/7/2005 12:00:00 AM, False, 75874a95-a445-4872-90d1-79aaa86e2728
-b57130fb-a4dc-4157-be38-fb5a1caf6705, Triệu Đoàn Đoàn Khánh, 7/26/2003 12:00:00 AM, True, c3aa3922-268d-4b6d-b06d-3db58a451ad6
-635bd6a8-520f-4b93-869c-957e18b54645, Chu Kim Vân, 7/29/2003 12:00:00 AM, False, 6b3a4d80-b3f9-4188-a1eb-cc86c36b4885
-5151cf5e-09e6-48a6-8ff0-39b800d26c61, Triệu Bảo Đức Hưng, 10/18/2004 12:00:00 AM, True, 9c9ed184-1035-4599-8e4e-86c542844bbd
-f495a8d0-d980-4392-9181-cab09986e607, Dư Nhật Kim Linh, 11/13/2005 12:00:00 AM, False, e687c848-879f-439b-a7eb-0f7bf91e66f5
-394f2d15-5544-474a-b421-5ad136b9d84f, Hồ Văn Hưng, 11/29/2005 12:00:00 AM, True, 54cb5691-c71b-4ad4-965d-0ccdd307b56f
-003d511f-f1ae-4b10-9af6-8f2dcad00497, Thái Hà, 9/10/2003 12:00:00 AM, False, 57638870-c512-4a4a-8a4e-a9d65b37b928
-75232d88-8b4a-49a6-93b2-f14a6fda44bf, Võ Đoàn Long, 7/2/2005 12:00:00 AM, True, a24bd95e-a3f7-4579-acdf-03d1baf1bca4
-27ae2395-c43b-4142-8de7-1637797931fd, Trần Đức Văn Khánh, 10/11/2003 12:00:00 AM, True, f602fc18-d084-4c37-9026-10f1f2774e87
-6a1cdc11-4399-47c0-87a0-a8b93050922d, Quách Đặng Thúy Kiều, 3/7/2004 12:00:00 AM, False, d91095ff-2db3-472f-a404-b5b61151fa92
-99ca3942-d9af-46de-9e13-cff9663a43e3, Trần Thịnh, 4/12/2004 12:00:00 AM, True, d56d8d1e-a906-46a8-aee2-ac307941f886
-02d1fe38-a8df-4119-8135-2e0790149a95, Dư Giang, 4/3/2004 12:00:00 AM, False, 780e1e27-9f53-4279-8cb5-cf178f22f76b
-1ebdd5c4-f978-4461-b276-ee8850f87ea1, Ngô Hưng, 4/17/2004 12:00:00 AM, True, 1180d794-ea08-457e-a273-5a9e9fd66c3b
-6a11e8be-9cee-4849-938d-d0b42f3f0070, Thái Đoàn Anh Hưng, 9/22/2004 12:00:00 AM, True, 9363196b-d76b-44b6-b785-8838217bec8a
-62254f55-99e9-486b-aef8-af3453a47423, Hồ Đoàn Đức Hùng, 1/29/2005 12:00:00 AM, True, 571b2eb1-32a3-43c0-b51a-0bc66d8bb793
-23eca57a-3033-4c11-9d05-db5a8da52e60, Chu Ngọc Thu Vân, 9/4/2003 12:00:00 AM, False, 20583c3a-fcc8-4dd4-8c62-98a10c9854ca
-e33f6499-6b68-46c2-aad5-d8bd47b9977a, Ngô Hoàng Thị Thy, 1/21/2005 12:00:00 AM, False, 492e5876-8109-4db2-87da-2d26bdb883ac
-8e9a6bca-e6ee-48d7-833a-631d525a232d, Lê Thúy Giang, 10/2/2003 12:00:00 AM, False, 09293bbb-4ab5-41ab-aabf-96e1080c178b
-13704556-7c56-4c83-9ba0-38c2614f8ed7, Bùi Dương Văn Hiếu, 2/6/2004 12:00:00 AM, True, 8265ad19-f83b-476f-916c-2b1322f7532b
-c5bfff87-6442-47bc-9cfe-cd710e0a2bb0, Ngô Hoàng Hoàng Thành, 6/8/2003 12:00:00 AM, True, d8b115a3-a9af-4970-9eb2-ad2f6f2f73f2
-99653e37-ce0a-4fa8-942f-1e828caf539d, Bùi Thi, 11/6/2004 12:00:00 AM, False, f9573e9e-12f0-4e8f-8da9-80d15b28db16
-dc92cfff-26bb-4251-a46c-d44640f44f21, Chu Hà, 1/29/2003 12:00:00 AM, False, 9cd7f246-d07f-4313-bdb2-a709b38da128
-d4553a34-9676-4f91-a8a3-16526756224e, Bùi Bá Bá Hiếu, 2/16/2004 12:00:00 AM, True, 209cd844-9e99-4771-8323-b96789f72915
-a4c86635-a0be-4aad-a5df-675f0919de3f, Nguyễn Văn Minh Long, 4/28/2004 12:00:00 AM, True, 079d0bcd-bee0-4b80-a21f-19ab396cc8a7
+507b71ca-11a0-482c-8975-2858b99230c6, Chu Kiều, 3/2/2003 12:00:00 AM, False, 6ff1aa84-9b99-43fd-a788-bed2d7463a4c
+0b32866d-eda9-4f96-91fc-cbb546505654, Lê Minh Thịnh, 4/20/2004 12:00:00 AM, True, e7a0ebf6-d480-4fb2-8de4-4d9032bf36ef
+1c9b17fe-54f1-4d08-9249-9a32b6af7787, Lý Hiếu, 10/5/2004 12:00:00 AM, True, 0518db24-68b1-4c47-af57-89f6476f1aee
+3e6ae21a-7429-4e48-b442-623b1501ee12, Dư Mai, 10/10/2005 12:00:00 AM, False, 30b753ed-6390-41c5-8435-325b1e9933f5
+c63d88ad-cbf3-463c-833e-1565480f49a6, Dư Thị Đặng Hà, 10/16/2004 12:00:00 AM, False, f77eed59-6cd5-4ff9-a8d1-d9bbe56f77f1
+798d2509-7a62-4138-be02-a7156afac7b3, Nguyễn Thị Linh, 12/26/2004 12:00:00 AM, False, 0d4d84db-9277-4bcc-ab4f-89a844109366
+8bf6c51d-ae55-45eb-a5d9-83a2e5ce56ad, Ngô Ngọc Thi, 6/11/2004 12:00:00 AM, False, 564d0424-e25d-443b-a08e-0335c978fa84
+2d884f6c-2734-4757-92cb-39c6d5279d18, Hồ Bảo Hoàng Việt, 11/8/2004 12:00:00 AM, True, cfdbad7b-28a2-4677-8c3c-7077b1f54b2d
+6d3d898e-991a-491b-bd6a-f5c03e6c7fb6, Võ Bảo Hưng, 5/23/2004 12:00:00 AM, True, 49e59453-8202-4562-8143-9424ac807321
+30febce1-0025-4485-85bf-c0ccd3fdabf5, Bùi Hoàng Mai, 3/22/2005 12:00:00 AM, False, fdf67bc4-ccd2-4f11-bf62-d93775044c9f

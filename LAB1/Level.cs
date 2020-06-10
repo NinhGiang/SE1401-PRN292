@@ -14,7 +14,7 @@ namespace LAB1
     {
         private string uuid;
         private string name;
-        private static List<Class> levelList;
+        private static List<Level> levelList;
         /// <value>Gets the value of UUID.</value>
         public string UUID
         {
@@ -32,7 +32,7 @@ namespace LAB1
             }
         }
         /// <value>Gets the value of LevelList.</value>
-        public static List<Class> LevelList
+        public static List<Level> LevelList
         {
             get
             {
@@ -54,7 +54,7 @@ namespace LAB1
         {
             if (levelList == null)
             {
-                levelList = new List<Class>();
+                levelList = new List<Level>();
             }
             string content = File.ReadAllText(@"..\..\..\SchoolConfigure.json");
             SchoolConfigure config = JsonSerializer.Deserialize<SchoolConfigure>(content);
@@ -63,6 +63,7 @@ namespace LAB1
             int levelNameIndex = rnd.Next(levelConfig.LevelNameSet.Length);
             string levelName = levelConfig.LevelNameSet[levelNameIndex];
             Level level = new Level(Guid.NewGuid().ToString(), levelName);
+            levelList.Add(level);
             return level;
         }
     }

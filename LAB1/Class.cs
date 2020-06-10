@@ -81,5 +81,18 @@ namespace LAB1
             classList.Add(newClass);
             return newClass;
         }
+        /// <summary>
+        /// Used to write data into file.
+        /// </summary>
+        /// <param name="filename">A file used to store data.</param>
+        public static void SaveClasses(string filename)
+        {
+            String content = "UUID, LevelUUID, RoomUUID, Name\n";
+            foreach (Class classObject in classList)
+            {
+                content += classObject.UUID + ", " + classObject.LevelUUID + ", " + classObject.RoomUUID + ", " + classObject.Name + "\n";
+            }
+            File.WriteAllText(filename, content);
+        }
     }
 }

@@ -62,16 +62,21 @@ namespace LAB1
             }*/
             Console.OutputEncoding = Encoding.UTF8;
             //Test Create method in Student class
-            Student.Create(100);
+            Student.Create(10);
             Student.SaveStudents(@"..\..\..\Students.csv");
-            /*foreach (var student in Student.StudentList)
+            Class.SaveClasses(@"..\..\..\Classes.csv");
+            foreach (var student in Student.StudentList)
             {
                 Console.WriteLine(student.UUID + ", " + student.Name + ", " + student.Birthday + ", " + student.Gender + ", " + student.ClassUUID);
             }
             foreach (var classObject in Class.ClassList)
             {
                 Console.WriteLine(classObject.UUID);
-            }*/
+            }
+            foreach (var level in Level.LevelList)
+            {
+                Console.WriteLine(level.UUID + ", " + level.Name);
+            }
         }
     }
 }
