@@ -6,7 +6,8 @@ namespace LAB1
 {
     class Configuration
     {
-        public NameConfig NameConfig { get; set; }
+        public NameConfig nameConfig { get; set; }
+        public LevelConfig levelConfig { get; set; }
         
     }
     class NameConfig
@@ -15,5 +16,9 @@ namespace LAB1
         public string[] first_female_name_set { get; set; }
         public string[] middle_name_set { get; set; }
         public string[] last_name_set { get; set; }
+    }
+    class LevelConfig
+    {
+        public String[] level_set { get; set; }
     }
 }

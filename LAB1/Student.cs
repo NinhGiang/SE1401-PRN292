@@ -47,7 +47,7 @@ namespace LAB1
             set { _class = value; }
         }
 
-        public void Create(int numberOfStudent)
+        public void createStudent(int numberOfStudent)
         {
             List<Student> list = new List<Student>();
             Random rand = new Random();
@@ -56,8 +56,10 @@ namespace LAB1
                 String id = Guid.NewGuid().ToString();
                 bool gender = Utils.getRandomGender();
                 String name = Utils.getRandomFullName(gender);
-                int age = rand.Next(15,21);
-                DateTime birth = Utils.getRandomDateTime(2020-age);
+                int level = rand.Next(10, 12);
+                int age = Utils.getRandomAge(level);
+                DateTime birth = Utils.getRandomDateTime(2020 - age);
+                
                 //list.Add(new Student(id, name, birth, gender,));
             }
             
