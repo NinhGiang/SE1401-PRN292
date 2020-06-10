@@ -11,8 +11,8 @@ namespace LAB1
 
         public Field(string uuid, string name)
         {
-            _uuid = uuid ?? throw new ArgumentNullException(nameof(uuid));
-            _name = name ?? throw new ArgumentNullException(nameof(name));
+            _uuid = uuid;
+            _name = name;
         }
         public string UUID
         {

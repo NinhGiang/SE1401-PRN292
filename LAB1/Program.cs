@@ -29,6 +29,11 @@ namespace LAB1
             Subject[] subject_list = Subject.createSubject(field_list, level_list);
             school.SubjectList = subject_list;
             school.saveSubject(directoryPath + "\\" + "Subject.csv");
+            
+            //create Teacher
+            Teacher[] teacher_list = Teacher.createTeacher(30, field_list);
+            school.TeacherList = teacher_list;
+            school.saveTeacher(directoryPath + "\\" + "Teacher.csv");
 
             Console.ReadLine();
         }

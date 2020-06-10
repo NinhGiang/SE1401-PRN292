@@ -13,10 +13,10 @@ namespace LAB1
 
         public Subject(string uuid, string name, string level, string field)
         {
-            _uuid = uuid ?? throw new ArgumentNullException(nameof(uuid));
-            _name = name ?? throw new ArgumentNullException(nameof(name));
-            _level = level ?? throw new ArgumentNullException(nameof(level));
-            _field = field ?? throw new ArgumentNullException(nameof(field));
+            _uuid = uuid;
+            _name = name;
+            _level = level;
+            _field = field;
         }
 
         public string UUID

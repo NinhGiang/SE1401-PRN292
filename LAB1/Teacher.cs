@@ -13,10 +13,10 @@ namespace LAB1
 
         public Teacher(string uuid, string name, bool gender, string field)
         {
-            _uuid = uuid ?? throw new ArgumentNullException(nameof(uuid));
-            _name = name ?? throw new ArgumentNullException(nameof(name));
+            _uuid = uuid;
+            _name = name;
             _gender = gender;
-            _field = field ?? throw new ArgumentNullException(nameof(field));
+            _field = field;
         }
         public string UUID
         {
@@ -37,6 +37,19 @@ namespace LAB1
         {
             get { return _field; }
             set { _field = value; }
+        }
+        public static Teacher[] createTeacher(int number, Field[] fieldList) 
+        {
+            Teacher[] list = new Teacher[number];
+            Random rand = new Random();
+            for (int i = 0; i < number; i++)
+            {
+                String id = Guid.NewGuid().ToString();
+                bool gender = Utils.getRandomGender();
+                String name = Utils.getRandomFullName(gender);
+                list[i] = new Teacher(id,name,gender,fieldList[rand.Next(fieldList.Length)].UUID);
+            }
+            return list;
         }
     }
 }
