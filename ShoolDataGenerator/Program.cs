@@ -1,6 +1,7 @@
 ﻿using LAB1;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace ShoolDataGenerator
 {
@@ -50,11 +51,17 @@ namespace ShoolDataGenerator
                 }
             }*/
 
-            
-            string[] listFeildName = Field.GenerateFieldName(9, 50);
+
+            /*string[] listFeildName = Field.GenerateFieldName(9, 50);
             foreach (var field in listFeildName)
             {
                 Console.WriteLine(field);
+            }*/
+
+            int[] listRoomNo = Room.GenrateRoomNo(100);
+            foreach (var no in listRoomNo)
+            {
+                Console.WriteLine(no);
             }
         }
 
