@@ -49,5 +49,16 @@
       "Ngo",
       "Dinh"
     ]
+  },
+  "FieldDataSet": {
+    "FieldNameSet": [
+      "Math",
+      "Literature",
+      "Biology",
+      "English",
+      "日本語",
+      "Chemistry",
+      "Physics"
+    ]
   }
 } 

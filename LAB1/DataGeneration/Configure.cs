@@ -4,6 +4,7 @@
 	public NameDataSet NameDataSet {get; set;}
     public GenderDataSet GenderDataSet { get; set; }
     public ClassDataSet ClassDataSet { get; set; }
+    public FieldDataSet FieldDataSet { get; set; }
 }
 class NameDataSet
 {
@@ -19,4 +20,8 @@ class GenderDataSet
 class ClassDataSet
 {
     public string[] ClassSet { get; set; }
+}
+class FieldDataSet
+{
+    public string[] FieldNameSet { get; set; }
 }

@@ -10,6 +10,7 @@ namespace LAB1.DataGeneration
     {
         private static Configure config = JsonSerializer.Deserialize<Configure>(File.ReadAllText(@"..\..\..\DataGeneration\database.json"));
         private static ClassDataSet classDB = config.ClassDataSet;
+        private static FieldDataSet fieldDB = config.FieldDataSet;
         private static Random rnd = new Random();
         public static int GetLevelLength()
         {
@@ -56,6 +57,13 @@ namespace LAB1.DataGeneration
             // string romNo = room[2].Trim();
             return roomInfo;
         }
-
+        public static int getFieldLength()
+        {
+            return fieldDB.FieldNameSet.Length;
+        }
+        public static string getFieldName(uint index)
+        {
+            return fieldDB.FieldNameSet[index].ToString();
+        }
     }
 }
