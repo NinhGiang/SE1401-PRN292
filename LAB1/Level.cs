@@ -58,7 +58,6 @@ namespace LAB1
             }
             string content = File.ReadAllText(@"..\..\..\SchoolConfigure.json");
             SchoolConfigure config = JsonSerializer.Deserialize<SchoolConfigure>(content);
-            Random rnd = new Random();
             LevelConfig levelConfig = config.LevelConfig;   
             for (int i = 0; i < levelConfig.LevelNameSet.Length; i++)
             {

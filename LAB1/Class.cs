@@ -74,14 +74,19 @@ namespace LAB1
         /// <returns>
         /// A Class object.
         /// </returns>
-        public static Class Create(Level level, string roomUUID)
+        public static Class Create(Level level, string roomUUID, int index)
         {
             if (classList == null)
             {
                 classList = new List<Class>();
             }
+            string content = File.ReadAllText(@"..\..\..\SchoolConfigure.json");
+            SchoolConfigure config = JsonSerializer.Deserialize<SchoolConfigure>(content);
+            ClassConfig randomClassName = config.ClassConfig;
+            int classNameIndex = index;
             string uuid = Guid.NewGuid().ToString();
-            Class newClass = new Class(uuid, level.UUID, roomUUID, "Classname");
+            string classname = level.Name + randomClassName.ClassNameSet[classNameIndex];
+            Class newClass = new Class(uuid, level.UUID, roomUUID, classname);
             classList.Add(newClass);
             return newClass;
         }

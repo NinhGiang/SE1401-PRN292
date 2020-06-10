@@ -13,6 +13,9 @@ namespace LAB1
         /// <value>Gets the value of LevelConfig.</value>
         /// <value>Sets the value of LevelConfig.</value>
         public LevelConfig LevelConfig { get; set; }
+        /// <value>Gets the value of ClassConfig.</value>
+        /// <value>Sets the value of ClassConfig.</value>
+        public ClassConfig ClassConfig { get; set; }
     }
     /// <summary>
     /// The main NameConfig class.
@@ -41,5 +44,11 @@ namespace LAB1
         /// <value>Gets the value of LevelNameSet.</value>
         /// <value>Sets the value of LevelNameSet.</value>
         public string[] LevelNameSet { get; set; }
+    }
+    class ClassConfig
+    {
+        /// <value>Gets the value of ClassNameSet.</value>
+        /// <value>Sets the value of ClassNameSet.</value>
+        public string[] ClassNameSet { get; set; }
     }
 }

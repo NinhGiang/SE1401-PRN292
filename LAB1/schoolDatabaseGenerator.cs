@@ -7,12 +7,12 @@ namespace LAB1
 {
     /// <summary>
     /// The main SchoolDatabaseGenerator class.
-    /// Contains all methods for generating a school database.
+    /// Contains Main method.
     /// </summary>
     class SchoolDatabaseGenerator
     {       
         /// <summary>
-        /// Used to test method.
+        /// Used to perform functions.
         /// </summary>
         /// <param name="args">A string array contains command from command-line.</param>
         public static void Main(string[] args)
@@ -63,8 +63,8 @@ namespace LAB1
             Console.OutputEncoding = Encoding.UTF8;
             Random rnd = new Random();
             uint noOfStudentInClass = (uint) rnd.Next(30, 51);
-            uint noOfClass = (uint) 100 / noOfStudentInClass;
-            uint noOfClassPerLevel = (uint)noOfClass / 3;
+            uint noOfClass = (uint) Math.Ceiling((double) 1000 / noOfStudentInClass);
+            uint noOfClassPerLevel = (uint) Math.Ceiling((double) noOfClass / 3);
             uint roomNo = 1;
             //Test Create method in Level class
             Level.Create();
@@ -73,7 +73,7 @@ namespace LAB1
             {
                 for (int i = 0; i < noOfClassPerLevel; i++)
                 {
-                    Class.Create(level, "");
+                    Class.Create(level, "", i);
                     Room.Create(Class.ClassList[i], roomNo);
                     roomNo++;
                 }
@@ -88,7 +88,7 @@ namespace LAB1
             {               
                 for (int i = 0; i < noOfStudentInClass; i++)
                 {
-                    Student.Create(100, classObject);
+                    Student.Create(1000, classObject);
                 }
             }
 

@@ -75,16 +75,14 @@ namespace LAB1
             classUUID = newClassUUID;
         }
         /// <summary>
-        /// Generate random birthday of students.
+        /// Generate random birthday for a student.
         /// </summary>
         /// <returns>
-        /// A random date in range 1/1/2003-12/12/2005.
+        /// A random date in range depends on student's level.
         /// </returns>
-        private static DateTime GenerateRandomBirthday()
+        private static DateTime GenerateRandomBirthday(DateTime start, DateTime end)
         {
             Random rnd = new Random();
-            DateTime start = new DateTime(2003, 1, 1);
-            DateTime end = new DateTime(2005, 12, 12);
             int range = (end - start).Days;
             return start.AddDays(rnd.Next(range));
         }
@@ -113,45 +111,62 @@ namespace LAB1
                 Random rnd = new Random();
                 //for (int i = 0; i < noOfStudents; i++)
                 //{
-                    NameConfig randomName = config.NameConfig;
-                    int lastNameIndex = rnd.Next(randomName.LastNameSet.Length);
-                    int noOfMiddleName = rnd.Next(3);
-                    string fullName = randomName.LastNameSet[lastNameIndex] + " ";
-                    DateTime birthday = GenerateRandomBirthday();
-                    bool gender;
+                NameConfig randomName = config.NameConfig;
+                int lastNameIndex = rnd.Next(randomName.LastNameSet.Length);
+                int noOfMiddleName = rnd.Next(3);
+                string fullName = randomName.LastNameSet[lastNameIndex] + " ";
+                DateTime start;
+                DateTime end;
+                if (classObject.Name.Contains("10"))
+                {
+                    start = new DateTime(2001, 1, 1);
+                    end = new DateTime(2005, 12, 12);
+                }
+                else if (classObject.Name.Contains("11"))
+                {
+                    start = new DateTime(2000, 1, 1);
+                    end = new DateTime(2004, 12, 12);
+                }
+                else
+                {
+                    start = new DateTime(1999, 1, 1);
+                    end = new DateTime(2003, 12, 12);
+                }
+                DateTime birthday = GenerateRandomBirthday(start, end);
+                bool gender;
 
-                    if (rnd.NextDouble() > 0.5)
+                if (rnd.NextDouble() > 0.5)
+                {
+                    gender = false;
+                    int femaleFirstNameIndex = rnd.Next(randomName.FemaleFirstNameSet.Length);
+                    if (noOfMiddleName > 0)
                     {
-                        gender = false;
-                        int femaleFirstNameIndex = rnd.Next(randomName.FemaleFirstNameSet.Length);
-                        if (noOfMiddleName > 0)
+                        for (int j = 0; j < noOfMiddleName; j++)
                         {
-                            for (int j = 0; j < noOfMiddleName; j++)
-                            {
-                                int femaleMiddleNameIndex = rnd.Next(randomName.FemaleMiddleNameSet.Length);
-                                fullName += randomName.FemaleMiddleNameSet[femaleMiddleNameIndex] + " ";
-                            }
-                        }                                                                                             
-                        fullName += randomName.FemaleFirstNameSet[femaleFirstNameIndex];
-                        Student newStudent = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, classObject.UUID);
-                        studentList.Add(newStudent);
-                    } //end if gender is false
-                    else
+                            int femaleMiddleNameIndex = rnd.Next(randomName.FemaleMiddleNameSet.Length);
+                            fullName += randomName.FemaleMiddleNameSet[femaleMiddleNameIndex] + " ";
+                        }
+                    }
+                    fullName += randomName.FemaleFirstNameSet[femaleFirstNameIndex];
+                    Student newStudent = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, classObject.UUID);
+                    studentList.Add(newStudent);
+                } //end if gender is false
+                else
+                {
+                    gender = true;
+                    int maleFirstNameIndex = rnd.Next(randomName.MaleFirstNameSet.Length);
+                    if (noOfMiddleName > 0)
                     {
-                        gender = true;
-                        int maleFirstNameIndex = rnd.Next(randomName.MaleFirstNameSet.Length);
-                        if (noOfMiddleName > 0)
+                        for (int j = 0; j < noOfMiddleName; j++)
                         {
-                            for (int j = 0; j < noOfMiddleName; j++)
-                            {
-                                int maleMiddleNameIndex = rnd.Next(randomName.MaleMiddleNameSet.Length);
-                                fullName += randomName.MaleMiddleNameSet[maleMiddleNameIndex] + " ";
-                            }
-                        }                       
-                        fullName += randomName.MaleFirstNameSet[maleFirstNameIndex];
-                        Student newStudent = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, classObject.UUID);
-                        studentList.Add(newStudent);
-                    } //end if gender is true
+                            int maleMiddleNameIndex = rnd.Next(randomName.MaleMiddleNameSet.Length);
+                            fullName += randomName.MaleMiddleNameSet[maleMiddleNameIndex] + " ";
+                        }
+                    }
+                    fullName += randomName.MaleFirstNameSet[maleFirstNameIndex];
+                    Student newStudent = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, classObject.UUID);
+                    studentList.Add(newStudent);
+                } //end if gender is true
                 //} //end for each index in result array
 
                 //} //end if noOfStudents in range 500-3000
