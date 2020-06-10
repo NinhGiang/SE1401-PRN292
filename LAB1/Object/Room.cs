@@ -47,7 +47,7 @@ namespace LAB1
             for (int i = 0; i < number_room; i++)
             {
                 int no = i + 1;
-                string id = Guid.NewGuid().ToString(P); // Generate random UUID V4 (32 bits) start with '{' and end with '}'
+                string id = Guid.NewGuid().ToString(); 
                 string classInfo = "N/A";
                 result.Add(new Room(id, classInfo, no));
             }
