@@ -53,15 +53,10 @@ namespace LAB1
             for (int i = 0; i < numberOfStudent; i++)
             {
                 String id = Guid.NewGuid().ToString();
-                bool gender = false;
-               
-                int randomGender = rand.Next(1,2);
-                if (randomGender == 1)
-                {
-                    gender = true;
-                }
-
-
+                bool gender = Utils.getRandomGender();
+                String name = Utils.getRandomFullName(gender);
+                DateTime birth = Utils.getRandomDateTime();
+                //list.Add(new Student(id, name, birth, gender,));
             }
             
         }

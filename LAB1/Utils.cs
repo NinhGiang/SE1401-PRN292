@@ -33,5 +33,22 @@ namespace LAB1
             }
             return name;
         }
+        public static bool getRandomGender()
+        {
+            bool gender = false;
+            int randomGender = rand.Next(1, 2);
+            if (randomGender == 1)
+            {
+                gender = true;
+            }
+            return gender;
+        }
+        public static DateTime getRandomDateTime()
+        {
+            int year = rand.Next(1997, 2000);
+            DateTime start = new DateTime(year,1,1);
+            DateTime end = new DateTime(year + 1, 12, 31);
+            return start.AddDays(rand.Next((end-start).Days));
+        }
     }
 }
