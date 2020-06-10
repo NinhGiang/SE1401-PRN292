@@ -78,6 +78,10 @@ namespace LAB1.DataGeneration
         {
             return CsvReader(@"..\..\..\DataGeneration\Room.csv");
         }
+        public static List<string> GetFieldList()
+        {
+            return CsvReader(@"..\..\..\DataGeneration\Field.csv");
+        }
     }
 }
     
