@@ -70,14 +70,20 @@ namespace LAB1
         /// <returns>
         /// A Class object.
         /// </returns>
-        public static Class Create()
+        public static Class Create(Level level)
         {
             if (classList == null)
             {
                 classList = new List<Class>();
             }
-            Level newLevel = Level.Create();
-            Class newClass = new Class(Guid.NewGuid().ToString(), newLevel.UUID, Guid.NewGuid().ToString(), "Classname");
+            /*if (no == 0)
+            {
+                Random rnd = new Random();
+                no = (uint) rnd.Next(1, 101);
+            }*/
+            string uuid = Guid.NewGuid().ToString();
+            Room newRoom = Room.Create(uuid);
+            Class newClass = new Class(uuid, level.UUID, newRoom.UUID, "Classname");
             classList.Add(newClass);
             return newClass;
         }

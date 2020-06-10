@@ -98,7 +98,7 @@ namespace LAB1
         /// <exception cref="System.NullReferenceException">
         /// Thrown when the object in Json file does not exist or has no data.
         /// </exception>
-        public static List<Student> Create(int noOfStudents)
+        public static void Create(int noOfStudents, Class classObject)
         {
             try
             {
@@ -106,13 +106,13 @@ namespace LAB1
                 //{
                 if (studentList == null)
                 {
-                    studentList = new List<Student>(noOfStudents);
+                    studentList = new List<Student>();
                 }
                 string content = File.ReadAllText(@"..\..\..\SchoolConfigure.json");
                 SchoolConfigure config = JsonSerializer.Deserialize<SchoolConfigure>(content);
                 Random rnd = new Random();
-                for (int i = 0; i < noOfStudents; i++)
-                {
+                //for (int i = 0; i < noOfStudents; i++)
+                //{
                     NameConfig randomName = config.NameConfig;
                     int lastNameIndex = rnd.Next(randomName.LastNameSet.Length);
                     int noOfMiddleName = rnd.Next(3);
@@ -133,8 +133,7 @@ namespace LAB1
                             }
                         }                                                                                             
                         fullName += randomName.FemaleFirstNameSet[femaleFirstNameIndex];
-                        Class newClass = Class.Create();
-                        Student newStudent = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, newClass.UUID);
+                        Student newStudent = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, classObject.UUID);
                         studentList.Add(newStudent);
                     } //end if gender is false
                     else
@@ -150,11 +149,10 @@ namespace LAB1
                             }
                         }                       
                         fullName += randomName.MaleFirstNameSet[maleFirstNameIndex];
-                        Class newClass = Class.Create();
-                        Student newStudent = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, newClass.UUID);
+                        Student newStudent = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, classObject.UUID);
                         studentList.Add(newStudent);
                     } //end if gender is true
-                } //end for each index in result array
+                //} //end for each index in result array
 
                 //} //end if noOfStudents in range 500-3000
                 /*else
@@ -167,7 +165,6 @@ namespace LAB1
             {
                 Console.WriteLine("Student _ NullReference: " + ex.Message);
             }
-            return studentList;
         }
         /// <summary>
         /// Used to write data into file.

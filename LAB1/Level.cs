@@ -50,7 +50,7 @@ namespace LAB1
         /// <returns>
         /// A Level object.
         /// </returns>
-        public static Level Create()
+        public static void Create()
         {
             if (levelList == null)
             {
@@ -59,12 +59,13 @@ namespace LAB1
             string content = File.ReadAllText(@"..\..\..\SchoolConfigure.json");
             SchoolConfigure config = JsonSerializer.Deserialize<SchoolConfigure>(content);
             Random rnd = new Random();
-            LevelConfig levelConfig = config.LevelConfig;
-            int levelNameIndex = rnd.Next(levelConfig.LevelNameSet.Length);
-            string levelName = levelConfig.LevelNameSet[levelNameIndex];
-            Level level = new Level(Guid.NewGuid().ToString(), levelName);
-            levelList.Add(level);
-            return level;
+            LevelConfig levelConfig = config.LevelConfig;   
+            for (int i = 0; i < levelConfig.LevelNameSet.Length; i++)
+            {
+                string levelName = levelConfig.LevelNameSet[i];
+                Level level = new Level(Guid.NewGuid().ToString(), levelName);
+                levelList.Add(level);
+            }                      
         }
         /// <summary>
         /// Used to write data into file.

@@ -61,8 +61,32 @@ namespace LAB1
                 Console.WriteLine("Invalid command!");
             }*/
             Console.OutputEncoding = Encoding.UTF8;
+            Random rnd = new Random();
+            uint noOfStudentInClass = (uint) rnd.Next(30, 51);
+            uint noOfClass = (uint) 100 / noOfStudentInClass;
+            uint noOfClassPerLevel = (uint)noOfClass / 3;
+            //Test Create method in Level class
+            Level.Create();
+            //Test Create method in Class class
+            foreach (var level in Level.LevelList)
+            {
+                for (int i = 0; i < noOfClassPerLevel; i++)
+                {
+                    Class.Create(level);
+                    Room.Create(Class.ClassList[i].UUID);
+                }
+            }
+          
             //Test Create method in Student class
-            Student.Create(10);
+            foreach (var classObject in Class.ClassList)
+            {
+                
+                for (int i = 0; i < noOfStudentInClass; i++)
+                {
+                    Student.Create(100, classObject);
+                }
+            }
+            
             Student.SaveStudents(@"..\..\..\Students.csv");
             Class.SaveClasses(@"..\..\..\Classes.csv");
             Level.SaveLevels(@"..\..\..\Levels.csv");
@@ -70,10 +94,7 @@ namespace LAB1
             {
                 Console.WriteLine(student.UUID + ", " + student.Name + ", " + student.Birthday + ", " + student.Gender + ", " + student.ClassUUID);
             }
-            foreach (var classObject in Class.ClassList)
-            {
-                Console.WriteLine(classObject.UUID);
-            }
+            
             foreach (var level in Level.LevelList)
             {
                 Console.WriteLine(level.UUID + ", " + level.Name);
