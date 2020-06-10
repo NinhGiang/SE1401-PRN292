@@ -10,15 +10,13 @@ namespace LAB1
         private string _level;
         private string _room;
         private string _name;
-        private static List<Class> _classList;
 
         public string UUID { get { return _uuid;  } set { _uuid = value;  } }
         public string Level { get { return _level; } set { _level = value; } }
         public string Room { get { return _room; } set { _room = value; } }
         public string Name { get { return _name; } set { _name = value; } }
-        public string ClassList { get { return _classList; } set { _classList = value; } }
 
-        public Class(string UUID, string Level, string Room, string Name)
+        public ClassInfo(string UUID, string Level, string Room, string Name)
         {
             _uuid = UUID;
             _level = Level;
@@ -27,27 +25,22 @@ namespace LAB1
         }
         
         // Create a Class
-        public static Class Create()
+        public static ClassInfo[] Create(uint _noOfClasses)
         {
-            if (classList == null)
+            List<ClassInfo> classList = new List<ClassInfo>();
+            List<string> roomList = ListControl.GetRoomList();
+            for (int i = 0; i < roomList.Count; i++)
             {
-                classList = new List<Class>();
-            }
-            Level newLevel = Level.Create();
-            Class newClass = new Class(Guid.NewGuid().ToString(), Level.UUID, Guid.NewGuid().ToString(), "Classname");
-            classList.Add(newClass);
-            return newClass;
-        }
+                string uuid = Guid.NewGuid().ToString();
+                string levelID = DataConnection.getLevelInfo()[0].Trim();
+                string roomID = DataConnection.getRoomInfo()[0].Trim();
 
-        public static void SaveClasses(string filename)
-        {
-            String content = "UUID, Level, Room, Name\n";
-            foreach (Class classObject in classList)
-            {
-                content += classObject.UUID + ", " + classObject.LevelUUID + ", " + classObject.RoomUUID + ", " + classObject.Name + "\n";
+                string levelName = DataConnection.getLevelInfo()[1].Trim();
+                string roomNo = DataConnection.getRoomInfo()[2].Trim();
+                string className = levelName + "A" + roomNo;
+                classList.Add(new ClassInfo(uuid, levelID, roomID, className));
             }
-            File.WriteAllText(filename, content);
+            return classList.ToArray(); ;
         }
     }
-}
 }

@@ -15,7 +15,6 @@ namespace LAB1
         protected DateTime _birthday;
         protected string _gender;
         protected string _classID;
-        protected static List<Student> studentList;
         static Configure config = JsonSerializer.Deserialize<Configure>(File.ReadAllText(@"E:\C# and .NET\LAB1\SE1401-PRN292\LAB1\Configure.json"));
         static Random rnd = new Random();
 
@@ -60,57 +59,37 @@ namespace LAB1
         }
 
         // create list of student
-        public static List<Student> Create(uint number_student)
+        public static Student[] Create(uint number_student)
         {
-            try
-            {
-                Random rnd = new Random();
-                for (uint i = 0; i < number_student; i++)
+            Student[] result = new Student[number_student];
+            Random rnd = new Random();
+            for (uint i = 0; i < number_student; i++)
+            {                
+                String uuID = Guid.NewGuid().ToString();
+                GenderConfig gender = config.GenderConfig;
+                LevelNameConfig level = config.LevelNameConfig;
+
+                int gender_index = rnd.Next(gender.GenderSet.Length);
+                if (gender_index == 0)
                 {
-                    String uuID = Guid.NewGuid().ToString();
-                    NameConfig _ = config.NameConfig;
-                    GenderConfig gender = config.GenderConfig;
-                    LevelNameConfig classLevel = config.LevelNameConfig;
+                    String fullname = GetRadomFullName();
+                    int level_index = rnd.Next(level.LevelSet.Length);
 
-                    int gender_index = rnd.Next(gender.GenderSet.Length);
-                    if (gender_index == 0)
-                    {
-                        String fullname = GetRadomFullName();
-                        int class_index = rnd.Next(classLevel.LevelSet.Length);
-
-                        int year = rnd.Next(2003, 2005);
-                        DateTime birthday = GetRandomDate(year);
-                        Student student = new Student(uuID, fullname, birthday, gender.GenderSet[gender_index], classLevel.LevelSet[class_index]);
-                        studentList.Add(new student);
-                    }
-                    else if (gender_index == 1)
-                    {
-                        String fullname = GetRadomFullName();
-                        int class_index = rnd.Next(classLevel.LevelSet.Length);
-
-                        int year = rnd.Next(2003, 2005);
-                        DateTime birthday = GetRandomDate(year);
-                        Student student = new Student(uuID, fullname, birthday, gender.GenderSet[gender_index], classLevel.LevelSet[class_index]);
-                        studentList.Add(new student);
-                    }
+                    int year = rnd.Next(2003, 2005);
+                    DateTime birthday = GetRandomDate(year);
+                    result[i] = new Student(uuID, fullname, birthday, gender.GenderSet[gender_index], level.LevelSet[level_index]);                 
                 }
-            } 
-            catch
-            {
-                Console.WriteLine("Student _ NullReference: " + ex.Message);
-            }           
-            return studentList;
-        }
+                else if (gender_index == 1)
+                {
+                    String fullname = GetRadomFullName();
+                    int level_index = rnd.Next(level.LevelSet.Length);
 
-        // Save student's list in csv file
-        public static void SaveStudents(string filename)
-        {
-            String content = "ID, Name, Birthday, Gender, ClassID\n";
-            foreach (Student student in studentList)
-            {
-                content += student.ID + ", " + student.FullName + ", " + student.Birthday + ", " + student.Gender + ", " + student.ClassID + "\n";
+                    int year = rnd.Next(2003, 2005);
+                    DateTime birthday = GetRandomDate(year);
+                    result[i] = new Student(uuID, fullname, birthday, gender.GenderSet[gender_index], level.LevelSet[level_index]);
+                }
             }
-            File.WriteAllText(filename, content);
+            return result;
         }
     }
 }
