@@ -65,5 +65,18 @@ namespace LAB1
                 fieldList.Add(newField);
             }
         }
+        /// <summary>
+        /// Used to write data into file.
+        /// </summary>
+        /// <param name="filename">A file used to store data.</param>
+        public static void SaveFields(string filename)
+        {
+            String content = "UUID, Name\n";
+            foreach (Field field in fieldList)
+            {
+                content += field.UUID + ", " + field.Name + "\n";
+            }
+            File.WriteAllText(filename, content);
+        }
     }
 }

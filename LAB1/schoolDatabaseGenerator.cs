@@ -90,12 +90,14 @@ namespace LAB1
                     Student.Create(1000, classObject);
                 }
             }
+            //Test Create method in Field class
+            Field.Create();
 
             Level.SaveLevels(@"..\..\..\Levels.csv");
             Class.SaveClasses(@"..\..\..\Classes.csv");
             Room.SaveRooms(@"..\..\..\Rooms.csv");
             Student.SaveStudents(@"..\..\..\Students.csv");
-            
+            Field.SaveFields(@"..\..\..\Fields.csv");
             
             /*foreach (var student in Student.StudentList)
             {
