@@ -6,33 +6,35 @@ namespace LAB1
 {
     class Room
     {
-        protected string _id;
+        protected string _uuid;
         protected string _classInfo;
         protected int _no;
 
-        public Room(string id, string classInfo, int no)
+        public Room(string uuid, string classInfo, int no)
         {
-            _id = id ?? throw new ArgumentNullException(nameof(id));
+            _uuid = uuid ?? throw new ArgumentNullException(nameof(uuid));
             _classInfo = classInfo ?? throw new ArgumentNullException(nameof(classInfo));
             _no = no;
         }
 
-        public string GetClassInfo()
+        public string UUID
         {
-            return _classInfo;
+            get { return _uuid; }
+            set { _uuid = value; }
         }
-        public void SetClassInfo(String classInfo)
+        public string ClassInof
         {
-            _classInfo = classInfo;
+            get { return _classInfo; }
+            set { _classInfo = value; }
         }
-        public int GetNo()
+        public int No
         {
-            return _no;
+            get { return _no; }
+            set { _no = value; }
         }
-        public void SetNo(int no)
+        public void create()
         {
-            _no = no;
+
         }
-        
     }
 }
