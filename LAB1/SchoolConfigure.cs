@@ -38,9 +38,6 @@ namespace LAB1
     }
     class LevelConfig
     {
-        /// <value>Gets the value of LevelSet.</value>
-        /// <value>Sets the value of LevelSet.</value>
-        public string[] LevelSet { get; set; }
         /// <value>Gets the value of LevelNameSet.</value>
         /// <value>Sets the value of LevelNameSet.</value>
         public string[] LevelNameSet { get; set; }

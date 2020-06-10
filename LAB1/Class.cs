@@ -75,8 +75,9 @@ namespace LAB1
             if (classList == null)
             {
                 classList = new List<Class>();
-            }           
-            Class newClass = new Class(Guid.NewGuid().ToString(), Guid.NewGuid().ToString(), Guid.NewGuid().ToString(), "Classname");
+            }
+            Level newLevel = Level.Create();
+            Class newClass = new Class(Guid.NewGuid().ToString(), newLevel.UUID, Guid.NewGuid().ToString(), "Classname");
             classList.Add(newClass);
             return newClass;
         }

@@ -93,7 +93,7 @@ namespace LAB1
         /// </summary>
         /// <param name="noOfStudents">A positive integer number.</param>
         /// <returns>
-        /// A list of students
+        /// A list of Student objects
         /// </returns>
         /// <exception cref="System.NullReferenceException">
         /// Thrown when the object in Json file does not exist or has no data.

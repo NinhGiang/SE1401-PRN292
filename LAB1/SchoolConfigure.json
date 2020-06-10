@@ -90,11 +90,6 @@
         ]
     },
     "LevelConfig": {
-        "LevelSet": [
-            "10",
-            "11",
-            "12"
-        ],
         "LevelNameSet": [
             "10th-grade",
             "11th-grade",
