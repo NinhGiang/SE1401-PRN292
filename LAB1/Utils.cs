@@ -43,9 +43,8 @@ namespace LAB1
             }
             return gender;
         }
-        public static DateTime getRandomDateTime()
+        public static DateTime getRandomDateTime(int year)
         {
-            int year = rand.Next(1997, 2000);
             DateTime start = new DateTime(year,1,1);
             DateTime end = new DateTime(year + 1, 12, 31);
             return start.AddDays(rand.Next((end-start).Days));

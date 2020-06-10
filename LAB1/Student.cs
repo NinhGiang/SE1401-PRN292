@@ -10,15 +10,15 @@ namespace LAB1
         protected string _name;
         protected DateTime _birthday;
         protected bool _gender;
-        protected string _classInfo;
+        protected string _class;
 
-        public Student(string uuid, string name, DateTime birthday, bool gender, string classInfo)
+        public Student(string uuid, string name, DateTime birthday, bool gender, string Class)
         {
-            _uuid = uuid ?? throw new ArgumentNullException(nameof(uuid));
-            _name = name ?? throw new ArgumentNullException(nameof(name));
+            _uuid = uuid;
+            _name = name;
             _birthday = birthday;
             _gender = gender;
-            _classInfo = classInfo ?? throw new ArgumentNullException(nameof(classInfo));
+            _class = Class;
         }
 
         public string UUID
@@ -41,11 +41,12 @@ namespace LAB1
             get { return _gender; }
             set { _gender = value; }
         }
-        public string ClassInfo
+        public string Class
         {
-            get { return _classInfo; }
-            set { _classInfo = value; }
+            get { return _class; }
+            set { _class = value; }
         }
+
         public void Create(int numberOfStudent)
         {
             List<Student> list = new List<Student>();
@@ -55,7 +56,8 @@ namespace LAB1
                 String id = Guid.NewGuid().ToString();
                 bool gender = Utils.getRandomGender();
                 String name = Utils.getRandomFullName(gender);
-                DateTime birth = Utils.getRandomDateTime();
+                int age = rand.Next(15,21);
+                DateTime birth = Utils.getRandomDateTime(2020-age);
                 //list.Add(new Student(id, name, birth, gender,));
             }
             

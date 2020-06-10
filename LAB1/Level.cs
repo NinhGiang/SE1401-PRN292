@@ -7,22 +7,22 @@ namespace LAB1
     class Level
     {
         protected string _uuid;
-        protected string _field;
+        protected string _name;
 
-        public Level(string uuid, string field)
+        public Level(string uuid, string name)
         {
             _uuid = uuid ?? throw new ArgumentNullException(nameof(uuid));
-            _field = field ?? throw new ArgumentNullException(nameof(field));
+            _name = name ?? throw new ArgumentNullException(nameof(name));
         }
         public string UUID
         {
             get { return _uuid; }
             set { _uuid = value; }
         }
-        public string Field
+        public string Name
         {
-            get { return _field; }
-            set { _field = value; }
+            get { return _name; }
+            set { _name = value; }
         }
     }
 }
