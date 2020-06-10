@@ -103,6 +103,7 @@ namespace LAB1
             Room.SaveRooms(@"..\..\..\Rooms.csv");
             Student.SaveStudents(@"..\..\..\Students.csv");
             Field.SaveFields(@"..\..\..\Fields.csv");
+            Teacher.SaveTeachers(@"..\..\..\Teachers.csv");
             
             /*foreach (var student in Student.StudentList)
             {

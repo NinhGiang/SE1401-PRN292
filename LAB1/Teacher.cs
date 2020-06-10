@@ -65,20 +65,6 @@ namespace LAB1
             gender = newGender;
             fieldUUID = newFieldUUID;
         }
-        /// <summary>
-        /// Generate random birthday for a teacher.
-        /// </summary>
-        /// <returns>
-        /// A random date in range 1/1/1960 - 12/12/1995.
-        /// </returns>
-        private static DateTime GenerateRandomBirthday()
-        {
-            Random rnd = new Random();
-            DateTime start = new DateTime(1960, 1, 1);
-            DateTime end = new DateTime(1995, 12, 12);
-            int range = (end - start).Days;
-            return start.AddDays(rnd.Next(range));
-        }
 
         /// <summary>
         /// Generate random information of a teacher.
@@ -108,7 +94,6 @@ namespace LAB1
                 int lastNameIndex = rnd.Next(randomName.LastNameSet.Length);
                 int noOfMiddleName = rnd.Next(3);
                 string fullName = randomName.LastNameSet[lastNameIndex] + " ";
-                DateTime birthday = GenerateRandomBirthday();
                 bool gender;
 
                 if (rnd.NextDouble() > 0.5)
@@ -154,6 +139,20 @@ namespace LAB1
             {
                 Console.WriteLine("Teacher _ Json: " + ex.Message);
             }
+        }
+
+        /// <summary>
+        /// Used to write data into file.
+        /// </summary>
+        /// <param name="filename">A file used to store data.</param>
+        public static void SaveTeachers(string filename)
+        {
+            String content = "UUID, Name, Gender, FieldUUID\n";
+            foreach (Teacher teacher in teacherList)
+            {
+                content += teacher.UUID + ", " + teacher.Name + ", " + teacher.Gender + ", " + teacher.FieldUUID + "\n";
+            }
+            File.WriteAllText(filename, content);
         }
     }
 }
