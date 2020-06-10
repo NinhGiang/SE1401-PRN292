@@ -1,0 +1,41 @@
+{
+  "NameConfig" : {
+    "first_male_name_set": [
+      "Tan",
+      "Son",
+      "Long",
+      "Hung",
+      "Loc",
+      "Duc"
+    ],
+    "first_female_name_set": [
+      "Thu",
+      "Giang",
+      "Phuong",
+      "Anh",
+      "Ha",
+      "Mai"
+    ],
+    "middle_name_set": [
+      "Ngoc",
+      "Quang",
+      "Thanh",
+      "Gia",
+      "Hai",
+      "Ly"
+    ],
+    "last_name_set": [
+      "Dinh",
+      "Le",
+      "Ly",
+      "Tran",
+      "Le",
+      "Nguyen"
+    ]
+  },
+  
+
+  "level_list": [
+
+  ]
+}

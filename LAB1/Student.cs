@@ -49,10 +49,18 @@ namespace LAB1
         public void Create(int numberOfStudent)
         {
             List<Student> list = new List<Student>();
+            Random rand = new Random();
             for (int i = 0; i < numberOfStudent; i++)
             {
                 String id = Guid.NewGuid().ToString();
-                
+                bool gender = false;
+               
+                int randomGender = rand.Next(1,2);
+                if (randomGender == 1)
+                {
+                    gender = true;
+                }
+
 
             }
             
