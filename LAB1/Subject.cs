@@ -39,5 +39,23 @@ namespace LAB1
             get { return _field; }
             set { _field = value; }
         }
+        public Subject[] createSubject(Field[] fieldList, Level[] levelList)
+        {
+            Subject[] list = new Subject[fieldList.Length*levelList.Length];
+            int size = 0;
+            for (int i = 0; i < fieldList.Length; i++)
+            {
+                for (int j = 0; j < levelList.Length; i++)
+                {
+                    string id = Guid.NewGuid().ToString();
+                    string name = fieldList[i].Name + " " + levelList[j].Name;
+                    Subject subject = new Subject(id, name, levelList[j].UUID, fieldList[i].UUID);
+                    list[size] = subject;
+                    size++;
+                }
+            }
+            return list;
+            
+        }
     }
 }

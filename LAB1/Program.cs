@@ -11,16 +11,20 @@ namespace LAB1
             
             School school = new School();
             school.SchoolName = "ABC";
+            //create school folder
             string directoryPath = @"..\..\..\" + school.SchoolName;
             Directory.CreateDirectory(directoryPath);
 
+            //create level
             Level[] level_list = Level.CreateLevel();
             school.LevelList = level_list;
             school.saveLevel(directoryPath + "\\" + "Level.csv");
 
+            //create field
             Field[] field_list = Field.CreateField();
             school.FieldList = field_list;
             school.saveField(directoryPath + "\\" + "Field.csv");
+
             Console.ReadLine();
         }
 
