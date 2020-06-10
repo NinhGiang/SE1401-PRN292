@@ -66,5 +66,18 @@ namespace LAB1
             levelList.Add(level);
             return level;
         }
+        /// <summary>
+        /// Used to write data into file.
+        /// </summary>
+        /// <param name="filename">A file used to store data.</param>
+        public static void SaveLevels(string filename)
+        {
+            String content = "UUID, Name\n";
+            foreach (Level level in levelList)
+            {
+                content += level.UUID + ", " + level.Name + "\n";
+            }
+            File.WriteAllText(filename, content);
+        }
     }
 }

@@ -65,7 +65,8 @@ namespace LAB1
             Student.Create(10);
             Student.SaveStudents(@"..\..\..\Students.csv");
             Class.SaveClasses(@"..\..\..\Classes.csv");
-            foreach (var student in Student.StudentList)
+            Level.SaveLevels(@"..\..\..\Levels.csv");
+            /*foreach (var student in Student.StudentList)
             {
                 Console.WriteLine(student.UUID + ", " + student.Name + ", " + student.Birthday + ", " + student.Gender + ", " + student.ClassUUID);
             }
@@ -76,7 +77,7 @@ namespace LAB1
             foreach (var level in Level.LevelList)
             {
                 Console.WriteLine(level.UUID + ", " + level.Name);
-            }
+            }*/
         }
     }
 }
