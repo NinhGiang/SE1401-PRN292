@@ -18,7 +18,7 @@ namespace LAB1
         public String StFullName { get { return _stfullname; } }
         public DateTime StBirthday { get { return _stbirthday; } }
         public String StGender { get { return _stgender; } }
-        public String Class { get { return _class_info} }
+        public String Class { get { return _class_info; } }
 
         public Student(String StUUID, String StFullName, DateTime StBirthday, String StGender, String class_info)
         {
