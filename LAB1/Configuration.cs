@@ -6,8 +6,8 @@ namespace LAB1
 {
     class Configuration
     {
-        public NameConfig nameConfig { get; set; }
-        public LevelConfig levelConfig { get; set; }
+        public NameConfig NameConfig { get; set; }
+        public LevelConfig LevelConfig { get; set; }
         
     }
     class NameConfig

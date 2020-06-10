@@ -14,22 +14,22 @@ namespace LAB1
         public static String getRandomFullName(Boolean gender)
         {
             String name;
-            int lastNameIndex = rand.Next(config.nameConfig.last_name_set.Length);
-            int middleNameIndex = rand.Next(config.nameConfig.middle_name_set.Length);
+            int lastNameIndex = rand.Next(config.NameConfig.last_name_set.Length);
+            int middleNameIndex = rand.Next(config.NameConfig.middle_name_set.Length);
 
-            int firstNameIndex = rand.Next(config.nameConfig.first_male_name_set.Length);
+            int firstNameIndex = rand.Next(config.NameConfig.first_male_name_set.Length);
             if (gender)
             {
-                name = config.nameConfig.last_name_set[lastNameIndex] + " "
-                    + config.nameConfig.middle_name_set[middleNameIndex] + " "
-                    + config.nameConfig.first_male_name_set[firstNameIndex];
+                name = config.NameConfig.last_name_set[lastNameIndex] + " "
+                    + config.NameConfig.middle_name_set[middleNameIndex] + " "
+                    + config.NameConfig.first_male_name_set[firstNameIndex];
             }
             else
             {
-                firstNameIndex = rand.Next(config.nameConfig.first_female_name_set.Length);
-                name = config.nameConfig.last_name_set[lastNameIndex] + " "
-                    + config.nameConfig.middle_name_set[middleNameIndex] + " "
-                    + config.nameConfig.first_female_name_set[firstNameIndex];
+                firstNameIndex = rand.Next(config.NameConfig.first_female_name_set.Length);
+                name = config.NameConfig.last_name_set[lastNameIndex] + " "
+                    + config.NameConfig.middle_name_set[middleNameIndex] + " "
+                    + config.NameConfig.first_female_name_set[firstNameIndex];
             }
             return name;
         }
@@ -68,7 +68,11 @@ namespace LAB1
         }
         public static string[] getLevelData()
         {
-            return config.levelConfig.level_set;
+            return config.LevelConfig.level_set;
+        }
+        public static void print()
+        {
+            //Console.WriteLine(config.LevelConfig.level_set[0]);
         }
     }
 }

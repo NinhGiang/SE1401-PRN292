@@ -18,11 +18,11 @@ namespace LAB1
             get { return _school_name; }
             set { _school_name = value; }
         }
-        public List<Level> LevelList
+        public Level[] LevelList
         {
-            get { return _level_list; }
-            set { _level_list = value; }
+            set { _level_list = new List<Level>(value); }
         }
+
         public void saveLevel(String filename)
         {
             String content = "ID, Name\n";

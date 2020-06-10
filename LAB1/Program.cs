@@ -8,14 +8,17 @@ namespace LAB1
         static void Main(string[] args)
         {
             Console.WriteLine("Test Lab");
-            Console.ReadLine();
+            
             School school = new School();
             school.SchoolName = "ABC";
             string directoryPath = @"..\..\..\" + school.SchoolName;
             Directory.CreateDirectory(directoryPath);
 
             Level[] level_list = Level.CreateLevel();
-            school.saveLevel(directoryPath+"\\Level.csv");
+            school.LevelList = level_list;
+            school.saveLevel(directoryPath + "\\" + "Level.csv");
+            Console.ReadLine();
         }
+
     }
 }
