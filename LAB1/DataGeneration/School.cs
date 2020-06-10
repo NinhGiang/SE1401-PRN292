@@ -9,11 +9,7 @@ class School
     private List<Room> _room_list;
     private List<Level> _level_list;
     private List<Classes> _classes_list;
-    public School()
-    {
-        _student_list = new List<Student>();
-        _room_list = new List<Room>();
-    }
+    public School(){ }
     public School(Student[] student_list, Room[] room_list, Level[] level_list, Classes[] classes_list)
     {
         _student_list = new List<Student>(student_list);
@@ -29,13 +25,32 @@ class School
     {
         _student_list = new List<Student>(students);
     }
-    public List<Room> getRooms()
+    //getter setter for Student
+    public List<Room> GetRooms()
     {
         return _room_list;
     }
-    public void setRoom(Room[] rooms)
+    public void setRooms(Room[] rooms)
     {
         _room_list = new List<Room>(rooms);
+    }
+    //getter setter for Room
+    public List<Level> GetLevels()
+    {
+        return _level_list;
+    }
+    public void setLevels(Level[] levels)
+    {
+        _level_list = new List<Level>(levels);
+    }
+    //getter setter for Level
+    public List<Classes> GetClasses()
+    {
+        return _classes_list;
+    }
+    public void setClasses(Classes[] classes)
+    {
+        _classes_list = new List<Classes>(classes);
     }
     public void saveStudent(string filename)
     {
@@ -56,12 +71,13 @@ class School
                 content += student.Class + "\n";
             }
             File.WriteAllText(filename, content);
-        }catch(NullReferenceException ex)
+        }
+        catch (NullReferenceException ex)
         {
             Console.WriteLine("Error in saveStudent: " + ex.Message);
         }
-        }
-        
+    }
+
 
     public void saveRoom(string filename)
     {
@@ -80,7 +96,8 @@ class School
                 content += room.No + "\n";
             }
             File.WriteAllText(filename, content);
-        }catch(NullReferenceException ex)
+        }
+        catch (NullReferenceException ex)
         {
             Console.WriteLine("Error in saveRoom: " + ex.Message);
         }
@@ -100,7 +117,8 @@ class School
                 content += level.Name + "\n";
             }
             File.WriteAllText(filename, content);
-        }catch(NullReferenceException ex)
+        }
+        catch (NullReferenceException ex)
         {
             Console.WriteLine("Error in saveLevel:" + ex.Message);
         }
@@ -120,8 +138,10 @@ class School
                 content += classs.Name + "\n";
             }
             File.WriteAllText(filename, content);
-        }catch(NullReferenceException ex){
-            Console.WriteLine("Error in saveClasses: "+ ex.Message);
+        }
+        catch (NullReferenceException ex)
+        {
+            Console.WriteLine("Error in saveClasses: " + ex.Message);
         }
     }
 
