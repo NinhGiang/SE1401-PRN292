@@ -70,6 +70,10 @@ namespace LAB1
         {
             return config.LevelConfig.level_set;
         }
+        public static string[] getFieldData()
+        {
+            return config.FieldConfig.field_set;
+        }
         public static void print()
         {
             //Console.WriteLine(config.LevelConfig.level_set[0]);

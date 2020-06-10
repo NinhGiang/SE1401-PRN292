@@ -24,5 +24,18 @@ namespace LAB1
             get { return _name; }
             set { _name = value; }
         }
+        public static Field[] CreateField()
+        {
+            String[] data = Utils.getFieldData();
+            Field[] list = new Field[data.Length];
+            for (int i = 0; i < data.Length; i++)
+            {
+                String uuid = Guid.NewGuid().ToString();
+                String name = data[i];
+                Field field = new Field(uuid, name);
+                list[i] = field;
+            }
+            return list;
+        }
     }
 }

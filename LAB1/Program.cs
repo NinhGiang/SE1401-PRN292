@@ -17,6 +17,10 @@ namespace LAB1
             Level[] level_list = Level.CreateLevel();
             school.LevelList = level_list;
             school.saveLevel(directoryPath + "\\" + "Level.csv");
+
+            Field[] field_list = Field.CreateField();
+            school.FieldList = field_list;
+            school.saveField(directoryPath + "\\" + "Field.csv");
             Console.ReadLine();
         }
 
