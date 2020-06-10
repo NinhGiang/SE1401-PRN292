@@ -12,6 +12,7 @@ namespace LAB1
         private List<Field> _field_list;
         private List<Subject> _subject_list;
         private List<Teacher> _teacher_list;
+        private List<Room> _room_list;
 
         public School()
         {
@@ -36,6 +37,10 @@ namespace LAB1
         public Teacher[] TeacherList
         {
             set { _teacher_list = new List<Teacher>(value); }
+        }
+        public Room[] RoomList
+        {
+            set { _room_list = new List<Room>(value); }
         }
 
         public void saveLevel(String filename)
@@ -128,6 +133,29 @@ namespace LAB1
             catch (NullReferenceException ex)
             {
                 Console.WriteLine("saveTeacher : " + ex.Message);
+            }
+        }
+        public void saveRoom(String filename)
+        {
+            String content = "ID, Class, No\n";
+            if (_room_list == null)
+            {
+                _room_list = new List<Room>();
+            }
+            try
+            {
+                foreach (Room room in _room_list)
+                {
+                    content += room.UUID + ", ";
+                    content += room.ClassInfo + ", ";
+                    content += room.No + "\n";
+                }
+                File.WriteAllText(filename, content);
+            }
+
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine("saveRoom : " + ex.Message);
             }
         }
     }

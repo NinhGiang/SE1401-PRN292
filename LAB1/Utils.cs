@@ -74,6 +74,20 @@ namespace LAB1
         {
             return config.FieldConfig.field_set;
         }
+        public static Dictionary<string,string> generateRoomAndClassID(int number)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            for (int i = 0; i < number; i++)
+            {
+                string roomID = Guid.NewGuid().ToString();
+                string classID = Guid.NewGuid().ToString();
+
+                dict.Add(roomID, classID);
+            }
+            
+            return dict;
+        }
         public static void print()
         {
             //Console.WriteLine(config.LevelConfig.level_set[0]);

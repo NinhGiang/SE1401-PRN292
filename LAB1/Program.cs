@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace LAB1
@@ -34,6 +35,12 @@ namespace LAB1
             Teacher[] teacher_list = Teacher.createTeacher(30, field_list);
             school.TeacherList = teacher_list;
             school.saveTeacher(directoryPath + "\\" + "Teacher.csv");
+
+            //create room and class
+            Dictionary<string, string> roomAndClassIDList = Utils.generateRoomAndClassID(20);
+            Room[] room_list = Room.createRoom(roomAndClassIDList);
+            school.RoomList =  room_list;
+            school.saveRoom(directoryPath + "\\" + "Room.csv");
 
             Console.ReadLine();
         }
