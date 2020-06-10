@@ -39,7 +39,7 @@ namespace LAB1
             get { return _field; }
             set { _field = value; }
         }
-        public Subject[] createSubject(Field[] fieldList, Level[] levelList)
+        public static Subject[] createSubject(Field[] fieldList, Level[] levelList)
         {
             Subject[] list = new Subject[fieldList.Length*levelList.Length];
             int size = 0;

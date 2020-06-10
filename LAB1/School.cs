@@ -10,6 +10,7 @@ namespace LAB1
         private string _school_name;
         private List<Level> _level_list;
         private List<Field> _field_list;
+        private List<Subject> _subject_list;
 
         public School()
         {
@@ -26,6 +27,10 @@ namespace LAB1
         public Field[] FieldList
         {
             set { _field_list = new List<Field>(value); }
+        }
+        public Subject[] SubjectList
+        {
+            set { _subject_list = new List<Subject>(value); }
         }
 
         public void saveLevel(String filename)
@@ -66,7 +71,30 @@ namespace LAB1
             }
             catch (NullReferenceException ex)
             {
-                Console.WriteLine("fieldLevel : " + ex.Message);
+                Console.WriteLine("saveField : " + ex.Message);
+            }
+        }
+        public void saveSubject(String filename)
+        {
+            String content = "ID, Name,Level,Field\n";
+            try
+            {
+                if (_subject_list == null)
+                {
+                    _subject_list = new List<Subject>();
+                }
+                foreach (Subject subject in _subject_list)
+                {
+                    content += subject.UUID + ", ";
+                    content += subject.Name + ", ";
+                    content += subject.Level + ", ";
+                    content += subject.Field + "\n";
+                }
+                File.WriteAllText(filename, content);
+            }
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine("saveSubject : " + ex.Message);
             }
         }
     }
