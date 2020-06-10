@@ -24,16 +24,16 @@ namespace LAB1
             get { return _name; }
             set { _name = value; }
         }
-        public List<Level> CreateLevel()
+        public Level[] CreateLevel()
         {
             String[] data = Utils.getLevelData();
-            List<Level> list = new List<Level>();
+            Level[] list = new Level[data.Length];
             for (int i = 0; i < data.Length; i++)
             {
                 String uuid = Guid.NewGuid().ToString();
                 String name = data[i];
                 Level level = new Level(uuid, name);
-                list.Add(level);
+                list[i] = level;
             }
             return list;
         }
