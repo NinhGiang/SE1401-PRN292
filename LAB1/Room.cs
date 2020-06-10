@@ -41,6 +41,7 @@ namespace LAB1
                 String id = entry.Key;
                 String classInfo = entry.Value;
                 list[count] = new Room(id, classInfo, count + 1);
+                count++;
             }
             return list;
         }

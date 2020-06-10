@@ -146,9 +146,9 @@ namespace LAB1
             {
                 foreach (Room room in _room_list)
                 {
-                    content += room.UUID + ", ";
-                    content += room.ClassInfo + ", ";
-                    content += room.No + "\n";
+                      content += room.UUID + ", ";
+                      content += room.ClassInfo + ", ";
+                      content += room.No + "\n"; 
                 }
                 File.WriteAllText(filename, content);
             }
