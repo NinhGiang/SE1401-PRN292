@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarClient", "CarClient\CarClient.csproj", "{B472E06C-2AAD-45C9-8F80-20BFE988DD51}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarLibrary", "D:\GitHub\dotnet\SE1401-PRN292\CarLibrary\CarLibrary.csproj", "{2466A4D0-56F6-478A-A164-4D5B4525456C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarLibrary", "CarLibrary\CarLibrary.csproj", "{2466A4D0-56F6-478A-A164-4D5B4525456C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LAB1", "D:\GitHub\dotnet\SE1401-PRN292\LAB1\LAB1.csproj", "{AE777624-8BC5-4CB1-A4E9-4258249D799E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LAB1", "LAB1\LAB1.csproj", "{AE777624-8BC5-4CB1-A4E9-4258249D799E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentGeneration", "D:\GitHub\dotnet\SE1401-PRN292\StudentGeneration\StudentGeneration.csproj", "{173E20FB-AEDB-44DE-83F2-9DC6F3332557}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentGeneration", "StudentGeneration\StudentGeneration.csproj", "{173E20FB-AEDB-44DE-83F2-9DC6F3332557}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
