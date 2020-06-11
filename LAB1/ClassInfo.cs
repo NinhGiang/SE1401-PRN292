@@ -118,8 +118,9 @@ namespace LAB1
             List<ClassInfo> result = new List<ClassInfo>();
 
             List<string> listOfLevel = FileHelper.GetListOfLevel();
-
-            Random rnd = new Random();
+            int amountEachLevel = (int)Math.Ceiling((double)list.Count / listOfLevel.Count);
+            int count = 0;
+            int levelIndex = 0;
 
             for (uint i = 0; i < list.Count; i++)
             {
@@ -127,7 +128,6 @@ namespace LAB1
                 string uuid = list.ElementAt((int)i).Value;
 
                 //level
-                int levelIndex = rnd.Next(listOfLevel.Count);
                 string[] level = listOfLevel[levelIndex].Split(',');
                 string levelId = level[0].Trim();
 
@@ -140,6 +140,13 @@ namespace LAB1
                 string name = levelName + "-" + roomName;
 
                 result.Add(new ClassInfo(uuid, levelId, roomId, name));
+                count++;
+
+                if(count == amountEachLevel)
+                {
+                    levelIndex++;
+                    count = 0;
+                }
             }
 
             return result.ToArray();

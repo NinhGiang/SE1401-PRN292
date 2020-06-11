@@ -125,22 +125,34 @@ namespace LAB1
             return fullName;
         }
 
+        /// <summary>
+        /// Get school name in command line
+        /// </summary>
+        /// <param name="input">A string value</param>
+        /// <returns>The name of the school</returns>
         public static string GetSchoolName(string input)
         {
-            int index_of_s = input.IndexOf(" -s ");
-            int index_of_r = input.IndexOf(" -r ");
+            string tmp = input.Replace("./schoolDatabaseGenerator", "").Trim();
+            int index_of_s = tmp.IndexOf(" -s ");
+            int index_of_r = tmp.IndexOf(" -r ");
             if (index_of_s > 0)
             {
-                string schoolName = input.Substring(0, index_of_s).Trim();
+                string schoolName = tmp.Substring(0, index_of_s).Trim();
                 return schoolName;
-            } else if (index_of_r > 0)
+            }
+            else if (index_of_r > 0)
             {
-                string schoolName = input.Substring(0, index_of_r).Trim();
+                string schoolName = tmp.Substring(0, index_of_r).Trim();
                 return schoolName;
             }
             return null;
         }
 
+        /// <summary>
+        /// Gets the number of student by command line
+        /// </summary>
+        /// <param name="input">A string value</param>
+        /// <returns>The number of student</returns>
         public static int GetStudentAmount(string input)
         {
             int index_of_s = input.LastIndexOf(" -s ");
@@ -167,6 +179,11 @@ namespace LAB1
             return -1;
         }
 
+        /// <summary>
+        /// Gets the number of room by command line
+        /// </summary>
+        /// <param name="input">A string value</param>
+        /// <returns>The number of room</returns>
         public static int GetRoomAmount(string input)
         {
             int index_of_r = input.IndexOf(" -r ");
@@ -188,6 +205,11 @@ namespace LAB1
             return -1;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="numberOfStudent"></param>
+        /// <returns></returns>
         public static int GenerateRoomAmountByStudent(int numberOfStudent)
         {
             int maxRoom = (int)Math.Ceiling((double) numberOfStudent / 30);
