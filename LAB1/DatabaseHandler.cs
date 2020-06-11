@@ -280,7 +280,7 @@ namespace LAB1
                 subject.UUID = id;
                 subject.Level = level;
                 subject.Field = field;
-                subjectList[index++] = new Subject();
+                subjectList[index++] = subject;
             }
             return subjectList;
         }
