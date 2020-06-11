@@ -14,6 +14,7 @@ namespace LAB1
         private string uuid;
         private string name;
         private static List<Field> fieldsList;
+
         /// <value>Gets the value of uuid.</value>
         public string UUID
         {
@@ -22,6 +23,7 @@ namespace LAB1
                 return uuid;
             }
         }
+
         /// <value>Gets the value of name.</value>
         public string Name
         {
@@ -30,6 +32,7 @@ namespace LAB1
                 return name;
             }
         }
+
         /// <value>Gets the value of fieldsList.</value>
         public static List<Field> FieldsList
         {
@@ -38,6 +41,7 @@ namespace LAB1
                 return fieldsList;
             }
         }
+
         public Field(string newUUID, string newName)
         {
             uuid = newUUID;

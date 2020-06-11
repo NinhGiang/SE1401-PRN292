@@ -105,8 +105,15 @@ namespace LAB1
                 for (int i = 0; i < noOfStudentsInClass; i++)
                 {
                     Student.Create(classObject);
-                }
-            }
+                    foreach (var subject in Subject.SubjectsList)
+                    {
+                        if (string.Equals(subject.LevelUUID, classObject.LevelUUID))
+                        {
+                            Grade.Create(subject, Student.StudentList[i]);
+                        } //end if subject belongs to the same level as class
+                    } //end for each subject in subjectsList                                    
+                } //end for i from 0 to noOfStudentsInClass
+            } //end for each class in classesList
 
             Level.SaveLevels(@"..\..\..\Levels.csv");
             Class.SaveClasses(@"..\..\..\Classes.csv");
