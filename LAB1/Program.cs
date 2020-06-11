@@ -48,6 +48,8 @@ namespace LAB1
             school.SaveClass(directoryPath + "\\" + "Class.csv");
 
             Student[] student_list = Student.createStudent(200);
+            school.StudentList = student_list;
+            school.SaveStudent(directoryPath + "\\" + "Student.csv");
             Console.ReadLine();
         }
 

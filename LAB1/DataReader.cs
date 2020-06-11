@@ -143,11 +143,13 @@ namespace LAB1
             List<string> list = CsvFileReader(_directory_path + "\\" + "Field.csv");
             Field[] fieldList = new Field[list.Count];
             int index = 0;
+            int idCol = GetColumnID(_directory_path + "\\" + "Field.csv", "ID");
+            int idName = GetColumnID(_directory_path + "\\" + "Field.csv", "Name");
             foreach (string line in list)
             {
                 string[] entry = line.Split(",");
-                string id = entry[0].Trim();
-                string name = entry[1].Trim();
+                string id = entry[idCol].Trim();
+                string name = entry[idName].Trim();
                 fieldList[index++] = new Field(id, name);
             }
             return fieldList;
@@ -167,14 +169,18 @@ namespace LAB1
         }
         public static string[] GetClassIDByLevelList(String level)
         {
-            int col = GetColumnID(_directory_path + "\\" + "Class.csv", "ID");
+            int col = GetColumnID(_directory_path + "\\" + "Class.csv", "Level");
 
             List<string> list = GetRowInColumnByData(_directory_path + "\\" + "Class.csv", level, col);
+
+            int idCol = GetColumnID(_directory_path + "\\" + "Class.csv", "ID");
             string[] classIDList = new string[list.Count];
             int index = 0;
             foreach (string line in list)
             {
-                classIDList[index++] = line.Trim();
+                string[] entry = line.Split(",");
+                
+                classIDList[index++] = entry[idCol];
             }
             return classIDList;
         }
