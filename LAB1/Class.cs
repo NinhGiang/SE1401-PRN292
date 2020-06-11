@@ -51,9 +51,12 @@ namespace LAB1
                 Level currLevel = levelList[rand.Next(levelList.Length)];
                 String level = currLevel.UUID;
                 String room = entry.Key;
-                String name = currLevel.Name + "A" +levelCount;
+                String name = currLevel.Name + "A" + levelCount;
+                
+                list[count] = new Class(id,level,room,name);
                 count++;
             }
+            return list;
         }
     }
 }
