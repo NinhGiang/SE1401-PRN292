@@ -38,6 +38,7 @@ namespace LAB1
                 string name = lvl.Level_Set[i].ToString();
                 string id = Guid.NewGuid().ToString();
                 result[i] = new Level(id, name);
+                
             }
             return result;
         }
