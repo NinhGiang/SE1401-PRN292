@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentGeneration", "D:\Git
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threading", "D:\GitHub\dotnet\SE1401-PRN292\Threading\Threading.csproj", "{6F0BCD16-EECA-40E6-AFB6-E69B272EC917}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessDatabase", "AccessDatabase\AccessDatabase.csproj", "{89AABDC0-772A-4EA4-A804-07AEAF2F23AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6F0BCD16-EECA-40E6-AFB6-E69B272EC917}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F0BCD16-EECA-40E6-AFB6-E69B272EC917}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F0BCD16-EECA-40E6-AFB6-E69B272EC917}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89AABDC0-772A-4EA4-A804-07AEAF2F23AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89AABDC0-772A-4EA4-A804-07AEAF2F23AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89AABDC0-772A-4EA4-A804-07AEAF2F23AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89AABDC0-772A-4EA4-A804-07AEAF2F23AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
