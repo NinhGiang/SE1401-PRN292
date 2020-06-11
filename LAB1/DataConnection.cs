@@ -23,14 +23,14 @@ namespace LAB1
         {
             List<string> levelList = ListControl.GetLevelList();
             int index = rnd.Next(levelList.Count);
-            string[] levelInfo = levelList[index].Split(',');
+            string[] levelInfo = levelList[index].Split('|');
             return levelInfo;
         }
         public static string getClassByLevelID(string levelId)
         {
             List<string> listOfClasses = ListControl.GetListOfClassByLevel(levelId);
             int index = rnd.Next(listOfClasses.Count);
-            string[] classes = listOfClasses[index].Split(',');
+            string[] classes = listOfClasses[index].Split('|');
             string classInfo = classes[0].Trim();
             return classInfo;
         }
@@ -38,7 +38,7 @@ namespace LAB1
         {
             List<string> listOfRooms = ListControl.GetRoomList();
             int roomIndex = rnd.Next(listOfRooms.Count);
-            string[] roomInfo = listOfRooms[roomIndex].Split(',');
+            string[] roomInfo = listOfRooms[roomIndex].Split('|');
             return roomInfo;
         }
 

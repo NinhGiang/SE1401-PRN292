@@ -66,18 +66,18 @@ namespace LAB1
 
         public static List<string> GetListOfClassByLevel(string levelId)
         {
-            string path = @"..\..\..\LAB1\Class.csv";
+            string path = @"..\..\..\Class.csv";
             int column = GetColumn(path, "Level");
             return GetDataInColumn(path, levelId, column);
         }
 
         public static List<string> GetLevelList()
         {
-            return CsvReader(@"..\..\..\LAB1\Level.csv");
+            return CsvReader(@"..\..\..\Level.csv");
         }
         public static List<string> GetRoomList()
         {
-            return CsvReader(@"..\..\..\LAB1\Room.csv");
+            return CsvReader(@"..\..\..\Room.csv");
         }
     }
 }

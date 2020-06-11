@@ -1,0 +1,201 @@
+ID, Fullname, Birthday, Gender, ClassID
+839e4134-e892-46d0-bb0e-0e87d9fd9fc8 | Nguyễn Văn Bách  | 31/03/2005 | Male | 10
+b60a261a-31f2-43ce-86c7-aead6db4c38d | Lương Hoàng Tân  | 28/05/2003 | Female | 11
+a7ee9bc9-cedf-4ba5-9f9e-239da70a2142 | Trần Hoàng Long  | 03/01/2004 | Female | 12
+9d5ee90b-d6ea-4a5d-9963-3ac2db06af4b | Lê Trung Bách  | 25/09/2005 | Male | 11
+e834d88c-01ee-4d01-86d2-4fb0410dc303 | Hồ Anh Tân  | 03/06/2004 | Female | 11
+d4672986-35f5-4206-9a9a-9d016bfbeae4 | Lương Trung Bách  | 23/05/2005 | Female | 11
+4b262dbd-a0ca-4eb9-b8c7-c01210215714 | Lý Văn Thắng  | 05/12/2004 | Male | 10
+9fe83984-725c-4d47-9372-e7708a5319a6 | Hồ Văn Bách  | 18/10/2004 | Male | 10
+394706de-1389-4ce3-b323-713f9f2755bc | Lê Anh Khôi  | 06/10/2003 | Male | 10
+34c33ec4-32d6-46a1-ba53-3a3be3ea253f | Hồ Minh Thành  | 23/06/2004 | Male | 10
+f85d2191-68c9-4fdf-846a-418fe8c2589d | Hồ Văn Long  | 16/01/2004 | Female | 10
+3d0d9340-d74b-4d01-8272-f445fbe15afb | Lý Thị Khôi  | 06/03/2003 | Male | 10
+66d0a291-2318-4c95-b49e-a52226350387 | Lương Hoàng Bảo Thắng  | 01/07/2005 | Female | 11
+a354bfb0-15e9-4ba4-812c-9c2132bd3e2e | Trần Hoàng Bảo Long  | 29/03/2005 | Female | 10
+c1fac342-3d5d-4570-a3cb-e4cc4b4f75cd | Lê Hoàng Bảo Tân  | 11/02/2003 | Male | 10
+3eaf3a1c-078e-437e-af45-af902e66f9d6 | Võ Trung Thành  | 25/06/2005 | Female | 10
+3ca58c48-d432-4302-9765-6715f17a297b | Nguyễn Văn Thắng  | 16/10/2004 | Male | 11
+27b11ce1-42b1-447e-8b9e-216d7a3b2b25 | Lê Hoàng Bảo Thắng  | 24/12/2003 | Female | 10
+5a6b5f3f-3d6d-4a1d-844e-6269a140471e | Lương Hoàng Khôi  | 29/07/2003 | Female | 11
+40bff269-07d3-444d-9abe-4e7155bb29cb | Võ Trung Thắng  | 15/02/2004 | Female | 11
+7d904fdc-5d62-451a-9d3d-73f73b6c78e8 | Võ Văn Long  | 21/03/2004 | Male | 12
+c4e76e77-236c-4a69-b42c-be87a0c0a5ea | Hồ Hoàng Tân  | 11/03/2004 | Female | 11
+af05743d-8e6f-4355-a2cf-80a095ba6133 | Lê Thị Tân  | 12/06/2003 | Male | 11
+6615f5b4-da6b-4d08-a856-f63ae349f393 | Nguyễn Anh Thắng  | 27/06/2005 | Male | 10
+9725b418-1238-4085-8338-073507ab78e9 | Võ Trung Thắng  | 22/12/2005 | Male | 12
+02bce434-d349-4cef-a130-a026250cebc1 | Lương Hoàng Bảo Thắng  | 22/09/2005 | Male | 11
+58dd7f7f-054e-4242-a7da-eecb9fef8b19 | Lê Anh Tân  | 27/01/2004 | Female | 11
+56555dc3-0806-4169-ac71-065f1ba98787 | Trần Văn Bách  | 30/03/2004 | Female | 12
+ab702fc4-c07a-410d-a13c-86d1f1b43d34 | Lý Hoàng Bảo Thành  | 17/01/2004 | Male | 12
+7fc6019f-bd7e-437e-8e5f-10e43e634169 | Võ Minh Thắng  | 12/12/2004 | Male | 11
+5b9a5ca9-95fc-4851-8be6-b86798ffd47e | Lê Anh Bách  | 24/01/2003 | Male | 10
+385cdbf8-7e37-4191-b366-656e40a62b00 | Lý Văn Tân  | 24/09/2004 | Male | 11
+e44244cc-4582-4fdc-9d03-afb4c9ed4671 | Lương Thị Thành  | 23/09/2004 | Male | 11
+97c796f3-d612-42e5-9586-6bd4d174cb05 | Lương Minh Thắng  | 09/01/2005 | Female | 11
+65e83bcb-da14-4198-b51c-05d0183d4501 | Nguyễn Trung Thắng  | 23/03/2005 | Female | 10
+9d1af677-6969-4e66-ad64-3d795a2e7d29 | Lý Anh Khôi  | 01/12/2004 | Male | 12
+50b3e53a-63a5-4f6c-ac8b-4911bd47dbbc | Hồ Thị Long  | 09/12/2004 | Male | 10
+d0662066-96ac-441c-91bd-4a9207cf7d62 | Hồ Minh Thắng  | 07/06/2004 | Male | 10
+21529c5f-75cb-4210-9123-17ece9b915fb | Hồ Thị Thắng  | 29/06/2005 | Female | 11
+41fddddc-b0fb-4528-a9b7-9594010b0bc2 | Lê Trung Bách  | 05/12/2004 | Female | 11
+de99f4c6-a240-4dfc-a18e-91cf8449689d | Lê Anh Thắng  | 03/04/2004 | Male | 12
+91f767dd-754a-4603-8eff-90f577b68d9f | Lương Văn Tân  | 04/11/2004 | Female | 12
+c3a6c1e7-0843-43ea-aa4f-36dbd1b9d65d | Lê Hoàng Bách  | 02/10/2003 | Female | 11
+3e36ea97-b82c-4ad1-9576-c1ff275e7261 | Trần Văn Thành  | 04/10/2004 | Male | 10
+3fcb70fa-2699-4a5c-917f-bee5eed6bbeb | Lê Trung Thắng  | 28/09/2005 | Female | 12
+702128b9-bacb-4bef-9488-13435520564c | Nguyễn Thị Thành  | 18/02/2004 | Male | 10
+c0ad588a-dbc9-417f-a41f-5e57baa6dc5b | Lý Thị Long  | 14/11/2004 | Male | 11
+833f1507-3707-4ae9-b2c7-0c3b740edf22 | Nguyễn Văn Tân  | 27/08/2003 | Female | 10
+e5ced512-af8f-4132-8ab4-dd6e2ecd7ab5 | Lê Văn Tân  | 07/01/2005 | Female | 12
+c6bc1d2d-47ea-4cb0-8fc1-0741297cf8ba | Lê Văn Thắng  | 11/07/2004 | Male | 12
+a523bb87-331b-493d-9a5c-bb19a5cbc754 | Hồ Minh Thắng  | 08/03/2005 | Female | 10
+7e164d22-7167-4435-a71c-756bac09f23e | Lý Văn Thắng  | 19/05/2004 | Male | 11
+6dbef5fe-a9af-44dd-bac7-e3d05201c667 | Hồ Minh Long  | 23/03/2004 | Female | 10
+f171d2fb-42fa-4663-a319-59d52349847c | Trần Trung Thành  | 20/12/2004 | Male | 12
+285b3453-4d35-44c0-8286-0b0a50ffdf27 | Trần Hoàng Bảo Bách  | 28/10/2004 | Female | 10
+013f04c9-2443-4b2c-bbb3-e62f9a4f2f9a | Lê Trung Khôi  | 17/07/2003 | Male | 11
+58d72fa1-1e86-4b68-bcde-41912c317f90 | Lê Văn Long  | 07/12/2003 | Male | 11
+5878e200-782d-4e1b-bcdf-c0bcd01c7f60 | Võ Trung Long  | 03/04/2004 | Female | 12
+b51e2437-5478-42c6-bbf8-fd5b3343e18c | Hồ Anh Tân  | 30/08/2005 | Male | 11
+32d7e739-2fe8-47cf-81e9-d491ca69abc3 | Lê Anh Long  | 29/03/2004 | Female | 12
+118db7f1-bfb1-4644-bf21-d824889ad1b2 | Lý Trung Tân  | 07/12/2004 | Male | 11
+e2c23abf-2bb1-4467-be53-708e976df866 | Võ Hoàng Bảo Thành  | 06/04/2004 | Male | 11
+b298cd4b-c6ad-43ae-8332-c4b7af6fcb9d | Nguyễn Hoàng Bảo Thành  | 25/09/2004 | Male | 11
+bc9cbc84-2740-4f26-856b-1af50da7862e | Lương Trung Long  | 30/07/2003 | Male | 10
+88fd63f2-a694-4bd4-8d1d-9fc2965e7197 | Lương Hoàng Bảo Khôi  | 13/07/2004 | Male | 11
+fe4b1429-9f6f-4ebb-927e-42020fdeab52 | Hồ Minh Long  | 23/07/2004 | Female | 12
+68384baf-dc70-4a07-a386-e5913179114b | Hồ Hoàng Bảo Khôi  | 29/03/2003 | Female | 11
+d70bf7fe-65dd-400a-bf54-6a1dac08f54f | Lê Minh Thắng  | 29/11/2004 | Male | 12
+519fd488-95ea-4fc5-a337-a939c58cccda | Lê Hoàng Thành  | 09/11/2004 | Female | 12
+46ffa1a1-4725-46c0-a84f-60b82c873385 | Võ Hoàng Bảo Long  | 18/07/2004 | Female | 12
+1d117c15-4cdb-456f-9392-6ecd6a9310f2 | Lê Thị Thắng  | 03/08/2003 | Male | 10
+4583866c-4902-4a45-bddc-72372446ba7e | Trần Hoàng Khôi  | 03/05/2003 | Male | 10
+6d234672-1800-4e33-a482-0b2605865002 | Lương Hoàng Bảo Thành  | 20/10/2004 | Male | 11
+14b9e0d1-6674-4de8-aa46-f90deb46ee69 | Lê Anh Thành  | 10/10/2004 | Male | 12
+7f9ed3bf-91ad-47b3-b221-6e587eb4f231 | Trần Hoàng Bảo Bách  | 28/05/2004 | Male | 10
+6349cd4c-7ac5-4604-89a2-372f1ba84518 | Lê Minh Khôi  | 27/12/2004 | Male | 11
+954cb3b4-1c33-4735-ba78-520fa27c19dc | Lê Văn Tân  | 24/11/2005 | Male | 12
+ed85e285-f127-4c2f-88cb-457a1b183483 | Trần Trung Tân  | 06/03/2004 | Female | 12
+34cc7c03-1483-4cd0-b2f4-5b970ee2a9f3 | Lương Minh Thành  | 06/04/2005 | Female | 12
+bd084e74-bc98-410a-97a7-9634cdfdb763 | Lương Thị Khôi  | 10/04/2004 | Female | 11
+d87ea08e-0e89-46ba-b169-0976d8ae8b09 | Hồ Hoàng Bảo Khôi  | 12/01/2004 | Female | 10
+69230983-e77b-4659-a6ad-9cf3ef812f7c | Trần Trung Long  | 13/12/2005 | Male | 10
+60cd430d-5d1d-421c-a5f6-7de825065301 | Hồ Anh Khôi  | 08/11/2003 | Male | 10
+bda4f3bf-bfc0-44d9-aff4-80f307a4c48b | Trần Anh Long  | 21/05/2004 | Male | 11
+43d2b100-da61-4c7d-b88d-9e014ebf304b | Lý Hoàng Bách  | 03/07/2005 | Male | 11
+2029494d-420a-46a7-b35a-8a6715bf31fb | Nguyễn Anh Bách  | 14/04/2005 | Female | 10
+8c482813-60fe-46d2-8969-3f34e679e1e8 | Lê Hoàng Bảo Khôi  | 10/11/2004 | Female | 11
+8a5544bb-0b2c-42fb-953f-84a7c891fd08 | Hồ Thị Thành  | 30/05/2003 | Female | 12
+1e3a4772-f0dc-46e3-b7ab-7f0842aaae8c | Lý Hoàng Bảo Thành  | 20/12/2003 | Male | 11
+97491ebe-3a36-4daf-83b7-4763f2db4a1a | Lê Hoàng Tân  | 27/05/2003 | Female | 12
+1d7c0ab3-dff3-4ee7-ad40-169195dc4575 | Lương Hoàng Bảo Long  | 26/03/2005 | Female | 11
+6fbc2210-36bb-42c8-8bc9-5b96da5943b5 | Lê Văn Bách  | 02/05/2004 | Male | 12
+1f502899-28ff-4fde-a4e4-66a00ef010d7 | Lê Thị Thắng  | 06/01/2004 | Male | 11
+20e0bd77-c292-43b1-8088-e298929cfc8f | Võ Văn Tân  | 08/01/2005 | Female | 10
+9badfd19-3815-429f-848e-0d69356be4ce | Lý Trung Thắng  | 11/09/2003 | Male | 11
+8b31bf14-5718-4e04-bd8e-093ee0340323 | Trần Anh Tân  | 20/07/2004 | Male | 10
+94c80c23-0910-4095-9bb8-4d71ef6fdc6f | Lương Hoàng Bảo Khôi  | 30/11/2004 | Female | 12
+8ac74b74-5cbe-47c6-8abb-79d81774c675 | Hồ Trung Thắng  | 09/03/2004 | Female | 10
+16de61bc-bbb2-4206-8aff-332ff4040e53 | Nguyễn Văn Thành  | 11/03/2003 | Male | 11
+4c514c48-f58d-4dda-9ab7-019f8ad3a584 | Lý Anh Bách  | 01/08/2005 | Male | 11
+ec77f5d6-413e-4e3d-85fc-ed8ca0daa90e | Võ Minh Thành  | 15/07/2003 | Female | 11
+ffc7bdc8-e739-481b-be30-ef49b429cbe3 | Lý Anh Khôi  | 24/09/2004 | Female | 12
+06315c1b-d7a6-46e5-93cd-5abfbe3ee254 | Lý Minh Long  | 28/05/2004 | Male | 11
+7145189e-bc77-4250-b626-6fbff25ebb75 | Nguyễn Trung Thành  | 17/07/2004 | Male | 10
+d7ed9365-8616-4451-95fe-c0f7c698c913 | Võ Thị Khôi  | 29/04/2003 | Female | 10
+780ea26e-b444-456e-83f8-2b29675b9a7f | Lương Hoàng Bảo Tân  | 08/08/2003 | Female | 12
+6fdd7e8b-3116-44a6-8117-a1ccd43f1acc | Trần Minh Long  | 11/01/2003 | Female | 11
+4985212a-a33b-4773-8c2b-ede44c538f7d | Nguyễn Anh Tân  | 31/07/2005 | Female | 11
+0042d4f9-f5e1-43f6-9de5-8fe23b3e4531 | Lê Hoàng Bảo Long  | 10/01/2004 | Female | 12
+b9a00d12-c2e9-4c39-b502-2c4ee3b53b85 | Lê Thị Long  | 05/10/2003 | Female | 11
+bbd2b09d-56b7-40e3-a263-4ab757acddb6 | Lê Anh Tân  | 24/01/2004 | Male | 12
+ec391688-b599-4fdc-869a-5b2a2f458de4 | Lương Hoàng Bảo Long  | 06/03/2005 | Male | 12
+75c0fccc-a949-484a-ad83-d906a331897e | Lý Hoàng Khôi  | 01/07/2004 | Male | 10
+146e1cb8-78fb-458f-998b-ea336b3a0aa4 | Võ Văn Long  | 01/07/2004 | Male | 10
+3a9b4552-03fc-43c7-8743-1e66bd9bd8fe | Hồ Hoàng Bảo Long  | 11/07/2004 | Female | 12
+cc3a51b6-799a-4be7-86a8-01bc1f1417bf | Lý Thị Tân  | 08/04/2003 | Female | 12
+d95ecd62-3a42-4bdc-b687-64f03cc062d2 | Hồ Hoàng Bảo Long  | 13/06/2004 | Male | 12
+371e831b-726f-4474-9b35-75f71daef120 | Hồ Anh Thắng  | 11/08/2005 | Male | 11
+081a1d17-cc2f-4b11-9402-9b969967e2cf | Nguyễn Hoàng Bảo Bách  | 11/02/2005 | Male | 12
+1433d5a8-c885-4428-a577-1c736e43b0f0 | Hồ Hoàng Bảo Thành  | 03/07/2004 | Female | 10
+7da02636-40d1-4e56-bad8-37e1240351fe | Nguyễn Trung Long  | 05/10/2004 | Male | 11
+9f53f87d-5b06-470a-be94-c27f20bf3147 | Nguyễn Hoàng Bách  | 03/05/2004 | Female | 12
+7fc6dad6-af72-4a82-b2c4-b6f3d81fe33d | Lê Anh Long  | 13/09/2003 | Male | 11
+3f757f9e-11d8-4f52-ae37-83036a97f1ef | Lê Minh Thành  | 16/11/2005 | Male | 11
+766e54fc-cf97-46a3-b4d0-1ee32070ad7c | Lê Minh Thắng  | 08/08/2004 | Male | 11
+7dd42fb7-ad42-4c34-8b1f-ae6cf3e0c20b | Trần Hoàng Khôi  | 12/09/2004 | Female | 11
+91d66e3e-39b8-47c5-b547-24ccca91628a | Lương Hoàng Bảo Thắng  | 25/11/2003 | Male | 12
+cd7cf1c6-8f61-454c-a9fc-821b6a24e954 | Võ Văn Khôi  | 25/07/2004 | Male | 11
+af33f18b-3e4c-4c92-99d1-68e26be602e5 | Hồ Hoàng Bảo Long  | 21/05/2004 | Female | 10
+4f5cc1ff-9dd1-4a92-b5a6-6211cce9759a | Võ Trung Tân  | 03/10/2004 | Female | 10
+d414b3c5-2630-4c87-ac21-7d7ff6946c23 | Hồ Hoàng Bách  | 18/04/2004 | Female | 11
+6bcb8544-ca0b-49a2-b3f3-3e580388aacd | Lý Thị Long  | 21/07/2004 | Male | 10
+2be8c8df-9846-48c0-896a-922be9334f6d | Lý Văn Tân  | 09/11/2004 | Female | 12
+ab9ee528-349f-4310-8a7a-5a40c7e0c90f | Lê Thị Thành  | 28/10/2004 | Male | 11
+1a6f6dca-d330-4803-9541-d7d89be9a222 | Lý Hoàng Bách  | 16/03/2003 | Female | 12
+dca8052a-5ec7-489e-b8b8-2a0deee0834e | Võ Anh Khôi  | 10/03/2005 | Female | 12
+d2f7dc34-d1c1-4e60-9b42-0ca39a198195 | Hồ Anh Khôi  | 03/06/2003 | Male | 10
+6767f352-7d33-4170-ae64-d43230c10f21 | Lê Văn Tân  | 28/11/2003 | Male | 11
+3ba19e15-64b4-4eef-84da-405684f9d319 | Lương Trung Khôi  | 10/02/2003 | Female | 12
+1e40151a-6b25-400c-bed6-5c46c28eaa43 | Hồ Hoàng Thắng  | 16/02/2004 | Female | 12
+8d802ab7-1040-4693-bdb8-d48d2764b9f6 | Trần Văn Tân  | 17/09/2005 | Female | 12
+0cd3a6b3-3636-468a-aa59-577f0b9a70a4 | Lê Hoàng Khôi  | 31/01/2004 | Female | 10
+0a1021ba-3121-4493-ae78-50d3dee56567 | Võ Minh Khôi  | 01/09/2003 | Female | 10
+cf2543c4-ff1d-4cbe-a1da-4d8c83351df6 | Lương Minh Long  | 06/09/2004 | Male | 10
+b6774ae1-6312-4ed4-92bd-2bcbb6ae2f20 | Lê Trung Tân  | 14/05/2003 | Female | 12
+f5eb92ec-b902-44f5-9ca2-e52c8c21466a | Lê Văn Thành  | 15/10/2004 | Female | 11
+233868bb-7b7e-4b82-8aad-467b71bd4071 | Nguyễn Hoàng Thắng  | 03/02/2004 | Female | 11
+773d5247-c9ad-4c6d-8979-c178d182a7e5 | Võ Hoàng Bảo Bách  | 20/05/2005 | Female | 10
+6239de5f-ae9f-42c9-bd15-f91348c67d0f | Nguyễn Văn Tân  | 09/08/2005 | Male | 12
+6d89dc7d-0edf-403b-93e4-36f2c43ef32a | Võ Hoàng Tân  | 21/02/2003 | Male | 11
+efa35ea2-1f1e-4ee2-adce-93dae4b4f8a5 | Lý Trung Long  | 26/08/2003 | Male | 12
+aa033905-5cee-426b-a973-2b27aa0e59a1 | Võ Anh Bách  | 23/08/2004 | Male | 11
+f36575a3-dc3e-4bb0-8c7b-f61bebf2f084 | Lương Văn Tân  | 27/08/2004 | Female | 12
+249c564f-202f-41db-bb57-385670e8d290 | Trần Anh Khôi  | 29/01/2004 | Female | 10
+d42c8afc-9c10-4e24-9195-d3edead1fe1e | Hồ Anh Thắng  | 04/03/2003 | Male | 10
+df722da0-79ef-4391-b1c5-7277ac4d1d6c | Lý Thị Long  | 24/05/2005 | Female | 10
+fdfa1407-2c8a-4623-93c7-d77e027b097c | Lý Văn Tân  | 27/03/2004 | Female | 11
+e2f68b51-de7d-489b-a693-583662b8db78 | Võ Thị Thành  | 10/08/2003 | Female | 10
+4ec160eb-2d58-47cb-be8f-6157518760ac | Trần Hoàng Thắng  | 23/04/2005 | Male | 10
+df0fef31-1ba4-4b4c-9177-5aef60cd67aa | Hồ Anh Long  | 11/06/2004 | Female | 12
+27715f39-4389-4cc4-af2c-5bf6274a92f7 | Hồ Minh Tân  | 27/08/2003 | Male | 11
+5d6bbe26-08a4-4143-840b-b4e4dfe54806 | Võ Hoàng Bảo Bách  | 25/05/2004 | Male | 12
+cc0e7afc-27c4-4095-af41-0d333a52b557 | Trần Trung Thành  | 05/03/2004 | Male | 11
+439ed3e6-b50d-4327-b72e-37d22434dee0 | Lê Minh Thắng  | 08/03/2005 | Female | 10
+b435f9a2-9dcd-4c60-94c8-3ecbff60ee9e | Lê Anh Long  | 08/09/2003 | Female | 10
+21e322cc-1259-4aee-8f64-deee3e42d509 | Võ Văn Thắng  | 08/09/2004 | Female | 10
+d15d85d3-4acf-4e9d-9e1a-f3c32f44229f | Lý Minh Bách  | 01/06/2004 | Female | 10
+6b82c7ae-82fd-484d-b8fa-ce66861eb7e4 | Lý Hoàng Tân  | 03/10/2004 | Male | 11
+fabcf831-2a5c-45bc-ba4c-0eefd80e0e5f | Nguyễn Trung Tân  | 26/02/2004 | Female | 11
+35f9200b-0427-4649-8153-bfe8106fb698 | Lê Hoàng Long  | 03/05/2004 | Female | 10
+020c725d-6f17-4eec-abd6-75fd9d0a03fb | Lương Anh Thắng  | 09/03/2005 | Male | 12
+f9a82ff6-5190-4153-9808-4dff3d4f3895 | Nguyễn Văn Long  | 12/02/2005 | Male | 11
+76af9707-7fe2-4697-a6b0-644102076d16 | Lê Hoàng Bách  | 11/08/2003 | Male | 10
+e27168c5-ff1e-453f-be7e-63890070de07 | Trần Thị Tân  | 02/11/2005 | Female | 10
+9f06c67a-d38f-4884-be06-4effe00268e2 | Lương Minh Khôi  | 22/07/2004 | Male | 12
+664d0f9d-d675-46b5-92e7-2384acf2d49d | Võ Anh Thắng  | 16/10/2005 | Female | 12
+d2747d4c-317a-4f4d-8ec1-8973cbb20dd5 | Hồ Minh Long  | 15/09/2003 | Female | 12
+d0c705be-4f54-4c31-812e-bd4d7618a67f | Lương Thị Thành  | 26/12/2005 | Female | 12
+49f56343-b95b-4a17-b2a9-07c2dd6de720 | Nguyễn Minh Thắng  | 20/08/2004 | Female | 10
+5c47bddf-547a-4d4e-996a-dc901d6d420a | Lý Thị Thắng  | 09/06/2003 | Male | 12
+96d3e879-ce49-4178-9d7c-7ad6b394b90a | Lê Minh Thành  | 06/07/2003 | Female | 12
+341136b3-21f8-446c-8705-f9ec86b0cd93 | Võ Trung Khôi  | 20/09/2004 | Male | 12
+6f741276-1801-437f-a30c-7c79284ef4c3 | Lý Văn Bách  | 20/12/2004 | Female | 10
+8a29771c-b5dd-4eec-962e-5f2744082972 | Trần Anh Khôi  | 15/07/2004 | Female | 11
+61eff65b-2e9c-474c-be30-8b991c1501d8 | Lê Văn Khôi  | 13/03/2003 | Female | 10
+11ad9bd2-a55f-4b87-9de3-c5f92953f851 | Lương Hoàng Thành  | 22/05/2004 | Female | 10
+80e16f54-fbfc-44f0-96e9-9413ba28b921 | Nguyễn Hoàng Khôi  | 20/12/2004 | Female | 10
+199eacd2-e7a5-4072-9d0d-30b4766bb615 | Võ Minh Tân  | 27/07/2004 | Female | 12
+c5a85818-6d1c-4a01-ac76-64f6e26e03f0 | Lý Hoàng Thành  | 07/04/2004 | Male | 11
+569b3dc7-6388-4b37-97c9-070a9cae9d58 | Lương Hoàng Bảo Long  | 19/09/2005 | Male | 12
+c48bd101-812d-4f25-b92a-7f831a282ef2 | Lê Minh Khôi  | 12/12/2003 | Female | 12
+36e745ac-8e4f-4932-811c-fedca1a71277 | Lý Trung Tân  | 05/05/2005 | Male | 10
+eb6f30a8-fc43-477b-96e4-1ac99ea38d80 | Lương Thị Thắng  | 26/03/2003 | Female | 10
+60492af5-5bdc-4a71-92f7-a503746f2006 | Võ Văn Thắng  | 25/08/2005 | Male | 12
+b2f3d5d3-f542-4faa-bf23-daf9f69987f3 | Trần Minh Thành  | 16/03/2003 | Male | 10
+134d8312-e48a-47ba-a0c8-d984db2cbcd1 | Võ Thị Long  | 21/10/2005 | Male | 12
+7f8d238f-cbaa-45a6-a6a3-21efc16a0bb8 | Trần Hoàng Bảo Bách  | 02/03/2004 | Female | 12
+883de013-cfc4-43ae-a0d6-365d0ae3b6bb | Nguyễn Hoàng Thắng  | 27/11/2004 | Female | 12
+1729892f-ed88-4e81-83ea-b2a2a00a439a | Lý Trung Tân  | 23/09/2005 | Male | 12
+c5bdccfb-bf56-45b9-bf2d-d39c77dc407c | Nguyễn Anh Khôi  | 16/11/2004 | Male | 12

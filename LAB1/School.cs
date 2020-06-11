@@ -34,7 +34,7 @@ namespace LAB1
         public List<ClassInfo> GetClasses { get { return _class_list; } }
         public void SetClasses(ClassInfo[] student) { _class_list = new List<ClassInfo>(student); }
 
-        public void saveStudent(string filename)
+        public void createCsvStudent(string filename)
         {
             String content = "ID, Fullname, Birthday, Gender, ClassID\n";
             try
@@ -45,7 +45,7 @@ namespace LAB1
                 }
                 foreach (Student student in _students_list)
                 {
-                    content += student.ID + " | " + student.FullName + " | " + student.Birthday + " | " + student.Gender + " | "
+                    content += student.ID + " | " + student.FullName + " | " + student.Birthday.ToString("dd/MM/yyyy") + " | " + student.Gender + " | "
                         + student.ClassID + "\n";
                 }
                 File.WriteAllText(filename, content);
@@ -56,7 +56,7 @@ namespace LAB1
             }
         }
 
-        public void saveRoom(String filename)
+        public void createCsvRoom(String filename)
         {
             string content = "ID, Class, No\n";
             try
@@ -77,7 +77,7 @@ namespace LAB1
             }
         }
 
-        public void saveLevel(string filename)
+        public void createCsvLevel(string filename)
         {
             string content = "ID, Name\n";
             try
@@ -98,7 +98,7 @@ namespace LAB1
             }
         }
 
-        public void saveClasses(string filename)
+        public void createCsvClasses(string filename)
         {
             string content = "ID, Level, Room, Name\n";
             try
