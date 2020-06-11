@@ -1,26 +1,76 @@
 {
-  "NameConfig": {
-    "last_name_set": [
-      "Nguyễn",
-      "Lý",
-      "Lê",
-      "Trần",
-      "Hồ",
-      "Võ"
-    ],
-    "middle_name_set": [
-      "Văn",
-      "Thị",
-      "Hoàng Bảo",
-      "Anh",
-      "Minh",
-      "Thúy"
-    ],
-    "first_name_set": [
-      "Đạt",
-      "Trang",
-      "Long",
-      "Thành"
-    ]
-  }
+    "NameConfig": {
+        "last_name_set": [
+            "Nguyễn",
+            "Lý",
+            "Lê",
+            "Trần",
+            "Hồ",
+            "Võ",
+            "Phan",
+            "Hoàng"
+
+        ],
+        "middle_name_set": [
+            "Đức",
+            "Văn",
+            "Hoàng Bảo",
+            "Anh",
+            "Minh",
+            "Công",
+            "Thị",
+            "Thùy",
+            "Ngọc",
+            "Mỹ",
+            "Thanh"
+        ],
+        "first_Male_set": [
+            "Đạt",
+            "Nam",
+            "Long",
+            "Thành",
+            "Trí",
+            "Thắng",
+            "Khoa",
+            "Đăng",
+            "Hiếu"
+        ],
+        "first_Female_set": [
+
+            "Ngọc",
+            "Linh",
+            "Thanh",
+            "Nga",
+            "Trang",
+            "Ngân"
+        ]
+
+    },
+    "FieldDataSet": {
+        "FieldNameSet": [
+            "Math",
+            "Literature",
+            "Biology",
+            "History",
+            "Chemistry",
+            "English",
+            "Physics",
+            "Geography "
+        ]
+    },
+    "GenderConfig": {
+        "GenderSet": [
+            "Male",
+            "Female"
+        ]
+    },
+    "LevelConfig": {
+        "LevelSet": [
+            "10",
+            "11",
+            "12"
+        ]
+    }
+
+
 }
