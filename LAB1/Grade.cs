@@ -31,9 +31,22 @@ namespace LAB1
             get { return _grade; }
             set { _grade = value; }
         }
-        public static Grade[] createGrade()
+        public static Grade[] CreateGrade()
         {
-
+            Student[] studentList = DatabaseHandler.getStudentIDClassList();
+            Random rand = new Random();
+            List<Grade> list = new List<Grade>();
+            //Grade[] list = new Grade[studentList.Length];
+            foreach (Student student in studentList)
+            {
+                String level = DatabaseHandler.GetClassLevelByID(student.Class);
+                String[] subjectIDList =  DatabaseHandler.GetSubjectIDByLevelList(level);
+                foreach (string subject in subjectIDList)
+                {
+                    list.Add(new Grade(subject, student.UUID, rand.Next(101)));
+                }
+            }
+            return list.ToArray();
         }
     }
 }
