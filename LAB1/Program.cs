@@ -6,8 +6,8 @@ namespace LAB1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Good Morning Vietnam !!!!");
-            Console.ReadLine();
+            //Console.WriteLine("Good Morning Vietnam !!!!");
+            //Console.ReadLine();
         }
     }
 }
