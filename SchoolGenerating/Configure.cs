@@ -1,14 +1,15 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace SchoolGenerating
 {
-    class StudentConfigure
+    class Configure
     {
-        public NameConfig NameCongfig { get; set; }
+
+        public NameConfig NameConfig { get; set; }
+
     }
-    
     class NameConfig
     {
         public string[] Last_name_set { get; set; }
@@ -16,4 +17,3 @@ namespace SchoolGenerating
         public string[] First_name_set { get; set; }
     }
 }
-*/
