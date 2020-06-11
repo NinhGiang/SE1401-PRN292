@@ -39,5 +39,21 @@ namespace LAB1
             get { return _name; }
             set { _name = value; }
         }
+        public static Class[] createClass(Dictionary<String,String> ids,Level[] levelList)
+        {
+            Class[] list = new Class[ids.Count];
+            int count = 0;
+            int levelCount = 1;
+            Random rand = new Random();
+            foreach (KeyValuePair<string,string> entry in ids)
+            {
+                String id = entry.Value;
+                Level currLevel = levelList[rand.Next(levelList.Length)];
+                String level = currLevel.UUID;
+                String room = entry.Key;
+                String name = currLevel.Name + "A" +levelCount;
+                count++;
+            }
+        }
     }
 }

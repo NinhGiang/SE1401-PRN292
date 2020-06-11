@@ -41,6 +41,7 @@ namespace LAB1
             Room[] room_list = Room.createRoom(roomAndClassIDList);
             school.RoomList =  room_list;
             school.saveRoom(directoryPath + "\\" + "Room.csv");
+            
 
             Console.ReadLine();
         }
