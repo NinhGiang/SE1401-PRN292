@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LAB1
+namespace LAB1.Object
 {
     class Program
     {

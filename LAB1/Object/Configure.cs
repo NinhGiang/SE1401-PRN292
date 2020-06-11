@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LAB1
+namespace LAB1.Object
 {
     class Configure
     {
