@@ -17,6 +17,7 @@ namespace LAB1
         private List<Student> _student_list;
         private List<Grade> _grade_list;
         private List<Attendance> _attendance_list;
+        
 
         public School()
         {
@@ -28,38 +29,47 @@ namespace LAB1
         }
         public Level[] LevelList
         {
+            get { return _level_list.ToArray(); }
             set { _level_list = new List<Level>(value); }
         }
         public Field[] FieldList
         {
+            get { return _field_list.ToArray(); }
             set { _field_list = new List<Field>(value); }
         }
         public Subject[] SubjectList
         {
+            get { return _subject_list.ToArray(); }
             set { _subject_list = new List<Subject>(value); }
         }
         public Teacher[] TeacherList
         {
+            get { return _teacher_list.ToArray(); }
             set { _teacher_list = new List<Teacher>(value); }
         }
         public Room[] RoomList
         {
+            get { return _room_list.ToArray(); }
             set { _room_list = new List<Room>(value); }
         }
         public Class[] ClassList
         {
+            get { return _class_list.ToArray(); }
             set { _class_list = new List<Class>(value); }
         }
         public Student[] StudentList
         {
+            get { return _student_list.ToArray(); }
             set { _student_list = new List<Student>(value); }
         }
         public Grade[] GradeList
         {
+            get { return _grade_list.ToArray(); }
             set { _grade_list = new List<Grade>(value); }
         }
         public Attendance[] AttendanceList
         {
+            get { return _attendance_list.ToArray(); }
             set { _attendance_list = new List<Attendance>(value); }
         }
 
