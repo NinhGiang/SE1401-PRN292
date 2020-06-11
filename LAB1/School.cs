@@ -20,7 +20,7 @@ namespace LAB1
         }
         public void save(string filename)
         {
-            String content = "ID, Fullname\n";
+            String content = "ID, UUID, Fullname, Birthday\n";
             foreach (Student student in _students_list)
             {
                 content += student.ID + ", " + student.UUID + ", " + student.FullName + ", " + student.Birthday + "\n";
