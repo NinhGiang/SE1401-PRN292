@@ -8,35 +8,52 @@ namespace LAB1.StudentGeneration
 {
     class School
     {
-        private List<Student> students;
-        public School(Student[] students)
+        protected string _school_name;
+        protected List<Student> _students;
+        protected List<Level> _levels;
+        protected List<Room> _rooms;
+        protected List<SchoolClass> _classes;
+
+        public School(string school_name, Student[] students, Level[] levels, 
+            Room[] rooms, SchoolClass[] classes)
         {
-            this.students = new List<Student>(students);
+            this._school_name = school_name;
+            this._students = new List<Student>(students);
+            this._levels = new List<Level>(levels);
+            this._rooms = new List<Room>(rooms);
+            this._classes = new List<SchoolClass>(classes);
         }
-        public void save(string school_name)
+
+        public void save()
         {
-            String content = "ID, Fullname, Gender, Birthday\n";
-            foreach (Student student in students)
+            createDirectory(_school_name);
+            saveStudents();
+        }
+
+        public void saveStudents()
+        {
+            String content = "ID, Fullname, Gender, Birthday, Class\n";
+            foreach (Student student in _students)
             {
-                content += student.ID + ", " + student.Name + "\n";
+                content += student.ID + ", " + student.Name + ", " 
+                    + student.Gender + ", " 
+                    + student.Birthday.ToShortDateString() + ", "
+                    + student.Current_class + "\n";
             }
-            createDirectory(school_name);
-            string filepath = getFilePath(school_name);
+            string filepath = getFilePath(_school_name);
             File.WriteAllText(filepath, content);
-            Console.WriteLine("Successful: You have created {0} with {1} student",
-                school_name, students.Count);
         }
 
         public String createDirectory(String directory_name)
         {
-            Directory.CreateDirectory(@"..\..\..\StudentGeneration\" + directory_name);
-            return @"..\..\..\StudentGeneration\" + directory_name;
+            Directory.CreateDirectory(@"..\..\..\" + directory_name);
+            return @"..\..\..\" + directory_name;
         }
 
-        public String getFilePath(String directory)
+        public String getFilePath(String filename)
         {
-            string filename_csv = directory + ".csv";
-            return @"..\..\..\StudentGeneration\" + directory + @"\" + filename_csv;
+            string filename_csv = filename + ".csv";
+            return @"..\..\..\" + _school_name + @"\" + filename_csv;
 
         }
     }

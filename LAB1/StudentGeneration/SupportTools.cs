@@ -20,7 +20,7 @@ namespace LAB1.StudentGeneration
             return null;
         }
 
-        public static int getStudentAmount(string input)
+        public static uint getStudentAmount(string input)
         {
             int index_of_s = input.LastIndexOf(" -s ");
             int index_of_r = input.IndexOf(" -r ");

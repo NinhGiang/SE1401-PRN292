@@ -36,7 +36,7 @@ namespace StudentGeneration
                     case "s":
                         input = Console.ReadLine();
                         string school_name = SupportTools.getSchoolName(input);
-                        int number_of_students = SupportTools.getStudentAmount(input);
+                        uint number_of_students = SupportTools.getStudentAmount(input);
                         int number_of_rooms = SupportTools.getRoomAmount(input);
 
                         student_list = Student.CreateStudentRandomly(number_of_students);

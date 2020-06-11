@@ -8,6 +8,9 @@ namespace StudentGeneration
 	class Configure
 	{
 		public NameDataSet NameDataSet { get; set; }
+		public GenderDataSet GenderDataSet { get; set; }
+		public LevelDataSet LevelDataSet { get; set; }
+		public CLassDataSet CLassDataSet { get; set; }
 	}
 
 	class NameDataSet
@@ -17,9 +20,18 @@ namespace StudentGeneration
 		public String[] FirstNameSet { get; set; }
 	}
 
-	class ClassDataSet
-    {
-		public String[] Class_set { get; set; }
+	class GenderDataSet
+	{
+		public String[] GenderSet { get; set; }
+	}
+
+	class LevelDataSet
+	{
+		public String[] LevelSet { get; set; }
+	}
+	class CLassDataSet
+	{
+		public String[] ClassSet { get; set; }
     }
 }
 

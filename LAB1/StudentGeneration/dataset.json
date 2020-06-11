@@ -34,13 +34,31 @@
       "On"
     ]
   },
+  "GenderDataSet": {
+    "GenderSet": [
+      "Female",
+      "Male"
+    ]
+  },
 
-  "ClassDataSet": {
-    "ClassSet": [
+  "LevelDataSet": {
+    "LevelSet": [
       "10",
       "11",
       "12"
     ]
-  } 
+  },
 
+  "CLassDataSet": {
+    "ClassSet": [
+      "A1",
+      "A2",
+      "A3",
+      "B1",
+      "B2",
+      "D1",
+      "D2",
+      "D3"
+    ]
+  }
 }
