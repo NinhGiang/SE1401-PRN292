@@ -1,14 +1,19 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using ProgramManagerStudent;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
 using System.Text;
+using System.Xml.Linq;
 
 namespace StudentGeneration
 {
     class Program
     {
+        
         static void Main(string[] args)
         {/*
             Student[] student_list = Student.Create(3000);
@@ -40,11 +45,29 @@ namespace StudentGeneration
             //write string to file
             //System.IO.File.WriteAllText(@"D:\path.txt", json);    }
             //À Đoàn hiểu rồi. code vớ vẩn. random ngyaf luôn cũng đc
-
+            
             Console.OutputEncoding = Encoding.UTF8;
             Random rnd = new Random();
+
+            /*
+            //Tạo Level
+            List<Level> levelList = Level.CreateLevel();
+            Level.SaveLevel(levelList);
+            Console.WriteLine("Created Level!!");
+            */
+
+            //Tạo Room
             uint numbOfStudentInShool = (uint)rnd.Next(500, 3001);
-            uint numbOfStudentInClass = (uint)rnd.Next(30, 51);
+            List<Room> roomList = Room.CreateRoom(numbOfStudentInShool);
+            Room.SaveRooms(roomList);
+            Console.WriteLine("Created Room!!");
+
+            
+
+            uint numbOfClass = (uint)roomList.Count();
+
+            /*
+
             uint numbOfClass = (uint)Math.Ceiling((double)numbOfStudentInShool / numbOfStudentInClass);
             uint numbOfClassOfLevel = (uint)Math.Ceiling((double)numbOfClass / 3);
             uint numbOfRoom = 1;
@@ -64,7 +87,6 @@ namespace StudentGeneration
                     roomNo++;
                 }
             }
-
             //Test Create method in Student class
             foreach (var classObject in Class.ClassList)
             {
@@ -90,5 +112,6 @@ namespace StudentGeneration
             */
 
         }
+
     }
 }

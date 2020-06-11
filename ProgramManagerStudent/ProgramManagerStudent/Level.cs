@@ -10,34 +10,38 @@ namespace ProgramManagerStudent
     {
         private string uuid;
         private string name;
-        private static List<Level> levelList;
 
         public string Uuid { get { return uuid; } }
-
         public string Name { get { return name; } }
 
-        public static List<Level> LevelList{ get{ return levelList;} }
         public Level(string newUUID, string newName)
         {
             uuid = newUUID;
             name = newName;
         }
 
-        public static void Create()
+        public static List<Level> CreateLevel()
         {
-            if (levelList == null)
-            {
-                levelList = new List<Level>();
-            }
-            string content = File.ReadAllText(@"..\..\..\SchoolConfigure.json");
-            Configure config = JsonSerializer.Deserialize<Configure>(content);
+            List<Level> levelList = new List<Level>();
+            string configContent = File.ReadAllText(@"..\..\..\Configure.json");
+            Configure config = JsonSerializer.Deserialize<Configure>(configContent);
             LevelConfigure levelConfig = config.LevelConfig;
             for (int i = 0; i < levelConfig.level_name_set.Length; i++)
             {
+                string uuid = Guid.NewGuid().ToString();
                 string levelName = levelConfig.level_name_set[i];
-                Level level = new Level(Guid.NewGuid().ToString(), levelName);
-                levelList.Add(level);
+                levelList.Add(new Level(uuid, levelName));
             }
+            return levelList;
+        }
+        public static void SaveLevel(List<Level> levelList)
+        {
+            String content = "UUID, Name";
+            foreach (Level level in levelList)
+            {
+                content += "\n" + level.Uuid + ", " + level.Name;
+            }
+            File.WriteAllText(@"..\..\..\Levels.csv", content);
         }
     }
 }

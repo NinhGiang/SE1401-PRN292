@@ -11,17 +11,17 @@ namespace StudentGeneration
     /// </summary>
     class Configure
     {
-        public NameConfigure NameConfig { get; set; }
+        public NameConfig NameConfig { get; set; }
         public LevelConfigure LevelConfig { get; set; }
-        public ClassConfigure ClassConfig { get; set; }
-        public FieldConfigure FieldConfig { get; set; }
+        public ClassConfig ClassConfig { get; set; }
+        public FieldConfig FieldConfig { get; set; }
     }
 
     /// <summary>
     /// FieldConfig class
     /// Contains all method for get/set in FieldConfig class
     /// </summary>
-    public class FieldConfigure
+    public class FieldConfig
     {
         public string[] field_set { get; set; }
     }
@@ -30,7 +30,7 @@ namespace StudentGeneration
     /// ClassConfig class
     /// Contains all method for get/set in ClassConfig class
     /// </summary>
-    public class ClassConfigure
+    public class ClassConfig
     {
         /// <value>
         /// set and get class_name_set,semester_set
@@ -55,7 +55,7 @@ namespace StudentGeneration
     /// NameConfig class
     /// Contains all method for get/set in NameConfig class
     /// </summary>
-    class NameConfigure
+    class NameConfig
     {
         /// <value>
         /// set and get last_name_set
