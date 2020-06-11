@@ -59,5 +59,29 @@ namespace LAB1
             Subject newSubject = new Subject(level.UUID, field.UUID);
             subjectsList.Add(newSubject);
         }
-    }
+
+        /// <summary>
+        /// Used to write data into file.
+        /// </summary>
+        /// <exception cref="System.IO.DirectoryNotFoundException">
+        /// Thrown when part of a file or directory cannot be found.
+        /// </exception>
+        /// <param name="filename">A file used to store data.</param>
+        public static void SaveSubjects(string filename)
+        {
+            try
+            {
+                String content = "LevelUUID, FieldUUID\n";
+                foreach (Subject subject in subjectsList)
+                {
+                    content += subject.LevelUUID + ", " + subject.FieldUUID + "\n";
+                }
+                File.WriteAllText(filename, content);
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine("Subject _ DirectoryNotFound: " + ex.Message);
+            }
+        }
+    }  
 }

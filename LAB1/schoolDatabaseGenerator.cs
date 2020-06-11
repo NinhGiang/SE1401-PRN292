@@ -66,8 +66,8 @@ namespace LAB1
             uint noOfClasses = (uint) Math.Ceiling((double) 1000 / noOfStudentsInClass);
             uint noOfClassesPerLevel = (uint) Math.Ceiling((double) noOfClasses / 3);
             uint roomNo = 1;
-            int start = (int)Math.Ceiling((double)noOfClasses / 4);
-            int end = (int)Math.Ceiling((double)noOfClasses / 10);
+            int start = (int)Math.Ceiling((double)noOfClasses / 10);
+            int end = (int)Math.Ceiling((double)noOfClasses / 4);
             uint noOfTeachers;
             int count = 0; //used when create class (add RoomUUID to Class object)
             
@@ -109,6 +109,7 @@ namespace LAB1
             Student.SaveStudents(@"..\..\..\Students.csv");
             Field.SaveFields(@"..\..\..\Fields.csv");
             Teacher.SaveTeachers(@"..\..\..\Teachers.csv");
+            Subject.SaveSubjects(@"..\..\..\Subjects.csv");
             
             /*foreach (var student in Student.StudentList)
             {
