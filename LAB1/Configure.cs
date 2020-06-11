@@ -4,14 +4,28 @@ using System.Text;
 
 namespace StudentGeneration
 {
-    class Configure
+    public class Configure
     {
         public NameConfig NameConfig { get; set; }
+
+        public LevelConfig LevelConfig { get; set; }
+
+        public FieldConfig FieldConfig { get; set; }
     }
-    class NameConfig
+    public class NameConfig
     {
         public string[] last_name_set { get; set; }
         public string[] middle_name_set { get; set; }
         public string[] first_name_set { get; set; }
+    }
+
+    public class LevelConfig
+    {
+        public string[] level_type { get; set; }
+    }
+
+    public class FieldConfig
+    {
+        public string[] field_type { get; set; }
     }
 }
