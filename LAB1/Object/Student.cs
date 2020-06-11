@@ -55,9 +55,7 @@ namespace LAB1.Object
             Random rnd = new Random();
             for (uint i = 0; i < number_student; i++)
             {
-                //String id = Guid.NewGuid().ToString();
-                
-
+                //String id = Guid.NewGuid().ToString(); - Random ID
                 NameConfig _ = config.NameConfig;
                 int last_name_index = rnd.Next(_.last_name_set.Length);
                 int first_name_index = rnd.Next(_.first_name_set.Length);
@@ -66,10 +64,23 @@ namespace LAB1.Object
                 full_name += _.middle_name_set[middle_name_index] + " ";
                 full_name += _.first_name_set[first_name_index];
 
-                result[i] = new Student(ID, Name, Birthday, Gender, Class);
+                //result[i] = new Student(ID, Name, Birthday, Gender, Class);
             }
             return result;
         }
+
+        /*
+        public static DateTime randBirthday()
+        {
+            Random rnd = new Random();
+            DateTime from = new DateTime(2002, 1, 1);
+            DateTime to = new DateTime(2004, 12, 31);
+
+            DateTime birthday;
+            return birthday;
+        }
+        */
+
         public void print()
         {
             Console.WriteLine(_id + 1 + " " + _name);
