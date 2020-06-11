@@ -30,7 +30,6 @@ namespace LAB1
             string content = File.ReadAllText(@"..\..\..\Configure.json");
             config config = JsonSerializer.Deserialize<config>(content);
             LevelConfig lvl = config.LevelConfig;
-
             int size = lvl.Level_Set.Length;
             Level[] result = new Level[size];
 
