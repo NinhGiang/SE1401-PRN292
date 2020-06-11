@@ -50,6 +50,9 @@ namespace LAB1
             Student[] student_list = Student.createStudent(200);
             school.StudentList = student_list;
             school.SaveStudent(directoryPath + "\\" + "Student.csv");
+
+            Grade[] grade_list = Grade.CreateGrade();
+
             Console.ReadLine();
         }
 

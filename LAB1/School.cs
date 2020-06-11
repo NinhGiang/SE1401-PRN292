@@ -15,6 +15,7 @@ namespace LAB1
         private List<Room> _room_list;
         private List<Class> _class_list;
         private List<Student> _student_list;
+        private List<Grade> _grade_list;
 
         public School()
         {
@@ -51,6 +52,10 @@ namespace LAB1
         public Student[] StudentList
         {
             set { _student_list = new List<Student>(value); }
+        }
+        public Grade[] GradeList
+        {
+            set { _grade_list = new List<Grade>(value); }
         }
 
         public void SaveLevel(String filename)
@@ -219,6 +224,29 @@ namespace LAB1
             catch (NullReferenceException ex)
             {
                 Console.WriteLine("SaveStudent : " + ex.Message);
+            }
+        }
+        public void SaveGrade(String filename)
+        {
+            String content = "Subject, Student, Grade\n";
+            if (_grade_list == null)
+            {
+                _grade_list = new List<Grade>();
+            }
+            try
+            {
+                foreach (Grade grade in _grade_list)
+                {
+                    content += grade.Subject + ", ";
+                    content += grade.Student + ", ";
+                    content += grade.Grades + "\n";
+                }
+                File.WriteAllText(filename, content);
+            }
+
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine("SaveClass : " + ex.Message);
             }
         }
     }
