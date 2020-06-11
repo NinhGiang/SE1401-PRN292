@@ -56,7 +56,7 @@ namespace StudentGeneration
             Random rnd = new Random();
             for (uint i = 0; i < number_student; i++)
             {
-                NameConfig _ = config.NameConfig;
+                NameConfigure _ = config.NameConfig;
                 int last_name_index = rnd.Next(_.last_name_set.Length);
                 int male_first_name_index = rnd.Next(_.male_first_name_set.Length);
                 int male_middle_name_index = rnd.Next(_.male_middle_name_set.Length);

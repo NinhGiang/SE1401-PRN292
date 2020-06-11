@@ -47,15 +47,15 @@ namespace StudentGeneration
             uint numbOfStudentInClass = (uint)rnd.Next(30, 51);
             uint numbOfClass = (uint)Math.Ceiling((double)numbOfStudentInShool / numbOfStudentInClass);
             uint numbOfClassOfLevel = (uint)Math.Ceiling((double)numbOfClass / 3);
-            uint roomNo = 1;
+            uint numbOfRoom = 1;
             int count = 0; //used when create class (add RoomUUID to Class object)
-            uint noOfTeacher = (uint)Math.Ceiling((double)numbOfClass / rnd.Next(4, 11));
+            uint numbOfTeacher = (uint)Math.Ceiling((double)numbOfClass / rnd.Next(4, 11));
             //Test Create method in Level class
             Level.Create();
             //Test Create method in Class class
             foreach (var level in Level.LevelList)
             {
-                for (int i = 0; i < noOfClassPerLevel; i++)
+                for (int i = 0; i < numbOfClassOfLevel; i++)
                 {
                     Class.Create(level, "", i);
                     Room.Create(Class.ClassList[i], roomNo);

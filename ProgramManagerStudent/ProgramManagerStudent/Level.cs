@@ -31,7 +31,7 @@ namespace ProgramManagerStudent
             }
             string content = File.ReadAllText(@"..\..\..\SchoolConfigure.json");
             Configure config = JsonSerializer.Deserialize<Configure>(content);
-            LevelConfig levelConfig = config.LevelConfig;
+            LevelConfigure levelConfig = config.LevelConfig;
             for (int i = 0; i < levelConfig.level_name_set.Length; i++)
             {
                 string levelName = levelConfig.level_name_set[i];
