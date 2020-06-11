@@ -68,18 +68,13 @@ namespace LAB1.Object
             }
             return result;
         }
-
-        /*
-        public static DateTime randBirthday()
+        public static int randNumber(int minNum, int maxNum)
         {
             Random rnd = new Random();
-            DateTime from = new DateTime(2002, 1, 1);
-            DateTime to = new DateTime(2004, 12, 31);
-
-            DateTime birthday;
-            return birthday;
+            maxNum = minNum + 1;
+            int randNumber = rnd.Next(minNum, maxNum); 
+            return randNumber;
         }
-        */
 
         public void print()
         {
