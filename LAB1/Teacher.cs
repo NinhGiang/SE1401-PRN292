@@ -11,6 +11,10 @@ namespace LAB1
         protected bool _gender;
         protected string _field;
 
+        public Teacher()
+        {
+        }
+
         public Teacher(string uuid, string name, bool gender, string field)
         {
             _uuid = uuid;

@@ -11,6 +11,10 @@ namespace LAB1
         protected string _level;
         protected string _field;
 
+        public Subject()
+        {
+        }
+
         public Subject(string uuid, string name, string level, string field)
         {
             _uuid = uuid;

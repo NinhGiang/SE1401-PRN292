@@ -240,7 +240,29 @@ namespace LAB1
         }
 
         //Subject
+        public static Subject[] GetSubjectList()
+        {
 
+            List<string> list = CsvFileReader(_directory_path + "\\" + "Subject.csv");
+            Subject[] subjectList = new Subject[list.Count];
+            int idCol = GetColumnID(_directory_path + "\\" + "Subject.csv", "ID");
+            int levelCol = GetColumnID(_directory_path + "\\" + "Subject.csv", "Level");
+            int fieldCol = GetColumnID(_directory_path + "\\" + "Subject.csv", "Field");
+            int index = 0;
+            foreach (string line in list)
+            {
+                string[] entry = line.Split(",");
+                string id = entry[idCol].Trim();
+                string level = entry[levelCol].Trim();
+                string field = entry[fieldCol].Trim();
+                Subject subject = new Subject();
+                subject.UUID = id;
+                subject.Level = level;
+                subject.Field = field;
+                subjectList[index++] = new Subject();
+            }
+            return subjectList;
+        }
         public static string[] GetSubjectIDByLevelList(String level)
         {
             int col = GetColumnID(_directory_path + "\\" + "Subject.csv", "Level");
@@ -279,6 +301,28 @@ namespace LAB1
                 studentList[index++] = student;
             }
             return studentList;
+        }
+
+        //Teacher
+
+        public static Teacher[] GetTeacherList()
+        {
+            List<string> list = CsvFileReader(_directory_path + "\\" + "Teacher.csv");
+            Teacher[] teacherList = new Teacher[list.Count];
+            int index = 0;
+            int idCol = GetColumnID(_directory_path + "\\" + "Teacher.csv", "ID");
+            int fieldCol = GetColumnID(_directory_path + "\\" + "Teacher.csv", "Field");
+            foreach (string line in list)
+            {
+                string[] entry = line.Split(",");
+                string id = entry[idCol].Trim();
+                string field = entry[fieldCol].Trim();
+                Teacher teacher = new Teacher();
+                teacher.UUID = id;
+                teacher.Field = field;
+                teacherList[index++] = teacher;
+            }
+            return teacherList;
         }
     }
 }
