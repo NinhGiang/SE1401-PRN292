@@ -42,7 +42,7 @@ namespace LAB1
         {
             Teacher[] list = new Teacher[number];
             
-            string[] fieldIDList = DataReader.getFieldIDList();
+            string[] fieldIDList = DatabaseHandler.getFieldIDList();
             Random rand = new Random();
             for (int i = 0; i < number; i++)
             {

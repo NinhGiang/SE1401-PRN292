@@ -42,7 +42,7 @@ namespace LAB1
         }
         public static Class[] createClass(Dictionary<String,String> ids)
         {
-            Level[] levelList = DataReader.getLevelList();
+            Level[] levelList = DatabaseHandler.GetLevelList();
             Class[] list = new Class[ids.Count];
             int count = 0;
             int numberOfClass = ids.Count / levelList.Length;

@@ -13,6 +13,10 @@ namespace LAB1
         protected bool _gender;
         protected string _class;
 
+        public Student()
+        {
+        }
+
         public Student(string uuid, string name, DateTime birthday, bool gender, string Class)
         {
             _uuid = uuid;
@@ -51,7 +55,7 @@ namespace LAB1
         public static Student[] createStudent(int numberOfStudent)
         {
             Student[] list = new Student[numberOfStudent];
-            Level[] levelList = DataReader.getLevelList();
+            Level[] levelList = DatabaseHandler.GetLevelList();
                         Random rand = new Random();
             for (int i = 0; i < numberOfStudent; i++)
             {
@@ -69,7 +73,7 @@ namespace LAB1
                         levelID = lev.UUID;
                     }
                 }
-                string[] classIDList = DataReader.GetClassIDByLevelList(levelID);
+                string[] classIDList = DatabaseHandler.GetClassIDByLevelList(levelID);
                 string classID = classIDList[rand.Next(classIDList.Length)];
                 list[i] = new Student(id, name, birth, gender,classID);
             }

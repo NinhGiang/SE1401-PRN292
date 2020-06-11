@@ -5,8 +5,11 @@ using System.Text;
 
 namespace LAB1
 {
-    class DataReader
+    class DatabaseHandler
     {
+
+        //File reader
+
         private static string _directory_path;
         public string DirectoryPath
         {
@@ -40,17 +43,19 @@ namespace LAB1
         }
         private static int GetColumnID(string path, string col)
         {
+            bool found = false;
+            int id = -1;
             try
             {
                 using (StreamReader sr = new StreamReader(path))
                 {
                     string headerLine = sr.ReadLine();
                     string[] entry = headerLine.Split(",");
-                    for (int i = 0; i < entry.Length; i++)
+                    for (int i = 0; i < entry.Length & found == false; i++)
                     {
                         if (entry[i].Trim().Equals(col.Trim()))
                         {
-                            return i;
+                            id = i;
                         }
                     }
                     sr.Close();
@@ -64,7 +69,7 @@ namespace LAB1
             {
                 Console.WriteLine("Reading failed : " + path + " / " + ex.Message);
             }
-            return -1;
+            return id;
         }
         private static List<string> GetColumnData(string path, int col)
         {
@@ -93,7 +98,7 @@ namespace LAB1
             }
             return list;
         }
-        private static List<string> GetRowInColumnByData(string path,string data, int col)
+        private static List<string> GetRowByData(string path,string data, int col)
         {
             List<string> list = new List<string>();
             try
@@ -123,20 +128,58 @@ namespace LAB1
             }
             return list;
         }
-        public static Level[] getLevelList()
+        private static string GetSingleRowByData(string path, string data, int col)
+        {
+            bool found = false;
+            String result = "";
+            try
+            {
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    sr.ReadLine(); //skip header
+                    while (!sr.EndOfStream & found == false)
+                    {
+                        string currLine = sr.ReadLine();
+                        string[] entry = currLine.Split(",");
+                        if (entry[col].Trim().Equals(data.Trim()))
+                        {
+                            result = currLine;
+                        }
+                    }
+                    sr.Close();
+                }
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("Reading failed : " + path + " / " + ex.Message);
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine("Reading failed : " + path + " / " + ex.Message);
+            }
+            return result;
+        }
+
+        //Level
+
+        public static Level[] GetLevelList()
         {
             List<string> list = CsvFileReader(_directory_path + "\\" + "Level.csv");
             Level[] levelList = new Level[list.Count];
             int index = 0;
+            int idCol = GetColumnID(_directory_path + "\\" + "Level.csv", "ID");
+            int nameCol = GetColumnID(_directory_path + "\\" + "Level.csv", "Name");
             foreach (string line in list)
             {
                 string[] entry = line.Split(",");
-                string id = entry[0].Trim();
-                string name = entry[1].Trim();
+                string id = entry[idCol].Trim();
+                string name = entry[nameCol].Trim();
                 levelList[index++] = new Level(id, name);
             }
             return levelList;
         }
+
+        //Field
 
         public static Field[] getFieldList()
         {
@@ -144,12 +187,12 @@ namespace LAB1
             Field[] fieldList = new Field[list.Count];
             int index = 0;
             int idCol = GetColumnID(_directory_path + "\\" + "Field.csv", "ID");
-            int idName = GetColumnID(_directory_path + "\\" + "Field.csv", "Name");
+            int nameCol = GetColumnID(_directory_path + "\\" + "Field.csv", "Name");
             foreach (string line in list)
             {
                 string[] entry = line.Split(",");
                 string id = entry[idCol].Trim();
-                string name = entry[idName].Trim();
+                string name = entry[nameCol].Trim();
                 fieldList[index++] = new Field(id, name);
             }
             return fieldList;
@@ -167,11 +210,14 @@ namespace LAB1
             }
             return fieldIDList;
         }
+
+        // Class
+
         public static string[] GetClassIDByLevelList(String level)
         {
             int col = GetColumnID(_directory_path + "\\" + "Class.csv", "Level");
 
-            List<string> list = GetRowInColumnByData(_directory_path + "\\" + "Class.csv", level, col);
+            List<string> list = GetRowByData(_directory_path + "\\" + "Class.csv", level, col);
 
             int idCol = GetColumnID(_directory_path + "\\" + "Class.csv", "ID");
             string[] classIDList = new string[list.Count];
@@ -183,6 +229,56 @@ namespace LAB1
                 classIDList[index++] = entry[idCol];
             }
             return classIDList;
+        }
+        public static string GetClassLevelByID(String id)
+        {
+            int col = GetColumnID(_directory_path + "\\" + "Class.csv", "ID");
+            string result = GetSingleRowByData(_directory_path + "\\" + "Class.csv", id, col);
+            int levelCol = GetColumnID(_directory_path + "\\" + "Class.csv", "Level");
+            string[] entry = result.Split(",");    
+            return entry[levelCol];
+        }
+
+        //Subject
+
+        public static string[] GetSubjectIDByLevelList(String level)
+        {
+            int col = GetColumnID(_directory_path + "\\" + "Subject.csv", "Level");
+
+            List<string> list = GetRowByData(_directory_path + "\\" + "Subject.csv", level, col);
+
+            int idCol = GetColumnID(_directory_path + "\\" + "Subject.csv", "ID");
+            string[] classIDList = new string[list.Count];
+            int index = 0;
+            foreach (string line in list)
+            {
+                string[] entry = line.Split(",");
+
+                classIDList[index++] = entry[idCol];
+            }
+            return classIDList;
+        }
+
+        //Student
+
+        public static Student[] getStudentIDClassList()
+        {
+            List<string> list = CsvFileReader(_directory_path + "\\" + "Student.csv");
+            int idCol = GetColumnID(_directory_path + "\\" + "Student.csv", "ID");
+            int classCol = GetColumnID(_directory_path + "\\" + "Student.csv", "Class");
+            Student[] studentList = new Student[list.Count];
+            int index = 0;
+            foreach (string line in list)
+            {
+                string[] entry = line.Split(",");
+                string id = entry[idCol].Trim();
+                string classInfo = entry[classCol].Trim();
+                Student student = new Student();
+                student.UUID = id;
+                student.Class = classInfo;
+                studentList[index++] = student;
+            }
+            return studentList;
         }
     }
 }

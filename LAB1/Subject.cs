@@ -41,8 +41,8 @@ namespace LAB1
         }
         public static Subject[] createSubject()
         {
-            Field[] fieldList = DataReader.getFieldList();
-            Level[] levelList = DataReader.getLevelList();
+            Field[] fieldList = DatabaseHandler.getFieldList();
+            Level[] levelList = DatabaseHandler.GetLevelList();
             Subject[] list = new Subject[fieldList.Length*levelList.Length];
             int size = 0;
             for (int i = 0; i < fieldList.Length; i++)

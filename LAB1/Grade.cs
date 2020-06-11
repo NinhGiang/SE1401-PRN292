@@ -31,5 +31,9 @@ namespace LAB1
             get { return _grade; }
             set { _grade = value; }
         }
+        public static Grade[] createGrade()
+        {
+
+        }
     }
 }
