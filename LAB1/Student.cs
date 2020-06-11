@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace LAB1
@@ -47,7 +48,7 @@ namespace LAB1
             set { _class = value; }
         }
 
-        public void createStudent(int numberOfStudent)
+        public void createStudent(int numberOfStudent,Level[] levelList, Class[] classList)
         {
             List<Student> list = new List<Student>();
             Random rand = new Random();
@@ -59,7 +60,15 @@ namespace LAB1
                 int level = rand.Next(10, 12);
                 int age = Utils.getRandomAge(level);
                 DateTime birth = Utils.getRandomDateTime(2020 - age);
-                
+                String levelID;
+                foreach (Level lev in levelList)
+                {
+                    if(lev.Name.Equals(level.ToString()))
+                    {
+                        levelID = lev.UUID;
+                    }
+                }
+                Class c = classList[rand.Next(classList.Length)];
                 //list.Add(new Student(id, name, birth, gender,));
             }
             
