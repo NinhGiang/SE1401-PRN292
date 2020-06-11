@@ -75,6 +75,20 @@ namespace LAB1.DataGeneration
             int column = GetColumn(path, "Level");
             return GetDataInColumn(path, levelId, column);
         }
+        public static List<string> GetListofSubjectByClass(string classID)
+        {
+            string link = @"..\..\..\DataGeneration\Attendance.csv";
+            int column = GetColumn(link, "Class");
+            return GetDataInColumn(link, classID, column);
+        }
+        public static List<string> GetSubjectsByStudent(string student)
+        {
+            List<string> subjects;
+            string[] info = student.Split(',');
+            string classId = info[4].Trim();
+            subjects = GetListofSubjectByClass(classId);
+            return subjects;
+        }
         public static string getClassByLevelID(string levelId)
         {
             string[] classes = null;
@@ -109,6 +123,10 @@ namespace LAB1.DataGeneration
         public  static List<string> GetTeacherList()
         {
             return CsvReader(@"..\..\..\DataGeneration\Teacher.csv");
+        }
+        public static List<string> GetStudentList()
+        {
+            return CsvReader(@"..\..\..\DataGeneration\FPT大学.csv");
         }
     }
 }

@@ -6,6 +6,7 @@ namespace LAB1.DataGeneration
 {
     class Teacher
     {
+        private static Random rnd = new Random();
         protected string _uuid;
         protected string _name;
         protected string _gender;
@@ -38,5 +39,29 @@ namespace LAB1.DataGeneration
             _gender = gender;
             _field = field;
         }
+        public static Teacher[] createTeacher(uint number_teachers)
+        {
+            List<Teacher> result = new List<Teacher>();
+            List<string> fieldList = ListStorage.GetFieldList();
+            for (int i = 0; i < number_teachers; i++)
+            {
+                string uuid = Guid.NewGuid().ToString(); //generate random uuid
+                string gender = RandomGenerator.GetRandomGender();
+                if (gender.Equals("Male")) 
+                {
+                    string fullName = RandomGenerator.GetRadomMaleFullName();
+                    string fieldID = RandomGenerator.GetRandomFieldID();
+                    result.Add(new Teacher(uuid, fullName, gender, fieldID));
+                }
+                if (gender.Equals("Female"))
+                {
+                    string fullName = RandomGenerator.GetRadomFemaleFullName();
+                    string fieldID = RandomGenerator.GetRandomFieldID();
+                    result.Add(new Teacher(uuid, fullName, gender, fieldID));
+                }
+            }
+            return result.ToArray();
+        }
     }
+   
 }

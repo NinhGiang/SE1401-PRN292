@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Text;
 using System.Text.Json;
@@ -20,10 +21,21 @@ namespace LAB1.DataGeneration
             int range = (end - start).Days;
             return start.AddDays(rnd.Next(range));
         }
-        public static string GetRadomFullName()
+        public static string GetRadomMaleFullName()
         {
             String fullname;           
             int firstname_index = rnd.Next(nameDB.MaleFirstNameSet.Length); //generate one random firstname
+            int midlename_index = rnd.Next(nameDB.MiddleNameSet.Length); //generate one random middlename;
+            int lastname_index = rnd.Next(nameDB.LastNameSet.Length); //generate one random lastname
+            fullname = nameDB.LastNameSet[lastname_index] + " ";
+            fullname += nameDB.MiddleNameSet[midlename_index] + " ";
+            fullname += nameDB.MaleFirstNameSet[firstname_index];
+            return fullname;
+        }//generate a random fullname;
+        public static string GetRadomFemaleFullName()
+        {
+            String fullname;
+            int firstname_index = rnd.Next(nameDB.FemaleFirstNameSet.Length); //generate one random firstname
             int midlename_index = rnd.Next(nameDB.MiddleNameSet.Length); //generate one random middlename;
             int lastname_index = rnd.Next(nameDB.LastNameSet.Length); //generate one random lastname
             fullname = nameDB.LastNameSet[lastname_index] + " ";
@@ -42,6 +54,14 @@ namespace LAB1.DataGeneration
             int gender_index = rnd.Next(genderDB.GenderSet.Length);
             return genderDB.GenderSet[gender_index];
         }//generate random Gender
+        public static string GetRandomFieldID()
+        {
+            List<string> fieldList = ListStorage.GetFieldList();
+            int index = rnd.Next(fieldList.Count);
+            string[] fields = fieldList[index].Split(',');
+            string fieldID = fields[0].Trim();
+            return fieldID;
+        }
 
     }
 }

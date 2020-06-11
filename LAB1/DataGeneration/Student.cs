@@ -59,7 +59,7 @@ public class Student
 
             if (gender.Equals("Male"))
             {
-                String fullname = RandomGenerator.GetRadomFullName(); //generate random name
+                String fullname = RandomGenerator.GetRadomMaleFullName(); //generate random name
                 string classInfo = ListStorage.getClassByLevelID(DataGenerator.GetLevelData()[0].Trim());
                 //String classInfo = RandomGenerator.GetRandomClass();//generate random class
                 
@@ -69,7 +69,7 @@ public class Student
             }//generate a male student
             else if (gender.Equals("Female"))
             {
-                String fullname = RandomGenerator.GetRadomFullName();//generate random name
+                String fullname = RandomGenerator.GetRadomFemaleFullName();//generate random name
                 string classInfo = ListStorage.getClassByLevelID(DataGenerator.GetLevelData()[0].Trim());
                 //String classInfo = RandomGenerator.GetRandomClass();//generate random class
 

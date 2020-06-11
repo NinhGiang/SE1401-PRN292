@@ -40,7 +40,7 @@ namespace LAB1.DataGeneration
             string[] teacherInfo = teacherList[index].Split(",");
             return teacherInfo;
         }
-        public static string GetStudentData(strig index)
+        public static string GetStudentData(string index)
         {
             return null;
         }//current proccess
