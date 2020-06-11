@@ -131,14 +131,10 @@ namespace LAB1
         /// <returns>An array of subjects</returns>
         public static Subject[] Create()
         {
-            List<string> listOfLevels = DataHelper.GetListOfLevel();
-            List<string> listOfFields = DataHelper.GetListOfField();
+            List<string> listOfLevels = FileHelper.GetListOfLevel();
+            List<string> listOfFields = FileHelper.GetListOfField();
 
             List<Subject> result = new List<Subject>();
-            string content = File.ReadAllText(@"..\..\..\Configure.json");
-            Configure config = JsonSerializer.Deserialize<Configure>(content);
-
-            Random rnd = new Random();
 
             for (int i = 0; i < listOfLevels.Count; i++)
             {

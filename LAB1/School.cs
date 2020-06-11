@@ -7,6 +7,7 @@ namespace LAB1
 {
     class School
     {
+        private string _school_name;
         private List<Student> _students_list;
         private List<Teacher> _teacher_list;
         private List<Level> _level_list;
@@ -18,6 +19,17 @@ namespace LAB1
         private List<Grade> _grade_list;
 
         public School() { }
+
+        public School(string schoolName)
+        {
+            _school_name = schoolName;
+        }
+
+        public string SchoolName
+        {
+            get { return _school_name; }
+            set { _school_name = value; }
+        }
 
         public void SetStudentList(Student[] students)
         { _students_list = new List<Student>(students); }
@@ -45,6 +57,7 @@ namespace LAB1
 
         public void SetGradeList(Grade[] grade)
         { _grade_list = new List<Grade>(grade); }
+
 
         public void SaveStudent(string filename)
         {

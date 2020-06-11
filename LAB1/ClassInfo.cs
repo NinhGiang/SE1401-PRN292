@@ -7,7 +7,7 @@ using System.Text.Json;
 namespace LAB1
 {
     /// <summary>
-    /// The ClassInfo class
+    /// The ClassInfo class.
     /// Contains create method and properties of ClassInfo. 
     /// </summary>
     public class ClassInfo
@@ -117,7 +117,7 @@ namespace LAB1
         {
             List<ClassInfo> result = new List<ClassInfo>();
 
-            List<string> listOfLevel = DataHelper.GetListOfLevel();
+            List<string> listOfLevel = FileHelper.GetListOfLevel();
 
             Random rnd = new Random();
 
@@ -152,7 +152,7 @@ namespace LAB1
         /// <returns>The name of room</returns>
         private static string GetRoomNameById(string id)
         {
-            string room = DataHelper.GetRoomByPrimaryKey(id);
+            string room = FileHelper.GetRoomByPrimaryKey(id);
             string[] info = room.Split(',');
             string name = info[2].Trim();
             return name;

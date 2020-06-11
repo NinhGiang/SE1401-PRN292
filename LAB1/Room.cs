@@ -28,26 +28,59 @@ namespace LAB1
         /// </summary>
         protected int _no;
 
+        /// <summary>
+        /// Gets Id of room
+        /// </summary>
+        /// <returns>The Id of room</returns>
         public string GetId()
         { return _id; }
 
+        /// <summary>
+        /// Sets Id of room
+        /// </summary>
+        /// <param name="value">A string value</param>
         public void SetId(string value)
         { _id = value; }
 
+        /// <summary>
+        /// Gets class Id of room
+        /// </summary>
+        /// <returns>The class Id of room</returns>
         public string GetClassInfo()
         { return _class; }
 
+        /// <summary>
+        /// Sets class Id of room
+        /// </summary>
+        /// <param name="value">A string value</param>
         public void SetClassInfo(string value)
         { _class = value; }
 
+        /// <summary>
+        /// Gets room number
+        /// </summary>
+        /// <returns>The room number</returns>
         public int GetNo()
         { return _no; }
 
+        /// <summary>
+        /// Sets room number
+        /// </summary>
+        /// <param name="value">A positive integer value</param>
         public void SetNo(int value)
         { _no = value; }
 
+        /// <summary>
+        /// An empty constructor for room
+        /// </summary>
         public Room() { }
 
+        /// <summary>
+        /// A constructor for room
+        /// </summary>
+        /// <param name="id">A string value</param>
+        /// <param name="classInfo">A string value</param>
+        /// <param name="no">A positive integer value</param>
         public Room(string id,  string classInfo, int no)
         {
             _id = id;

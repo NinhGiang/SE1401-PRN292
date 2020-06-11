@@ -91,7 +91,7 @@ namespace LAB1
         public static Attendance[] Create()
         {
             Random rnd = new Random();
-            List<string> listOfTeacher = DataHelper.GetListOfTeacher();
+            List<string> listOfTeacher = FileHelper.GetListOfTeacher();
             List<Attendance> list = new List<Attendance>();
             int index;
 
@@ -106,14 +106,14 @@ namespace LAB1
                 for (int j = 0; j < numberOfClass; j++)
                 {
                     //subject
-                    List<string> listOfSubject = DataHelper.GetListOfSubjectByField(field);
+                    List<string> listOfSubject = FileHelper.GetListOfSubjectByField(field);
                     index = rnd.Next(listOfSubject.Count);
                     string[] subjectInfo = listOfSubject[index].Split(',');
                     string subject = subjectInfo[0];
                     string level = subjectInfo[1];
 
                     //class
-                    List<string> listOfClass = DataHelper.GetListOfClassByLevel(level);
+                    List<string> listOfClass = FileHelper.GetListOfClassByLevel(level);
                     index = rnd.Next(listOfClass.Count);
                     string[] classes = listOfClass[index].Split(',');
                     string classInfo = classes[0];

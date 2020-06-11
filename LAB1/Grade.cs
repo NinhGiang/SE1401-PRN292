@@ -54,12 +54,12 @@ namespace LAB1
             Random rnd = new Random();
 
             List<Grade> result = new List<Grade>();
-            List<string> listOfStudents = DataHelper.GetListOfStudent();
+            List<string> listOfStudents = FileHelper.GetListOfStudent();
             foreach (string student in listOfStudents)
             {
                 //student id
                 string[] info = student.Split(',');
-                string id = info[0].Trim() + " (" + info[2].Trim() + ")";
+                string id = info[0].Trim();
 
                 //subjects
                 List<string> subjects = GetSubjectsByStudent(student);
@@ -70,7 +70,7 @@ namespace LAB1
                     string sId = sInfo[2].Trim();
 
                     //random grade
-                    int grade = rnd.Next(0, 100);
+                    int grade = rnd.Next(101);
 
                     result.Add(new Grade(sId, id, grade));
                 }
@@ -85,7 +85,7 @@ namespace LAB1
             List<string> subjects;
             string[] info = student.Split(',');
             string classId = info[4].Trim();
-            subjects = DataHelper.GetListOfSubjectByClass(classId);
+            subjects = FileHelper.GetListOfSubjectByClass(classId);
             return subjects;
         }
     }

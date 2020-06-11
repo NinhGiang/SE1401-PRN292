@@ -78,22 +78,40 @@ namespace LAB1
         /// Creates a list of fields and returns the result
         /// </summary>
         /// <returns>An array of fields</returns>
+        /// <exception cref="System.IO.FileNotFoundException">
+        /// Thrown when the Json file is not exist.
+        /// </exception>
+        /// <exception cref="System.NullReferenceException">
+        /// Thrown when the object in Json file is not exist or has no data.
+        /// </exception>
         public static Field[] Create()
         {
-            List<Field> result = new List<Field>();
-            string content = File.ReadAllText(@"..\..\..\Configure.json");
-            Configure config = JsonSerializer.Deserialize<Configure>(content);
-            FieldNameConfig _ = config.FieldNameConfig;
-
-            int size = _.field_name_set.Length;
-
-            for (int i = 0; i < size; i++)
+            try
             {
-                string name = _.field_name_set[i].ToString();
-                string id = Guid.NewGuid().ToString();
-                result.Add(new Field(id, name));
+                List<Field> result = new List<Field>();
+                string content = File.ReadAllText(@"..\..\..\Configure.json");
+                Configure config = JsonSerializer.Deserialize<Configure>(content);
+                FieldNameConfig _ = config.FieldNameConfig;
+
+                int size = _.field_name_set.Length;
+
+                for (int i = 0; i < size; i++)
+                {
+                    string name = _.field_name_set[i].ToString();
+                    string id = Guid.NewGuid().ToString();
+                    result.Add(new Field(id, name));
+                }
+                return result.ToArray();
             }
-            return result.ToArray();
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("Field _ FileNotFoundException: " + ex.Message);
+            }
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine("Field _ NullReferenceException: " + ex.Message);
+            }
+            return null;
         }
     }
 }

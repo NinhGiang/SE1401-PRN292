@@ -117,7 +117,7 @@ namespace LAB1
         {
             List<Teacher> result = new List<Teacher>();
 
-            List<string> listOfField = DataHelper.GetListOfField();
+            List<string> listOfField = FileHelper.GetListOfField();
             Random rnd = new Random();
 
             for (uint i = 0; i < numberOfTeacher; i++)
@@ -129,7 +129,7 @@ namespace LAB1
                 bool gender = rnd.Next(2) == 1;
 
                 //name
-                string fullName = DataHelper.GetRandomNameByGender(gender);
+                string fullName = GenerateDataHelper.GetRandomNameByGender(gender);
 
                 //Field
                 int index = rnd.Next(listOfField.Count);

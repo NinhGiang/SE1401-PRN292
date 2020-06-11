@@ -40,9 +40,5 @@ namespace StudentGeneration
             }
             return result;
         }
-        public void print()
-        {
-            Console.WriteLine(_id+1 + " " + _fullname);
-        }
     }
 }

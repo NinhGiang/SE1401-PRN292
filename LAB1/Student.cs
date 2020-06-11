@@ -155,20 +155,20 @@ namespace LAB1
                 bool gender = rnd.Next(2) == 1;
 
                 //name
-                string fullName = DataHelper.GetRandomNameByGender(gender);
+                string fullName = GenerateDataHelper.GetRandomNameByGender(gender);
 
                 //level
-                List<string> levelList = DataHelper.GetListOfLevel();
+                List<string> levelList = FileHelper.GetListOfLevel();
                 index = rnd.Next(levelList.Count);
                 string[] levelInfo = levelList[index].Split(',');
                 string level = levelInfo[1].Trim();
                 string levelId = levelInfo[0].Trim();
 
                 //birthdate
-                DateTime birthdate = DataHelper.GetRandomBirthdayByLevel(level);
+                DateTime birthdate = GenerateDataHelper.GetRandomBirthdayByLevel(level);
 
                 //Class
-                List<string> listOfClasses = DataHelper.GetListOfClassByLevel(levelId);
+                List<string> listOfClasses = FileHelper.GetListOfClassByLevel(levelId);
                 index = rnd.Next(listOfClasses.Count);
                 string[] classes = listOfClasses[index].Split(',');
                 string classInfo = classes[0].Trim();
