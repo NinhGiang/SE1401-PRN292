@@ -43,7 +43,7 @@ namespace LAB1
         {
             Class[] list = new Class[ids.Count];
             int count = 0;
-            int levelCount = 1;
+            
             Random rand = new Random();
             foreach (KeyValuePair<string,string> entry in ids)
             {
@@ -51,6 +51,14 @@ namespace LAB1
                 Level currLevel = levelList[rand.Next(levelList.Length)];
                 String level = currLevel.UUID;
                 String room = entry.Key;
+                int levelCount = 1;
+                for (int i = 0; i < list.Length; i++)
+                {
+                    if (list[i].Level.Equals(level))
+                    {
+                        levelCount++;
+                    }
+                }
                 String name = currLevel.Name + "A" + levelCount;
                 
                 list[count] = new Class(id,level,room,name);
