@@ -12,9 +12,9 @@ namespace LAB1
 
         public Attendance(string teacher, string classInfo, string subject)
         {
-            _teacher = teacher ?? throw new ArgumentNullException(nameof(teacher));
-            _classInfo = classInfo ?? throw new ArgumentNullException(nameof(classInfo));
-            _subject = subject ?? throw new ArgumentNullException(nameof(subject));
+            _teacher = teacher;
+            _classInfo = classInfo;
+            _subject = subject;
         }
         public string Teacher
         {

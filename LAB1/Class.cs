@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace LAB1
@@ -13,10 +14,10 @@ namespace LAB1
 
         public Class(string uuid, string level, string room, string name)
         {
-            _uuid = uuid ?? throw new ArgumentNullException(nameof(uuid));
-            _level = level ?? throw new ArgumentNullException(nameof(level));
-            _room = room ?? throw new ArgumentNullException(nameof(room));
-            _name = name ?? throw new ArgumentNullException(nameof(name));
+            _uuid = uuid;
+            _level = level;
+            _room = room;
+            _name = name;
         }
 
         public string UUID
@@ -43,28 +44,52 @@ namespace LAB1
         {
             Class[] list = new Class[ids.Count];
             int count = 0;
-            
+            int numberOfClass = ids.Count / levelList.Length;
+            int leftover = ids.Count - numberOfClass * levelList.Length;
+            int levelIndex = 0;
             Random rand = new Random();
+            int levelCount = 1;
             foreach (KeyValuePair<string,string> entry in ids)
             {
                 String id = entry.Value;
-                Level currLevel = levelList[rand.Next(levelList.Length)];
+                Level currLevel = levelList[levelIndex];
                 String level = currLevel.UUID;
                 String room = entry.Key;
-                int levelCount = 1;
-                for (int i = 0; i < list.Length; i++)
-                {
-                    if (list[i].Level.Equals(level))
-                    {
-                        levelCount++;
-                    }
-                }
+                
                 String name = currLevel.Name + "A" + levelCount;
                 
                 list[count] = new Class(id,level,room,name);
                 count++;
+
+                if (levelCount < numberOfClass)
+                {
+                    levelCount++;
+                }
+                else
+                {
+                    if (levelIndex < levelList.Length - 1)
+                    {
+                        levelIndex++;
+                    }
+                    else
+                    {
+                        levelIndex = 0;
+                    }
+                    levelCount = 1;
+                }
             }
             return list;
+        }
+        public static void print(Dictionary<String, String> ids, Level[] levelList)
+        {
+            int idCount = ids.Count;
+            int count = levelList.Length;
+
+            Console.WriteLine(idCount);
+            Console.WriteLine(count);
+
+            Console.WriteLine(idCount/=count);
+            Console.WriteLine(idCount % count);
         }
     }
 }

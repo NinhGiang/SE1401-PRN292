@@ -12,8 +12,8 @@ namespace LAB1
 
         public Room(string uuid, string classInfo, int no)
         {
-            _uuid = uuid ?? throw new ArgumentNullException(nameof(uuid));
-            _classInfo = classInfo ?? throw new ArgumentNullException(nameof(classInfo));
+            _uuid = uuid;
+            _classInfo = classInfo;
             _no = no;
         }
 

@@ -12,8 +12,8 @@ namespace LAB1
 
         public Grade(string subject, string student, int grade)
         {
-            _subject = subject ?? throw new ArgumentNullException(nameof(subject));
-            _student = student ?? throw new ArgumentNullException(nameof(student));
+            _subject = subject;
+            _student = student;
             _grade = grade;
         }
         public string Subject
