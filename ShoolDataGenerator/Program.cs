@@ -58,11 +58,12 @@ namespace ShoolDataGenerator
                 Console.WriteLine(field);
             }*/
 
+            /*//Test No of Room
             int[] listRoomNo = Room.GenrateRoomNo(100);
             foreach (var no in listRoomNo)
             {
                 Console.WriteLine(no);
-            }
+            }*/
         }
 
 
