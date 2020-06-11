@@ -40,6 +40,10 @@ namespace LAB1.DataGeneration
             string[] teacherInfo = teacherList[index].Split(",");
             return teacherInfo;
         }
+        public static string GetStudentData(strig index)
+        {
+            return null;
+        }//current proccess
        public static string[] GetSubjectData(string field)
         {
             List<string> subjectList = ListStorage.GetSubjectListByField(field);
@@ -49,7 +53,7 @@ namespace LAB1.DataGeneration
         }
         public static string[] GetClassData(string level)
         {
-            List<string> classesList = ListStorage.getClassListByLevel(level);
+            List<string> classesList = ListStorage.GetListOfClassByLevel(level);
             int index = rnd.Next(classesList.Count);
             string[] classesInfo = classesList[index].Split(",");
             return classesInfo;

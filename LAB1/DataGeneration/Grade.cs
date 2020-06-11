@@ -31,5 +31,11 @@ namespace LAB1.DataGeneration
             _student = student;
             _grade = grade; 
         }
+        public static Grade[] createGrade()
+        {
+            List<Grade> result = new List<Grade>();
+
+            return result.ToArray();
+        }
     } 
 }
