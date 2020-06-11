@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.IO;
 using System.Text.Json;
-
+using LAB1.StudentGeneration;
 
 namespace StudentGeneration
 {
@@ -32,27 +32,18 @@ namespace StudentGeneration
         public static Student[] Create(uint number_student)
         {
             Student[] result = new Student[number_student];
-            string content = File.ReadAllText(@"..\..\..\Configure.json");
-            Configure config = JsonSerializer.Deserialize<Configure>(content);
-
             Random rnd = new Random();
             for (uint i = 0; i < number_student; i++)
             {
-                NameConfig name = config.NameConfig;
-                BirthDayConfig dob = config.BirthdayConfig;
-                int gender_index = rnd.Next(config.GenderConfig.Gender_set.Length);
-                ClassConfig classname = config.ClassConfig;
+                string UUID = Guid.NewGuid().ToString();//create new uuid
+                int gender_index = DataSetter.GetRandomGender();
                 //if Male
                 if (gender_index == 0)
                 {
-                    //name
-                    int last_name_index = rnd.Next(name.last_Male_set.Length);
-                    int first_name_index = rnd.Next(name.first_Male_set.Length);
-                    int middle_name_index = rnd.Next(name.middle_Male_set.Length);
-                    string full_name = name.last_Male_set[last_name_index] + " ";
-                    full_name += name.middle_Male_set[middle_name_index] + " ";
-                    full_name += name.first_Male_set[first_name_index];
+                    //create random Malename
+                    string fullname = DataSetter.RandomMaleName();
                     //birthday
+
                   
                     
                 }

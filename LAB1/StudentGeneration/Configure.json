@@ -46,7 +46,7 @@
         ]
 
     },
-    "FieldDataSet": {
+    "FieldConfig": {
         "FieldNameSet": [
             "Math",
             "Literature",
@@ -64,8 +64,8 @@
             "Female"
         ]
     },
-    "LevelConfig": {
-        "LevelSet": [
+    "ClassConfig": {
+        "ClassSet": [
             "10",
             "11",
             "12"
