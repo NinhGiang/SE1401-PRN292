@@ -4,14 +4,24 @@ using System.IO;
 using LAB1.DataGeneration;
 using System.Collections.Generic;
 
+/// <summary>
+/// The Student class
+/// Contains method to create Student and its getter/setter/ctor.
+/// </summary>
 public class Student
 {
+    /// <summary>
+    /// The 5 values of Student
+    /// </summary>
     protected string _uuid;
     protected string _name;
     protected DateTime _birthday;
     protected string _gender;
     protected string _class;
 
+    /// <summary>
+    /// The getter/setter method of Student values
+    /// </summary>
     public string Uuid
     {
         get { return _uuid; }
@@ -36,6 +46,15 @@ public class Student
         get { return _class; }
         set { _class = value; }
     }
+    /// <summary>
+    /// The ctor of Student 
+    /// Has one blank ctor
+    /// </summary>
+    /// <param name="id">A string value</param>
+    /// <param name="name">A string value</param>
+    /// <param name="birthdate">A DateTime value</param>
+    /// <param name="gender">A string value</param>
+    /// <param name="classInfo">A string value</param>
     public Student(string Uuid, string Name, DateTime Birthday, string Gender, string Class)
     {
         _uuid = Uuid;
@@ -47,7 +66,11 @@ public class Student
     public Student()
     {
     }
-
+    /// <summary>
+    /// Creates a random list of students and returns the result
+    /// </summary>
+    /// <param name="number_student">An integer value</param>
+    /// <returns>An array of students</returns>
     static public Student[] createStudent(uint number_student)
     {
         Student[] result = new Student[number_student];
