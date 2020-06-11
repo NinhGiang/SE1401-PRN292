@@ -12,13 +12,13 @@ namespace LAB1
         protected bool _gender;
         protected string _class;
 
-        public Student(string uuid, string name, DateTime birthday, bool gender, string Class)
+        public Student(string uuid, string name, DateTime birthday, bool gender, string @class)
         {
             _uuid = uuid;
             _name = name;
             _birthday = birthday;
             _gender = gender;
-            _class = Class;
+            _class = @class;
         }
 
         public string UUID
