@@ -13,8 +13,8 @@ namespace LAB1
     {
         private string uuid;
         private string name;
-        private static List<Level> levelList;
-        /// <value>Gets the value of UUID.</value>
+        private static List<Level> levelsList;
+        /// <value>Gets the value of uuid.</value>
         public string UUID
         {
             get
@@ -22,7 +22,7 @@ namespace LAB1
                 return uuid;
             }
         }
-        /// <value>Gets the value of Name.</value>
+        /// <value>Gets the value of name.</value>
         public string Name
         {
             get
@@ -30,12 +30,12 @@ namespace LAB1
                 return name;
             }
         }
-        /// <value>Gets the value of LevelList.</value>
-        public static List<Level> LevelList
+        /// <value>Gets the value of levelsList.</value>
+        public static List<Level> LevelsList
         {
             get
             {
-                return levelList;
+                return levelsList;
             }
         }
         public Level(string newUUID, string newName)
@@ -46,37 +46,68 @@ namespace LAB1
         /// <summary>
         /// Generate a random level.
         /// </summary>
-        /// <returns>
-        /// A Level object.
-        /// </returns>
+        /// <exception cref="System.NullReferenceException">
+        /// Thrown when an object does not exist but it is used.
+        /// </exception>
+        /// <exception cref="System.IO.FileNotFoundException">
+        /// Thrown when the file is not found (wrong path, wrong filename or file is not existed).
+        /// </exception>
+        /// <exception cref="System.Text.Json.JsonException">
+        /// Thrown when cannot parse a value in Json file into an instance.
+        /// </exception>
         public static void Create()
         {
-            if (levelList == null)
+            try
             {
-                levelList = new List<Level>();
+                if (levelsList == null)
+                {
+                    levelsList = new List<Level>();
+                }
+                string content = File.ReadAllText(@"..\..\..\SchoolConfigure.json");
+                SchoolConfigure config = JsonSerializer.Deserialize<SchoolConfigure>(content);
+                LevelConfig levelConfig = config.LevelConfig;
+                for (int i = 0; i < levelConfig.LevelNameSet.Length; i++)
+                {
+                    string levelName = levelConfig.LevelNameSet[i];
+                    Level level = new Level(Guid.NewGuid().ToString(), levelName);
+                    levelsList.Add(level);
+                }
             }
-            string content = File.ReadAllText(@"..\..\..\SchoolConfigure.json");
-            SchoolConfigure config = JsonSerializer.Deserialize<SchoolConfigure>(content);
-            LevelConfig levelConfig = config.LevelConfig;   
-            for (int i = 0; i < levelConfig.LevelNameSet.Length; i++)
+            catch (NullReferenceException ex)
             {
-                string levelName = levelConfig.LevelNameSet[i];
-                Level level = new Level(Guid.NewGuid().ToString(), levelName);
-                levelList.Add(level);
-            }                      
+                Console.WriteLine("Level _ NullReference: " + ex.Message);
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("Level _ FileNotFound: " + ex.Message);
+            }
+            catch (JsonException ex)
+            {
+                Console.WriteLine("Level _ Json: " + ex.Message);
+            }                                 
         }
         /// <summary>
         /// Used to write data into file.
         /// </summary>
+        /// <exception cref="System.IO.DirectoryNotFoundException">
+        /// Thrown when part of a file or directory cannot be found.
+        /// </exception>
         /// <param name="filename">A file used to store data.</param>
         public static void SaveLevels(string filename)
         {
-            String content = "UUID, Name\n";
-            foreach (Level level in levelList)
+            try
             {
-                content += level.UUID + ", " + level.Name + "\n";
+                String content = "UUID, Name\n";
+                foreach (Level level in levelsList)
+                {
+                    content += level.UUID + ", " + level.Name + "\n";
+                }
+                File.WriteAllText(filename, content);
             }
-            File.WriteAllText(filename, content);
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine("Level _ DirectoryNotFound: " + ex.Message);
+            }           
         }
     }
 }

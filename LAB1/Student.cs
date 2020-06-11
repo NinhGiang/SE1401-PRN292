@@ -16,9 +16,9 @@ namespace LAB1
         private DateTime birthday;
         private bool gender;
         private string classUUID;
-        private static List<Student> studentList;
+        private static List<Student> studentsList;
 
-        /// <value>Gets the value of UUID.</value>
+        /// <value>Gets the value of uuid.</value>
         public string UUID
         {
             get
@@ -26,7 +26,7 @@ namespace LAB1
                 return uuid;
             }
         }
-        /// <value>Gets the value of Name.</value>
+        /// <value>Gets the value of name.</value>
         public string Name
         {
             get
@@ -34,7 +34,7 @@ namespace LAB1
                 return name;
             }
         }
-        /// <value>Gets the value of Birthday.</value>
+        /// <value>Gets the value of birthday.</value>
         public DateTime Birthday
         {
             get
@@ -42,7 +42,7 @@ namespace LAB1
                 return birthday;
             }
         }
-        /// <value>Gets the value of Gender.</value>
+        /// <value>Gets the value of gender.</value>
         public bool Gender
         {
             get
@@ -50,7 +50,7 @@ namespace LAB1
                 return gender;
             }
         }
-        /// <value>Gets the value of ClassUUID.</value>
+        /// <value>Gets the value of classUUID.</value>
         public string ClassUUID
         {
             get
@@ -58,12 +58,12 @@ namespace LAB1
                 return classUUID;
             }
         }
-        /// <value>Gets the value of StudentList.</value>
+        /// <value>Gets the value of studentsList.</value>
         public static List<Student> StudentList
         {
             get
             {
-                return studentList;
+                return studentsList;
             }
         }
         public Student(string newUUID, string newName, DateTime newBirthday, bool newGender, string newClassUUID)
@@ -107,9 +107,9 @@ namespace LAB1
         {
             try
             {
-                if (studentList == null)
+                if (studentsList == null)
                 {
-                    studentList = new List<Student>();
+                    studentsList = new List<Student>();
                 }
                 string content = File.ReadAllText(@"..\..\..\SchoolConfigure.json");
                 SchoolConfigure config = JsonSerializer.Deserialize<SchoolConfigure>(content);
@@ -169,7 +169,7 @@ namespace LAB1
                     fullName += randomName.MaleFirstNameSet[maleFirstNameIndex];
                 } //end if gender is true
                 Student newStudent = new Student(Guid.NewGuid().ToString(), fullName, birthday, gender, classObject.UUID);
-                studentList.Add(newStudent);
+                studentsList.Add(newStudent);
             }
             catch (NullReferenceException ex)
             {
@@ -188,15 +188,25 @@ namespace LAB1
         /// <summary>
         /// Used to write data into file.
         /// </summary>
+        /// <exception cref="System.IO.DirectoryNotFoundException">
+        /// Thrown when part of a file or directory cannot be found.
+        /// </exception>
         /// <param name="filename">A file used to store data.</param>
         public static void SaveStudents(string filename)
         {
-            String content = "UUID, Name, Birthday, Gender, ClassUUID\n";
-            foreach (Student student in studentList)
+            try
             {
-                content += student.UUID + ", " + student.Name + ", " + student.Birthday + ", " + student.Gender + ", " + student.ClassUUID + "\n";
+                String content = "UUID, Name, Birthday, Gender, ClassUUID\n";
+                foreach (Student student in studentsList)
+                {
+                    content += student.UUID + ", " + student.Name + ", " + student.Birthday + ", " + student.Gender + ", " + student.ClassUUID + "\n";
+                }
+                File.WriteAllText(filename, content);
             }
-            File.WriteAllText(filename, content);
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine("Student _ DirectoryNotFound: " + ex.Message);
+            }           
         }
     }
 }

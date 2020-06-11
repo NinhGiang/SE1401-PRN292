@@ -16,9 +16,9 @@ namespace LAB1
         private string name;
         private bool gender;
         private string fieldUUID;
-        private static List<Teacher> teacherList;
+        private static List<Teacher> teachersList;
 
-        /// <value>Gets the value of UUID.</value>
+        /// <value>Gets the value of uuid.</value>
         public string UUID
         {
             get
@@ -26,7 +26,7 @@ namespace LAB1
                 return uuid;
             }
         }
-        /// <value>Gets the value of Name.</value>
+        /// <value>Gets the value of name.</value>
         public string Name
         {
             get
@@ -34,7 +34,7 @@ namespace LAB1
                 return name;
             }
         }
-        /// <value>Gets the value of Gender.</value>
+        /// <value>Gets the value of gender.</value>
         public bool Gender
         {
             get
@@ -42,7 +42,7 @@ namespace LAB1
                 return gender;
             }
         }
-        /// <value>Gets the value of FieldUUID.</value>
+        /// <value>Gets the value of fieldUUID.</value>
         public string FieldUUID
         {
             get
@@ -50,12 +50,12 @@ namespace LAB1
                 return fieldUUID;
             }
         }
-        /// <value>Gets the value of TeacherList.</value>
-        public static List<Teacher> TeacherList
+        /// <value>Gets the value of teachersList.</value>
+        public static List<Teacher> TeachersList
         {
             get
             {
-                return teacherList;
+                return teachersList;
             }
         }
         public Teacher(string newUUID, string newName, bool newGender, string newFieldUUID)
@@ -83,9 +83,9 @@ namespace LAB1
         {
             try
             {
-                if (teacherList == null)
+                if (teachersList == null)
                 {
-                    teacherList = new List<Teacher>();
+                    teachersList = new List<Teacher>();
                 }
                 string content = File.ReadAllText(@"..\..\..\SchoolConfigure.json");
                 SchoolConfigure config = JsonSerializer.Deserialize<SchoolConfigure>(content);
@@ -125,7 +125,7 @@ namespace LAB1
                     fullName += randomName.MaleFirstNameSet[maleFirstNameIndex];
                 } //end if gender is true
                 Teacher newTeacher = new Teacher(Guid.NewGuid().ToString(), fullName, gender, field.UUID);
-                teacherList.Add(newTeacher);
+                teachersList.Add(newTeacher);
             }
             catch (NullReferenceException ex)
             {
@@ -144,15 +144,25 @@ namespace LAB1
         /// <summary>
         /// Used to write data into file.
         /// </summary>
+        /// <exception cref="System.IO.DirectoryNotFoundException">
+        /// Thrown when part of a file or directory cannot be found.
+        /// </exception>
         /// <param name="filename">A file used to store data.</param>
         public static void SaveTeachers(string filename)
         {
-            String content = "UUID, Name, Gender, FieldUUID\n";
-            foreach (Teacher teacher in teacherList)
+            try
             {
-                content += teacher.UUID + ", " + teacher.Name + ", " + teacher.Gender + ", " + teacher.FieldUUID + "\n";
+                String content = "UUID, Name, Gender, FieldUUID\n";
+                foreach (Teacher teacher in teachersList)
+                {
+                    content += teacher.UUID + ", " + teacher.Name + ", " + teacher.Gender + ", " + teacher.FieldUUID + "\n";
+                }
+                File.WriteAllText(filename, content);
             }
-            File.WriteAllText(filename, content);
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine("Teacher _ DirectoryNotFound: " + ex.Message);
+            }            
         }
     }
 }

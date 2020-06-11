@@ -13,8 +13,8 @@ namespace LAB1
     {
         private string uuid;
         private string name;
-        private static List<Field> fieldList;
-        /// <value>Gets the value of UUID.</value>
+        private static List<Field> fieldsList;
+        /// <value>Gets the value of uuid.</value>
         public string UUID
         {
             get
@@ -22,7 +22,7 @@ namespace LAB1
                 return uuid;
             }
         }
-        /// <value>Gets the value of Name.</value>
+        /// <value>Gets the value of name.</value>
         public string Name
         {
             get
@@ -30,12 +30,12 @@ namespace LAB1
                 return name;
             }
         }
-        /// <value>Gets the value of FieldList.</value>
-        public static List<Field> FieldList
+        /// <value>Gets the value of fieldsList.</value>
+        public static List<Field> FieldsList
         {
             get
             {
-                return fieldList;
+                return fieldsList;
             }
         }
         public Field(string newUUID, string newName)
@@ -43,39 +43,72 @@ namespace LAB1
             uuid = newUUID;
             name = newName;
         }
+
         /// <summary>
         /// Generate a random class.
         /// </summary>
-        /// <returns>
-        /// A Class object.
-        /// </returns>
+        /// <exception cref="System.NullReferenceException">
+        /// Thrown when an object does not exist but it is used.
+        /// </exception>
+        /// <exception cref="System.IO.FileNotFoundException">
+        /// Thrown when the file is not found (wrong path, wrong filename or file is not existed).
+        /// </exception>
+        /// <exception cref="System.Text.Json.JsonException">
+        /// Thrown when cannot parse a value in Json file into an instance.
+        /// </exception>
         public static void Create()
         {
-            if (fieldList == null)
+            try
             {
-                fieldList = new List<Field>();
+                if (fieldsList == null)
+                {
+                    fieldsList = new List<Field>();
+                }
+                string content = File.ReadAllText(@"..\..\..\SchoolConfigure.json");
+                SchoolConfigure config = JsonSerializer.Deserialize<SchoolConfigure>(content);
+                FieldConfig fieldName = config.FieldConfig;
+                for (int i = 0; i < fieldName.FieldSet.Length; i++)
+                {
+                    Field newField = new Field(Guid.NewGuid().ToString(), fieldName.FieldSet[i]);
+                    fieldsList.Add(newField);
+                }
             }
-            string content = File.ReadAllText(@"..\..\..\SchoolConfigure.json");
-            SchoolConfigure config = JsonSerializer.Deserialize<SchoolConfigure>(content);
-            FieldConfig fieldName = config.FieldConfig;
-            for (int i = 0; i < fieldName.FieldSet.Length; i++)
+            catch (NullReferenceException ex)
             {
-                Field newField = new Field(Guid.NewGuid().ToString(), fieldName.FieldSet[i]);
-                fieldList.Add(newField);
+                Console.WriteLine("Field _ NullReference: " + ex.Message);
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("Field _ FileNotFound: " + ex.Message);
+            }
+            catch (JsonException ex)
+            {
+                Console.WriteLine("Field _ Json: " + ex.Message);
             }
         }
+
         /// <summary>
         /// Used to write data into file.
         /// </summary>
+        /// <exception cref="System.IO.DirectoryNotFoundException">
+        /// Thrown when part of a file or directory cannot be found.
+        /// </exception>
         /// <param name="filename">A file used to store data.</param>
         public static void SaveFields(string filename)
         {
-            String content = "UUID, Name\n";
-            foreach (Field field in fieldList)
+            try
             {
-                content += field.UUID + ", " + field.Name + "\n";
+                String content = "UUID, Name\n";
+                foreach (Field field in fieldsList)
+                {
+                    content += field.UUID + ", " + field.Name + "\n";
+                }
+                File.WriteAllText(filename, content);
             }
-            File.WriteAllText(filename, content);
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine("Field _ DirectoryNotFound: " + ex.Message);
+            }            
         }
     }
 }

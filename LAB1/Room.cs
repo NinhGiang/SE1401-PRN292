@@ -13,8 +13,8 @@ namespace LAB1
         private string uuid;
         private string classUUID;
         private uint no;
-        private static List<Room> roomList;
-        /// <value>Gets the value of UUID.</value>
+        private static List<Room> roomsList;
+        /// <value>Gets the value of uuid.</value>
         public string UUID
         {
             get
@@ -22,7 +22,7 @@ namespace LAB1
                 return uuid;
             }
         }
-        /// <value>Gets the value of ClassUUID.</value>
+        /// <value>Gets the value of classUUID.</value>
         public string ClassUUID
         {
             get
@@ -30,7 +30,7 @@ namespace LAB1
                 return classUUID;
             }
         }
-        /// <value>Gets the value of No.</value>
+        /// <value>Gets the value of no.</value>
         public uint No
         {
             get
@@ -38,12 +38,12 @@ namespace LAB1
                 return no;
             }
         }
-        /// <value>Gets the value of RoomList.</value>
-        public static List<Room> RoomList
+        /// <value>Gets the value of roomList.</value>
+        public static List<Room> RoomsList
         {
             get
             {
-                return roomList;
+                return roomsList;
             }
         }
         public Room(string newUUID, string newClassUUID, uint newNo)
@@ -60,26 +60,36 @@ namespace LAB1
         /// </returns>
         public static Room Create(Class classObject, uint no)
         {
-            if (roomList == null)
+            if (roomsList == null)
             {
-                roomList = new List<Room>();
+                roomsList = new List<Room>();
             }
             Room newRoom = new Room(Guid.NewGuid().ToString(), classObject.UUID, no);
-            roomList.Add(newRoom);
+            roomsList.Add(newRoom);
             return newRoom;
         }
         /// <summary>
         /// Used to write data into file.
         /// </summary>
+        /// <exception cref="System.IO.DirectoryNotFoundException">
+        /// Thrown when part of a file or directory cannot be found.
+        /// </exception>
         /// <param name="filename">A file used to store data.</param>
         public static void SaveRooms(string filename)
         {
-            String content = "UUID, ClassUUID, No\n";
-            foreach (Room room in roomList)
+            try
             {
-                content += room.UUID + ", " + room.ClassUUID + ", " + room.No + "\n";
+                String content = "UUID, ClassUUID, No\n";
+                foreach (Room room in roomsList)
+                {
+                    content += room.UUID + ", " + room.ClassUUID + ", " + room.No + "\n";
+                }
+                File.WriteAllText(filename, content);
             }
-            File.WriteAllText(filename, content);
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine("Room _ DirectoryNotFound: " + ex.Message);
+            }           
         }
     }
 }

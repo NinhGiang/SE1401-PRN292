@@ -62,40 +62,45 @@ namespace LAB1
             }*/
             Console.OutputEncoding = Encoding.UTF8;
             Random rnd = new Random();
-            uint noOfStudentInClass = (uint) rnd.Next(30, 51);
-            uint noOfClass = (uint) Math.Ceiling((double) 1000 / noOfStudentInClass);
-            uint noOfClassPerLevel = (uint) Math.Ceiling((double) noOfClass / 3);
+            uint noOfStudentsInClass = (uint) rnd.Next(30, 51);
+            uint noOfClasses = (uint) Math.Ceiling((double) 1000 / noOfStudentsInClass);
+            uint noOfClassesPerLevel = (uint) Math.Ceiling((double) noOfClasses / 3);
             uint roomNo = 1;
+            int start = (int)Math.Ceiling((double)noOfClasses / 4);
+            int end = (int)Math.Ceiling((double)noOfClasses / 10);
+            uint noOfTeachers;
             int count = 0; //used when create class (add RoomUUID to Class object)
-            uint noOfTeacher = (uint)Math.Ceiling((double) noOfClass / rnd.Next(4, 11));
+            
             //Test Create method in Level class
             Level.Create();
+            //Test Create method in Field class
+            Field.Create();
             //Test Create method in Class class
-            foreach (var level in Level.LevelList)
+            foreach (var level in Level.LevelsList)
             {
-                for (int i = 0; i < noOfClassPerLevel; i++)
+                noOfTeachers = (uint)rnd.Next(start, end + 1);
+                for (int i = 0; i < noOfClassesPerLevel; i++)
                 {
                     Class.Create(level, "", i);
-                    Room.Create(Class.ClassList[i], roomNo);
-                    Class.ClassList[count].RoomUUID = Room.RoomList[count].UUID;
+                    Room.Create(Class.ClassesList[i], roomNo);
+                    Class.ClassesList[count].RoomUUID = Room.RoomsList[count].UUID;
                     count++;
                     roomNo++;
+                }
+                for (int i = 0; i < noOfTeachers; i++)
+                {
+                    Teacher.Create(Field.FieldsList[rnd.Next(10)]);
+                    Subject.Create(level, Field.FieldsList[i]);
                 }
             }
           
             //Test Create method in Student class
-            foreach (var classObject in Class.ClassList)
+            foreach (var classObject in Class.ClassesList)
             {               
-                for (int i = 0; i < noOfStudentInClass; i++)
+                for (int i = 0; i < noOfStudentsInClass; i++)
                 {
                     Student.Create(classObject);
                 }
-            }
-            //Test Create method in Field class
-            Field.Create();
-            for (int i = 0; i < noOfTeacher; i++)
-            {
-                Teacher.Create(Field.FieldList[rnd.Next(10)]);
             }
 
             Level.SaveLevels(@"..\..\..\Levels.csv");
