@@ -42,5 +42,13 @@ namespace LAB1
             return roomInfo;
         }
 
+        public static string[] getClassID()
+        {
+            List<string> listOfClassID = ListControl.getClassID();
+            int index = rnd.Next(listOfClassID.Count);
+            string[] classID = listOfClassID[index].Split('|');
+            return classID;
+        }
+
     }
 }

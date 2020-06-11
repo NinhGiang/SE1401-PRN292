@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -78,6 +78,10 @@ namespace LAB1
         public static List<string> GetRoomList()
         {
             return CsvReader(@"..\..\..\Room.csv");
+        }
+        public static List<string> getClassID()
+        {
+            return CsvReader(@"..\..\..\Class.csv");
         }
     }
 }

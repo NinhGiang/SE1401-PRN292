@@ -109,10 +109,7 @@ namespace LAB1
                 }                    
                 foreach (ClassInfo classes in _class_list)
                 {
-                    content += classes.UUID + ", ";
-                    content += classes.Level + ", ";
-                    content += classes.Room + ", ";
-                    content += classes.Name + "\n";
+                    content += classes.UUID + " | " + classes.Level + " | " + classes.Room + " | " + classes.Name + "\n";
                 }
                 File.WriteAllText(filename, content);
             }

@@ -68,25 +68,22 @@ namespace LAB1
                 String uuID = Guid.NewGuid().ToString();
                 GenderConfig gender = config.GenderConfig;
                 LevelNameConfig level = config.LevelNameConfig;
+                string classID = DataConnection.getClassID()[0].Trim();
 
                 int gender_index = rnd.Next(gender.GenderSet.Length);
                 if (gender_index == 0)
                 {
                     String fullname = GetRadomFullName();
-                    int level_index = rnd.Next(level.LevelSet.Length);
-
-                    int year = rnd.Next(2003, 2005);
-                    DateTime birthday = GetRandomDate(year);
-                    result[i] = new Student(uuID, fullname, birthday, gender.GenderSet[gender_index], level.LevelSet[level_index]);                 
+                    int year = rnd.Next(2003, 2005);                    
+                    DateTime birthday = GetRandomDate(year);                    
+                    result[i] = new Student(uuID, fullname, birthday, gender.GenderSet[gender_index], classID);
                 }
                 else if (gender_index == 1)
                 {
                     String fullname = GetRadomFullName();
-                    int level_index = rnd.Next(level.LevelSet.Length);
-
                     int year = rnd.Next(2003, 2005);
                     DateTime birthday = GetRandomDate(year);
-                    result[i] = new Student(uuID, fullname, birthday, gender.GenderSet[gender_index], level.LevelSet[level_index]);
+                    result[i] = new Student(uuID, fullname, birthday, gender.GenderSet[gender_index], classID);
                 }
             }
             return result;
