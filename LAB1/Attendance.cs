@@ -31,5 +31,10 @@ namespace LAB1
             get { return _subject; }
             set { _subject = value; }
         }
+        public static Attendance[] createAttendance()
+        {
+            Teacher[] teacherList = DatabaseHandler.GetTeacherList();
+            Subject[] subjectList = DatabaseHandler.GetSubjectList();
+        }
     }
 }

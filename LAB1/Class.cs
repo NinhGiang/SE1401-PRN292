@@ -12,6 +12,10 @@ namespace LAB1
         protected string _room;
         protected string _name;
 
+        public Class()
+        {
+        }
+
         public Class(string uuid, string level, string room, string name)
         {
             _uuid = uuid;

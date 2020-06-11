@@ -213,6 +213,27 @@ namespace LAB1
 
         // Class
 
+        public static Class[] GetClassList()
+        {
+
+            List<string> list = CsvFileReader(_directory_path + "\\" + "Class.csv");
+            Class[] classList = new Class[list.Count];
+            int idCol = GetColumnID(_directory_path + "\\" + "Class.csv", "ID");
+            int levelCol = GetColumnID(_directory_path + "\\" + "Class.csv", "Level");
+            int index = 0;
+            foreach (string line in list)
+            {
+                string[] entry = line.Split(",");
+                string id = entry[idCol].Trim();
+                string level = entry[levelCol].Trim();
+                Class classInfo = new Class();
+                classInfo.UUID = id;
+                classInfo.Level = level;
+                classList[index++] = classInfo;
+            }
+            return classList;
+        }
+
         public static string[] GetClassIDByLevelList(String level)
         {
             int col = GetColumnID(_directory_path + "\\" + "Class.csv", "Level");
