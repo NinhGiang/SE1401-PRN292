@@ -20,7 +20,7 @@ namespace LAB1.Object
             _name = Name;
         }
 
-        public static Student[] Create(uint number_student)
+        public static Student[] addNewStudent(uint number_student)
         {
             Student[] result = new Student[number_student];
             string content = File.ReadAllText(@"..\..\..\Configure.json");
