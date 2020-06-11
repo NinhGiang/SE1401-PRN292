@@ -15,7 +15,8 @@ namespace LAB1
             //create school folder
             string directoryPath = @"..\..\..\" + school.SchoolName;
             Directory.CreateDirectory(directoryPath);
-
+            DataReader dr = new DataReader();
+            dr.DirectoryPath = directoryPath;
             //create level
             Level[] level_list = Level.CreateLevel();
             school.LevelList = level_list;

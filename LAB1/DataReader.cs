@@ -19,9 +19,9 @@ namespace LAB1
             {
                 using (StreamReader sr = new StreamReader(path))
                 {
+                    sr.ReadLine();//skip header
                     while (!sr.EndOfStream)// read until the end
                     {
-                        sr.ReadLine(); //skip header
                         String currLine = sr.ReadLine(); // read current line
                         list.Add(currLine); //add current line
                     }
@@ -154,6 +154,7 @@ namespace LAB1
         public static string[] getFieldIDList()
         {
             int col = GetColumnID(_directory_path + "\\" + "Field.csv","ID");
+
             List<string> list = GetColumnData(_directory_path + "\\" + "Field.csv", col);
             string[] fieldIDList = new string[list.Count];
             int index = 0;

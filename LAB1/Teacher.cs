@@ -49,7 +49,8 @@ namespace LAB1
                 String id = Guid.NewGuid().ToString();
                 bool gender = Utils.getRandomGender();
                 String name = Utils.getRandomFullName(gender);
-                list[i] = new Teacher(id,name,gender, fieldIDList[rand.Next(fieldIDList.Length)]);
+                string fieldID = fieldIDList[rand.Next(fieldIDList.Length)];
+                list[i] = new Teacher(id,name,gender, fieldID);
             }
             return list;
         }
