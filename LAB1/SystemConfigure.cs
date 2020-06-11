@@ -10,10 +10,10 @@ namespace LAB1
     }
     class StuNameConfig
     {
-        public string[] maleLastNameSet { get; set; }
-        public string[] femaleLastNameSet { get; set; }
+        public string[] maleFirstNameSet { get; set; }
+        public string[] femaleFirstNameSet { get; set; }
         public string[] middleNameSet { get; set; }
-        public string[] firstNameSet { get; set; }
+        public string[] lastNameSet { get; set; }
     }
     
 }

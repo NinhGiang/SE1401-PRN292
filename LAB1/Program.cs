@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace LAB1
 {
@@ -6,7 +7,26 @@ namespace LAB1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Tui la Teo ne cac ban oi");
+            Console.WriteLine("****************School system*******************");
+
+
+            Student[] stuList;
+            stuList = Student.CreateStudent(10);
+
+            foreach (Student student in stuList)
+            {
+                Console.WriteLine("{0}, {1}", student.StuID, student.Fullname);
+            }
+
+            string stuContent = "ID, Fullname\n";
+            string stuFile = @"..\..\..\Student.csv";
+            foreach (Student student in stuList)
+            {
+                stuContent += student.StuID + ", "
+                    + student.Fullname + "\n";
+            }
+            File.WriteAllText(stuFile, stuContent);
+
             Console.ReadLine();
         }
     }

@@ -29,28 +29,46 @@ namespace LAB1
             stuClass = StuClass;
         }
         protected Student() { }
-
-        public static Student[] CreateStudent(uint numberOfStudent)
+        protected Student(string StuID, string FullName)
+        {
+            stuID = StuID;
+            fullname = FullName;
+        }
+            public static Student[] CreateStudent(uint numberOfStudent)
         {
             Student[] studentList = new Student[numberOfStudent];
-            string content = File.ReadAllText(@"..\..\..\StudentConfigure.json");
+            string content = File.ReadAllText(@"..\..\..\SystemConfigure.json");
             SystemConfigure config = JsonSerializer.Deserialize<SystemConfigure>(content);
 
             Random ran = new Random();
             for (uint i = 0; i < numberOfStudent; i++)
             {
+                // uuid
+                string uuid = Guid.NewGuid().ToString();
+                // fullname
                 StuNameConfig con = config.StuNameConfig;
-                int gender = ran.Next(10);
-                int maleLastNameIndex = ran.Next(con.maleLastNameSet.Length);
-                int femaleLastNameIndex = ran.Next(con.femaleLastNameSet.Length);
-                int firstNameIndex = ran.Next(con.firstNameSet.Length);
+                int ranGender = ran.Next(10);
+                int maleLastNameIndex = ran.Next(con.maleFirstNameSet.Length);
+                int femaleLastNameIndex = ran.Next(con.femaleFirstNameSet.Length);
                 int middleNameIndex = ran.Next(con.middleNameSet.Length);
-                string fullName = con.maleLastNameSet[maleLastNameIndex] + " ";
-                fullName += con.middleNameSet[middleNameIndex] + " ";
-                fullName += con.firstNameSet[firstNameIndex];
-                studentList[i] = new Student(i.ToString(), fullName);
-
-                string aaaa = Guid.NewGuid().ToString();
+                int firstNameIndex = ran.Next(con.lastNameSet.Length);
+                string fullName = "";
+                if (ranGender % 2 == 1)
+                {
+                    fullName = con.lastNameSet[firstNameIndex] + " "
+                        + con.middleNameSet[middleNameIndex] + " "
+                        + con.maleFirstNameSet[maleLastNameIndex] + " ";
+                }
+                else
+                {
+                    fullName = con.lastNameSet[firstNameIndex] + " "
+                        + con.middleNameSet[middleNameIndex] + " "
+                        + con.femaleFirstNameSet[femaleLastNameIndex] + " ";
+                }
+                
+                studentList[i] = new Student(uuid, fullName);
+                // birthday
+                
             }
 
             return studentList;

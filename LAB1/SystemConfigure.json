@@ -1,13 +1,13 @@
 {
     "StuNameConfig": {
-        "maleLastNameSet": [
+        "maleFirstNameSet": [
             "Long",
             "Tung",
             "Nghia",
             "Khoi",
             "Phat"
         ],
-        "femaleLastNameSet": [
+        "femaleFirstNameSet": [
             "Hoa",
             "Hue",
             "Tien",
@@ -15,13 +15,13 @@
             "Lan"
         ],
         "middleNameSet": [
-            "Ven",
-            "Ceng",
+            "Van",
+            "Vo",
             "Huu",
             "Hai",
             "Thanh"
         ],
-        "firstNameSet": [
+        "lastNameSet": [
             "Tran",
             "Nguyen",
             "Le",
