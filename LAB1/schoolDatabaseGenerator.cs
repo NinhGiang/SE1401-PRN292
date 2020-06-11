@@ -123,6 +123,7 @@ namespace LAB1
             Teacher.SaveTeachers(@"..\..\..\Teachers.csv");
             Subject.SaveSubjects(@"..\..\..\Subjects.csv");
             Attendance.SaveAttendances(@"..\..\..\Attendances.csv");
+            Grade.SaveGrades(@"..\..\..\Grades.csv");
             
             /*foreach (var student in Student.StudentList)
             {

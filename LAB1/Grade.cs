@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.IO;
 
 namespace LAB1
 {
@@ -70,9 +70,33 @@ namespace LAB1
                 gradesList = new List<Grade>();
             }
             Random rnd = new Random();
-            double grade = rnd.NextDouble() * 10;
+            double grade = Math.Round(rnd.NextDouble() * 10, 1);
             Grade newGrade = new Grade(subject.UUID, student.UUID, grade);
             gradesList.Add(newGrade);
+        }
+
+        /// <summary>
+        /// Used to write data into file.
+        /// </summary>
+        /// <exception cref="System.IO.DirectoryNotFoundException">
+        /// Thrown when part of a file or directory cannot be found.
+        /// </exception>
+        /// <param name="filename">A file used to store data.</param>
+        public static void SaveGrades(string filename)
+        {
+            try
+            {
+                String content = "SubjectUUID, StudentUUID, Grade\n";
+                foreach (Grade grade in gradesList)
+                {
+                    content += grade.StudentUUID + ", " + grade.StudentUUID + ", " + grade.GradeProp + "\n";
+                }
+                File.WriteAllText(filename, content);
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine("Grade _ DirectoryNotFound: " + ex.Message);
+            }
         }
     }
 }
