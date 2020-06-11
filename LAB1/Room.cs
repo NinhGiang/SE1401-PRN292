@@ -21,13 +21,13 @@ namespace LAB1
             class_info = _class_info;
         }
 
-        public static Room[] Create (int num_rooms) 
+        public static Room[] Create (int num_rooms, Class[] _class) 
         {
             Room[] result = new Room[num_rooms];
             for(int i = 0; i < num_rooms; i++)
             {
                 String uuid = Guid.NewGuid().ToString();
-                String class_info = Guid.NewGuid().ToString();
+                String class_info = _class[i].Class_name;
                 int No = i+1;
                 result[i] = new Room(uuid, No, class_info);
             }

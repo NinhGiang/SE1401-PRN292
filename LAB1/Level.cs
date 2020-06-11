@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json;
+using System.IO;
 
 namespace LAB1
 {
@@ -16,6 +18,24 @@ namespace LAB1
         {
             _uuid = UUID;
             _level_name = Level_name;
+        }
+
+        public static Level[] Create()
+        {
+            string content = File.ReadAllText(@"..\..\..\Configure.json");
+            Configure config = JsonSerializer.Deserialize<Configure>(content);
+
+            String[] level_data = config.LevelConfig.level_name_set;
+            Level[] result = new Level[level_data.Length];
+
+            for(int i = 0; i < level_data.Length; i++)
+            {
+                String uuid = Guid.NewGuid().ToString();
+                String level_name = level_data[i];
+                Level level = new Level(uuid, level_name);
+                result[i] = level;
+            }
+            return result;
         }
     }
 }

@@ -20,5 +20,12 @@ namespace LAB1
             _subject = Subject_info;
             _grade = Grade_info;
         }
+
+        public static Grade[] Create(Student[] student, Subject[] subject)
+        {
+            Grade[] result = new Grade[4];
+
+            return result;
+        }
     }
 }
