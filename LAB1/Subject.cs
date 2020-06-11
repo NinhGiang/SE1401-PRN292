@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
-using System.Text.Json;
 
 namespace LAB1
 {
@@ -12,9 +10,20 @@ namespace LAB1
     /// </summary>
     public class Subject
     {
+        private string uuid;
         private string levelUUID;
         private string fieldUUID;
         private static List<Subject> subjectsList;
+
+        /// <value>Gets the value of uuid.</value>
+        public string UUID
+        {
+            get
+            {
+                return uuid;
+            }
+        }
+
         /// <value>Gets the value of levelUUID.</value>
         public string LevelUUID
         {
@@ -23,6 +32,7 @@ namespace LAB1
                 return levelUUID;
             }
         }
+
         /// <value>Gets the value of fieldUUID.</value>
         public string FieldUUID
         {
@@ -31,6 +41,7 @@ namespace LAB1
                 return fieldUUID;
             }
         }
+
         /// <value>Gets the value of subjectsList.</value>
         public static List<Subject> SubjectsList
         {
@@ -39,8 +50,10 @@ namespace LAB1
                 return subjectsList;
             }
         }
-        public Subject(string newLevelUUID, string newFieldUUID)
+
+        public Subject(string newUUID, string newLevelUUID, string newFieldUUID)
         {
+            uuid = newUUID;
             levelUUID = newLevelUUID;
             fieldUUID = newFieldUUID;
         }
@@ -56,7 +69,7 @@ namespace LAB1
             {
                 subjectsList = new List<Subject>();
             }
-            Subject newSubject = new Subject(level.UUID, field.UUID);
+            Subject newSubject = new Subject(Guid.NewGuid().ToString(), level.UUID, field.UUID);
             subjectsList.Add(newSubject);
         }
 
@@ -71,10 +84,10 @@ namespace LAB1
         {
             try
             {
-                String content = "LevelUUID, FieldUUID\n";
+                String content = "UUID, LevelUUID, FieldUUID\n";
                 foreach (Subject subject in subjectsList)
                 {
-                    content += subject.LevelUUID + ", " + subject.FieldUUID + "\n";
+                    content += subject.UUID + ", " + subject.LevelUUID + ", " + subject.FieldUUID + "\n";
                 }
                 File.WriteAllText(filename, content);
             }

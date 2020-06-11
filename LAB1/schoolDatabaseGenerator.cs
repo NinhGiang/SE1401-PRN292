@@ -91,6 +91,7 @@ namespace LAB1
                 {
                     Teacher.Create(Field.FieldsList[rnd.Next(10)]);
                     Subject.Create(level, Field.FieldsList[i]);
+                    Attendance.Create(Teacher.TeachersList[i], Class.ClassesList[i], Subject.SubjectsList[i]);
                 }
             }
           
