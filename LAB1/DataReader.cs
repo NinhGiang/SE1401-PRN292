@@ -93,7 +93,7 @@ namespace LAB1
             }
             return list;
         }
-        private static List<string> GetRowDataInColumn(string path,string data, int col)
+        private static List<string> GetRowInColumnByData(string path,string data, int col)
         {
             List<string> list = new List<string>();
             try
@@ -137,6 +137,7 @@ namespace LAB1
             }
             return levelList;
         }
+
         public static Field[] getFieldList()
         {
             List<string> list = CsvFileReader(_directory_path + "\\" + "Field.csv");
@@ -163,6 +164,19 @@ namespace LAB1
                 fieldIDList[index++] = line.Trim();
             }
             return fieldIDList;
+        }
+        public static string[] GetClassIDByLevelList(String level)
+        {
+            int col = GetColumnID(_directory_path + "\\" + "Class.csv", "ID");
+
+            List<string> list = GetRowInColumnByData(_directory_path + "\\" + "Class.csv", level, col);
+            string[] classIDList = new string[list.Count];
+            int index = 0;
+            foreach (string line in list)
+            {
+                classIDList[index++] = line.Trim();
+            }
+            return classIDList;
         }
     }
 }

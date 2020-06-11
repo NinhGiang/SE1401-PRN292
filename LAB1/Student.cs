@@ -48,10 +48,11 @@ namespace LAB1
             set { _class = value; }
         }
 
-        public void createStudent(int numberOfStudent,Level[] levelList, Class[] classList)
+        public static Student[] createStudent(int numberOfStudent)
         {
-            List<Student> list = new List<Student>();
-            Random rand = new Random();
+            Student[] list = new Student[numberOfStudent];
+            Level[] levelList = DataReader.getLevelList();
+                        Random rand = new Random();
             for (int i = 0; i < numberOfStudent; i++)
             {
                 String id = Guid.NewGuid().ToString();
@@ -60,7 +61,7 @@ namespace LAB1
                 int level = rand.Next(10, 12);
                 int age = Utils.getRandomAge(level);
                 DateTime birth = Utils.getRandomDateTime(2020 - age);
-                String levelID;
+                String levelID = level.ToString();
                 foreach (Level lev in levelList)
                 {
                     if(lev.Name.Equals(level.ToString()))
@@ -68,10 +69,11 @@ namespace LAB1
                         levelID = lev.UUID;
                     }
                 }
-                Class c = classList[rand.Next(classList.Length)];
-                //list.Add(new Student(id, name, birth, gender,));
+                string[] classIDList = DataReader.GetClassIDByLevelList(levelID);
+                string classID = classIDList[rand.Next(classIDList.Length)];
+                list[i] = new Student(id, name, birth, gender,classID);
             }
-            
+            return list;
         }
     }
 }

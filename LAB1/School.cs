@@ -14,6 +14,7 @@ namespace LAB1
         private List<Teacher> _teacher_list;
         private List<Room> _room_list;
         private List<Class> _class_list;
+        private List<Student> _student_list;
 
         public School()
         {
@@ -47,8 +48,12 @@ namespace LAB1
         {
             set { _class_list = new List<Class>(value); }
         }
+        public Student[] StudentList
+        {
+            set { _student_list = new List<Student>(value); }
+        }
 
-        public void saveLevel(String filename)
+        public void SaveLevel(String filename)
         {
             String content = "ID, Name\n";
             try
@@ -65,10 +70,10 @@ namespace LAB1
                 File.WriteAllText(filename, content);
             } catch (NullReferenceException ex)
             {
-                Console.WriteLine("saveLevel : " + ex.Message);
+                Console.WriteLine("SaveLevel : " + ex.Message);
             }
         }
-        public void saveField(String filename)
+        public void SaveField(String filename)
         {
             String content = "ID, Name\n";
             try
@@ -86,10 +91,10 @@ namespace LAB1
             }
             catch (NullReferenceException ex)
             {
-                Console.WriteLine("saveField : " + ex.Message);
+                Console.WriteLine("SaveField : " + ex.Message);
             }
         }
-        public void saveSubject(String filename)
+        public void SaveSubject(String filename)
         {
             String content = "ID, Name, Level, Field\n";
             try
@@ -109,10 +114,10 @@ namespace LAB1
             }
             catch (NullReferenceException ex)
             {
-                Console.WriteLine("saveSubject : " + ex.Message);
+                Console.WriteLine("SaveSubject : " + ex.Message);
             }
         }
-        public void saveTeacher(String filename)
+        public void SaveTeacher(String filename)
         {
             String content = "ID, Name, Gender, Field\n";
             if (_teacher_list == null)
@@ -137,10 +142,10 @@ namespace LAB1
             
             catch (NullReferenceException ex)
             {
-                Console.WriteLine("saveTeacher : " + ex.Message);
+                Console.WriteLine("SaveTeacher : " + ex.Message);
             }
         }
-        public void saveRoom(String filename)
+        public void SaveRoom(String filename)
         {
             String content = "ID, Class, No\n";
             if (_room_list == null)
@@ -160,10 +165,10 @@ namespace LAB1
 
             catch (NullReferenceException ex)
             {
-                Console.WriteLine("saveRoom : " + ex.Message);
+                Console.WriteLine("SaveRoom : " + ex.Message);
             }
         }
-        public void saveClass(String filename)
+        public void SaveClass(String filename)
         {
             String content = "ID, Level, Room, Name\n";
             if (_class_list == null)
@@ -184,7 +189,36 @@ namespace LAB1
 
             catch (NullReferenceException ex)
             {
-                Console.WriteLine("saveClass : " + ex.Message);
+                Console.WriteLine("SaveClass : " + ex.Message);
+            }
+        }
+        public void SaveStudent(String filename)
+        {
+            String content = "ID, Name, Birthday, Gender, Class\n";
+            if (_student_list == null)
+            {
+                _student_list = new List<Student>();
+            }
+            try
+            {
+                foreach (Student student in _student_list)
+                {
+                    content += student.UUID + ", ";
+                    content += student.Name + ", ";
+                    content += student.Birthday + ", ";
+                    if (student.Gender)
+                    {
+                        content += "M" + ", ";
+                    }
+                    else content += "F" + ", ";
+                    content += student.Class + "\n";
+                }
+                File.WriteAllText(filename, content);
+            }
+
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine("SaveStudent : " + ex.Message);
             }
         }
     }
