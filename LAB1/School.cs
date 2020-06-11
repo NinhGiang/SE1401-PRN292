@@ -16,6 +16,7 @@ namespace LAB1
         private List<Class> _class_list;
         private List<Student> _student_list;
         private List<Grade> _grade_list;
+        private List<Attendance> _attendance_list;
 
         public School()
         {
@@ -56,6 +57,10 @@ namespace LAB1
         public Grade[] GradeList
         {
             set { _grade_list = new List<Grade>(value); }
+        }
+        public Attendance[] AttendanceList
+        {
+            set { _attendance_list = new List<Attendance>(value); }
         }
 
         public void SaveLevel(String filename)
@@ -247,6 +252,29 @@ namespace LAB1
             catch (NullReferenceException ex)
             {
                 Console.WriteLine("SaveClass : " + ex.Message);
+            }
+        }
+        public void SaveAttendance(String filename)
+        {
+            String content = "Teacher, Class, Subject\n";
+            if (_attendance_list == null)
+            {
+                _attendance_list = new List<Attendance>();
+            }
+            try
+            {
+                foreach (Attendance attendance in _attendance_list)
+                {
+                    content += attendance.Teacher + ", ";
+                    content += attendance.ClassInfo + ", ";
+                    content += attendance.Subject + "\n";
+                }
+                File.WriteAllText(filename, content);
+            }
+
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine("SaveAttendance : " + ex.Message);
             }
         }
     }

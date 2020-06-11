@@ -55,6 +55,10 @@ namespace LAB1
             school.GradeList = grade_list;
             school.SaveGrade(directoryPath + "\\" + "Grade.csv");
 
+            Attendance[] attendance_list = Attendance.CreateAttendance();
+            school.AttendanceList = attendance_list;
+            school.SaveAttendance(directoryPath + "\\" + "Attendance.csv");
+
             Console.ReadLine();
         }
 

@@ -31,10 +31,31 @@ namespace LAB1
             get { return _subject; }
             set { _subject = value; }
         }
-        public static Attendance[] createAttendance()
+        public static Attendance[] CreateAttendance()
         {
             Teacher[] teacherList = DatabaseHandler.GetTeacherList();
             Subject[] subjectList = DatabaseHandler.GetSubjectList();
+            Class[] classList = DatabaseHandler.GetClassList();
+
+            List<Attendance> list = new List<Attendance>();
+
+            Random rand = new Random();
+            foreach (Teacher teacher in teacherList)
+            {
+                int number = rand.Next(4, 11);
+                for (int i = 0; i < number; i++)
+                {
+                    Class classToTeach = classList[rand.Next(classList.Length)];
+                    foreach (Subject subject in subjectList)
+                    {
+                        if (subject.Field.Equals(teacher.Field) & subject.Level.Equals(classToTeach.Level))
+                        {
+                            list.Add(new Attendance(teacher.UUID, classToTeach.UUID, subject.UUID));
+                        }
+                    }
+                }
+            }
+            return list.ToArray();
         }
     }
 }
