@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text.Json;
 using System.IO;
 using System.Dynamic;
+using System.Globalization;
 
 namespace LAB1
 {
@@ -13,6 +14,7 @@ namespace LAB1
         protected DateTime _stbirthday;
         protected String _stgender;
         protected String _class_info;
+   
 
         public String StUUID { get { return _stuuid; } }
         public String StFullName { get { return _stfullname; } }
@@ -50,7 +52,7 @@ namespace LAB1
 
                 DateTime birthday = new DateTime(RandomNumberBetween(1999, 2001), RandomNumberBetween(1, 12), RandomNumberBetween(1, 30));
 
-                int gender = rnd.Next(0, 1);
+                int gender = rnd.Next(0, 2);
                 String genderStr = "Female";
                 if(gender == 1)
                 {
@@ -75,5 +77,6 @@ namespace LAB1
             int randomValue = rnd.Next(smallNum, bigNum + 1);
             return randomValue;
         }
+        
     }
 }

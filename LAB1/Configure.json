@@ -1,25 +1,45 @@
 ﻿{
   "NameConfig": {
     "last_name_set": [
-      "Nguyễn",
-      "Lý",
-      "Lâm",
+      "Nguyen",
+      "Ly",
+      "Lam",
       "Kha",
-      "Lê"
+      "Le"
     ],
     "middle_name_set": [
       "Trung",
-      "Ngọc",
-      "Thành",
-      "Hồng",
+      "Ngoc",
+      "Thanh",
+      "Hong",
       "Thanh"
     ],
     "first_name_set": [
-      "Cường",
-      "Công",
-      "Hân",
+      "Cuong",
+      "Cong",
+      "Han",
       "Mai",
-      "Phương"
+      "Phuong"
+    ]
+  },
+
+  "FieldConfig": {
+    "field_name_set": [
+      "Math",
+      "Literature",
+      "History",
+      "English",
+      "Geography",
+      "Physic",
+      "Chemistry"
+    ]
+  },
+
+  "LevelConfig": {
+    "level_name_set": [
+      "10",
+      "11",
+      "12"
     ]
   }
 }

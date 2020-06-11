@@ -25,7 +25,7 @@ namespace LAB1
             _field = Field_info;
         }
 
-        public static Teacher[] Create (uint num_teacher)
+        public static Teacher[] Create (uint num_teacher, Field[] flist)
         {
             Teacher[] result = new Teacher[num_teacher];
             string content = File.ReadAllText(@"..\..\..\Configure.json");
@@ -36,7 +36,7 @@ namespace LAB1
             {
                 String uuid = Guid.NewGuid().ToString();
 
-                int gender = rnd.Next(0, 1);
+                int gender = rnd.Next(0, 2);
                 String genderStr = "Female";
                 if (gender == 1)
                 {
@@ -51,7 +51,7 @@ namespace LAB1
                 full_name += _.middle_name_set[middle_name_set] + " ";
                 full_name += _.first_name_set[first_name_set];
 
-                String field_info = Guid.NewGuid().ToString();
+                String field_info = flist[rnd.Next(flist.Length)].Name;
 
                 result[i] = new Teacher(uuid, full_name, genderStr, field_info);
             }
