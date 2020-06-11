@@ -21,6 +21,34 @@ namespace LAB1
             _class = Class;
         }
 
+        public string UUID
+        {
+            get { return _uuid; }
+            set { _uuid = value; }
+        }
 
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+
+        public DateTime Birthday
+        {
+            get { return _birthday; }
+            set { _birthday = value; }
+        }
+
+        public bool Gender
+        {
+            get { return _gender; }
+            set { _gender = value; }
+        }
+
+        public string Class
+        {
+            get { return _class; }
+            set { _class = value; }
+        }
     }
 }
