@@ -48,7 +48,7 @@ namespace LAB1
             int leftover = ids.Count - numberOfClass * levelList.Length;
             int levelIndex = 0;
             Random rand = new Random();
-            int levelCount = 1;
+            int classLevelCount = 1;
             foreach (KeyValuePair<string,string> entry in ids)
             {
                 String id = entry.Value;
@@ -56,26 +56,34 @@ namespace LAB1
                 String level = currLevel.UUID;
                 String room = entry.Key;
                 
-                String name = currLevel.Name + "A" + levelCount;
+                String name = currLevel.Name + "A" + classLevelCount;
                 
                 list[count] = new Class(id,level,room,name);
                 count++;
 
-                if (levelCount < numberOfClass)
+                if (classLevelCount < numberOfClass)
                 {
-                    levelCount++;
+                    classLevelCount++;
+                }
+                else if (levelIndex == 0 & classLevelCount < numberOfClass + leftover)
+                {
+                        classLevelCount++;
                 }
                 else
                 {
                     if (levelIndex < levelList.Length - 1)
                     {
                         levelIndex++;
+                        classLevelCount = 1;
                     }
+                    /*                   
                     else
                     {
                         levelIndex = 0;
-                    }
-                    levelCount = 1;
+                        classLevelCount = numberOfClass + 1;
+                        numberOfClass += leftover;
+                    } 
+                    */
                 }
             }
             return list;
