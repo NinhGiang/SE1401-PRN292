@@ -15,6 +15,10 @@ namespace LAB1
             //ABC.save(@"..\..\Whatever\ABC.csv");
             ABC.save(dir + "/ABC.csv");
             Console.ReadLine();
+            foreach (Student std in student_list)
+            {
+                std.print();
+            }
         }
     }
 }

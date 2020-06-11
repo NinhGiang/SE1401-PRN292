@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LAB1
 {
-    class Configure
+    class StudentConfigure
     {
        public NameConfig NameConfig { get; set; }
     }

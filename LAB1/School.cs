@@ -23,7 +23,7 @@ namespace LAB1
             String content = "ID, Fullname\n";
             foreach (Student student in _students_list)
             {
-                content += student.ID + ", " + student.FullName + "\n";
+                content += student.ID + ", " + student.UUID + ", " + student.FullName + ", " + student.Birthday + "\n";
             }
             File.WriteAllText(filename, content);
         }
