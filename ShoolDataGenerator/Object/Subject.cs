@@ -9,6 +9,10 @@ namespace LAB1
         public string UUID { get; set; }
         public Level Level { get; set; }
         public Field Field { get; set; }
+        
 
-    }
+
+
+
+}
 }
