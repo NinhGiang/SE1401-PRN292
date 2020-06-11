@@ -14,22 +14,18 @@ namespace LAB1.Object
         public string ID
         {
             get { return _id; }
-            set { _id = value; }
         }
         public string Level
         {
             get { return _level; }
-            set { _level = value; }
         }
         public string Room
         {
             get { return _room; }
-            set { _room = value; }
         }
         public string Name
         {
             get { return _name; }
-            set { _name = value; }
         }
 
 

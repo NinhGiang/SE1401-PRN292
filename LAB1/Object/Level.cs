@@ -16,7 +16,6 @@ namespace LAB1.Object
         public string FullName
         {
             get { return _fullname; }
-            set { _fullname = value; }
         }
 
         protected Level(string ID, string FullName)
@@ -25,12 +24,13 @@ namespace LAB1.Object
             _fullname = FullName;
         }
         
+        /*
         public static Level[] addNewLevel()
         {
 
             return;
         }
-
+        */
 
     }
 }
