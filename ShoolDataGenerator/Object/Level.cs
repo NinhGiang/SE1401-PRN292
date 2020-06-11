@@ -8,7 +8,7 @@ namespace LAB1
     class Level
     {
         public string UUID  { get; set; }
-        public string Name { get; set; }
+        public int Name { get; set; }
         public Level()
         {
             UUID = Guid.NewGuid().ToString();
