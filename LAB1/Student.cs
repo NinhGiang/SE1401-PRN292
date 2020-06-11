@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Text.Json;
 
 namespace LAB1
 {
@@ -11,6 +13,8 @@ namespace LAB1
         protected DateTime _birthday;
         protected bool _gender;
         protected string _class;
+
+        private static Random rd = new Random();
 
         public Student(string uuid, string name, DateTime birthday, bool gender, string @class)
         {
@@ -49,6 +53,31 @@ namespace LAB1
         {
             get { return _class; }
             set { _class = value; }
+        }
+
+        private static String jsonFile = File.ReadAllText(@"..\..\..\Configure.json");
+        private static Configure config = JsonSerializer.Deserialize<Configure>(jsonFile);
+
+        public static String getName(Boolean gender)
+        {
+            String name;
+            int lastNameIndex = rd.Next(config.NameConfig.last_name.Length);
+            int middleNameIndex = rd.Next(config.NameConfig.middle_name.Length);
+            int firstNameIndex = rd.Next(config.NameConfig.male_first_name.Length);
+            if (gender)
+            {
+                name = config.NameConfig.last_name[lastNameIndex] + " " 
+                    + config.NameConfig.middle_name[middleNameIndex] + " " 
+                    + config.NameConfig.male_first_name[firstNameIndex];
+            }
+            else
+            {
+                firstNameIndex = rd.Next(config.NameConfig.female_first_name.Length);
+                name = config.NameConfig.last_name[lastNameIndex] + " "
+                    + config.NameConfig.middle_name[middleNameIndex] + " "
+                    + config.NameConfig.female_first_name[firstNameIndex];
+            }
+            return name;
         }
     }
 }
