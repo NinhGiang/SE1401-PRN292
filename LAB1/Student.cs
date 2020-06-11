@@ -6,10 +6,10 @@ namespace LAB1
 {
     class Student
     {
-        private String UUID , Name;
-        private DateTime BirthDay;
-        private Boolean Gender;
-        private String ClassName;
+        protected String UUID , Name;
+        protected DateTime BirthDay;
+        protected Boolean Gender;
+        protected String ClassName;
 
         public Student(String uUID, String name, DateTime birthDay, bool gender, String className)
         {

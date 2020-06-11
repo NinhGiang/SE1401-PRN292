@@ -6,8 +6,8 @@ namespace LAB1
 {
     class Room
     {
-        private String UUID , Class ;
-        private int No;
+        protected String UUID , Class ;
+        protected int No;
 
         public Room(String UUID , String Class , int No)
         {

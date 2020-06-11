@@ -6,7 +6,7 @@ namespace LAB1
 {
     class Level
     {
-        private String UUID, Name;
+        protected String UUID, Name;
 
         public Level(String UUID , String Name)
         {
