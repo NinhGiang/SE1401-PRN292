@@ -30,7 +30,7 @@ namespace LAB1.DataGeneration
             for (int i = 0; i < level_size; i++)
             {
                 string uuid = Guid.NewGuid().ToString();
-                string name = DataGenerator.GetLevelData(i);
+                string name = DataGenerator.GetLevelDataInIndex(i);
                 result[i] = new Level(uuid, name);
             }
             return result;

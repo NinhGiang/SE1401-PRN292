@@ -46,11 +46,11 @@ namespace LAB1.DataGeneration
             for (int i = 0; i < roomList.Count; i++)
             {
                 string uuid = Guid.NewGuid().ToString(); //generate random uuid
-                string levelID = DataGenerator.getLevelInfo()[0].Trim();
-                string roomID = DataGenerator.getRoomInfo()[0].Trim();
+                string levelID = DataGenerator.GetLevelData()[0].Trim();
+                string roomID = DataGenerator.GetRoomData()[0].Trim();
 
-                string levelName = DataGenerator.getLevelInfo()[1].Trim();
-                string roomNo = DataGenerator.getRoomInfo()[2].Trim();
+                string levelName = DataGenerator.GetLevelData()[1].Trim();
+                string roomNo = DataGenerator.GetRoomData()[2].Trim();
                 string className = levelName + "A" + roomNo;
                 result.Add(new Classes(uuid, levelID, roomID, className));              
             }

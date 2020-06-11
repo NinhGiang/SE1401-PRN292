@@ -7,6 +7,7 @@ namespace LAB1.DataGeneration
 {
     class ListStorage
     {
+        private static Random rnd = new Random();
         private static List<string> CsvReader(string link)
         {
             List<string> curr_list = new List<string>();
@@ -43,8 +44,6 @@ namespace LAB1.DataGeneration
             StreamReader sr = new StreamReader(link);
             try
             {
-
-            
             sr.ReadLine();
             while (!sr.EndOfStream)
             {
@@ -64,12 +63,37 @@ namespace LAB1.DataGeneration
             }
             return null;
         }
+        public static List<string> GetSubjectListByField(string fieldID)
+        {
+            string link = @"..\..\..\DataGeneration\Subject.csv";
+            int column = GetColumn(link, "Field");
+            return GetDataInColumn(link, fieldID, column);
+        }
         public static List<string> GetListOfClassByLevel(string levelId)
         {
             string path = @"..\..\..\DataGeneration\Class.csv";
             int column = GetColumn(path, "Level");
             return GetDataInColumn(path, levelId, column);
         }
+        public static string getClassByLevelID(string levelId)
+        {
+            string[] classes = null;
+            // try
+            //  {
+
+
+            List<string> listOfClasses = ListStorage.GetListOfClassByLevel(levelId);
+            int index = rnd.Next(listOfClasses.Count);
+            classes = listOfClasses[index].Split(',');
+            string classInfo = classes[0].Trim();
+            return classInfo;
+            // } catch (ArgumentOutOfRangeException ex)
+            // {
+            //     Console.WriteLine("The current array: " + classes);
+            // }
+            // return classes.ToString();
+        }
+
         public static List<string> GetLevelList()
         {
             return CsvReader(@"..\..\..\DataGeneration\Level.csv");
@@ -81,6 +105,10 @@ namespace LAB1.DataGeneration
         public static List<string> GetFieldList()
         {
             return CsvReader(@"..\..\..\DataGeneration\Field.csv");
+        }
+        public  static List<string> GetTeacherList()
+        {
+            return CsvReader(@"..\..\..\DataGeneration\Teacher.csv");
         }
     }
 }

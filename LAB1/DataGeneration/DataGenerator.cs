@@ -16,46 +16,43 @@ namespace LAB1.DataGeneration
         {
             return classDB.ClassSet.Length;
         }
-        public static string GetLevelData(int index)
+        public static string GetLevelDataInIndex(int index)
         {
             return classDB.ClassSet[index];
         }
-        public static string[] getLevelInfo()
+        public static string[] GetLevelData()
         {
             List<string> levelList = ListStorage.GetLevelList();
             int index = rnd.Next(levelList.Count);
             string[] levelInfo = levelList[index].Split(',');
-           // string level = levelInfo[1].Trim();
-           // string levelId = levelInfo[0].Trim();
             return levelInfo;
         }
-        public static string getClassByLevelID(string levelId)
-        {
-            string[] classes = null;
-           // try
-          //  {
-
-
-                List<string> listOfClasses = ListStorage.GetListOfClassByLevel(levelId);
-                int index = rnd.Next(listOfClasses.Count);
-                classes = listOfClasses[index].Split(',');
-                string classInfo = classes[0].Trim();
-                return classInfo;
-           // } catch (ArgumentOutOfRangeException ex)
-           // {
-           //     Console.WriteLine("The current array: " + classes);
-           // }
-           // return classes.ToString();
-        }
-        public static string[] getRoomInfo()
+        public static string[] GetRoomData()
         {
             List<string> listOfRooms = ListStorage.GetRoomList();
             int roomIndex = rnd.Next(listOfRooms.Count);
             string[] roomInfo = listOfRooms[roomIndex].Split(',');
-            // string roomId = room[0].Trim();
-            // string roomClass = room[1].Trim();
-            // string romNo = room[2].Trim();
             return roomInfo;
+        }
+        public static string[] GetTeacherData(int index)
+        {
+            List<string> teacherList = ListStorage.GetTeacherList();
+            string[] teacherInfo = teacherList[index].Split(",");
+            return teacherInfo;
+        }
+       public static string[] GetSubjectData(string field)
+        {
+            List<string> subjectList = ListStorage.GetSubjectListByField(field);
+            int index = rnd.Next(subjectList.Count);
+            string[] subjectInfo = subjectList[index].Split(",");
+            return subjectInfo;
+        }
+        public static string[] GetClassData(string level)
+        {
+            List<string> classesList = ListStorage.getClassListByLevel(level);
+            int index = rnd.Next(classesList.Count);
+            string[] classesInfo = classesList[index].Split(",");
+            return classesInfo;
         }
         public static int getFieldLength()
         {
