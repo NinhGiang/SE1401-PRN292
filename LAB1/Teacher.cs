@@ -38,16 +38,18 @@ namespace LAB1
             get { return _field; }
             set { _field = value; }
         }
-        public static Teacher[] createTeacher(int number, Field[] fieldList) 
+        public static Teacher[] createTeacher(int number) 
         {
             Teacher[] list = new Teacher[number];
+            
+            string[] fieldIDList = DataReader.getFieldIDList();
             Random rand = new Random();
             for (int i = 0; i < number; i++)
             {
                 String id = Guid.NewGuid().ToString();
                 bool gender = Utils.getRandomGender();
                 String name = Utils.getRandomFullName(gender);
-                list[i] = new Teacher(id,name,gender,fieldList[rand.Next(fieldList.Length)].UUID);
+                list[i] = new Teacher(id,name,gender, fieldIDList[rand.Next(fieldIDList.Length)]);
             }
             return list;
         }

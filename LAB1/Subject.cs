@@ -39,8 +39,10 @@ namespace LAB1
             get { return _field; }
             set { _field = value; }
         }
-        public static Subject[] createSubject(Field[] fieldList, Level[] levelList)
+        public static Subject[] createSubject()
         {
+            Field[] fieldList = DataReader.getFieldList();
+            Level[] levelList = DataReader.getLevelList();
             Subject[] list = new Subject[fieldList.Length*levelList.Length];
             int size = 0;
             for (int i = 0; i < fieldList.Length; i++)

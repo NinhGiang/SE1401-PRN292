@@ -27,12 +27,12 @@ namespace LAB1
             school.saveField(directoryPath + "\\" + "Field.csv");
 
             //create subject
-            Subject[] subject_list = Subject.createSubject(field_list, level_list);
+            Subject[] subject_list = Subject.createSubject();
             school.SubjectList = subject_list;
             school.saveSubject(directoryPath + "\\" + "Subject.csv");
             
             //create Teacher
-            Teacher[] teacher_list = Teacher.createTeacher(30, field_list);
+            Teacher[] teacher_list = Teacher.createTeacher(30);
             school.TeacherList = teacher_list;
             school.saveTeacher(directoryPath + "\\" + "Teacher.csv");
 
@@ -42,7 +42,7 @@ namespace LAB1
             school.RoomList =  room_list;
             school.saveRoom(directoryPath + "\\" + "Room.csv");
 
-            Class[] class_list = Class.createClass(roomAndClassIDList,level_list);
+            Class[] class_list = Class.createClass(roomAndClassIDList);
             school.ClassList = class_list;
             school.saveClass(directoryPath + "\\" + "Class.csv");
 

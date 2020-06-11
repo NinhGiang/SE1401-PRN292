@@ -40,8 +40,9 @@ namespace LAB1
             get { return _name; }
             set { _name = value; }
         }
-        public static Class[] createClass(Dictionary<String,String> ids,Level[] levelList)
+        public static Class[] createClass(Dictionary<String,String> ids)
         {
+            Level[] levelList = DataReader.getLevelList();
             Class[] list = new Class[ids.Count];
             int count = 0;
             int numberOfClass = ids.Count / levelList.Length;
