@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Text.Json;
 
 namespace LAB1
 {
@@ -28,6 +30,30 @@ namespace LAB1
         }
         protected Student() { }
 
+        public static Student[] CreateStudent(uint numberOfStudent)
+        {
+            Student[] studentList = new Student[numberOfStudent];
+            string content = File.ReadAllText(@"..\..\..\StudentConfigure.json");
+            SystemConfigure config = JsonSerializer.Deserialize<SystemConfigure>(content);
 
+            Random ran = new Random();
+            for (uint i = 0; i < numberOfStudent; i++)
+            {
+                StuNameConfig con = config.StuNameConfig;
+                int gender = ran.Next(10);
+                int maleLastNameIndex = ran.Next(con.maleLastNameSet.Length);
+                int femaleLastNameIndex = ran.Next(con.femaleLastNameSet.Length);
+                int firstNameIndex = ran.Next(con.firstNameSet.Length);
+                int middleNameIndex = ran.Next(con.middleNameSet.Length);
+                string fullName = con.maleLastNameSet[maleLastNameIndex] + " ";
+                fullName += con.middleNameSet[middleNameIndex] + " ";
+                fullName += con.firstNameSet[firstNameIndex];
+                studentList[i] = new Student(i.ToString(), fullName);
+
+                string aaaa = Guid.NewGuid().ToString();
+            }
+
+            return studentList;
+        }
     }
 }
