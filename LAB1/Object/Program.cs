@@ -10,7 +10,6 @@ namespace LAB1
             School ABC = new School(student_list);
             ABC.save(@"..\..\..\ABC.csv");
             Console.ReadLine();
-
         }
     }
 }
