@@ -17,7 +17,7 @@ namespace LAB1.Object
             String content = "ID, Fullname\n";
             foreach (Student student in _students_list)
             {
-                content += student.ID + ", " + student.FullName + "\n";
+                content += student.ID + ", " + student.Name + "\n";
             }
             File.WriteAllText(filename, content);
         }

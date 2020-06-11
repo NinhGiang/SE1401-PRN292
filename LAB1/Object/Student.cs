@@ -10,14 +10,14 @@ namespace LAB1.Object
     class Student
     {
         protected string _id;
-        protected string _fullname;
+        protected string _name;
         public string ID { get { return _id; } }
-        public string FullName { get { return _fullname; } }
+        public string Name { get { return _name; } }
 
-        protected Student(string ID, string FullName)
+        protected Student(string ID, string Name)
         {
             _id = ID;
-            _fullname = FullName;
+            _name = Name;
         }
 
         public static Student[] Create(uint number_student)
@@ -42,7 +42,7 @@ namespace LAB1.Object
         }
         public void print()
         {
-            Console.WriteLine(_id + 1 + " " + _fullname);
+            Console.WriteLine(_id + 1 + " " + _name);
         }
     }
 }
