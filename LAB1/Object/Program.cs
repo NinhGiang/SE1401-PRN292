@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Text;
+using System.IO;
+
 
 namespace LAB1.Object
 {
@@ -6,6 +9,7 @@ namespace LAB1.Object
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             Student[] student_list = Student.Create(100);
             School ABC = new School(student_list);
             ABC.save(@"..\..\..\ABC.csv");
