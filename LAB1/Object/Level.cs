@@ -28,7 +28,7 @@ namespace LAB1.Object
         public static Level[] addNewLevel()
         {
 
-            
+            return;
         }
 
 
