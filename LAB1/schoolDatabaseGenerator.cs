@@ -91,7 +91,11 @@ namespace LAB1
                 {
                     Teacher.Create(Field.FieldsList[rnd.Next(10)]);
                     Subject.Create(level, Field.FieldsList[i]);
-                    Attendance.Create(Teacher.TeachersList[i], Class.ClassesList[i], Subject.SubjectsList[i]);
+                    for (int j = 0; j < rnd.Next(4, 11); j++)
+                    {
+                        Attendance.Create(Teacher.TeachersList[i], Class.ClassesList[j], Subject.SubjectsList[i]);
+                    }
+                    
                 }
             }
           
@@ -111,6 +115,7 @@ namespace LAB1
             Field.SaveFields(@"..\..\..\Fields.csv");
             Teacher.SaveTeachers(@"..\..\..\Teachers.csv");
             Subject.SaveSubjects(@"..\..\..\Subjects.csv");
+            Attendance.SaveAttendances(@"..\..\..\Attendances.csv");
             
             /*foreach (var student in Student.StudentList)
             {

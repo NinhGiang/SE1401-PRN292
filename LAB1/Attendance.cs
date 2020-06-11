@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.IO;
 
 namespace LAB1
 {
@@ -72,6 +72,30 @@ namespace LAB1
             }
             Attendance newAttendance = new Attendance(teacher.UUID, classObject.UUID, subject.UUID);
             attendancesList.Add(newAttendance);
+        }
+
+        /// <summary>
+        /// Used to write data into file.
+        /// </summary>
+        /// <exception cref="System.IO.DirectoryNotFoundException">
+        /// Thrown when part of a file or directory cannot be found.
+        /// </exception>
+        /// <param name="filename">A file used to store data.</param>
+        public static void SaveAttendances(string filename)
+        {
+            try
+            {
+                String content = "TeacherUUID, ClassUUID, SubjectUUID\n";
+                foreach (Attendance attendance in attendancesList)
+                {
+                    content += attendance.TeacherUUID + ", " + attendance.ClassUUID + ", " + attendance.SubjectUUID + "\n";
+                }
+                File.WriteAllText(filename, content);
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine("Attendance _ DirectoryNotFound: " + ex.Message);
+            }
         }
     }
 }
