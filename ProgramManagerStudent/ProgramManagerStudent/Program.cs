@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
+using ProgramManagerStudent;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Text;
 
 namespace StudentGeneration
 {
@@ -36,21 +38,57 @@ namespace StudentGeneration
             //string json = JsonConvert.SerializeObject(.ToArray());
 
             //write string to file
-            // System.IO.File.WriteAllText(@"D:\path.txt", json);    }
-            GenerateRandomBirthday // à Đoàn hiểu rồi. code vớ vẩn. random ngyaf luôn cũng đc
+            //System.IO.File.WriteAllText(@"D:\path.txt", json);    }
+            //À Đoàn hiểu rồi. code vớ vẩn. random ngyaf luôn cũng đc
 
+            Console.OutputEncoding = Encoding.UTF8;
+            Random rnd = new Random();
+            uint numbOfStudentInShool = (uint)rnd.Next(500, 3001);
+            uint numbOfStudentInClass = (uint)rnd.Next(30, 51);
+            uint numbOfClass = (uint)Math.Ceiling((double)numbOfStudentInShool / numbOfStudentInClass);
+            uint numbOfClassOfLevel = (uint)Math.Ceiling((double)numbOfClass / 3);
+            uint roomNo = 1;
+            int count = 0; //used when create class (add RoomUUID to Class object)
+            uint noOfTeacher = (uint)Math.Ceiling((double)numbOfClass / rnd.Next(4, 11));
+            //Test Create method in Level class
+            Level.Create();
+            //Test Create method in Class class
+            foreach (var level in Level.LevelList)
+            {
+                for (int i = 0; i < noOfClassPerLevel; i++)
+                {
+                    Class.Create(level, "", i);
+                    Room.Create(Class.ClassList[i], roomNo);
+                    Class.ClassList[count].RoomUUID = Room.RoomList[count].UUID;
+                    count++;
+                    roomNo++;
+                }
+            }
 
-        }
+            //Test Create method in Student class
+            foreach (var classObject in Class.ClassList)
+            {
+                for (int i = 0; i < noOfStudentInClass; i++)
+                {
+                    Student.Create(classObject);
+                }
+            }
+            //Test Create method in Field class
+            /*Field.Create();
+            for (int i = 0; i < noOfTeacher; i++)
+            {
+                Teacher.Create(Field.FieldList[rnd.Next(10)]);
+            }
+            */
+            /*
+            Level.SaveLevels(@"..\..\..\Levels.csv");
+            Class.SaveClasses(@"..\..\..\Classes.csv");
+            Room.SaveRooms(@"..\..\..\Rooms.csv");
+            Student.SaveStudents(@"..\..\..\Students.csv");
+            Field.SaveFields(@"..\..\..\Fields.csv");
+            Teacher.SaveTeachers(@"..\..\..\Teachers.csv");
+            */
 
-        static DateTime GenerateRandomBirthday(DateTime start, DateTime end) // Start là kieur datetime
-        {
-            // String day = rnd.Next(dayRange) + "/" + rnd.Next(monthRange) + "/" + rnd.Next(YearRange)
-            // DateTime date = DateTime.parse(day); // => esier => DOne nhé?
-
-            Random rnd = new Random(); // khởi tạo object random
-            // random như cái dòng (end-start).Days thì ta có 1 
-            int range = (end - start).Days; //random 1 ngày trong khoảng thời gian đã đưa ra => ở đây là start và end
-            return start.AddDays(rnd.Next(range)); //thêm start + một ngày được random trong khoảng range (với range là 1 ngày đã random)
         }
     }
 }

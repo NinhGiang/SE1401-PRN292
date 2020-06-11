@@ -42,6 +42,7 @@ namespace StudentGeneration
         private static DateTime GenerateRandomBirthday(DateTime start, DateTime end)
         {
             Random rnd = new Random();
+            String date;
             int range = (end - start).Days;
             return start.AddDays(rnd.Next(range));
         }
