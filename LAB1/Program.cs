@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Text;
 
 namespace LAB1
@@ -10,11 +11,9 @@ namespace LAB1
             Console.OutputEncoding = Encoding.UTF8;
             Student[] student_list = Student.Create(100);
             School ABC = new School(student_list);
-            ABC.save(@"..\..\..\ABC.csv");
-            foreach (Student std in student_list)
-            {
-                std.print();
-            }
+            string dir = ABC.createSchoolDir("Whatever");
+            //ABC.save(@"..\..\Whatever\ABC.csv");
+            ABC.save(dir + "/ABC.csv");
             Console.ReadLine();
         }
     }

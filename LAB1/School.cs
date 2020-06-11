@@ -12,6 +12,12 @@ namespace LAB1
         {
             _students_list = new List<Student>(students);
         }
+        public string createSchoolDir(String schoolName)
+        {
+            string dir = Directory.CreateDirectory(@"..\..\..\" + schoolName).FullName;
+            Console.WriteLine(dir);
+            return dir;
+        }
         public void save(string filename)
         {
             String content = "ID, Fullname\n";
