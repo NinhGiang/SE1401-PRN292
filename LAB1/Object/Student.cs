@@ -5,7 +5,7 @@ using System.IO;
 using System.Text.Json;
 
 
-namespace LAB1
+namespace LAB1.Object
 {
     class Student
     {
