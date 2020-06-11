@@ -3,12 +3,27 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
+/// <summary>
+/// The School class
+/// Contains method to create School and its getter/setter/ctor.
+/// Contains lists of others objects to manage and write to the file.
+/// </summary>
 class School
 {
+
     private List<Student> _student_list;
     private List<Room> _room_list;
     private List<Level> _level_list;
     private List<Classes> _classes_list;
+
+    /// <summary>
+    /// The ctor of School 
+    /// Has one blank ctor
+    /// </summary>
+    /// <param name="student_list">An array of Student</param>
+    /// <param name="room_list">An array of Room</param>
+    /// <param name="level_list">An array of Level</param>
+    /// <param name="classes_list">An array of Classes</param>
     public School(){ }
     public School(Student[] student_list, Room[] room_list, Level[] level_list, Classes[] classes_list)
     {

@@ -43,12 +43,12 @@ namespace LAB1.DataGeneration
         }
 
         /// <summary>
-        /// The ctor of Student 
+        /// The ctor of Classes 
         /// Has one blank ctor
         /// </summary>
         /// <param name="uuid">A string value</param>
         /// <param name="level">A string value</param>
-        /// <param name="room">A DateTime value</param>
+        /// <param name="room">A string value</param>
         /// <param name="name">A string value</param>
         public Classes(){     }
         public Classes(string uuid, string level, string room, string name)
@@ -58,6 +58,7 @@ namespace LAB1.DataGeneration
             _room = room;
             _name = name;
         }
+
         /// <summary>
         /// Creates a random list of classes and returns the result
         /// </summary>
