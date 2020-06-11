@@ -52,6 +52,8 @@ namespace LAB1
             school.SaveStudent(directoryPath + "\\" + "Student.csv");
 
             Grade[] grade_list = Grade.CreateGrade();
+            school.GradeList = grade_list;
+            school.SaveGrade(directoryPath + "\\" + "Grade.csv");
 
             Console.ReadLine();
         }
