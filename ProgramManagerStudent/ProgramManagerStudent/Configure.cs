@@ -37,7 +37,6 @@ namespace StudentGeneration
         /// </value>
         public string[] class_name_set { get; set; }
          
-        public string[] semester_set { get; set; }
     }
 
     /// <summary>
@@ -58,20 +57,20 @@ namespace StudentGeneration
     /// </summary>
     class NameConfig
     {
-
+        /// <value>
+        /// set and get last_name_set
+        /// </value>
+        public string[] last_name_set { get; set; }
         /// <value>
         /// set and get male_last_name_set,male_middle_name_set,male_first_name_set
         /// </value>
-        public string[] male_last_name_set { get; set; }
         public string[] male_middle_name_set { get; set; }
         public string[] male_first_name_set { get; set; }
 
         /// <value>
-        /// set and get female_last_name_set,female_middle_name_set,female_first_name_set
+        /// set and get female_middle_name_set,female_first_name_set
         /// </value>
-        public string[] female_last_name_set { get; set; }
         public string[] female_middle_name_set { get; set; }
         public string[] female_first_name_set { get; set; }
-
     }
 }
