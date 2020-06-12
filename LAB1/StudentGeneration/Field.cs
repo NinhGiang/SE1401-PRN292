@@ -34,6 +34,7 @@ namespace LAB1.StudentGeneration
                 result.Add(new Field(id, name));
             }
             return result.ToArray();
+
         }
 
     }
