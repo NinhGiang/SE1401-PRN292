@@ -8,7 +8,7 @@ namespace StudentGeneration
     class School
     {
         private List<Student> _students_list;
-        //public List<Student> Schools { get { return _students_list;}}
+        public List<Student> Schools { get { return _students_list;}}
 
         public School(Student[] students)
         {
@@ -27,7 +27,7 @@ namespace StudentGeneration
             } 
             else if(Path.GetExtension(filename) == ".json")
             {
-                content = JsonConvert.SerializeObject(this);
+                content = JsonConvert.SerializeObject(this, Formatting.Indented);
             }
             File.WriteAllText(filename, content);
         }
