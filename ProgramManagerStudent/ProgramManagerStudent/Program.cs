@@ -49,20 +49,21 @@ namespace StudentGeneration
             Console.OutputEncoding = Encoding.UTF8;
             Random rnd = new Random();
 
-            /*
-            //Tạo Level
-            List<Level> levelList = Level.CreateLevel();
-            Level.SaveLevel(levelList);
-            Console.WriteLine("Created Level!!");
-            */
-
             //Tạo Room
             uint numbOfStudentInShool = (uint)rnd.Next(500, 3001);
+            Console.WriteLine(numbOfStudentInShool);
             List<Room> roomList = Room.CreateRoom(numbOfStudentInShool);
             Room.SaveRooms(roomList);
             Console.WriteLine("Created Room!!");
 
-            
+            //Tạo Level
+            uint numbOfRoom = (uint)roomList.Count();
+            List<Level> levelList = Level.CreateLevel(numbOfRoom);
+            Level.SaveLevel(levelList);
+            Console.WriteLine("Created Level!!");
+
+            //Tao Class
+
 
             uint numbOfClass = (uint)roomList.Count();
 
