@@ -31,23 +31,28 @@ namespace StudentGeneration
 
         public static Student[] Create(uint number_student)
         {
-            Student[] result = new Student[number_student];
-            string content = File.ReadAllText(@"..\..\..\Configure.json");
-            Configure config = JsonSerializer.Deserialize<Configure>(content);
-
-            Random rnd = new Random();
-            for (uint i = 0; i < number_student; i++)
+            try
             {
-                NameConfig _ = config.NameConfig;
-                int last_name_index = rnd.Next(_.last_name_set.Length);
-                int first_name_index = rnd.Next(_.first_name_set.Length);
-                int middle_name_index = rnd.Next(_.middle_name_set.Length);
-                string full_name = _.last_name_set[last_name_index] + " ";
-                full_name += _.middle_name_set[middle_name_index] + " ";
-                full_name += _.first_name_set[first_name_index];
-                result[i] = new Student(i.ToString(), full_name);
+                Student[] result = new Student[number_student];
+                string content = File.ReadAllText(@"..\..\..\Configure.json");
+                Configure config = JsonSerializer.Deserialize<Configure>(content);
+
+                Random rnd = new Random();
+                for (uint i = 0; i < number_student; i++)
+                {
+                    //id
+                    String uuid = Guid.NewGuid().ToString();
+
+
+                    result[i] = new Student(uuid,null,null,false,null);
+                }
+                return result;
             }
-            return result;
+            catch( FileNotFoundException ex)
+            {
+                Console.WriteLine("Student _ FileNotFoundException" + ex.Message);
+            }
+            
         }
         public void print()
         {

@@ -21,7 +21,7 @@ namespace StudentGeneration
 
     public class LevelConfig
     {
-        public string[] level_type { get; set; }
+        public string[] level_set { get; set; }
     }
 
     public class FieldConfig

@@ -15,6 +15,7 @@ namespace LAB1
         private static string subject = File.ReadAllText(CONFIG);
         private static Configure config = JsonSerializer.Deserialize<Configure>(subject);
 
+        public LoadData() { }
         private static DateTime GetRandomDate(int year)
         {
             DateTime begin = new DateTime(year, 1, 1);
