@@ -30,29 +30,29 @@ namespace LAB1.StudentGeneration
         }
 
         //generate a random Malename;
-        public static string RandomMaleName()
+        public static string RandomFullNameByGender(int genderIndex)
         {
             string fullname = null;
-            int firstNameIndex = rnd.Next(config.NameConfig.first_Male_set.Length);
-            int lastNameIndex = rnd.Next(config.NameConfig.last_name_set.Length);
-            int middleNameIndex = rnd.Next(config.NameConfig.middle_name_set.Length);
-            fullname = name.last_name_set[lastNameIndex] + " ";
-            fullname += name.middle_name_set[middleNameIndex] + " ";
-            fullname += name.first_Male_set[firstNameIndex];
-            return fullname;
-        }
-
-        //generate a random Femalename;
-        public static string RandomFemaleName()
-        {
-            string fullname = null;
-            int firstNameIndex = rnd.Next(config.NameConfig.first_Female_set.Length);
-            int lastNameIndex = rnd.Next(config.NameConfig.last_name_set.Length);
-            int middleNameIndex = rnd.Next(config.NameConfig.middle_name_set.Length);
-            fullname = name.last_name_set[lastNameIndex] + " ";
-            fullname += name.middle_name_set[middleNameIndex] + " ";
-            fullname += name.first_Female_set[firstNameIndex];
-            return fullname;
+            if (genderIndex == 0)
+            {
+                int firstNameIndex = rnd.Next(config.NameConfig.first_Male_set.Length);
+                int lastNameIndex = rnd.Next(config.NameConfig.last_name_set.Length);
+                int middleNameIndex = rnd.Next(config.NameConfig.middle_name_set.Length);
+                fullname = name.last_name_set[lastNameIndex] + " ";
+                fullname += name.middle_name_set[middleNameIndex] + " ";
+                fullname += name.first_Male_set[firstNameIndex];
+                return fullname;
+            }
+            else if(genderIndex == 1) {
+                int firstNameIndex = rnd.Next(config.NameConfig.first_Female_set.Length);
+                int lastNameIndex = rnd.Next(config.NameConfig.last_name_set.Length);
+                int middleNameIndex = rnd.Next(config.NameConfig.middle_name_set.Length);
+                fullname = name.last_name_set[lastNameIndex] + " ";
+                fullname += name.middle_name_set[middleNameIndex] + " ";
+                fullname += name.first_Female_set[firstNameIndex];
+                return fullname;
+            }
+                return fullname ;
         }
 
         //generate a random class

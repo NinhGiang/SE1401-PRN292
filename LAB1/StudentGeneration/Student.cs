@@ -11,16 +11,16 @@ namespace StudentGeneration
     {
         protected string _UUID;
         protected string _fullname;
-        protected string _dayofbirth;
+        protected DateTime _dayofbirth;
         protected string _gender;
         protected string _class;
-        public string ID { get { return _UUID; } }
-        public string FullName { get { return _fullname; } }
-        public string DayOfBirth { get { return _dayofbirth; } }
-        public string Gender { get{ return _gender; } }
-        public string Class { get{ return _class; } }
+        public string ID { get { return _UUID; } set { _UUID = value; } }
+        public string FullName { get { return _fullname; } set { _fullname = value; } }
+        public DateTime DayOfBirth { get { return _dayofbirth; } set { _dayofbirth = value; } }
+        public string Gender { get{ return _gender; } set { _gender = value; } }
+        public string Class { get{ return _class; } set { _class = value; } }
 
-        protected Student(string ID, string FullName,string Dayofbirth,string Gender,string Class)
+        protected Student(string ID, string FullName,DateTime Dayofbirth,string Gender,string Class)
         {
             _UUID = ID;
             _fullname = FullName;
@@ -36,17 +36,13 @@ namespace StudentGeneration
             for (uint i = 0; i < number_student; i++)
             {
                 string UUID = Guid.NewGuid().ToString();//create new uuid
-                int gender_index = DataSetter.GetRandomGender();
-                //if Male
-                if (gender_index == 0)
-                {
-                    //create random Malename
-                    string fullname = DataSetter.RandomMaleName();
+                int gender_index = DataSetter.GetRandomGender();//create random gender
+                    //create random name by gender_index
+                    string fullname = DataSetter.RandomFullNameByGender(gender_index);
                     //birthday
 
                   
                     
-                }
 
             }
             return result;
