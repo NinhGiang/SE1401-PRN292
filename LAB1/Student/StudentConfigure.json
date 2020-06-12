@@ -1,0 +1,80 @@
+﻿{
+  "NameConfig": {
+    "last_name_set": [
+      "Nguyễn",
+      "Lê",
+      "Trần",
+      "Hồ",
+      "Nguyễn",
+      "Võ",
+      "Đặng",
+      "Đoàn",
+      "Hoàng",
+      "Nguyễn",
+      "Lưu",
+      "Phạm",
+      "Nguyễn"
+    ],
+    "middle_male_name_set": [
+      "Văn",
+      "Hoàng Bảo",
+      "Anh",
+      "Minh",
+      "Gia",
+      "Xuân",
+      "Đăng",
+      "Thiên",
+      "Thái",
+      "Việt"
+    ],
+    "first_male_name_set": [
+      "Đạt",
+      "Long",
+      "Thành",
+      "Dũng",
+      "Huy",
+      "Bình",
+      "Phúc",
+      "Hùng",
+      "Hoàng",
+      "Anh",
+      "Sơn",
+      "Hưng",
+      "Khánh",
+      "Dương",
+      "Duy",
+      "Nguyên"
+    ],
+    "middle_female_name_set": [
+      "Thị Thanh",
+      "Bảo",
+      "Ngọc",
+      "Thảo",
+      "Mai",
+      "Minh",
+      "Hương",
+      "Phương",
+      "Xuân",
+      "Trúc",
+      "Thu"
+    ],
+    "first_female_name_set": [
+      "Giang",
+      "Phương",
+      "Linh",
+      "Hà",
+      "Hương",
+      "Vy",
+      "Vân",
+      "Ngọc",
+      "Nguyên",
+      "Khánh",
+      "Lan",
+      "Trang",
+      "Thư",
+      "Thanh",
+      "Uyên",
+      "Châu"
+    ]
+  }
+}

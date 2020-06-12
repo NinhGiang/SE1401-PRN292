@@ -10,15 +10,39 @@ namespace LAB1
         {
             Console.OutputEncoding = Encoding.UTF8;
             Student[] student_list = Student.Create(100);
-            School ABC = new School(student_list);
+            Level[] level_list = Level.Create(3);
+            Field[] field_list = Field.Create(5);
+            Subject[] subject_list = Subject.Create();
+            School ABC = new School(student_list, level_list);
             string dir = ABC.createSchoolDir("Whatever");
             //ABC.save(@"..\..\Whatever\ABC.csv");
-            ABC.save(dir + "/ABC.csv");
-            Console.ReadLine();
+            ABC.saveStudent(dir + "/Students.csv");
+            ABC.saveStudent(dir + "/Students.json");
+            ABC.saveLevel(dir + "/Levels.csv");
+            ABC.saveLevel(dir + "/Levels.json");
+
+
+
+            //print for tracking
             foreach (Student std in student_list)
             {
                 std.print();
             }
+            foreach (Level lv in level_list)
+            {
+                lv.print();
+            }
+            Console.ReadLine();
+            foreach (Field fd in field_list)
+            {
+                fd.print();
+            }
+            Console.ReadLine();
+            foreach (Subject sbj in subject_list)
+            {
+                sbj.print();
+            }
+            Console.ReadLine();
         }
     }
 }

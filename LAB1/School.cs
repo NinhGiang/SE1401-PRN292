@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
+using Newtonsoft.Json;
 
 namespace LAB1
 {
     class School
     {
         private List<Student> _students_list;
-        public School(Student[] students)
+        private List<Level> _levels_list;
+        public School(Student[] students, Level[] levels)
         {
             _students_list = new List<Student>(students);
+            _levels_list = new List<Level>(levels);
         }
         public string createSchoolDir(String schoolName)
         {
@@ -18,12 +20,41 @@ namespace LAB1
             Console.WriteLine(dir);
             return dir;
         }
-        public void save(string filename)
+        //Save student list
+        public void saveStudent(string filename)
         {
-            String content = "ID, UUID, Fullname, Birthday\n";
-            foreach (Student student in _students_list)
+            String content = "UUID, Fullname, Gender, Birthday\n";
+            if (Path.GetExtension(filename) == ".csv")
             {
-                content += student.ID + ", " + student.UUID + ", " + student.FullName + ", " + student.Birthday + "\n";
+
+                foreach (Student student in _students_list)
+                {
+                    content += student.UUID + ", " + student.FullName + ", " + student.Gender + ", " + student.Birthday + "\n";
+                }
+
+            }
+            else if (Path.GetExtension(filename) == ".json")
+            {
+                content = JsonConvert.SerializeObject(this._students_list, Formatting.Indented);
+            }
+            File.WriteAllText(filename, content);
+        }
+        //Save level list
+        public void saveLevel(string filename)
+        {
+            String content = "UUID, Name\n";
+            if (Path.GetExtension(filename) == ".csv")
+            {
+
+                foreach (Level level in _levels_list)
+                {
+                    content += level.UUID + ", " + level.Name + "\n";
+                }
+
+            }
+            else if (Path.GetExtension(filename) == ".json")
+            {
+                content = JsonConvert.SerializeObject(this._students_list, Formatting.Indented);
             }
             File.WriteAllText(filename, content);
         }

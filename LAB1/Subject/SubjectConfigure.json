@@ -1,0 +1,30 @@
+﻿{
+  "SubjectNameConfig": {
+    "experimentalscience_subject_name_set": [
+      "Vật Lý",
+      "Hóa Học",
+      "Sinh Học"
+    ],
+    "language_subject_name_set": [
+      "Ngữ Văn",
+      "Tiếng Anh",
+      "Tiếng Đức"
+    ],
+    "math_subject_name_set": [
+      "Đại Số",
+      "Hình Học",
+      "Giải Tích"
+    ],
+    "miscellaneous_subject_name_set": [
+      "Công Nghệ",
+      "Thể Dục",
+      "Tin Học",
+      "Giáo Dục Quốc Phòng"
+    ],
+    "socialscience_subject_name_set": [
+      "Lịch Sử",
+      "Địa Lý",
+      "Giáo Dục Công Dân"
+    ]
+  }
+}
