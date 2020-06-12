@@ -11,13 +11,22 @@ namespace StudentGeneration
     {
         protected string _id;
         protected string _fullname;
+        protected DateTime _birth;
+        protected bool _gender;
+        protected string _class;
         public string ID { get { return _id; } }
         public string FullName { get { return _fullname; } }
+        public string Class { get { return _class; } }
+        public DateTime Birth { get { return _birth; } }
+        public bool Gender { get { return _gender; } }
 
-        protected Student(string ID, string FullName)
+        protected Student(string ID, string FullName, DateTime Birth, bool Gender, string Class)
         {
             _id = ID;
             _fullname = FullName;
+            _birth = Birth;
+            _gender = Gender;
+            _class = Class;
         }
 
         public static Student[] Create(uint number_student)
