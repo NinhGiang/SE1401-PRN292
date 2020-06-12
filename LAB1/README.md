@@ -48,7 +48,7 @@ Succesful: You have a new school database with 1800 students and 45 rooms
 ./schoolDatabaseGenerator <<school_name>> -s 2000 -r 40
 Succesful: You have a new school database with 2000 students and 40 rooms
 # hoặc
-./schoolDatabaseGenerator <<school_name>> -r 40 -s 2000
+./schoolDatabaseGenerator <<school_name>> -s 2000 -r 40 
 Succesful: You have a new school database with 2000 students and 40 rooms
 ```
 
