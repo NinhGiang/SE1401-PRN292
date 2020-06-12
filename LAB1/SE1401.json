@@ -75,6 +75,29 @@
             "Thắng",
             "Đức"
         ]
+    },
+    "LevelList": {
+        "LevelName": [
+            "10",
+            "11",
+            "12"
+        ]
+    },
+    "fieldNameList": {
+        "SubjectName": [
+            "Math",
+            "Chemistry",
+            "Physic",
+            "Liturature",
+            "English",
+            "Biology",
+            "History",
+            "Geography",
+            "Physical Education",
+            "Ethic",
+            "Art",
+            "Music"
+        ]
     }
 
 }

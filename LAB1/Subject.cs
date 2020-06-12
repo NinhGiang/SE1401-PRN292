@@ -4,8 +4,9 @@ using System.Text;
 
 namespace LAB1
 {
-    class School
+    class Subject
     {
-
+        protected string level;
+        
     }
 }

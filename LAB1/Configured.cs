@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LAB1;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,6 +8,7 @@ namespace Lab_1
     class Configured
     {
         public NameConfig NameConfig { get; set; }
+        public LevelList LevelList { get; set; }
     }
     class NameConfig
     {
@@ -17,4 +19,9 @@ namespace Lab_1
         public string[] FemaleNameSet { get; set; }
         public string[] MaleNameSet { get; set; }
     }
+    class LevelList
+    {
+        public string[] LevelName { get; set; }
+    }
+
 }
