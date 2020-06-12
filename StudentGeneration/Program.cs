@@ -8,7 +8,7 @@ namespace StudentGeneration
         {
             Student[] student_list = Student.Create(100);
             School ABC = new School(student_list);
-            ABC.save(@"..\..\..\ABC.csv");
+            ABC.save(@"..\..\..\ABC.json");
             Console.ReadLine();
         }
     }
