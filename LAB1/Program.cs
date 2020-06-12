@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace LAB1
 {
@@ -6,8 +7,10 @@ namespace LAB1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadLine();
+            School sc = new School();
+            sc.School_name = "ABC";
+            string directorypath = @"..\..\..\" + sc.School_name;
+            Directory.CreateDirectory(directorypath);
         }
     }
 }
