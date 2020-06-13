@@ -2,7 +2,7 @@
   "profiles": {
     "LAB1": {
       "commandName": "Project",
-      "commandLineArgs": "FPT -s 500 "
+      "commandLineArgs": "FPT -s 700 -r 30"
     }
   }
 }

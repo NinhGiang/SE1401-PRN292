@@ -94,7 +94,7 @@ namespace LAB1
                     }
                     else
                     {
-                        if (!Utils.CheckStudentNumber(roomNum))
+                        if (!Utils.CheckRoomNumber(roomNum))
                         {
                             result += "Error : Room number must be below 100 .\n";
                             foundError = true;

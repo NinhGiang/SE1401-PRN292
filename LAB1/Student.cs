@@ -62,6 +62,7 @@ namespace LAB1
 
             int studentNumPerClass = (int) Math.Floor((double)numberOfStudent / classList.Length);
             int leftover = numberOfStudent - studentNumPerClass * classList.Length;
+            int count = 0;
 
             foreach (Level level in levelList)
             {
@@ -88,7 +89,7 @@ namespace LAB1
 
                         int age = Utils.GerateRandomAge(levelNum);
                         DateTime birth = Utils.GenerateRandomDateTime(2020 - age);
-                        list[i] = new Student(id, name, birth, gender, classID);
+                        list[count++] = new Student(id, name, birth, gender, classID);
                     }
                 }
             }
