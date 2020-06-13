@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
@@ -8,23 +9,34 @@ namespace LAB1
     {
         static void Main(string[] args)
         {
+            //Allow output unicode
             Console.OutputEncoding = Encoding.UTF8;
-            Student[] student_list = Student.Create(100);
-            Level[] level_list = Level.Create(3);
-            Field[] field_list = Field.Create(5);
-            //Subject[] subject_list = Subject.Create();
-            Room[] room_list = Room.Create(100);
-            School ABC = new School(student_list, level_list);
+            //New empty school
+            School ABC = new School();
+            //Create directory
             string dir = ABC.createSchoolDir("Whatever");
-            //ABC.save(@"..\..\Whatever\ABC.csv");
+            //Create student list, save csv and json
+            Student[] student_list = Student.Create(100);
+            ABC.StudentList = new List<Student>(student_list); //add for other usage
             ABC.saveStudent(dir + "/Students.csv");
             ABC.saveStudent(dir + "/Students.json");
+            //Create level list, save csv and json
+            Level[] level_list = Level.Create(3);
+            ABC.LevelList = new List<Level>(level_list); //add for other usage
             ABC.saveLevel(dir + "/Levels.csv");
             ABC.saveLevel(dir + "/Levels.json");
-            //Create Subject only after generating Levels.json
-            Subject[] subject_list = Subject.Create();
-
-            //print for tracking
+            //Create class list ONLY AFTER save levels.json
+            Class[] class_list = Class.Create(100);
+            ABC.ClassList = new List<Class>(class_list); //add for other usage
+            ABC.saveClass(dir + "/Classes.csv");
+            ABC.saveClass(dir + "/Classes.json");
+            //Create room list ONLY AFTER save classes.json
+            Room[] room_list = Room.Create(100);
+            ABC.RoomList = new List<Room>(room_list); //add for other usage
+            ABC.saveRoom(dir + "/Rooms.csv");
+            ABC.saveRoom(dir + "/Rooms.json");
+            //Fill the ABC
+            Field[] field_list = Field.Create(5);
             foreach (Student std in student_list)
             {
                 std.print();
@@ -36,14 +48,6 @@ namespace LAB1
             foreach (Field fd in field_list)
             {
                 fd.print();
-            }
-            foreach (Subject sbj in subject_list)
-            {
-                sbj.print();
-            }
-            foreach (Room rm in room_list)
-            {
-                rm.print();
             }
         }
     }

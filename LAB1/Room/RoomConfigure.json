@@ -1,0 +1,502 @@
+[
+  {
+    "UUID": "98c33a0b-01be-4344-a41b-42a5d905455f",
+    "Class": "10A1",
+    "No": 0
+  },
+  {
+    "UUID": "b2eef985-bfb2-40ea-bed5-091e66550634",
+    "Class": "11A1",
+    "No": 1
+  },
+  {
+    "UUID": "5bdd321b-8631-4cdb-92f4-37cff35ca4a0",
+    "Class": "12A1",
+    "No": 2
+  },
+  {
+    "UUID": "4b3d8b3c-b9f6-4083-b8e8-d2ed287f6f10",
+    "Class": "10A2",
+    "No": 3
+  },
+  {
+    "UUID": "502530f3-0fdd-459b-b9ae-0757a810fd08",
+    "Class": "11A2",
+    "No": 4
+  },
+  {
+    "UUID": "3b9f2e66-d305-4177-b689-a33aa3ef69a7",
+    "Class": "12A2",
+    "No": 5
+  },
+  {
+    "UUID": "32d8a5ea-f132-4828-b767-daf2df21f5b7",
+    "Class": "10A3",
+    "No": 6
+  },
+  {
+    "UUID": "028042e1-c171-46f1-8993-43ea7bc5137e",
+    "Class": "11A3",
+    "No": 7
+  },
+  {
+    "UUID": "5691243f-d90c-4436-aded-88572f2ac1ea",
+    "Class": "12A3",
+    "No": 8
+  },
+  {
+    "UUID": "f36d9106-04c9-4703-82ea-307cdb98f19a",
+    "Class": "10A4",
+    "No": 9
+  },
+  {
+    "UUID": "fa3ae871-5a30-4350-b8c4-fb824ee97d1d",
+    "Class": "11A4",
+    "No": 10
+  },
+  {
+    "UUID": "e66c0c18-2fb8-45fc-9811-a0e452a4e027",
+    "Class": "12A4",
+    "No": 11
+  },
+  {
+    "UUID": "171f2027-4792-452a-b8ec-e05a8c63dd95",
+    "Class": "10A5",
+    "No": 12
+  },
+  {
+    "UUID": "b5763f7e-d5e7-4fd8-b993-1bdc83d8a8c5",
+    "Class": "11A5",
+    "No": 13
+  },
+  {
+    "UUID": "2e950fb7-a583-4bdc-9e03-d6a52e057328",
+    "Class": "12A5",
+    "No": 14
+  },
+  {
+    "UUID": "e1e57903-e95c-4954-a2c9-7617eff438d7",
+    "Class": "10A6",
+    "No": 15
+  },
+  {
+    "UUID": "0d3595e6-fa19-403a-ad29-b56453e76882",
+    "Class": "11A6",
+    "No": 16
+  },
+  {
+    "UUID": "02458115-b76d-41ce-8207-6be6dba77a3d",
+    "Class": "12A6",
+    "No": 17
+  },
+  {
+    "UUID": "52810603-14e4-4dae-b3e8-ee40624bddd3",
+    "Class": "10A7",
+    "No": 18
+  },
+  {
+    "UUID": "a506a073-27a3-438a-a466-272cd03e9bc2",
+    "Class": "11A7",
+    "No": 19
+  },
+  {
+    "UUID": "03d07934-f05a-45de-8740-d1479a9e93da",
+    "Class": "12A7",
+    "No": 20
+  },
+  {
+    "UUID": "7ed72437-75d5-440b-9310-1c58ca54d195",
+    "Class": "10A8",
+    "No": 21
+  },
+  {
+    "UUID": "cddfc340-3ded-482f-beab-4adeb0b5c52c",
+    "Class": "11A8",
+    "No": 22
+  },
+  {
+    "UUID": "ec40e3f3-77ad-4a14-ba83-c7c5c10c3bfc",
+    "Class": "12A8",
+    "No": 23
+  },
+  {
+    "UUID": "158a4820-5360-4f00-bc48-824b1aacd27b",
+    "Class": "10A9",
+    "No": 24
+  },
+  {
+    "UUID": "5701e758-3711-4219-8752-9d0f15d72732",
+    "Class": "11A9",
+    "No": 25
+  },
+  {
+    "UUID": "d352245f-ca39-4eb0-a066-0a359033e480",
+    "Class": "12A9",
+    "No": 26
+  },
+  {
+    "UUID": "64542397-93af-4673-a517-1b647036751d",
+    "Class": "10B1",
+    "No": 27
+  },
+  {
+    "UUID": "60599623-d8d0-4ac2-9712-e23bec6d062e",
+    "Class": "11B1",
+    "No": 28
+  },
+  {
+    "UUID": "375ad48c-0c6f-47eb-b6af-0797d7e7bc07",
+    "Class": "12B1",
+    "No": 29
+  },
+  {
+    "UUID": "2069f6a0-323f-4c48-b3f0-b5ed9f6d3ab0",
+    "Class": "10B2",
+    "No": 30
+  },
+  {
+    "UUID": "fb80b84a-07e8-4899-9c8a-374f1f521df4",
+    "Class": "11B2",
+    "No": 31
+  },
+  {
+    "UUID": "5e9af393-5c81-4c1d-9d56-0b6aae426315",
+    "Class": "12B2",
+    "No": 32
+  },
+  {
+    "UUID": "563f8135-2207-452e-bdff-94acbff2067f",
+    "Class": "10B3",
+    "No": 33
+  },
+  {
+    "UUID": "b78889a3-1241-4a43-a571-250bde14fafd",
+    "Class": "11B3",
+    "No": 34
+  },
+  {
+    "UUID": "22e3feac-3da3-4c19-b161-72dbe85ce51a",
+    "Class": "12B3",
+    "No": 35
+  },
+  {
+    "UUID": "41f6febd-017a-4c26-b9bb-98334c269a03",
+    "Class": "10B4",
+    "No": 36
+  },
+  {
+    "UUID": "d8c36f46-6f03-40e3-818a-4e2c93cddcc5",
+    "Class": "11B4",
+    "No": 37
+  },
+  {
+    "UUID": "318c2387-4d54-4f09-899c-83023e6311e0",
+    "Class": "12B4",
+    "No": 38
+  },
+  {
+    "UUID": "47579f15-804b-4f0f-b3c5-9853e76ddd94",
+    "Class": "10B5",
+    "No": 39
+  },
+  {
+    "UUID": "6db7d6e7-3af7-4863-b9aa-1d5d7a83473a",
+    "Class": "11B5",
+    "No": 40
+  },
+  {
+    "UUID": "adf47e3b-2440-4460-a1d0-e0cb9e5d6a17",
+    "Class": "12B5",
+    "No": 41
+  },
+  {
+    "UUID": "afc97089-dece-4a07-a724-abcb6519bdfd",
+    "Class": "10B6",
+    "No": 42
+  },
+  {
+    "UUID": "06f827db-39dd-4ac1-a352-0199647ef132",
+    "Class": "11B6",
+    "No": 43
+  },
+  {
+    "UUID": "44bfc0f7-61db-4462-a018-59b388dcf89f",
+    "Class": "12B6",
+    "No": 44
+  },
+  {
+    "UUID": "26a86d3e-0eb9-4ea7-8d46-109135d8c240",
+    "Class": "10B7",
+    "No": 45
+  },
+  {
+    "UUID": "5d5bc758-c1fa-4290-81bf-b4e883dde1b5",
+    "Class": "11B7",
+    "No": 46
+  },
+  {
+    "UUID": "3e884202-4a20-4e84-be3f-393ee5a4e018",
+    "Class": "12B7",
+    "No": 47
+  },
+  {
+    "UUID": "14fee31d-1cd6-453c-983d-0cb28bc6996e",
+    "Class": "10B8",
+    "No": 48
+  },
+  {
+    "UUID": "41eee92e-ecb8-44b1-9dde-fa5008b68773",
+    "Class": "11B8",
+    "No": 49
+  },
+  {
+    "UUID": "976d6d99-f13b-43bf-bc0c-363aa5b43c4b",
+    "Class": "12B8",
+    "No": 50
+  },
+  {
+    "UUID": "5b8300a2-3deb-430c-8344-dd08b7ac94c9",
+    "Class": "10B9",
+    "No": 51
+  },
+  {
+    "UUID": "384882f5-c7d0-45d7-b2b2-37af4e79a421",
+    "Class": "11B9",
+    "No": 52
+  },
+  {
+    "UUID": "4b77be25-5cd9-448d-be4a-012dc5930e53",
+    "Class": "12B9",
+    "No": 53
+  },
+  {
+    "UUID": "0c8d1f5d-923d-425c-a5e3-22abfeb85278",
+    "Class": "10C1",
+    "No": 54
+  },
+  {
+    "UUID": "0943e017-d826-4858-930d-f107e5838319",
+    "Class": "11C1",
+    "No": 55
+  },
+  {
+    "UUID": "627021f4-8273-44ea-a56b-5bb7b0c14348",
+    "Class": "12C1",
+    "No": 56
+  },
+  {
+    "UUID": "0af36b2a-062e-43de-b8fc-18626021b4ea",
+    "Class": "10C2",
+    "No": 57
+  },
+  {
+    "UUID": "6831c1d4-a180-4161-82e0-1abaf2868a5f",
+    "Class": "11C2",
+    "No": 58
+  },
+  {
+    "UUID": "26a4fb3c-a7f6-498a-b2aa-9b9659533978",
+    "Class": "12C2",
+    "No": 59
+  },
+  {
+    "UUID": "e1287a95-8ab9-4fd2-a409-5eddeb2275df",
+    "Class": "10C3",
+    "No": 60
+  },
+  {
+    "UUID": "068c324c-8293-470e-a5ee-9852aab2e5db",
+    "Class": "11C3",
+    "No": 61
+  },
+  {
+    "UUID": "891f4ad1-2f52-41c5-afda-48aba727a58b",
+    "Class": "12C3",
+    "No": 62
+  },
+  {
+    "UUID": "858e73a4-3559-4e5d-be4d-afde71b47e7c",
+    "Class": "10C4",
+    "No": 63
+  },
+  {
+    "UUID": "75ea72d9-93dd-46d7-be73-fd01528417c0",
+    "Class": "11C4",
+    "No": 64
+  },
+  {
+    "UUID": "d1c6ffc9-f905-427c-b3dd-ea51b9e029c2",
+    "Class": "12C4",
+    "No": 65
+  },
+  {
+    "UUID": "f52d7e4f-e160-4fe9-8664-48202718b665",
+    "Class": "10C5",
+    "No": 66
+  },
+  {
+    "UUID": "ac9328f6-211a-4bf6-adc0-d281d38b236d",
+    "Class": "11C5",
+    "No": 67
+  },
+  {
+    "UUID": "f3cfb3a4-b7a5-4dd0-ae28-c0619ec28fd5",
+    "Class": "12C5",
+    "No": 68
+  },
+  {
+    "UUID": "195d2129-241a-4653-beb8-a0a2745b9457",
+    "Class": "10C6",
+    "No": 69
+  },
+  {
+    "UUID": "7862a244-302b-4b4f-8797-7488f6a24b84",
+    "Class": "11C6",
+    "No": 70
+  },
+  {
+    "UUID": "1cc3c8f3-e2f7-47dd-b214-81f2ac995647",
+    "Class": "12C6",
+    "No": 71
+  },
+  {
+    "UUID": "bb5953d4-8cc8-48dd-b462-1636d2a7c7e9",
+    "Class": "10C7",
+    "No": 72
+  },
+  {
+    "UUID": "7cf9cfd6-1af2-4f08-bb6b-10551ccbb31b",
+    "Class": "11C7",
+    "No": 73
+  },
+  {
+    "UUID": "c76d60c3-79d4-439d-953e-96a95e89cdb2",
+    "Class": "12C7",
+    "No": 74
+  },
+  {
+    "UUID": "79f04054-3632-48f3-8a7a-35ffbb43a94c",
+    "Class": "10C8",
+    "No": 75
+  },
+  {
+    "UUID": "12b2c99c-73e4-4e2c-a40d-e76ebbb13d24",
+    "Class": "11C8",
+    "No": 76
+  },
+  {
+    "UUID": "908a4b9e-29e2-461c-8a67-8474b816e83c",
+    "Class": "12C8",
+    "No": 77
+  },
+  {
+    "UUID": "6157719b-c610-4aa5-bfc6-9b439e0150a8",
+    "Class": "10C9",
+    "No": 78
+  },
+  {
+    "UUID": "16f23ff6-8fb2-4a74-ac72-0aab28a7875c",
+    "Class": "11C9",
+    "No": 79
+  },
+  {
+    "UUID": "1e4cb21e-43e0-4a9f-b1d1-fdec1cb03a5a",
+    "Class": "12C9",
+    "No": 80
+  },
+  {
+    "UUID": "6c25b2d3-9602-472f-8db9-96ac21ab8e30",
+    "Class": "10D1",
+    "No": 81
+  },
+  {
+    "UUID": "dfb524ce-38f2-4cfa-84ce-d618d4d90733",
+    "Class": "11D1",
+    "No": 82
+  },
+  {
+    "UUID": "901b5132-5ab0-4f2d-89ad-3196c00b5b6b",
+    "Class": "12D1",
+    "No": 83
+  },
+  {
+    "UUID": "003117e2-1e3c-4b06-8734-37ce02d1bdfe",
+    "Class": "10D2",
+    "No": 84
+  },
+  {
+    "UUID": "887b8773-6153-423a-8bdf-3f98c0b2fc53",
+    "Class": "11D2",
+    "No": 85
+  },
+  {
+    "UUID": "dcaabf30-3839-401c-8301-6292e2cdee90",
+    "Class": "12D2",
+    "No": 86
+  },
+  {
+    "UUID": "b54b92b3-6a50-4487-b2c4-80246b48afe7",
+    "Class": "10D3",
+    "No": 87
+  },
+  {
+    "UUID": "27beecfd-7775-4222-9142-9180eaa78d17",
+    "Class": "11D3",
+    "No": 88
+  },
+  {
+    "UUID": "47e885e8-4393-4945-9df6-15fe4cee42bc",
+    "Class": "12D3",
+    "No": 89
+  },
+  {
+    "UUID": "e6cf78c5-086b-4a05-a54b-03e18fa054b5",
+    "Class": "10D4",
+    "No": 90
+  },
+  {
+    "UUID": "8370d663-5949-4570-8a71-5db893cc652f",
+    "Class": "11D4",
+    "No": 91
+  },
+  {
+    "UUID": "190d149e-2d2e-4a64-b69a-168e74405c38",
+    "Class": "12D4",
+    "No": 92
+  },
+  {
+    "UUID": "586b793c-85a0-48e6-9aa6-cc655cb6d6ad",
+    "Class": "10D5",
+    "No": 93
+  },
+  {
+    "UUID": "ba79a19f-74c0-46b9-85e3-0c245e15803f",
+    "Class": "11D5",
+    "No": 94
+  },
+  {
+    "UUID": "1a69d89d-5182-48f8-afbc-a4ee09402f48",
+    "Class": "12D5",
+    "No": 95
+  },
+  {
+    "UUID": "71ca653d-0923-4e78-8d84-58676d3ae279",
+    "Class": "10D6",
+    "No": 96
+  },
+  {
+    "UUID": "b5e2a659-89e0-4db1-b8ef-573f1b5bac1f",
+    "Class": "11D6",
+    "No": 97
+  },
+  {
+    "UUID": "ffb3460f-6f79-4a6d-a14e-211e97353074",
+    "Class": "12D6",
+    "No": 98
+  },
+  {
+    "UUID": "6cf4d209-ebec-49d6-a422-6066171c053c",
+    "Class": "10D7",
+    "No": 99
+  }
+]
