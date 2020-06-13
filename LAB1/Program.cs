@@ -8,6 +8,8 @@ namespace LAB1
         {
             Console.WriteLine("lời như đồn");
             Console.ReadLine();
+            Level l = new Level();
+            
         }
     }
 }
