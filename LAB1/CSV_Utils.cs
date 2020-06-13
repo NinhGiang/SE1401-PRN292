@@ -8,14 +8,31 @@ namespace LAB1
     {
         private static string attendanceCSV;
         private static string classCSV;
-        private static string FieldCSV;
-        private static string GradeCSV;
-        private static string LevelCSV;
-        private static string RoomCSV;
+        private static string fieldCSV;
+        private static string levelCSV;
+        private static string roomCSV;
         private static string studentCSV;
         private static string subjectCSV;
         private static string teacherCSV;
 
+        private static string directory;
 
+        private static void setPath()
+        {
+            attendanceCSV = directory + "\\" + "Attendance.CSV";
+            classCSV = directory + "\\" + "Class.CSV";
+            fieldCSV = directory + "\\" + "Field.CSV";
+            levelCSV = directory + "\\" + "Level.CSV";
+            roomCSV = directory + "\\" + "Room.CSV";
+            studentCSV = directory + "\\" + "Student.CSV";
+            subjectCSV = directory + "\\" + "Subject.CSV";
+            teacherCSV = directory + "\\" + "Teacher.CSV";
+        }
+        
+        public static void setDirectory(string path)
+        {
+            directory = path;
+            setPath();
+        }
     }
 }
