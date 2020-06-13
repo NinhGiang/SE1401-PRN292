@@ -10,6 +10,20 @@ namespace LAB1
         private static int _student_num;
         private static int _room_num;
 
+
+        public static string SchoolName
+        {
+            get { return _school_name; }
+        }
+        public static int StudentNum
+        {
+            get { return _student_num; }
+        }
+        public static int RoomNum
+        {
+            get { return _room_num; }
+        }
+
         public static int getIndexFromArray (string[] args, string value)
         {
             int result = -1;
@@ -63,7 +77,7 @@ namespace LAB1
                     }
                     else
                     {
-                        if (Utils.CheckStudentNumber(studentNum))
+                        if (!Utils.CheckStudentNumber(studentNum))
                         {
                             result += "Error : Student number must be 500 to 3000 .\n";
                             foundError = true;
@@ -80,7 +94,7 @@ namespace LAB1
                     }
                     else
                     {
-                        if (Utils.CheckStudentNumber(roomNum))
+                        if (!Utils.CheckStudentNumber(roomNum))
                         {
                             result += "Error : Room number must be below 100 .\n";
                             foundError = true;

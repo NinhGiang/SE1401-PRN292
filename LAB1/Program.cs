@@ -12,18 +12,18 @@ namespace LAB1
         
         static void Main(string[] args)
         {
-            string checkError = CLIHandler.CheckCLI(args);
-            if (checkError.Length != 0)
+            string info = CLIHandler.CheckCLI(args);
+            if (info.Length != 0)
             {
-                Console.WriteLine(checkError);
+                Console.WriteLine(info);
             }
             else
             {
                 Console.WriteLine("Test Lab");
 
-                string schoolName = "ABC";
-                int roomAndClassNum = 20;
-                int studentNum = 200;
+                string schoolName = CLIHandler.SchoolName;
+                int roomAndClassNum = CLIHandler.RoomNum;
+                int studentNum = CLIHandler.StudentNum;
 
                 School school = new School();
                 school.SchoolName = schoolName;

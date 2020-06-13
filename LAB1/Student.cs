@@ -56,13 +56,50 @@ namespace LAB1
         {
             Student[] list = new Student[numberOfStudent];
             Level[] levelList = DatabaseHandler.GetLevelList();
-                        Random rand = new Random();
-            for (int i = 0; i < numberOfStudent; i++)
+            Random rand = new Random();
+
+            Class[] classList = DatabaseHandler.GetClassList();
+
+            int studentNumPerClass = (int) Math.Floor((double)numberOfStudent / classList.Length);
+            int leftover = numberOfStudent - studentNumPerClass * classList.Length;
+
+            foreach (Level level in levelList)
+            {
+                string levelID = level.UUID;
+                int levelNum = Int32.Parse(level.Name);
+                string[] classIDList = DatabaseHandler.GetClassIDByLevelList(levelID);
+                foreach (string classID in classIDList)
+                {
+                    int additionalStudent = 0;
+                    if (leftover > 0 && studentNumPerClass < 50)
+                    {
+                        while (studentNumPerClass + additionalStudent < 50 && leftover > 0 )
+                        {
+                            additionalStudent++;
+                            leftover--;
+                        }
+                    }
+
+                    for (int i = 0; i < studentNumPerClass + additionalStudent ; i++)
+                    {
+                        String id = Guid.NewGuid().ToString();
+                        bool gender = Utils.GenerateRandomGender();
+                        String name = Utils.GenerateRandomFullName(gender);
+
+                        int age = Utils.GerateRandomAge(levelNum);
+                        DateTime birth = Utils.GenerateRandomDateTime(2020 - age);
+                        list[i] = new Student(id, name, birth, gender, classID);
+                    }
+                }
+            }
+            
+
+/*            for (int i = 0; i < numberOfStudent; i++)
             {
                 String id = Guid.NewGuid().ToString();
                 bool gender = Utils.GenerateRandomGender();
                 String name = Utils.GenerateRandomFullName(gender);
-                int level = rand.Next(10, 12);
+                
                 int age = Utils.GerateRandomAge(level);
                 DateTime birth = Utils.GenerateRandomDateTime(2020 - age);
                 String levelID = level.ToString();
@@ -76,7 +113,7 @@ namespace LAB1
                 string[] classIDList = DatabaseHandler.GetClassIDByLevelList(levelID);
                 string classID = classIDList[rand.Next(classIDList.Length)];
                 list[i] = new Student(id, name, birth, gender,classID);
-            }
+            }*/
             return list;
         }
     }

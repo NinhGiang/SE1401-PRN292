@@ -49,10 +49,9 @@ namespace LAB1
             Level[] levelList = DatabaseHandler.GetLevelList();
             Class[] list = new Class[ids.Count];
             int count = 0;
-            int numberOfClass = ids.Count / levelList.Length;
-            int leftover = ids.Count - numberOfClass * levelList.Length;
+            int numberOfClass = (int) Math.Floor((double)ids.Count / levelList.Length);
+            int leftover = ids.Count - numberOfClass * levelList.Length; // ids.Count % numberOfClass does not work
             int levelIndex = 0;
-            Random rand = new Random();
             int classLevelCount = 1;
             foreach (KeyValuePair<string,string> entry in ids)
             {
