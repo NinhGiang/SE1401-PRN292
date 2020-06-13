@@ -10,20 +10,21 @@ namespace StudentGeneration
     {
         static void Main(string[] args)
         {
+            Console.ReadLine();
             FileDataManagement.createDirectory("abc");
 
             List<Level> levels = Level.createLevels(3);
             FileDataManagement.saveLevels("abc", levels);
 
-            List<Room> rooms = Room.createRoomRandomly(20);
+            List<Room> rooms = Room.createRoomRandomly(45);
             FileDataManagement.saveRooms("abc", rooms);
 
-            List<SchoolClass> classes = SchoolClass.createClasses("abc", 20);
+            List<SchoolClass> classes = SchoolClass.createClasses("abc", 45);
             FileDataManagement.saveClass("abc", classes);
 
-            List<Student> students = Student.CreateStudentRandomly(50);
+            List<Student> students = Student.CreateStudentRandomly(2000);
             FileDataManagement.saveStudents("abc", students);
-            
+            Console.ReadLine();
         }
 
         public static void displayHelp()

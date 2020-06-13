@@ -62,6 +62,10 @@ namespace StudentGeneration
             List<Student> students = new List<Student>();
             Dictionary<string, int> classes = new Dictionary<string, int>();
 
+            //finding the general number of students of a class
+            int students_of_class = (int)Math.Round((double)(number_of_students / DataGetting.GetRoomList().Count),
+    MidpointRounding.ToZero) + 1;
+
             for (int i = 0; i < number_of_students; i++)
             {
                 //generate uuid
@@ -73,21 +77,16 @@ namespace StudentGeneration
                 //generate gender
                 string gender_gen = Generator.createGenderRandomly();
 
-                //generate birthday
-                int year = Generator.getRandomInteger(2004, 2007);
-                DateTime dob = Generator.getRandomDate(year);
-
                 //generate class
                 int value;
                 string current_class = "";
-
                 do
                 {
                     value = 0;
                     string[] class_info = DataGetting.GetClassData();
                     if (classes.TryGetValue(class_info[0], out value))
                     {
-                        if (value < 35)
+                        if (value < students_of_class)
                         {
                             current_class = class_info[0];
                             classes[current_class] = value + 1;
@@ -99,7 +98,21 @@ namespace StudentGeneration
                         current_class = class_info[0];
                         classes.Add(current_class, value);
                     }
-                } while (value > 35 || value == 1);
+                } while (value > students_of_class);
+
+
+                //generate birthday
+                int year;
+                if (current_class.Contains("10"))
+                {
+                    year = Generator.getRandomInteger(2001, 2005);
+                }
+                else
+                {
+                    year = current_class.Contains("11") ? Generator.getRandomInteger(2000, 2004) :
+                        Generator.getRandomInteger(1999, 2003);
+                }
+                DateTime dob = Generator.getRandomDate(year);
 
                 //Add student to student list
                 students.Add(new Student(student_id, fullname, gender_gen,
