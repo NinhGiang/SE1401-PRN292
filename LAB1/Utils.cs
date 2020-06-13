@@ -11,7 +11,7 @@ namespace LAB1
         private static String content = File.ReadAllText(@"..\..\..\Configuration.json");
         private static Configuration config = JsonSerializer.Deserialize<Configuration>(content);
         private static Random rand = new Random();
-        public static String getRandomFullName(Boolean gender)
+        public static String GenerateRandomFullName(Boolean gender)
         {
             String name;
             int lastNameIndex = rand.Next(config.NameConfig.last_name_set.Length);
@@ -33,7 +33,7 @@ namespace LAB1
             }
             return name;
         }
-        public static bool GetRandomGender()
+        public static bool GenerateRandomGender()
         {
             bool gender = false;
             int randomGender = rand.Next(1, 3);//random 1 and 2
@@ -43,13 +43,13 @@ namespace LAB1
             }
             return gender;
         }
-        public static DateTime GetRandomDateTime(int year)
+        public static DateTime GenerateRandomDateTime(int year)
         {
             DateTime start = new DateTime(year, 1, 1);
             DateTime end = new DateTime(year + 1, 12, 31);
             return start.AddDays(rand.Next((end - start).Days));
         }
-        public static int GetRandomAge(int level)
+        public static int GerateRandomAge(int level)
         {
             int age;
             if (level == 10)
@@ -88,9 +88,15 @@ namespace LAB1
 
             return dict;
         }
-        public static int GetRandomStudentNumber()
+        public static int GenerateRandomStudentNumber()
         {
             return rand.Next(500, 3001);
+        }
+        public static int GenerateRandomStudentNumberByRoomNumber(int roomNumber)
+        {
+            int minNum = roomNumber * 30;
+            int maxNum = roomNumber * 50;
+            return rand.Next(minNum, maxNum);
         }
         public static bool CheckStudentNumber(int number)
         {
@@ -100,9 +106,11 @@ namespace LAB1
             }
             return false;
         }
-        public static int GetRandomRoomNumber()
+        public static int GenerateRandomRoomNumberByStudentNumber(int studentNumber)
         {
-            return rand.Next(10, 100);
+            int minNum = (int) Math.Ceiling( (double) studentNumber / 50);
+            int maxNum = (int)Math.Ceiling((double)studentNumber / 30);
+            return rand.Next(minNum, maxNum);
         }
         public static bool CheckRoomNumber(int number)
         {

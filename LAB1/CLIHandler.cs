@@ -82,12 +82,26 @@ namespace LAB1
                         }
                     }
                 }
+
+
                 if (studentNumIndex == 0 && roomNumIndex == 0 )
                 {
-                    studentNum = Utils.GetRandomStudentNumber();
+                    studentNum = Utils.GenerateRandomStudentNumber();
                     roomNum = Utils.GetRandomRoomNumber();
+                }
+                else if (studentNumIndex > 0 && roomNumIndex == 0)
+                {
+                    roomNum = Utils.GetRandomRoomNumber();
+                }
+                else if (studentNumIndex == 0 && roomNumIndex > 0)
+                {
 
                 }
+                else 
+                {
+
+                }
+
 
             }
             return result;
