@@ -10,8 +10,8 @@ namespace LAB1
         {
             Random rnd = new Random();
             //ganerate random birthday
-            DateTime from = new DateTime(2002, 1, 1);
-            DateTime to = new DateTime(2004, 12, 31);
+            DateTime from = new DateTime(2000, 1, 1);
+            DateTime to = new DateTime(2006, 12, 31);
             var range = new TimeSpan(to.Ticks - from.Ticks);
             TimeSpan randTimeSpan = TimeSpan.FromSeconds((long)(range.TotalSeconds - rnd.Next(0, (int)range.TotalSeconds)));
             DateTime birthday = from + randTimeSpan;

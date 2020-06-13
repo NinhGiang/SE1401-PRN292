@@ -54,7 +54,7 @@ namespace LAB1
             }
             else if (Path.GetExtension(filename) == ".json")
             {
-                content = JsonConvert.SerializeObject(this._students_list, Formatting.Indented);
+                content = JsonConvert.SerializeObject(this._levels_list, Formatting.Indented);
             }
             File.WriteAllText(filename, content);
         }
