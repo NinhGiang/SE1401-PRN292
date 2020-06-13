@@ -63,11 +63,62 @@ namespace LAB1.DataGeneration
             }
             return null;
         }
+
+        public static List<string> GetDataInColumn(string link, int column)
+        {
+            List<string> list = new List<string>();
+            StreamReader sr = new StreamReader(link);
+            try
+            {
+                sr.ReadLine();
+                while (!sr.EndOfStream)
+                {
+                    string line = sr.ReadLine();
+                    string[] split = line.Split(',');                  
+                        list.Add(split[column]);                  
+                }
+                sr.Close();
+                return list;
+            }
+            catch (EndOfStreamException ex)
+            {
+                Console.WriteLine("Error in GetDataInColumn : " + ex.Message);
+            }
+            return null;
+        }
         public static List<string> GetSubjectListByField(string fieldID)
         {
             string link = @"..\..\..\DataGeneration\Subject.csv";
             int column = GetColumn(link, "Field");
             return GetDataInColumn(link, fieldID, column);
+        }
+
+        public static List<string> GetClassesIDByRoom()
+        {
+            string link = @"..\..\..\DataGeneration\Room.csv";
+            int column = GetColumn(link, "Class");
+            return GetDataInColumn(link, column);
+        }
+
+        public static List<string> GetRoomIDByRoom()
+        {
+            string link = @"..\..\..\DataGeneration\Room.csv";
+            int column = GetColumn(link, "ID");
+            return GetDataInColumn(link, column);
+        }
+
+        public static List<string> GetLevelNameByLevel()
+        {
+            string link = @"..\..\..\DataGeneration\Level.csv";
+            int column = GetColumn(link, "Name");
+            return GetDataInColumn(link, column);
+        }
+
+        public static List<string> GetLevelIDByLevel()
+        {
+            string link = @"..\..\..\DataGeneration\Level.csv";
+            int column = GetColumn(link, "ID");
+            return GetDataInColumn(link, column);
         }
         public static List<string> GetListOfClassByLevel(string levelId)
         {
@@ -89,13 +140,11 @@ namespace LAB1.DataGeneration
             subjects = GetListofSubjectByClass(classId);
             return subjects;
         }
-        public static string getClassByLevelID(string levelId)
+        public static string getClassByLevelID(string levelId) //have some bugs
         {
             string[] classes = null;
             // try
             //  {
-
-
             List<string> listOfClasses = ListStorage.GetListOfClassByLevel(levelId);
             int index = rnd.Next(listOfClasses.Count);
             classes = listOfClasses[index].Split(',');

@@ -67,18 +67,30 @@ namespace LAB1.DataGeneration
         public static Classes[] createClasses(uint nummber_classes)
         {
             List<Classes> result = new List<Classes>();
-            List<string> roomList = ListStorage.GetRoomList();
-            
-            for (int i = 0; i < roomList.Count; i++)
-            {
-                string uuid = Guid.NewGuid().ToString(); //generate random uuid
-                string levelID = DataGenerator.GetLevelData()[0].Trim();  //get levelID from Level
-                string roomID = DataGenerator.GetRoomData()[0].Trim(); //get roomID from Room
 
-                string levelName = DataGenerator.GetLevelData()[1].Trim();
-                string roomNo = DataGenerator.GetRoomData()[2].Trim();
-                string className = levelName + "A" + roomNo; //get className
-                result.Add(new Classes(uuid, levelID, roomID, className));              
+            List<string> listClassID = ListStorage.GetClassesIDByRoom();
+            List<string> listRoomID = ListStorage.GetRoomIDByRoom();
+            List<string> listLevelName = ListStorage.GetLevelNameByLevel();
+            List<string> listLevelID = ListStorage.GetLevelIDByLevel();
+
+            int class_no = 0;
+            int level_no = 0;
+            for (int i = 0; i < nummber_classes; i++)
+            {
+                string uuid = listClassID[i];
+                string room = listRoomID[i];
+
+                if (class_no < nummber_classes / 3 + 1)
+                {
+                    class_no++;
+                }
+                else
+                {
+                    class_no = 1;
+                    level_no++;
+                }
+                string name = listLevelName[level_no] + "A" + class_no;
+                result.Add(new Classes(uuid, listLevelID[level_no], room, name));
             }
             return result.ToArray();
         }

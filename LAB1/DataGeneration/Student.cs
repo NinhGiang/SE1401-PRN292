@@ -93,7 +93,7 @@ public class Student
             else if (gender.Equals("Female"))
             {
                 String fullname = RandomGenerator.GetRadomFemaleFullName();//generate random name
-                string classInfo = ListStorage.getClassByLevelID(DataGenerator.GetLevelData()[0].Trim());
+                string classInfo = ListStorage.getClassByLevelID(DataGenerator.GetLevelData()[0].Trim()); 
                 //String classInfo = RandomGenerator.GetRandomClass();//generate random class
 
                 int year = rnd.Next(2003, 2005);

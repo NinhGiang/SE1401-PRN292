@@ -1,7 +1,9 @@
 ﻿using LAB1.DataGeneration;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.Json.Serialization;
 
 /// <summary>
 /// The School class
@@ -15,7 +17,8 @@ class School
     private List<Room> _room_list;
     private List<Level> _level_list;
     private List<Classes> _classes_list;
-
+   
+    public List<Student> Shools { get { return _student_list; } }
     /// <summary>
     /// The ctor of School 
     /// Has one blank ctor
@@ -69,28 +72,36 @@ class School
     }
     public void saveStudent(string filename)
     {
-        String content = "ID, Name, DOB, Gender, Class\n";
-        try
+        string content = "";
+        if (Path.GetExtension(filename) == ".csv")
         {
-            if (_student_list == null)
+            content = "ID, Name, DOB, Gender, Class\n";
+            try
             {
-                _student_list = new List<Student>();
-            }
+                if (_student_list == null)
+                {
+                    _student_list = new List<Student>();
+                }
 
-            foreach (Student student in _student_list)
-            {
-                content += student.Uuid + ", ";
-                content += student.Name + ", ";
-                content += student.Birthday.ToString("d") + ", ";
-                content += student.Gender + ", ";
-                content += student.Class + "\n";
+                foreach (Student student in _student_list)
+                {
+                    content += student.Uuid + ", ";
+                    content += student.Name + ", ";
+                    content += student.Birthday.ToString("d") + ", ";
+                    content += student.Gender + ", ";
+                    content += student.Class + "\n";
+                }
             }
-            File.WriteAllText(filename, content);
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine("Error in saveStudent: " + ex.Message);
+            }
         }
-        catch (NullReferenceException ex)
+        if (Path.GetExtension(filename) == ".json")
         {
-            Console.WriteLine("Error in saveStudent: " + ex.Message);
+            content = JsonConvert.SerializeObject(this, Formatting.Indented); 
         }
+        File.WriteAllText(filename, content);
     }
 
 
