@@ -10,9 +10,9 @@ namespace LAB1
         private string classInfo;//fk
         private string subject;//fk
 
-        protected string Teacher { get => teacher; set => teacher = value; }
-        protected string ClassInfo { get => classInfo; set => classInfo = value; }
-        protected string Subject { get => subject; set => subject = value; }
+        public string Teacher { get => teacher; set => teacher = value; }
+        public string ClassInfo { get => classInfo; set => classInfo = value; }
+        public string Subject { get => subject; set => subject = value; }
 
         public Attendance(string teacher, string classInfo, string subject)
         {

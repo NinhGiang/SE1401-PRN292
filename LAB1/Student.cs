@@ -13,11 +13,11 @@ namespace LAB1
         private DateTime birthday;
         private bool gender;
 
-        protected string Id { get => id; set => id = value; }
-        protected string Name { get => name; set => name = value; }
-        protected string Classname { get => classname; set => classname = value; }
-        protected DateTime Birthday { get => birthday; set => birthday = value; }
-        protected bool Gender { get => gender; set => gender = value; }
+        public string Id { get => id; set => id = value; }
+        public string Name { get => name; set => name = value; }
+        public string Classname { get => classname; set => classname = value; }
+        public DateTime Birthday { get => birthday; set => birthday = value; }
+        public bool Gender { get => gender; set => gender = value; }
 
         public Student(string id, string name, string classname, DateTime birthday, bool gender)
         {

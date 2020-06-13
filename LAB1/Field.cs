@@ -11,8 +11,8 @@ namespace LAB1
         private string id;
         private string name;
 
-        protected string Id { get => id; set => id = value; }
-        protected string Name { get => name; set => name = value; }
+        public string Id { get => id; set => id = value; }
+        public string Name { get => name; set => name = value; }
 
         public Field(string id, string name)
         {

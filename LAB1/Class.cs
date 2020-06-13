@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CarLibrary
+namespace LAB1
 {
     class Class
     {
@@ -11,10 +11,10 @@ namespace CarLibrary
         private string room; //khoa ngoai
         private string name; //10A1, 10A2, 10A3
 
-        protected string Id { get => id; set => id = value; }
-        protected string Level { get => level; set => level = value; }
-        protected string Room { get => room; set => room = value; }
-        protected string Name { get => name; set => name = value; }
+        public string Id { get => id; set => id = value; }
+        public string Level { get => level; set => level = value; }
+        public string Room { get => room; set => room = value; }
+        public string Name { get => name; set => name = value; }
 
         
         public Class(string id, string level, string room, string name)

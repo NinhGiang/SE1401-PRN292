@@ -12,9 +12,9 @@ namespace LAB1
         private string @class;
         private int no;
 
-        protected string Id { get => id; set => id = value; }
-        protected string Class { get => @class; set => @class = value; }
-        protected int No { get => no; set => no = value; }
+        public string Id { get => id; set => id = value; }
+        public string Class { get => @class; set => @class = value; }
+        public int No { get => no; set => no = value; }
 
         public Room()
         {

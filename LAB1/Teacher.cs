@@ -11,10 +11,10 @@ namespace LAB1
         private string field; //FK
         private bool gender;
 
-        protected string Id { get => id; set => id = value; }
-        protected string Name { get => name; set => name = value; }
-        protected string Field { get => field; set => field = value; }
-        protected bool Gender { get => gender; set => gender = value; }
+        public string Id { get => id; set => id = value; }
+        public string Name { get => name; set => name = value; }
+        public string Field { get => field; set => field = value; }
+        public bool Gender { get => gender; set => gender = value; }
 
         public Teacher(string id, string name, string field, bool gender)
         {

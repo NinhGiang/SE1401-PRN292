@@ -11,9 +11,9 @@ namespace LAB1
         private string level;//FK
         private string field; //fk 
 
-        protected string Id { get => id; set => id = value; }
-        protected string Level { get => level; set => level = value; }
-        protected string Field { get => field; set => field = value; }
+        public string Id { get => id; set => id = value; }
+        public string Level { get => level; set => level = value; }
+        public string Field { get => field; set => field = value; }
 
         public Subject(string id, string level, string field)
         {

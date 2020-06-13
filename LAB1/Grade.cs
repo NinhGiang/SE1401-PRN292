@@ -8,17 +8,17 @@ namespace LAB1
     {
         private string subject;//fk
         private string student;//fk
-        private int grade;
+        private int grades;
 
-        protected string Subject { get => subject; set => subject = value; }
-        protected string Student { get => student; set => student = value; }
-        protected int Grade { get => grade; set => grade = value; }
+        public string Subject { get => subject; set => subject = value; }
+        public string Student { get => student; set => student = value; }
+        public int Grades { get => grades; set => grades = value; }
 
         public Grade(string subject, string student, int grade)
         {
             this.Subject = subject;
             this.Student = student;
-            this.Grade = grade;
+            this.Grades = grade;
         }
     }
 }
