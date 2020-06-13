@@ -1,6 +1,9 @@
 ﻿using LAB1.StudentGeneration;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -27,59 +30,84 @@ namespace StudentGeneration
 
         public string ID
         {
-            get{ return _UUID; }
+            get { return _UUID; }
         }
 
-        public String Name 
+        public String Name
         {
-            get{ return _name; }
-            set{ _name = value; }
+            get { return _name; }
+            set { _name = value; }
         }
 
-        public DateTime Birthday 
+        public DateTime Birthday
         {
-            get{ return _birthday; }
-            set{ _birthday = value; }
+            get { return _birthday; }
+            set { _birthday = value; }
         }
 
-        public String Gender  
+        public String Gender
         {
-            get{ return _gender; }
-            set{ _gender = value; }
+            get { return _gender; }
+            set { _gender = value; }
         }
 
-        public String Current_class 
+        public String Current_class
         {
-            get{ return _class; }
-            set{ _class = value; }
+            get { return _class; }
+            set { _class = value; }
         }
 
-        static public Student[] CreateStudentRandomly(uint number_of_students)
+        static public List<Student> CreateStudentRandomly(uint number_of_students)
         {
-            Student[] students = new Student[number_of_students];
-            String content = File.ReadAllText(@"..\..\..\StudentGeneration\dataset.json");
-            Configure config = JsonSerializer.Deserialize<Configure>(content);
+            List<Student> students = new List<Student>();
+            Dictionary<string, int> classes = new Dictionary<string, int>();
 
-            for (int i = 0; i < number_of_students; i++) 
+            for (int i = 0; i < number_of_students; i++)
             {
                 //generate uuid
                 string student_id = System.Guid.NewGuid().ToString();
 
                 //generate name
-                string fullname = Generator.createFullnameRandomly(config);
+                string fullname = Generator.createFullnameRandomly();
 
                 //generate gender
-                string gender_gen = Generator.createGenderRandomly(config);
+                string gender_gen = Generator.createGenderRandomly();
 
                 //generate birthday
                 int year = Generator.getRandomInteger(2004, 2007);
                 DateTime dob = Generator.getRandomDate(year);
 
                 //generate class
-                string current_class = Generator.createClassRandomly(config);
-                
-                students[i] = new Student(student_id ,fullname, gender_gen, 
-                    dob, current_class);
+                int value;
+                string current_class = "";
+
+                do
+                {
+                    value = 0;
+                    string[] class_info = DataGetting.GetClassData();
+                    if (classes.TryGetValue(class_info[0], out value))
+                    {
+                        if (value < 35)
+                        {
+                            current_class = class_info[0];
+                            classes[current_class] = value + 1;
+                        }
+                    }
+                    else
+                    {
+                        value = 1;
+                        current_class = class_info[0];
+                        classes.Add(current_class, value);
+                    }
+                } while (value > 35 || value == 1);
+
+                //Add student to student list
+                students.Add(new Student(student_id, fullname, gender_gen,
+                    dob, current_class));
+            }
+            for (int i = 0; i < classes.Count; i++)
+            {
+                Console.WriteLine("{0}, {1}", classes.ElementAt(i).Key, classes.ElementAt(i).Value);
             }
             return students;
         }

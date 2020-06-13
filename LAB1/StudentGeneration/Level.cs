@@ -1,6 +1,9 @@
-﻿using System;
+﻿using StudentGeneration;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Text.Json;
 
 namespace LAB1.StudentGeneration
 {
@@ -27,6 +30,20 @@ namespace LAB1.StudentGeneration
             set { _name = value; }
         }
 
-        
+        public static List<Level> createLevels(uint number_of_levels)
+        {
+            List<Level> levels = new List<Level>();
+            String content = File.ReadAllText(@"..\..\..\StudentGeneration\dataset.json");
+            Configure config = JsonSerializer.Deserialize<Configure>(content);
+
+            for (int i = 0; i < number_of_levels; i++)
+            {
+                string id = System.Guid.NewGuid().ToString();
+                string name = config.LevelDataSet.LevelSet[i];
+                levels.Add(new Level(id, name));
+            }
+            
+            return levels;
+        }
     }
 }

@@ -14,47 +14,45 @@ namespace LAB1.StudentGeneration
         protected List<Room> _rooms;
         protected List<SchoolClass> _classes;
 
-        public School(string school_name, Student[] students, Level[] levels, 
-            Room[] rooms, SchoolClass[] classes)
+        public School(string school_name) 
         {
-            this._school_name = school_name;
-            this._students = new List<Student>(students);
-            this._levels = new List<Level>(levels);
-            this._rooms = new List<Room>(rooms);
-            this._classes = new List<SchoolClass>(classes);
+            _school_name = school_name;
         }
 
-        public void save()
+        public string School_Name
         {
-            createDirectory(_school_name);
-            saveStudents();
+            get { return _school_name; }
+            set { _school_name = value; }
+        }
+        public List<Student> Students
+        {
+            get { return _students; }
+            set { _students = value; }
         }
 
-        public void saveStudents()
+        public List<Level> Levels
         {
-            String content = "ID, Fullname, Gender, Birthday, Class\n";
-            foreach (Student student in _students)
-            {
-                content += student.ID + ", " + student.Name + ", " 
-                    + student.Gender + ", " 
-                    + student.Birthday.ToShortDateString() + ", "
-                    + student.Current_class + "\n";
-            }
-            string filepath = getFilePath(_school_name);
-            File.WriteAllText(filepath, content);
+            get { return _levels; }
+            set { _levels = value; }
         }
 
-        public String createDirectory(String directory_name)
+        public List<SchoolClass> Classes
         {
-            Directory.CreateDirectory(@"..\..\..\" + directory_name);
-            return @"..\..\..\" + directory_name;
+            get { return _classes; }
+            set { _classes = value; }
         }
 
-        public String getFilePath(String filename)
+        public List<Room> Rooms
         {
-            string filename_csv = filename + ".csv";
-            return @"..\..\..\" + _school_name + @"\" + filename_csv;
-
+            get { return _rooms; }
+            set { _rooms = value; }
+        }
+        public void saveAll()
+        {
+            FileDataManagement.createDirectory(_school_name);
+            FileDataManagement.saveLevels(_school_name, _levels);
+            FileDataManagement.saveStudents(_school_name, _students);
+            
         }
     }
 }

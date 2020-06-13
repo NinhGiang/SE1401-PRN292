@@ -1,13 +1,17 @@
 ﻿using StudentGeneration;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Text.Json;
 
 namespace LAB1.StudentGeneration
 {
     class Generator
     {
         private static Random rd;
+        private static String content = File.ReadAllText(@"..\..\..\StudentGeneration\dataset.json");
+        private static Configure config = JsonSerializer.Deserialize<Configure>(content);
         public static int getRandomInteger(int range)
         {
             rd = new Random();
@@ -29,7 +33,7 @@ namespace LAB1.StudentGeneration
             return startDate.AddDays(randomDay);
         }
 
-        public static string createFullnameRandomly(Configure config)
+        public static string createFullnameRandomly()
         {
             NameDataSet name_config = config.NameDataSet;
             int lastname_length_inDB = name_config.LastNameSet.Length;
@@ -47,32 +51,13 @@ namespace LAB1.StudentGeneration
             return fullname;
         }
 
-        public static string createGenderRandomly(Configure config)
+        public static string createGenderRandomly()
         {
             GenderDataSet gender_config = config.GenderDataSet;
             int gender_length_inDB = gender_config.GenderSet.Length;
             int gender_index = getRandomInteger(gender_length_inDB);
             string gender = gender_config.GenderSet[gender_index];
             return gender;
-        }
-
-        public static string createLevelRandomly(Configure config)
-        {
-            LevelDataSet level_config = config.LevelDataSet;
-            int level_length_inDB = level_config.LevelSet.Length;
-            int level_index = getRandomInteger(level_length_inDB);
-            string level = level_config.LevelSet[level_index];
-            return level;
-        }
-
-        public static string createClassRandomly(Configure config)
-        {
-            CLassDataSet class_config = config.CLassDataSet;
-            int class_length_inDB = class_config.ClassSet.Length;
-            int class_index = getRandomInteger(class_length_inDB);
-            string level = createLevelRandomly(config);
-            string class_name = level + class_config.ClassSet[class_index];
-            return class_name;
         }
     }
 }

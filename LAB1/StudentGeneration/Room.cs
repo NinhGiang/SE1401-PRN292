@@ -37,15 +37,15 @@ namespace LAB1.StudentGeneration
             set { _no = value; }
         }
         
-        public static Room[] createRoomRandomly(uint number_of_rooms)
+        public static List<Room> createRoomRandomly(uint number_of_rooms)
         {
-            Room[] rooms = new Room[number_of_rooms];
+            List<Room> rooms = new List<Room>();
             for (int i = 0; i < number_of_rooms; i++)
             {
                 string uuid = System.Guid.NewGuid().ToString();
                 string class_using = System.Guid.NewGuid().ToString();
                 int room_number = i + 1;
-                rooms[i] = new Room(uuid, class_using, room_number);
+                rooms.Add(new Room(uuid, class_using, room_number));
             }
             return rooms;
         }

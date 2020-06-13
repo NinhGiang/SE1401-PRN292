@@ -8,7 +8,7 @@ namespace LAB1.StudentGeneration
 {
     class SupportTools
     {
-        public static string getSchoolName(string input)
+        /*public static string getSchoolName(string input)
         {
             int index_of_s = input.IndexOf(" -s ");
             string school_name;
@@ -42,7 +42,7 @@ namespace LAB1.StudentGeneration
                 }
                 return number_of_students;
             }
-            return -1;
+            return 0;
         }  
 
         public static int getRoomAmount(string input)
@@ -62,6 +62,6 @@ namespace LAB1.StudentGeneration
                 }
             }
             return -1;
-        }
+        }*/
     }
 }
