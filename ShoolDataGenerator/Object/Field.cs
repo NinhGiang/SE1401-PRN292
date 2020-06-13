@@ -7,19 +7,21 @@ namespace LAB1
 {
     class Field
     {
+        public static readonly string[] listFieldName= new string[] { "Toan", "Ngu Van", "Sinh Hoc", "Vat Ly", "Hoa Hoc", "Lich Su", "Dia Ly", "Ngoai Ngu", "GDCD", "The Duc" };
         public string UUID { get; set; }
         public string Name { get; set; }
+        public string[] ListFieldName { get { return listFieldName; } }
         public Field()
         {
             UUID = Guid.NewGuid().ToString();
         }
-        public static string[] GenerateFieldName(int fieldAmount, int length)
+        /*public static string[] GenerateFieldName(int fieldAmount, int length)
         {
             Random rd = new Random();
             string[] listField = new string[length];
             string[] fieldName = {"Toan", "Ngu Van", "Sinh Hoc", "Vat Ly", "Hoa Hoc", "Lich Su",
                 "Dia Ly", "Ngoai Ngu", "GDCD", "The Duc"};
-            if(fieldAmount >= 8 && fieldAmount <= 10)
+            if (fieldAmount >= 8 && fieldAmount <= 10)
             {
                 for (int i = 0; i < length; i++)
                 {
@@ -27,10 +29,10 @@ namespace LAB1
                     listField[i] = name;
                 }
             }
-            
+
 
             return listField;
 
-        }
+        }*/
     }
 }
