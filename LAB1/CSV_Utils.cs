@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace LAB1
@@ -17,7 +18,7 @@ namespace LAB1
 
         private static string directory;
 
-        private static void setPath()
+        private static void SetPath()
         {
             attendanceCSV = directory + "\\" + "Attendance.CSV";
             classCSV = directory + "\\" + "Class.CSV";
@@ -29,10 +30,33 @@ namespace LAB1
             teacherCSV = directory + "\\" + "Teacher.CSV";
         }
         
-        public static void setDirectory(string path)
+        public static void SetDirectory(string path)
         {
             directory = path;
-            setPath();
+            SetPath();
         }
+
+        private static List<string> ReadCSVFile(string path)
+        {
+            List<string> list = new List<string>();
+            try
+            {
+                StreamReader sr = new StreamReader(path);
+                sr.ReadLine();
+                while(!sr.EndOfStream)
+                {
+                    string line = sr.ReadLine();
+                    list.Add(line);
+                }
+                sr.Close();
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine("ReadCSVFile IOException: " + ex.Message);
+            }
+            return list;
+        }
+
+
     }
 }
