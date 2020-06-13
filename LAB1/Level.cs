@@ -52,22 +52,40 @@ namespace LAB1
         /// Creates a list of levels and returns the result
         /// </summary>
         /// <returns>An array of levels</returns>
+        /// <exception cref="System.IO.FileNotFoundException">
+        /// Thrown when the Json file is not exist.
+        /// </exception>
+        /// <exception cref="System.NullReferenceException">
+        /// Thrown when the object in Json file is not exist or has no data.
+        /// </exception>
         public static Level[] Create()
         {
-            string content = File.ReadAllText(@"..\..\..\Configure.json");
-            Configure config = JsonSerializer.Deserialize<Configure>(content);
-            LevelNameConfig _ = config.LevelNameConfig;
-
-            int size = _.level_name_set.Length;
-            List<Level> result = new List<Level>();
-
-            for (int i = 0; i < size; i++)
+            try
             {
-                string name = _.level_name_set[i].ToString();
-                string id = Guid.NewGuid().ToString();
-                result.Add(new Level(id, name));
+                string content = File.ReadAllText(@"..\..\..\Configure.json");
+                Configure config = JsonSerializer.Deserialize<Configure>(content);
+                LevelNameConfig _ = config.LevelNameConfig;
+
+                int size = _.level_name_set.Length;
+                List<Level> result = new List<Level>();
+
+                for (int i = 0; i < size; i++)
+                {
+                    string name = _.level_name_set[i].ToString();
+                    string id = Guid.NewGuid().ToString();
+                    result.Add(new Level(id, name));
+                }
+                return result.ToArray();
             }
-            return result.ToArray();
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("Level _ FileNotFoundException: " + ex.Message);
+            }
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine("Level _ NullReferenceException: " + ex.Message);
+            }
+            return null;
         }
     }
 

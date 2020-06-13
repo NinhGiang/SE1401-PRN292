@@ -103,8 +103,8 @@ UUID, Name
 
 **NOTE**: Các yêu cầu 1 và 5 là tiên quyết, giảng viên sẽ loại những dự án không đảm bảo các yêu cầu này. Điểm số xác định bằng số testcase mà ứng dụng của học viên có thể vượt qua (8 cases). Tất cả các source code được phần mềm phân tích là sao chép sẽ bị cấm thi. Yêu cầu 6 chiếm 20% trọng số của bài LAB và điểm số này chỉ đạt được khi học viên xây dựng được điểm 
 
-<hr>
 ### Các ghi chú, tóm lược, điểm nỗi bật hoặc sáng tạo của trong project
+
 1. Thêm cột Name cho bảng Subject để dễ nhìn
 2. Nếu command line có nhập cả số lượng student và room, có check xem khi phân ra mỗi lớp có chứa đúng 30~50 người hay không.
 3. Mỗi Class đảm bảo có 30~50 học sinh
