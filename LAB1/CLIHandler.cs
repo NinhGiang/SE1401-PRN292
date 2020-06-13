@@ -6,7 +6,25 @@ namespace LAB1
 {
     class CLIHandler
     {
-        public static string CLI(string[] args)
+        private static string _school_name;
+        private static int _student_num;
+        private static int _room_num;
+
+        public static int getIndexFromArray (string[] args, string value)
+        {
+            int result = -1;
+            bool found = false;
+            for (int i = 0; i < args.Length && found == false ; i++)
+            {
+                if (args[i].Equals(value))
+                {
+                    result = i;
+                }
+            }
+            return result;
+        }
+
+        public static string CheckCLI(string[] args)
         {
             string result = "";
             string help = @"Help: 
@@ -18,13 +36,59 @@ namespace LAB1
             {
                 result = help;
             }
-            else if (args.Length > 0 && !args[0].Equals("-h") && !args[0].Equals("-s") )
+            else if (args.Length > 0 && !args[0].Equals("-h") && !args[0].Equals("-s") && args[0].Equals("-r"))
             {
-                result = "Something is wrong";
+                result = "Error : Something is wrong";
             }
-            else if (args.Length == 1 && args[1].Equals("-s"))
+            else if (args.Length == 1 && ( args[0].Equals("-s") || args[0].Equals("-r") ))
             {
-                result = "Need a filename";
+                result = "Please input a school name";
+            }
+            else
+            {
+                _school_name = args[0];
+                int studentNumIndex = getIndexFromArray(args, "-s") + 1;
+                int roomNumIndex = getIndexFromArray(args, "-r") + 1;
+                int studentNum = 0;
+                int roomNum = 0;
+
+                if (studentNumIndex > 0)
+                {
+                    bool checkParse = Int32.TryParse(args[studentNumIndex], out studentNum);
+                    if (!checkParse)
+                    {
+                        result += "Error : CLI format for student number is incorrect .\n";
+                    }
+                    else
+                    {
+                        if (Utils.CheckStudentNumber(studentNum))
+                        {
+                            result += "Error : Student number must be 500 to 3000 .\n";
+                        }
+                    }
+                }
+                if (roomNumIndex > 0)
+                {
+                    bool checkParse = Int32.TryParse(args[roomNumIndex], out roomNum);
+                    if (!checkParse)
+                    {
+                        result += "Error : CLI format for room number is incorrect .\n";
+                    }
+                    else
+                    {
+                        if (Utils.CheckStudentNumber(roomNum))
+                        {
+                            result += "Error : Room number must be below 100 .\n";
+                        }
+                    }
+                }
+                if (studentNumIndex == 0 && roomNumIndex == 0 )
+                {
+                    studentNum = Utils.GetRandomStudentNumber();
+                    roomNum = Utils.GetRandomRoomNumber();
+
+                }
+
             }
             return result;
         }

@@ -60,11 +60,11 @@ namespace LAB1
             for (int i = 0; i < numberOfStudent; i++)
             {
                 String id = Guid.NewGuid().ToString();
-                bool gender = Utils.getRandomGender();
+                bool gender = Utils.GetRandomGender();
                 String name = Utils.getRandomFullName(gender);
                 int level = rand.Next(10, 12);
-                int age = Utils.getRandomAge(level);
-                DateTime birth = Utils.getRandomDateTime(2020 - age);
+                int age = Utils.GetRandomAge(level);
+                DateTime birth = Utils.GetRandomDateTime(2020 - age);
                 String levelID = level.ToString();
                 foreach (Level lev in levelList)
                 {

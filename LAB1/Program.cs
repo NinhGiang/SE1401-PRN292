@@ -12,60 +12,72 @@ namespace LAB1
         
         static void Main(string[] args)
         {
-            Console.WriteLine("Test Lab");
-            
-            School school = new School();
-            school.SchoolName = "ABC";
-            int roomAndClassNum = 20;
-            int studentNum = 200;
-            //create school folder
-            string directoryPath = @"..\..\..\" + school.SchoolName;
-            Directory.CreateDirectory(directoryPath);
-            DatabaseHandler dr = new DatabaseHandler();
-            dr.DirectoryPath = directoryPath;
-            //create level
-            Level[] level_list = Level.CreateLevel();
-            school.LevelList = level_list;
-            school.SaveLevel(directoryPath + "\\" + "Level.csv");
+            string checkError = CLIHandler.CheckCLI(args);
+            if (checkError.Length != 0)
+            {
+                Console.WriteLine(checkError);
+            }
+            else
+            {
+                Console.WriteLine("Test Lab");
 
-            //create field
-            Field[] field_list = Field.CreateField();
-            school.FieldList = field_list;
-            school.SaveField(directoryPath + "\\" + "Field.csv");
+                string schoolName = "ABC";
+                int roomAndClassNum = 20;
+                int studentNum = 200;
 
-            //create subject
-            Subject[] subject_list = Subject.createSubject();
-            school.SubjectList = subject_list;
-            school.SaveSubject(directoryPath + "\\" + "Subject.csv");
-            
-            //create Teacher
-            Teacher[] teacher_list = Teacher.createTeacher(30);
-            school.TeacherList = teacher_list;
-            school.SaveTeacher(directoryPath + "\\" + "Teacher.csv");
+                School school = new School();
+                school.SchoolName = schoolName;
 
-            //create room and class
-            Dictionary<string, string> roomAndClassIDList = Utils.generateRoomAndClassID(roomAndClassNum);
-            Room[] room_list = Room.createRoom(roomAndClassIDList);
-            school.RoomList =  room_list;
-            school.SaveRoom(directoryPath + "\\" + "Room.csv");
+                //create school folder
+                string directoryPath = @"..\..\..\" + school.SchoolName;
+                Directory.CreateDirectory(directoryPath);
+                DatabaseHandler dr = new DatabaseHandler();
+                dr.DirectoryPath = directoryPath;
+                //create level
+                Level[] level_list = Level.CreateLevel();
+                school.LevelList = level_list;
+                school.SaveLevel(directoryPath + "\\" + "Level.csv");
 
-            Class[] class_list = Class.createClass(roomAndClassIDList);
-            school.ClassList = class_list;
-            school.SaveClass(directoryPath + "\\" + "Class.csv");
+                //create field
+                Field[] field_list = Field.CreateField();
+                school.FieldList = field_list;
+                school.SaveField(directoryPath + "\\" + "Field.csv");
 
-            Student[] student_list = Student.createStudent(studentNum);
-            school.StudentList = student_list;
-            school.SaveStudent(directoryPath + "\\" + "Student.csv");
+                //create subject
+                Subject[] subject_list = Subject.createSubject();
+                school.SubjectList = subject_list;
+                school.SaveSubject(directoryPath + "\\" + "Subject.csv");
 
-            Grade[] grade_list = Grade.CreateGrade();
-            school.GradeList = grade_list;
-            school.SaveGrade(directoryPath + "\\" + "Grade.csv");
+                //create Teacher
+                Teacher[] teacher_list = Teacher.createTeacher(30);
+                school.TeacherList = teacher_list;
+                school.SaveTeacher(directoryPath + "\\" + "Teacher.csv");
 
-            Attendance[] attendance_list = Attendance.CreateAttendance();
-            school.AttendanceList = attendance_list;
-            school.SaveAttendance(directoryPath + "\\" + "Attendance.csv");
+                //create room and class
+                Dictionary<string, string> roomAndClassIDList = Utils.GenerateRoomAndClassID(roomAndClassNum);
+                Room[] room_list = Room.createRoom(roomAndClassIDList);
+                school.RoomList = room_list;
+                school.SaveRoom(directoryPath + "\\" + "Room.csv");
 
-            File.WriteAllText(directoryPath + "\\" + "Database.json", JsonSerializer.Serialize(school));
+                Class[] class_list = Class.createClass(roomAndClassIDList);
+                school.ClassList = class_list;
+                school.SaveClass(directoryPath + "\\" + "Class.csv");
+
+                Student[] student_list = Student.createStudent(studentNum);
+                school.StudentList = student_list;
+                school.SaveStudent(directoryPath + "\\" + "Student.csv");
+
+                Grade[] grade_list = Grade.CreateGrade();
+                school.GradeList = grade_list;
+                school.SaveGrade(directoryPath + "\\" + "Grade.csv");
+
+                Attendance[] attendance_list = Attendance.CreateAttendance();
+                school.AttendanceList = attendance_list;
+                school.SaveAttendance(directoryPath + "\\" + "Attendance.csv");
+
+                File.WriteAllText(directoryPath + "\\" + "Database.json", JsonSerializer.Serialize(school));
+
+            }
 
             Console.ReadLine();
         }

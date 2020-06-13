@@ -26,7 +26,7 @@ namespace LAB1
         }
         public static Field[] CreateField()
         {
-            String[] data = Utils.getFieldData();
+            String[] data = Utils.GetFieldData();
             Field[] list = new Field[data.Length];
             for (int i = 0; i < data.Length; i++)
             {

@@ -33,7 +33,7 @@ namespace LAB1
             }
             return name;
         }
-        public static bool getRandomGender()
+        public static bool GetRandomGender()
         {
             bool gender = false;
             int randomGender = rand.Next(1, 3);//random 1 and 2
@@ -43,13 +43,13 @@ namespace LAB1
             }
             return gender;
         }
-        public static DateTime getRandomDateTime(int year)
+        public static DateTime GetRandomDateTime(int year)
         {
-            DateTime start = new DateTime(year,1,1);
+            DateTime start = new DateTime(year, 1, 1);
             DateTime end = new DateTime(year + 1, 12, 31);
-            return start.AddDays(rand.Next((end-start).Days));
+            return start.AddDays(rand.Next((end - start).Days));
         }
-        public static int getRandomAge(int level)
+        public static int GetRandomAge(int level)
         {
             int age;
             if (level == 10)
@@ -66,15 +66,15 @@ namespace LAB1
             }
             return age;
         }
-        public static string[] getLevelData()
+        public static string[] GetLevelData()
         {
             return config.LevelConfig.level_set;
         }
-        public static string[] getFieldData()
+        public static string[] GetFieldData()
         {
             return config.FieldConfig.field_set;
         }
-        public static Dictionary<string,string> generateRoomAndClassID(int number)
+        public static Dictionary<string, string> GenerateRoomAndClassID(int number)
         {
             Dictionary<string, string> dict = new Dictionary<string, string>();
 
@@ -85,12 +85,41 @@ namespace LAB1
 
                 dict.Add(roomID, classID);
             }
-            
+
             return dict;
         }
-        public static void print()
+        public static int GetRandomStudentNumber()
         {
-            //Console.WriteLine(config.LevelConfig.level_set[0]);
+            return rand.Next(500, 3001);
+        }
+        public static bool CheckStudentNumber(int number)
+        {
+            if (number >= 500 && number <= 3000)
+            {
+                return true;
+            }
+            return false;
+        }
+        public static int GetRandomRoomNumber()
+        {
+            return rand.Next(10, 100);
+        }
+        public static bool CheckRoomNumber(int number)
+        {
+            if (number > 0 && number < 100)
+            {
+                return true;
+            }
+            return false;
+        }
+        public static bool ValidateStudentAndRoomNumber(int studentNumber, int roomNumber)
+        {
+            double check = (double)studentNumber / (double)roomNumber;
+            if (check > -30 && check <= 50)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

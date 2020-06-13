@@ -26,7 +26,7 @@ namespace LAB1
         }
         public static Level[] CreateLevel()
         {
-            String[] data = Utils.getLevelData();
+            String[] data = Utils.GetLevelData();
             Level[] list = new Level[data.Length];
             for (int i = 0; i < data.Length; i++)
             {
