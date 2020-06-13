@@ -22,12 +22,12 @@ namespace SchoolGenerating
         //generate Class
         public static Class[] Create(uint number_of_Classes)
         {
-            List<Class> class_list = new List<Class>();
-            for (int i = 0; i < class_list.lengh; i++)
+            Class[] result = new Class[number_of_Classes];
+            for (int i = 0; i < result.Length; i++)
             {
 
             }
-            return class_list.ToArray();
+            return result;
         }
     }
 }

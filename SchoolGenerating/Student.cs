@@ -91,7 +91,7 @@ namespace SchoolGenerating
         public static Student[] Create(uint number_student)
         {
             Student[] result = new Student[number_student];
-            
+            Random rdn = new Random();
 
             
 
@@ -99,7 +99,8 @@ namespace SchoolGenerating
             {
                 String fullname = generateName();
                 String UUID = Guid.NewGuid().ToString();
-                result[i] = new Student(UUID, fullname, "20", false, "10A");
+                Boolean gender = rdn.NextDouble() > 0.5;
+                result[i] = new Student(UUID, fullname, "20", gender, "10A");
             }
             return result;
         }
