@@ -8,9 +8,9 @@ namespace LAB1
     public class LevelDTO
     {
         public static readonly string[] listLevelName = new string[] { "10", "11", "12" };
+        public static string[] ListLevelName { get { return listLevelName; } }
         public string UUID { get; set; }
         public int Name { get; set; }
-        public string[] ListLevelName { get { return listLevelName; } }
         public LevelDTO()
         {
             UUID = Guid.NewGuid().ToString();
