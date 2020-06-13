@@ -1,8 +1,7 @@
 {
   "profiles": {
     "LAB1": {
-      "commandName": "Project",
-      "commandLineArgs": "fpt -s 21 -r 3"
+      "commandName": "Project"
     }
   }
 }
