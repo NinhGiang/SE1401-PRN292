@@ -6,15 +6,10 @@ namespace LAB1
 {
     class Class
     {
-        
-
         public string UUID { get; set; }
         public Level Level { get; set; }
         public Room Room { get; set; }
         public string Name { get; set; }
-        //threse mistake at here
-        //because in a Class must have number of  student in a Class.
-        public int NumberOfClass { get; set; } 
         public Class()
         {
             UUID = Guid.NewGuid().ToString() ;
