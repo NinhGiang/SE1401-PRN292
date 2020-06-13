@@ -132,7 +132,7 @@ namespace LAB1
         /// <returns>The number of student if in range, -1 if out of range</returns>
         public static int CheckStudentAmount(int number)
         {
-            if (number >= 10 & number <= 3000)
+            if (number >= 500 & number <= 3000)
             {
                 return number;
             }
@@ -161,7 +161,6 @@ namespace LAB1
         /// <returns>True if each room has 30-50 students, false if not</returns>
         public static bool CheckValidNumber(int student, int room)
         {
-            return true;
             double tmp = (double)student / (double)room;
             if (tmp >= 30 && tmp <= 50)
             {

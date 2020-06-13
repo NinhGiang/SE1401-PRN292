@@ -6,42 +6,47 @@ namespace LAB1
 {
     class Grade
     {
+        /// <summary>
+        /// Id of subject
+        /// </summary>
         protected string _subject;
+
+        /// <summary>
+        /// Id of student
+        /// </summary>
         protected string _student;
+
+        /// <summary>
+        /// Grade of the subject
+        /// </summary>
         protected int _grade;
 
-        public void SetSubject(string value)
-        {
-            _subject = value;
-        }
+        /// <value>
+        /// The subject of grade
+        /// </value>
+        public string Subject { get { return _subject; } }
 
-        public void SetStudent(string value)
-        {
-            _student = value;
-        }
+        /// <value>
+        /// The student of grade
+        /// </value>
+        public string Student { get { return _student; } }
 
-        public void SetGrade(int value)
-        {
-            _grade = value;
-        }
+        /// <value>
+        /// The grade
+        /// </value>
+        public int Grades { get { return _grade; } }
 
-        public string GetSubject()
-        {
-            return _subject;
-        }
-
-        public string GetStudent()
-        {
-            return _student;
-        }
-
-        public int GetGrade()
-        {
-            return _grade;
-        }
-
+        /// <summary>
+        /// An empty constructor for grade
+        /// </summary>
         public Grade() { }
 
+        /// <summary>
+        /// A constructor for grade
+        /// </summary>
+        /// <param name="subject">A string value</param>
+        /// <param name="student">A string value</param>
+        /// <param name="grade">A positive integer value</param>
         public Grade(string subject, string student, int grade)
         {
             _subject = subject;
@@ -49,6 +54,10 @@ namespace LAB1
             _grade = grade;
         }
 
+        /// <summary>
+        /// Creates a random list of grade of each student and returns the result
+        /// </summary>
+        /// <returns>An array of grade</returns>
         public static Grade[] Create()
         {
             Random rnd = new Random();
@@ -80,6 +89,11 @@ namespace LAB1
             return result.ToArray();
         }
 
+        /// <summary>
+        /// Get list of subject student studies
+        /// </summary>
+        /// <param name="student">A string value</param>
+        /// <returns>List of subject string</returns>
         private static List<string> GetSubjectsByStudent(string student)
         {
             List<string> subjects;

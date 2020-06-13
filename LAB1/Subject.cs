@@ -32,6 +32,26 @@ namespace LAB1
         /// </summary>
         protected string _name;
 
+        /// <value>
+        /// The id the subject
+        /// </value>
+        public string UUID { get { return _id; } }
+
+        /// <value>
+        /// The level the subject
+        /// </value>
+        public string Level { get { return _level; } }
+
+        /// <value>
+        /// The field the subject
+        /// </value>
+        public string Field { get { return _field; } }
+
+        /// <value>
+        /// The name the subject
+        /// </value>
+        public string Name { get { return _name; } }
+
         /// <summary>
         /// An empty constructor for subject
         /// </summary>
@@ -49,79 +69,6 @@ namespace LAB1
             _id = id;
             _level = level;
             _field = field;
-            _name = name;
-        }
-
-        /// <summary>
-        /// Gets Id of subject
-        /// </summary>
-        /// <returns>The Id of subject</returns>
-        public string GetId()
-        {
-            return _id;
-        }
-
-        /// <summary>
-        /// Sets Id of subject
-        /// </summary>
-        /// <param name="id">A string value</param>
-        public void SetId(string id)
-        {
-            _id = id;
-        }
-
-        /// <summary>
-        /// Gets level of subject
-        /// </summary>
-        /// <returns>The level id of subject</returns>
-        public string GetLevel()
-        {
-            return _level;
-        }
-
-        /// <summary>
-        /// Sets level of subject
-        /// </summary>
-        /// <param name="level">A string value</param>
-        public void SetLevel(string level)
-        {
-            _level = level;
-        }
-
-        /// <summary>
-        /// Gets field of subject
-        /// </summary>
-        /// <returns>The field id of subject</returns>
-        public string GetField()
-        {
-            return _field;
-        }
-
-        /// <summary>
-        /// Sets field of subject
-        /// </summary>
-        /// <param name="field">A string value</param>
-        public void SetField(string field)
-        {
-            _field = field;
-        }
-
-
-        /// <summary>
-        /// Gets name of subject
-        /// </summary>
-        /// <returns>The name of subject</returns>
-        public string GetName()
-        {
-            return _name;
-        }
-
-        /// <summary>
-        /// Sets name of subject
-        /// </summary>
-        /// <param name="name">A string value</param>
-        public void SetName(string name)
-        {
             _name = name;
         }
 

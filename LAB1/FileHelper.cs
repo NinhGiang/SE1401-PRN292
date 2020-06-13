@@ -13,65 +13,49 @@ namespace LAB1
     class FileHelper
     {
         /// <summary>
-        /// 
+        /// The path to the folder of the school
         /// </summary>
         private static string _directoryPath;
 
         /// <summary>
-        /// 
+        /// The path to Room.csv file
         /// </summary>
         private static string _roomFile;
 
         /// <summary>
-        /// 
+        /// The path to Attendance.csv file
         /// </summary>
         private static string _attendanceFile;
 
         /// <summary>
-        /// 
+        /// The path to Class.csv file
         /// </summary>
         private static string _classFile;
 
         /// <summary>
-        /// 
+        /// The path to Level.csv file
         /// </summary>
         private static string _levelFile;
 
         /// <summary>
-        /// 
+        /// The path to Field.csv file
         /// </summary>
         private static string _fieldFile;
 
         /// <summary>
-        /// 
+        /// The path to Student.csv file
         /// </summary>
         private static string _studentFile;
 
         /// <summary>
-        /// 
+        /// The path to Subject.csv file
         /// </summary>
         private static string _subjectFile;
 
         /// <summary>
-        /// 
+        /// The path to Teacher.csv file
         /// </summary>
         private static string _teacherFile;
-
-
-        public static string RoomFile
-        {
-            get { return _roomFile; }
-            set { }
-        }
-
-        /// <value>
-        /// Gets and sets value of attendanceFile
-        /// </value>
-        public static string AttendanceFile
-        {
-            get { return _attendanceFile; }
-            set { }
-        }
 
         /// <summary>
         /// Sets directory path
@@ -260,18 +244,6 @@ namespace LAB1
         }
 
         /// <summary>
-        /// Get room info by id
-        /// </summary>
-        /// <param name="roomId">A string value</param>
-        /// <returns>Room info</returns>
-        public static string GetRoomByPrimaryKey(string roomId)
-        {
-            string path = _roomFile;
-            return GetDataByPrimaryKey(path, roomId);
-        }
-
-
-        /// <summary>
         /// Get level info by id
         /// </summary>
         /// <param name="levelId">A string value</param>
@@ -334,15 +306,6 @@ namespace LAB1
         public static List<string> GetListOfField()
         {
             return GetCsvData(_fieldFile);
-        }
-
-        /// <summary>
-        /// Get all rooms from Room.csv file
-        /// </summary>
-        /// <returns>List of rooms</returns>
-        public static List<string> GetListOfRoom()
-        {
-            return GetCsvData(_roomFile);
         }
 
         /// <summary>

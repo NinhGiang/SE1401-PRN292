@@ -102,3 +102,14 @@ UUID, Name
 **Deadline:** 23h00 14/06/2020. Sau deadline mọi commit sẽ không được xem xét. 
 
 **NOTE**: Các yêu cầu 1 và 5 là tiên quyết, giảng viên sẽ loại những dự án không đảm bảo các yêu cầu này. Điểm số xác định bằng số testcase mà ứng dụng của học viên có thể vượt qua (8 cases). Tất cả các source code được phần mềm phân tích là sao chép sẽ bị cấm thi. Yêu cầu 6 chiếm 20% trọng số của bài LAB và điểm số này chỉ đạt được khi học viên xây dựng được điểm 
+
+<hr>
+# Các ghi chú, tóm lược, điểm nỗi bật hoặc sáng tạo của trong project
+1. Thêm cột Name cho bảng Subject để dễ nhìn
+2. Nếu command line có nhập cả số lượng student và room, có check xem khi phân ra mỗi lớp có chứa đúng 30~50 người hay không.
+3. Mỗi Class đảm bảo có 30~50 học sinh
+4. Grade tính trên thang điểm 100
+5. Name có phân ra giới tính
+6. Bảng Grade, mỗi Student chỉ có điểm tất cả các môn mà Class của nó attend
+7. Teacher chỉ dạy môn thuộc Field
+8. Mỗi khối chiếm số lượng phòng tương tự nhau, không cách biệt quá 2 phòng

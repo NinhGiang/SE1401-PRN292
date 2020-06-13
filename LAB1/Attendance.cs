@@ -24,47 +24,20 @@ namespace LAB1
         /// </summary>
         protected String _subject;
 
-        /// <summary>
-        /// Get teacher's Id
-        /// </summary>
-        /// <returns>The Id of teacher</returns>
-        public string GetTeacher()
-        { return _teacher; }
+        /// <value>
+        /// The teacher id
+        /// </value>
+        public string Teacher { get { return _teacher; } }
 
-        /// <summary>
-        /// Set teacher's Id
-        /// </summary>
-        /// <param name="value">A string value</param>
-        public void SetTeacher(string value)
-        { _teacher = value; }
+        /// <value>
+        /// The class id which the teacher teaches
+        /// </value>
+        public string Class { get { return _class; } }
 
-        /// <summary>
-        /// Get class's Id
-        /// </summary>
-        /// <returns>The Id of class</returns>
-        public string GetClassInfo()
-        { return _class; }
-
-        /// <summary>
-        /// Set class's Id
-        /// </summary>
-        /// <param name="value">A string value</param>
-        public void SetClassInfo(string value)
-        { _class = value; }
-
-        /// <summary>
-        /// Get subject's Id
-        /// </summary>
-        /// <returns>The Id of subject</returns>
-        public string GetSubject()
-        { return _subject; }
-
-        /// <summary>
-        /// Set subject's Id
-        /// </summary>
-        /// <param name="value">A string value</param>
-        public void SetSubject(string value)
-        { _subject = value; }
+        /// <value>
+        /// The subject id which the teacher teaches
+        /// </value>
+        public string Subject { get { return _subject; } }
 
         /// <summary>
         /// An empty constructor for attendance

@@ -7,19 +7,45 @@ namespace LAB1
 {
     class CLIHelper
     {
+        /// <summary>
+        /// The number of student
+        /// </summary>
         private static int _numberOfStudent;
+
+        /// <summary>
+        /// The number of room
+        /// </summary>
         private static int _numberOfRoom;
+
+        /// <summary>
+        /// The name of the school
+        /// </summary>
         private static string _schoolName;
 
+        /// <value>
+        /// Gets the number of student
+        /// </value>
         public static int NumberOfStudent
         { get { return _numberOfStudent; } }
 
+        /// <value>
+        /// Gets the number of room
+        /// </value>
         public static int NumberOfRoom
         { get { return _numberOfRoom; } }
 
+        /// <value>
+        /// Gets the school name
+        /// </value>
         public static string SchoolName
         { get { return _schoolName; } }
 
+        /// <summary>
+        /// Checks if the command line contains target value
+        /// </summary>
+        /// <param name="args">An array of string</param>
+        /// <param name="targetValue">A string value</param>
+        /// <returns>Return the index of target value if found, return -1 if not found.</returns>
         public static int CheckContain(string[] args, string targetValue)
         {
             int result = -1;

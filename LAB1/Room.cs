@@ -28,47 +28,20 @@ namespace LAB1
         /// </summary>
         protected int _no;
 
-        /// <summary>
-        /// Gets Id of room
-        /// </summary>
-        /// <returns>The Id of room</returns>
-        public string GetId()
-        { return _id; }
+        /// <value>
+        /// The id of room
+        /// </value>
+        public string UUID { get { return _id; } }
 
-        /// <summary>
-        /// Sets Id of room
-        /// </summary>
-        /// <param name="value">A string value</param>
-        public void SetId(string value)
-        { _id = value; }
+        /// <value>
+        /// The class that use this room
+        /// </value>
+        public string Class { get { return _class; } }
 
-        /// <summary>
-        /// Gets class Id of room
-        /// </summary>
-        /// <returns>The class Id of room</returns>
-        public string GetClassInfo()
-        { return _class; }
-
-        /// <summary>
-        /// Sets class Id of room
-        /// </summary>
-        /// <param name="value">A string value</param>
-        public void SetClassInfo(string value)
-        { _class = value; }
-
-        /// <summary>
-        /// Gets room number
-        /// </summary>
-        /// <returns>The room number</returns>
-        public int GetNo()
-        { return _no; }
-
-        /// <summary>
-        /// Sets room number
-        /// </summary>
-        /// <param name="value">A positive integer value</param>
-        public void SetNo(int value)
-        { _no = value; }
+        /// <value>
+        /// The room number
+        /// </value>
+        public int No { get { return _no; } }
 
         /// <summary>
         /// An empty constructor for room

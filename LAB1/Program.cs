@@ -56,7 +56,7 @@ namespace LAB1
                 school.SetRoomList(room_list);
                 school.SaveRoom(directoryPath + "\\" + "Room.csv");
 
-                ClassInfo[] class_list = ClassInfo.Create(ids);
+                Class[] class_list = Class.Create(ids);
                 school.SetClassList(class_list);
                 school.SaveClass(directoryPath + "\\" + "Class.csv");
 
@@ -81,6 +81,8 @@ namespace LAB1
                 school.SaveGrade(directoryPath + "\\" + "Grade.csv");
 
                 Console.WriteLine("Succesful: You have a new school database with " + student + " students and " + room + " rooms");
+
+                school.SaveSchool(directoryPath + "\\" + schoolName + ".json");
                 Console.ReadLine();
             }
             else

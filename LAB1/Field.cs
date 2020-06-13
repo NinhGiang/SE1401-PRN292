@@ -22,41 +22,15 @@ namespace LAB1
         /// </summary>
         protected string _name;
 
-        /// <summary>
-        /// Gets Id of field
-        /// </summary>
-        /// <returns></returns>
-        public string GetId()
-        {
-            return _id;
-        }
+        /// <value>
+        /// The id of field
+        /// </value>
+        public string UUID { get { return _id; } }
 
-        /// <summary>
-        /// Sets Id of field
-        /// </summary>
-        /// <param name="value">A string value</param>
-        public void SetId(string value)
-        {
-            _id = value;
-        }
-
-        /// <summary>
-        /// Gets name of field
-        /// </summary>
-        /// <returns>The name of field</returns>
-        public string GetName()
-        {
-            return _name;
-        }
-
-        /// <summary>
-        /// Sets name of field
-        /// </summary>
-        /// <param name="value">A string value</param>
-        public void SetName(string value)
-        {
-            _name = value;
-        }
+        /// <value>
+        /// The name of field
+        /// </value>
+        public string Name { get { return _name; } }
 
         /// <summary>
         /// An empty constructor for field

@@ -32,61 +32,25 @@ namespace LAB1
         /// </summary>
         protected string _field;
 
-        /// <summary>
-        /// Gets Id of teacher
-        /// </summary>
-        /// <returns>The Id of teacher</returns>
-        public string GetId()
-        { return _id; }
+        /// <value>
+        /// The id of teacher
+        /// </value>
+        public string UUID { get { return _id; } }
 
-        /// <summary>
-        /// Sets Id of teacher
-        /// </summary>
-        /// <param name="value">A string value</param>
-        public void SetId(string value)
-        { _id = value; }
+        /// <value>
+        /// The name of teacher
+        /// </value>
+        public string Name { get { return _name; } }
 
-        /// <summary>
-        /// Gets name of teacher
-        /// </summary>
-        /// <returns>The name of teacher</returns>
-        public string GetName()
-        { return _name; }
+        /// <value>
+        /// The gender of teacher
+        /// </value>
+        public bool Gender { get { return _gender; } }
 
-        /// <summary>
-        /// Sets name of teacher
-        /// </summary>
-        /// <param name="value">A string value</param>
-        public void SetName(string value)
-        { _name = value; }
-
-        /// <summary>
-        /// Gets gender of teacher
-        /// </summary>
-        /// <returns>The gender of teacher</returns>
-        public bool GetGender()
-        { return _gender; }
-
-        /// <summary>
-        /// Sets gender of teacher
-        /// </summary>
-        /// <param name="value">A boolean value</param>
-        public void SetGender(bool value)
-        { _gender = value; }
-
-        /// <summary>
-        /// Gets field teacher teaches
-        /// </summary>
-        /// <returns>The field id teacher teaches</returns>
-        public string GetField()
-        { return _field; }
-
-        /// <summary>
-        /// Sets field teacher teaches
-        /// </summary>
-        /// <param name="value">A string value</param>
-        public void SetField(string value)
-        { _field = value; }
+        /// <value>
+        /// The field of teacher
+        /// </value>
+        public string Field { get { return _field; } }
 
         /// <summary>
         /// An empty constructor for teacher

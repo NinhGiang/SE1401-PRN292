@@ -36,81 +36,30 @@ namespace LAB1
         /// </summary>
         protected string _class;
 
-        /// <summary>
-        /// Gets Id of student
-        /// </summary>
-        /// <returns>
-        /// The Id of student
-        /// </returns>
-        public string GetId()
-        { return _id; }
+        /// <value>
+        /// The id of student
+        /// </value>
+        public string UUID { get { return _id; } }
 
-        /// <summary>
-        /// Sets Id of student
-        /// </summary>
-        /// <param name="value">A string value</param>
-        public void SetId(string value)
-        { _id = value; }
-
-        /// <summary>
-        /// Gets name of student
-        /// </summary>
-        /// <returns>
+        /// <value>
         /// The name of student
-        /// </returns>
-        public string GetName()
-        { return _name; }
+        /// </value>
+        public string Name { get { return _name; } }
 
-        /// <summary>
-        /// Sets name of student
-        /// </summary>
-        /// <param name="value">A string value</param>
-        public void SetName(string value)
-        { _name = value; }
+        /// <value>
+        /// The birthday of student
+        /// </value>
+        public DateTime Birthday { get { return _birthdate; } }
 
-        /// <summary>
-        /// Gets birthday of student
-        /// </summary>
-        /// <returns>
-        /// The birthdate of student
-        /// </returns>
-        public DateTime GetBirthdate()
-        { return _birthdate; }
+        /// <value>
+        /// The gender of student
+        /// </value>
+        public bool Gender { get { return _gender; } }
 
-        /// <summary>
-        /// Sets birthday of student
-        /// </summary>
-        /// <param name="value">A Datetime value</param>
-        public void SetBirthdate(DateTime value)
-        { _birthdate = value; }
-
-        /// <summary>
-        /// Gets gender of student
-        /// </summary>
-        /// <returns>The gender of student</returns>
-        public bool GetGender()
-        { return _gender; }
-
-        /// <summary>
-        /// Sets gender of student
-        /// </summary>
-        /// <param name="value">A boolean value</param>
-        public void SetGender(bool value)
-        { _gender = value; }
-
-        /// <summary>
-        /// Gets class student attend
-        /// </summary>
-        /// <returns>The class student attend</returns>
-        public string GetClassInfo()
-        { return _class; }
-
-        /// <summary>
-        /// Sets class student attend
-        /// </summary>
-        /// <param name="value">The class student attend</param>
-        public void SetClassInfo(string value)
-        { _class = value; }
+        /// <value>
+        /// The class of student
+        /// </value>
+        public string Class { get { return _class; } }
 
         /// <summary>
         /// An empty contrustor for student
@@ -182,37 +131,6 @@ namespace LAB1
                     currentTotal++;
                 }
             }
-            /*
-            for (int i = 0; i < numberOfStudent; i++)
-            {
-                //id
-                String uuid = Guid.NewGuid().ToString();
-
-                //gender
-                bool gender = rnd.Next(2) == 1;
-
-                //name
-                string fullName = GenerateDataHelper.GetRandomNameByGender(gender);
-
-                //level
-                List<string> levelList = FileHelper.GetListOfLevel();
-                index = rnd.Next(levelList.Count);
-                string[] levelInfo = levelList[index].Split(',');
-                string level = levelInfo[1].Trim();
-                string levelId = levelInfo[0].Trim();
-
-                //birthdate
-                DateTime birthdate = GenerateDataHelper.GetRandomBirthdayByLevel(level);
-
-                //Class
-                List<string> listOfClasses = FileHelper.GetListOfClassByLevel(levelId);
-                index = rnd.Next(listOfClasses.Count);
-                string[] classes = listOfClasses[index].Split(',');
-                string classInfo = classes[0].Trim();
-
-                result.Add(new Student(uuid, fullName, birthdate, gender, classInfo));
-            }
-            */
             return result.ToArray();
         }
 
