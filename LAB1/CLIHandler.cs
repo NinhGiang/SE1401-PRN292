@@ -51,6 +51,7 @@ namespace LAB1
                 int roomNumIndex = getIndexFromArray(args, "-r") + 1;
                 int studentNum = 0;
                 int roomNum = 0;
+                bool foundError = false;
 
                 if (studentNumIndex > 0)
                 {
@@ -58,12 +59,14 @@ namespace LAB1
                     if (!checkParse)
                     {
                         result += "Error : CLI format for student number is incorrect .\n";
+                        foundError = true;
                     }
                     else
                     {
                         if (Utils.CheckStudentNumber(studentNum))
                         {
                             result += "Error : Student number must be 500 to 3000 .\n";
+                            foundError = true;
                         }
                     }
                 }
@@ -73,36 +76,42 @@ namespace LAB1
                     if (!checkParse)
                     {
                         result += "Error : CLI format for room number is incorrect .\n";
+                        foundError = true;
                     }
                     else
                     {
                         if (Utils.CheckStudentNumber(roomNum))
                         {
                             result += "Error : Room number must be below 100 .\n";
+                            foundError = true;
                         }
                     }
                 }
-
-
-                if (studentNumIndex == 0 && roomNumIndex == 0 )
+                if (!foundError)
                 {
-                    studentNum = Utils.GenerateRandomStudentNumber();
-                    roomNum = Utils.GetRandomRoomNumber();
+                    if (studentNumIndex == 0 && roomNumIndex == 0)
+                    {
+                        studentNum = Utils.GenerateRandomStudentNumber();
+                        roomNum = Utils.GenerateRandomRoomNumberByStudentNumber(studentNum);
+                    }
+                    else if (studentNumIndex > 0 && roomNumIndex == 0)
+                    {
+                        roomNum = Utils.GenerateRandomRoomNumberByStudentNumber(studentNum);
+                    }
+                    else if (studentNumIndex == 0 && roomNumIndex > 0)
+                    {
+                        studentNum = Utils.GenerateRandomStudentNumberByRoomNumber(roomNum);
+                    }
+                    else
+                    {
+                        if (!Utils.ValidateStudentAndRoomNumber(studentNum, roomNum))
+                        {
+                            result = "Invalid student to room ratio (Each room must have 30 - 50 student)";
+                        }
+                    }
+                    _student_num = studentNum;
+                    _room_num = roomNum;
                 }
-                else if (studentNumIndex > 0 && roomNumIndex == 0)
-                {
-                    roomNum = Utils.GetRandomRoomNumber();
-                }
-                else if (studentNumIndex == 0 && roomNumIndex > 0)
-                {
-
-                }
-                else 
-                {
-
-                }
-
-
             }
             return result;
         }
