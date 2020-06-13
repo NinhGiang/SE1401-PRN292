@@ -9,12 +9,15 @@ namespace LAB1
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             Console.WriteLine("Test Lab");
             
             School school = new School();
             school.SchoolName = "ABC";
+            int roomAndClassNum = 20;
+            int studentNum = 200;
             //create school folder
             string directoryPath = @"..\..\..\" + school.SchoolName;
             Directory.CreateDirectory(directoryPath);
@@ -41,7 +44,7 @@ namespace LAB1
             school.SaveTeacher(directoryPath + "\\" + "Teacher.csv");
 
             //create room and class
-            Dictionary<string, string> roomAndClassIDList = Utils.generateRoomAndClassID(20);
+            Dictionary<string, string> roomAndClassIDList = Utils.generateRoomAndClassID(roomAndClassNum);
             Room[] room_list = Room.createRoom(roomAndClassIDList);
             school.RoomList =  room_list;
             school.SaveRoom(directoryPath + "\\" + "Room.csv");
@@ -50,7 +53,7 @@ namespace LAB1
             school.ClassList = class_list;
             school.SaveClass(directoryPath + "\\" + "Class.csv");
 
-            Student[] student_list = Student.createStudent(200);
+            Student[] student_list = Student.createStudent(studentNum);
             school.StudentList = student_list;
             school.SaveStudent(directoryPath + "\\" + "Student.csv");
 

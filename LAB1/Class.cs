@@ -93,6 +93,7 @@ namespace LAB1
             }
             return list;
         }
+        /*
         public static void print(Dictionary<String, String> ids, Level[] levelList)
         {
             int idCount = ids.Count;
@@ -104,5 +105,6 @@ namespace LAB1
             Console.WriteLine(idCount/=count);
             Console.WriteLine(idCount % count);
         }
+        */
     }
 }
