@@ -5,13 +5,13 @@ using System.Text;
 
 namespace LAB1
 {
-    class Field
+    class FieldDTO
     {
         public static readonly string[] listFieldName= new string[] { "Toan", "Ngu Van", "Sinh Hoc", "Vat Ly", "Hoa Hoc", "Lich Su", "Dia Ly", "Ngoai Ngu", "GDCD", "The Duc" };
         public string UUID { get; set; }
         public string Name { get; set; }
         public string[] ListFieldName { get { return listFieldName; } }
-        public Field()
+        public FieldDTO()
         {
             UUID = Guid.NewGuid().ToString();
         }

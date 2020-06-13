@@ -4,10 +4,10 @@ using System.Text;
 
 namespace LAB1
 {
-    class Grade
+    class GradeDTO
     {
-        public Subject Subject { get; set; }
-        public Student Student { get; set; }
+        public SubjectDTO Subject { get; set; }
+        public StudentDTO Student { get; set; }
         public int Mark { get; set; }
     }
 }

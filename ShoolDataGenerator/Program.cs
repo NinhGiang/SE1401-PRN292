@@ -64,6 +64,12 @@ namespace ShoolDataGenerator
             {
                 Console.WriteLine(no);
             }*/
+            //Test subject
+            string[] listSubject = SubjectDTO.GenerateSubject(10, 100);
+            foreach (var subject in listSubject)
+            {
+                Console.WriteLine(subject);
+            }
         }
 
 

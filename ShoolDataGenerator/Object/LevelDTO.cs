@@ -5,13 +5,13 @@ using System.Text;
 
 namespace LAB1
 {
-    public class Level
+    public class LevelDTO
     {
         public static readonly string[] listLevelName = new string[] { "10", "11", "12" };
         public string UUID { get; set; }
         public int Name { get; set; }
         public string[] ListLevelName { get { return listLevelName; } }
-        public Level()
+        public LevelDTO()
         {
             UUID = Guid.NewGuid().ToString();
         }

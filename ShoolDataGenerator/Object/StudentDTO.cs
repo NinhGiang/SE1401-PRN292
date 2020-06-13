@@ -7,12 +7,12 @@ using System.Text;
 namespace LAB1
 {
 
-    class Student
+    class StudentDTO
     {
         public static int[] LimitYearForLevel10 { get; set; }
         public static int[] LimitYearForLevel11 { get; }
         public static int[] LimitYearForLevel12 { get; }
-        static Student()
+        static StudentDTO()
         {
             DateTime currentDate = DateTime.Now;
             int currentYear = currentDate.Year;
@@ -28,9 +28,9 @@ namespace LAB1
         public string Name { get; set; }
         public int Birthday { get; set; }
         public string Gender { get; set; }
-        public Class Class { get; set; }
+        public ClassDTO Class { get; set; }
 
-        public Student()
+        public StudentDTO()
         {
             UUID = Guid.NewGuid().ToString();
         }

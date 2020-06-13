@@ -4,13 +4,13 @@ using System.Text;
 
 namespace LAB1
 {
-    class Class
+    class ClassDTO
     {
         public string UUID { get; set; }
-        public Level Level { get; set; }
-        public Room Room { get; set; }
+        public LevelDTO Level { get; set; }
+        public RoomDTO Room { get; set; }
         public string Name { get; set; }
-        public Class()
+        public ClassDTO()
         {
             UUID = Guid.NewGuid().ToString() ;
         }
