@@ -16,7 +16,6 @@ namespace LAB1
 
         public Level()
         {
-
         }
 
         public Level(string id, string name)
@@ -27,20 +26,32 @@ namespace LAB1
 
         public static Level[] Create()
         {
-            string content = File.ReadAllText(@"..\..\..\Configure.json");
-            config config = JsonSerializer.Deserialize<config>(content);
-            LevelConfig lvl = config.LevelConfig;
-            int size = lvl.Level_Set.Length;
-            Level[] result = new Level[size];
-
-            for (int i = 0; i < size; i++)
+            try
             {
-                string name = lvl.Level_Set[i].ToString(); //set value level
-                string id = Guid.NewGuid().ToString();
-                result[i] = new Level(id, name);
-                
+                string content = File.ReadAllText(@"..\..\..\Configure.json");
+                config config = JsonSerializer.Deserialize<config>(content);
+                LevelConfig lvl = config.LevelConfig;
+                int size = lvl.Level_Set.Length;
+                List<Level> result = new List<Level>();
+
+                for (int i = 0; i < size; i++)
+                {
+                    string name = lvl.Level_Set[i].ToString(); //set value level
+                    string id = Guid.NewGuid().ToString();
+                    result[i] = new Level(id, name);
+
+                }
+                return result.ToArray();
             }
-            return result;
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("Level _ FileNotFoundException: " + ex.Message);
+            }
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine("Level _ NullReferenceException: " + ex.Message);
+            }
+            return null;
         }
     }
 }
