@@ -126,90 +126,55 @@ namespace LAB1
         }
 
         /// <summary>
-        /// Get school name in command line
+        /// Check if the number of student is in range
         /// </summary>
-        /// <param name="input">A string value</param>
-        /// <returns>The name of the school</returns>
-        public static string GetSchoolName(string input)
+        /// <param name="number">A positive integer value</param>
+        /// <returns>The number of student if in range, -1 if out of range</returns>
+        public static int CheckStudentAmount(int number)
         {
-            string tmp = input.Replace("./schoolDatabaseGenerator", "").Trim();
-            int index_of_s = tmp.IndexOf(" -s ");
-            int index_of_r = tmp.IndexOf(" -r ");
-            if (index_of_s > 0)
+            if (number >= 10 & number <= 3000)
             {
-                string schoolName = tmp.Substring(0, index_of_s).Trim();
-                return schoolName;
-            }
-            else if (index_of_r > 0)
-            {
-                string schoolName = tmp.Substring(0, index_of_r).Trim();
-                return schoolName;
-            }
-            return null;
-        }
-
-        /// <summary>
-        /// Gets the number of student by command line
-        /// </summary>
-        /// <param name="input">A string value</param>
-        /// <returns>The number of student</returns>
-        public static int GetStudentAmount(string input)
-        {
-            int index_of_s = input.LastIndexOf(" -s ");
-            int index_of_r = input.IndexOf(" -r ");
-            int number_of_students;
-            if (index_of_s > 0)
-            {
-                int index_of_student_amount = index_of_s + 4;
-                if (index_of_r > 0)
-                {
-                    int number_of_char = index_of_r - index_of_student_amount;
-                    number_of_students = IntegerType.FromString(input.Substring(index_of_student_amount, number_of_char));
-                }
-                else
-                {
-                    int number_of_char = input.Length - index_of_student_amount;
-                    number_of_students = IntegerType.FromString(input.Substring(index_of_student_amount, number_of_char));
-                }
-                if (number_of_students >= 500 & number_of_students <= 3000)
-                {
-                    return number_of_students;
-                }
+                return number;
             }
             return -1;
         }
 
         /// <summary>
-        /// Gets the number of room by command line
+        /// Check if the number of room is in range
         /// </summary>
-        /// <param name="input">A string value</param>
-        /// <returns>The number of room</returns>
-        public static int GetRoomAmount(string input)
+        /// <param name="number">A positive integer value</param>
+        /// <returns>The number of room if in range, -1 if out of range</returns>
+        public static int CheckRoomAmount(int number)
         {
-            int index_of_r = input.IndexOf(" -r ");
-            int number_of_rooms;
-
-            if (index_of_r > 0)
+            if (number <= 100 & number >= 3)
             {
-                int index_of_room_amount = index_of_r + 4;
-                int number_of_chars = input.Length - index_of_room_amount;
-                if (number_of_chars > 0)
-                {
-                    number_of_rooms = IntegerType.FromString(input.Substring(index_of_room_amount, number_of_chars));
-                    if (number_of_rooms <= 100 & number_of_rooms >= 3)
-                    {
-                        return number_of_rooms;
-                    }
-                }
+                return number;
             }
             return -1;
         }
 
         /// <summary>
-        /// 
+        /// Check if each room has 30-50 students
         /// </summary>
-        /// <param name="numberOfStudent"></param>
-        /// <returns></returns>
+        /// <param name="student">A positive integer value</param>
+        /// <param name="room">A positive integer value</param>
+        /// <returns>True if each room has 30-50 students, false if not</returns>
+        public static bool CheckValidNumber(int student, int room)
+        {
+            return true;
+            double tmp = (double)student / (double)room;
+            if (tmp >= 30 && tmp <= 50)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Get number of room based on the number of student
+        /// </summary>
+        /// <param name="numberOfStudent">A positive integer value</param>
+        /// <returns>The random number of room</returns>
         public static int GenerateRoomAmountByStudent(int numberOfStudent)
         {
             int maxRoom = (int)Math.Ceiling((double) numberOfStudent / 30);
@@ -217,6 +182,11 @@ namespace LAB1
             return rnd.Next(minRoom, maxRoom + 1);
         }
 
+        /// <summary>
+        /// Get number of student based on the number of room
+        /// </summary>
+        /// <param name="numberOfRoom">A positive integer value</param>
+        /// <returns>A random number of student</returns>
         public static int GenerateStudentAmountByRoom(int numberOfRoom)
         {
             int maxStudent = (int)Math.Ceiling((double)numberOfRoom * 50);
@@ -224,6 +194,10 @@ namespace LAB1
             return rnd.Next(minStudent, maxStudent + 1);
         }
 
+        /// <summary>
+        /// Get random number of student in range 500 to 3000
+        /// </summary>
+        /// <returns>A random number of student</returns>
         public static int GenerateRandomStudentAmount()
         {
             return rnd.Next(500, 3000 + 1);

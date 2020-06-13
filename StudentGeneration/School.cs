@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace StudentGeneration
 {
@@ -14,10 +16,18 @@ namespace StudentGeneration
         }
         public void save(string filename)
         {
-            String content = "ID, Fullname\n";
-            foreach(Student student in _students_list)
+            String content = "";
+            if (Path.GetExtension(filename) == ".csv")
             {
-                content += student.ID + ", " + student.FullName + "\n";
+                content = "ID, Fullname\n";
+                foreach (Student student in _students_list)
+                {
+                    content += student.ID + ", " + student.FullName + "\n";
+                }
+            }
+            else if (Path.GetExtension(filename) == ".json")
+            {
+                content = JsonSerializer.Serialize(_students_list);
             }
             File.WriteAllText(filename, content);
         }

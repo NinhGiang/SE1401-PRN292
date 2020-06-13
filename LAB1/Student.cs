@@ -144,8 +144,45 @@ namespace LAB1
             List<Student> result = new List<Student>();
 
             Random rnd = new Random();
-            int index;
 
+            List<string> listOfClasses = FileHelper.GetListOfClass();
+            int currentTotal = 0;
+            int quantity;
+            for (int i = 0; i < listOfClasses.Count; i++)
+            {
+                if (i == listOfClasses.Count)
+                {
+                    quantity = numberOfStudent - currentTotal;
+                }
+                else
+                {
+                    quantity = rnd.Next(30, 51);
+                }
+
+                string[] classs = listOfClasses[i].Split(',');
+                string classInfo = classs[0].Trim();
+                string levelId = classs[1].Trim();
+                string level = FileHelper.GetLevelByPrimaryKey(levelId).Split(',')[1];
+
+                for (int j = 0; j < quantity; j++)
+                {
+                    //id
+                    string uuid = Guid.NewGuid().ToString();
+
+                    //gender
+                    bool gender = rnd.Next(2) == 1;
+
+                    //name
+                    string fullName = GenerateDataHelper.GetRandomNameByGender(gender);
+
+                    //birthdate
+                    DateTime birthdate = GenerateDataHelper.GetRandomBirthdayByLevel(level);
+
+                    result.Add(new Student(uuid, fullName, birthdate, gender, classInfo));
+                    currentTotal++;
+                }
+            }
+            /*
             for (int i = 0; i < numberOfStudent; i++)
             {
                 //id
@@ -175,6 +212,7 @@ namespace LAB1
 
                 result.Add(new Student(uuid, fullName, birthdate, gender, classInfo));
             }
+            */
             return result.ToArray();
         }
 

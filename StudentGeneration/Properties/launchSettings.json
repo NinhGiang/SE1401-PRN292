@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "StudentGeneration": {
+      "commandName": "Project",
+      "commandLineArgs": "-s"
+    }
+  }
+}

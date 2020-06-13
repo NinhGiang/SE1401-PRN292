@@ -12,32 +12,90 @@ namespace LAB1
     /// </summary>
     class FileHelper
     {
+        /// <summary>
+        /// 
+        /// </summary>
         private static string _directoryPath;
-        private static string ROOM_FILE;
-        private static string ATTENDANCE_FILE;
-        private static string CLASS_FILE;
-        private static string LEVEL_FILE;
-        private static string FIELD_FILE;
-        private static string STUDENT_FILE;
-        private static string SUBJECT_FILE;
-        private static string TEACHER_FILE;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        private static string _roomFile;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private static string _attendanceFile;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private static string _classFile;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private static string _levelFile;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private static string _fieldFile;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private static string _studentFile;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private static string _subjectFile;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private static string _teacherFile;
+
+
+        public static string RoomFile
+        {
+            get { return _roomFile; }
+            set { }
+        }
+
+        /// <value>
+        /// Gets and sets value of attendanceFile
+        /// </value>
+        public static string AttendanceFile
+        {
+            get { return _attendanceFile; }
+            set { }
+        }
+
+        /// <summary>
+        /// Sets directory path
+        /// </summary>
+        /// <param name="value"></param>
         public static void SetDirectoryPath(string value)
         {
             _directoryPath = value;
             SetFilePath();
         }
 
+        /// <summary>
+        /// Sets .csv filepath
+        /// </summary>
         private static void SetFilePath()
         {
-            ROOM_FILE = _directoryPath + "\\" + "Room.csv";
-            ATTENDANCE_FILE = _directoryPath + "\\" + "Attendance.csv";
-            CLASS_FILE = _directoryPath + "\\" + "Class.csv";
-            LEVEL_FILE = _directoryPath + "\\" + "Level.csv";
-            FIELD_FILE = _directoryPath + "\\" + "Field.csv";
-            STUDENT_FILE = _directoryPath + "\\" + "Student.csv";
-            SUBJECT_FILE = _directoryPath + "\\" + "Subject.csv";
-            TEACHER_FILE = _directoryPath + "\\" + "Teacher.csv";
+            _roomFile = _directoryPath + "\\" + "Room.csv";
+            _attendanceFile = _directoryPath + "\\" + "Attendance.csv";
+            _classFile = _directoryPath + "\\" + "Class.csv";
+            _levelFile = _directoryPath + "\\" + "Level.csv";
+            _fieldFile = _directoryPath + "\\" + "Field.csv";
+            _studentFile = _directoryPath + "\\" + "Student.csv";
+            _subjectFile = _directoryPath + "\\" + "Subject.csv";
+            _teacherFile = _directoryPath + "\\" + "Teacher.csv";
         }
 
         /// <summary>
@@ -208,8 +266,20 @@ namespace LAB1
         /// <returns>Room info</returns>
         public static string GetRoomByPrimaryKey(string roomId)
         {
-            string path = ROOM_FILE;
+            string path = _roomFile;
             return GetDataByPrimaryKey(path, roomId);
+        }
+
+
+        /// <summary>
+        /// Get level info by id
+        /// </summary>
+        /// <param name="levelId">A string value</param>
+        /// <returns>Level info</returns>
+        public static string GetLevelByPrimaryKey(string levelId)
+        {
+            string path = _levelFile;
+            return GetDataByPrimaryKey(path, levelId);
         }
 
         /// <summary>
@@ -219,7 +289,7 @@ namespace LAB1
         /// <returns>List of subject contains field id</returns>
         public static List<string> GetListOfSubjectByField(string fieldId)
         {
-            string path = SUBJECT_FILE;
+            string path = _subjectFile;
             int column = GetColumn(path, "Field");
             return GetDataByForeignKey(path, fieldId, column);
         }
@@ -231,7 +301,7 @@ namespace LAB1
         /// <returns>List of class contains level id</returns>
         public static List<string> GetListOfClassByLevel(string levelId)
         {
-            string path = CLASS_FILE;
+            string path = _classFile;
             int column = GetColumn(path, "Level");
             return GetDataByForeignKey(path, levelId, column);
         }
@@ -243,7 +313,7 @@ namespace LAB1
         /// <returns>List of subject contains class id</returns>
         public static List<string> GetListOfSubjectByClass(string classId)
         {
-            string path = ATTENDANCE_FILE;
+            string path = _attendanceFile;
             int column = GetColumn(path, "Class");
             return GetDataByForeignKey(path, classId, column);
         }
@@ -254,7 +324,7 @@ namespace LAB1
         /// <returns>List of classes</returns>
         public static List<string> GetListOfClass()
         {
-            return GetCsvData(CLASS_FILE);
+            return GetCsvData(_classFile);
         }
 
         /// <summary>
@@ -263,7 +333,7 @@ namespace LAB1
         /// <returns>List of fields</returns>
         public static List<string> GetListOfField()
         {
-            return GetCsvData(FIELD_FILE);
+            return GetCsvData(_fieldFile);
         }
 
         /// <summary>
@@ -272,7 +342,7 @@ namespace LAB1
         /// <returns>List of rooms</returns>
         public static List<string> GetListOfRoom()
         {
-            return GetCsvData(ROOM_FILE);
+            return GetCsvData(_roomFile);
         }
 
         /// <summary>
@@ -281,7 +351,7 @@ namespace LAB1
         /// <returns>List of levels</returns>
         public static List<string> GetListOfLevel()
         {
-            return GetCsvData(LEVEL_FILE);
+            return GetCsvData(_levelFile);
         }
 
         /// <summary>
@@ -290,7 +360,7 @@ namespace LAB1
         /// <returns>List of students</returns>
         public static List<string> GetListOfStudent()
         {
-            return GetCsvData(STUDENT_FILE);
+            return GetCsvData(_studentFile);
         }
 
         /// <summary>
@@ -299,7 +369,7 @@ namespace LAB1
         /// <returns>List of teachers</returns>
         public static List<string> GetListOfTeacher()
         {
-            return GetCsvData(TEACHER_FILE);
+            return GetCsvData(_teacherFile);
         }
 
         /// <summary>
