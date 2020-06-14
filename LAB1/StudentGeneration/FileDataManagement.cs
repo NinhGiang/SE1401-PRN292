@@ -39,6 +39,29 @@ namespace LAB1.StudentGeneration
             File.WriteAllText(filepath, content);
         }
 
+        public static void saveFields(string school_name, List<Field> fields)
+        {
+            String content = "ID, Name\n";
+            foreach (Field field in fields)
+            {
+                content += field.ID + ", " + field.Name + "\n";
+            }
+            string filepath = @"..\..\..\StudentGeneration\" + school_name + @"\Fields.csv";
+            File.WriteAllText(filepath, content);
+        }
+
+        public static void saveSubjects(string school_name, List<Subject> subjects)
+        {
+            String content = "ID, Level, Field, Name\n";
+            foreach (Subject subject in subjects)
+            {
+                content += subject.ID + ", " + subject.Level + ", " + subject.Field + ", " +
+                    subject.Name + "\n";
+            }
+            string filepath = @"..\..\..\StudentGeneration\" + school_name + @"\Subjects.csv";
+            File.WriteAllText(filepath, content);
+        }
+
         public static void saveRooms(string school_name, List<Room> rooms)
         {
             String content = "ID, Class, No.\n";

@@ -118,10 +118,6 @@ namespace StudentGeneration
                 students.Add(new Student(student_id, fullname, gender_gen,
                     dob, current_class));
             }
-            for (int i = 0; i < classes.Count; i++)
-            {
-                Console.WriteLine("{0}, {1}", classes.ElementAt(i).Key, classes.ElementAt(i).Value);
-            }
             return students;
         }
     }

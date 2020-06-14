@@ -24,6 +24,12 @@ namespace StudentGeneration
 
             List<Student> students = Student.CreateStudentRandomly(2000);
             FileDataManagement.saveStudents("abc", students);
+
+            List<Field> fields = Field.CreateFields();
+            FileDataManagement.saveFields("abc", fields);
+
+            List<Subject> subjects = Subject.createSubjects();
+            FileDataManagement.saveSubjects("abc", subjects);
             Console.ReadLine();
         }
 

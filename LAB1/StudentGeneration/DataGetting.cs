@@ -25,6 +25,7 @@ namespace LAB1.StudentGeneration
         {
             return levelDB.LevelSet[index];
         }
+
         public static string[] GetLevelData()
         {
             List<string> levelList = GetLevelList();
@@ -32,6 +33,29 @@ namespace LAB1.StudentGeneration
             string[] levelInfo = levelList[index].Split(',');
             return levelInfo;
         }
+
+        public static string[] GetLevelData(int index)
+        {
+            List<string> levelList = GetLevelList();
+            string[] levelInfo = levelList[index].Split(',');
+            return levelInfo;
+        }
+
+        public static string[] GetFieldData(int index)
+        {
+            List<string> fieldList = GetFieldList();
+            string[] fieldInfo = fieldList[index].Split(',');
+            return fieldInfo;
+        }
+
+        public static string[] GetFieldData()
+        {
+            List<string> fieldList = GetFieldList();
+            int index = rnd.Next(fieldList.Count);
+            string[] fieldInfo = fieldList[index].Split(',');
+            return fieldInfo;
+        }
+
         public static string[] GetRoomData()
         {
             List<string> listOfRooms = GetRoomList();
@@ -43,6 +67,11 @@ namespace LAB1.StudentGeneration
         public static List<string> GetLevelList()
         {
             return FileDataManagement.CsvReader(@"..\..\..\StudentGeneration\abc\Levels.csv");
+        }
+
+        public static List<string> GetFieldList()
+        {
+            return FileDataManagement.CsvReader(@"..\..\..\StudentGeneration\abc\Fields.csv");
         }
 
         public static List<string> GetRoomList()

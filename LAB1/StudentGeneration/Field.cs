@@ -30,7 +30,7 @@ namespace LAB1.StudentGeneration
             set { _Name = value; }
         }
 
-        static public List<Field> CreateStudentRandomly()
+        static public List<Field> CreateFields()
         {
             List<Field> fields = new List<Field>();
             String content = File.ReadAllText(@"..\..\..\StudentGeneration\dataset.json");
