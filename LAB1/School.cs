@@ -5,74 +5,146 @@ using System.Text;
 
 namespace LAB1
 {
+    /// <summary>
+    /// School Class
+    /// Contains methods and properties for School
+    /// </summary>
     class School
     {
+        /// <summary>
+        /// School name
+        /// </summary>
         private string _school_name;
+        /// <summary>
+        /// List of Level
+        /// </summary>
         private List<Level> _level_list;
+        /// <summary>
+        /// List of Field
+        /// </summary>
         private List<Field> _field_list;
+        /// <summary>
+        /// List of Subject
+        /// </summary>
         private List<Subject> _subject_list;
+        /// <summary>
+        /// List of Teacher
+        /// </summary>
         private List<Teacher> _teacher_list;
+        /// <summary>
+        /// List of Room
+        /// </summary>
         private List<Room> _room_list;
+        /// <summary>
+        /// List of Class
+        /// </summary>
         private List<Class> _class_list;
+        /// <summary>
+        /// List of Student
+        /// </summary>
         private List<Student> _student_list;
+        /// <summary>
+        /// List of Grace
+        /// </summary>
         private List<Grade> _grade_list;
+        /// <summary>
+        /// List of Attendance
+        /// </summary>
         private List<Attendance> _attendance_list;
         
-
+        /// <summary>
+        /// Empty constructor for school
+        /// </summary>
         public School()
         {
         }
+        /// <summary>
+        /// getter and setter for school name
+        /// </summary>
         public string SchoolName
         {
             get { return _school_name; }
             set { _school_name = value; }
         }
+        /// <summary>
+        /// getter and setter for level list
+        /// </summary>
         public Level[] LevelList
         {
             get { return _level_list.ToArray(); }
             set { _level_list = new List<Level>(value); }
         }
+        /// <summary>
+        /// getter and setter for field list
+        /// </summary>
         public Field[] FieldList
         {
             get { return _field_list.ToArray(); }
             set { _field_list = new List<Field>(value); }
         }
+        /// <summary>
+        /// getter and setter for subject list
+        /// </summary>
         public Subject[] SubjectList
         {
             get { return _subject_list.ToArray(); }
             set { _subject_list = new List<Subject>(value); }
         }
+        /// <summary>
+        /// getter and setter for teacher list
+        /// </summary>
         public Teacher[] TeacherList
         {
             get { return _teacher_list.ToArray(); }
             set { _teacher_list = new List<Teacher>(value); }
         }
+        /// <summary>
+        /// getter and setter for room list
+        /// </summary>
         public Room[] RoomList
         {
             get { return _room_list.ToArray(); }
             set { _room_list = new List<Room>(value); }
         }
+        /// <summary>
+        /// getter and setter for class list
+        /// </summary>
         public Class[] ClassList
         {
             get { return _class_list.ToArray(); }
             set { _class_list = new List<Class>(value); }
         }
+        /// <summary>
+        /// getter and setter for student list
+        /// </summary>
         public Student[] StudentList
         {
             get { return _student_list.ToArray(); }
             set { _student_list = new List<Student>(value); }
         }
+        /// <summary>
+        /// getter and setter for grade list
+        /// </summary>
         public Grade[] GradeList
         {
             get { return _grade_list.ToArray(); }
             set { _grade_list = new List<Grade>(value); }
         }
+        /// <summary>
+        /// getter and setter for attendance list
+        /// </summary>
         public Attendance[] AttendanceList
         {
             get { return _attendance_list.ToArray(); }
             set { _attendance_list = new List<Attendance>(value); }
         }
-
+        /// <summary>
+        /// Save Level list into a file
+        /// </summary>
+        /// <param name="filename">string value (name and path)</param>
+        /// <exception cref="System.NullReferenceException">
+        /// Thrown when encounter null reference
+        /// </exception>
         public void SaveLevel(String filename)
         {
             String content = "ID, Name\n";
@@ -93,6 +165,13 @@ namespace LAB1
                 Console.WriteLine("SaveLevel : " + ex.Message);
             }
         }
+        /// <summary>
+        /// Save Field list into a file
+        /// </summary>
+        /// <param name="filename">string value (name and path)</param>
+        /// <exception cref="System.NullReferenceException">
+        /// Thrown when encounter null reference
+        /// </exception>
         public void SaveField(String filename)
         {
             String content = "ID, Name\n";
@@ -114,6 +193,13 @@ namespace LAB1
                 Console.WriteLine("SaveField : " + ex.Message);
             }
         }
+        /// <summary>
+        /// Save Subject list into a file
+        /// </summary>
+        /// <param name="filename">string value (name and path)</param>
+        /// <exception cref="System.NullReferenceException">
+        /// Thrown when encounter null reference
+        /// </exception>
         public void SaveSubject(String filename)
         {
             String content = "ID, Name, Level, Field\n";
@@ -137,6 +223,13 @@ namespace LAB1
                 Console.WriteLine("SaveSubject : " + ex.Message);
             }
         }
+        /// <summary>
+        /// Save Teacher list into a file
+        /// </summary>
+        /// <param name="filename">string value (name and path)</param>
+        /// <exception cref="System.NullReferenceException">
+        /// Thrown when encounter null reference
+        /// </exception>
         public void SaveTeacher(String filename)
         {
             String content = "ID, Name, Gender, Field\n";
@@ -165,6 +258,13 @@ namespace LAB1
                 Console.WriteLine("SaveTeacher : " + ex.Message);
             }
         }
+        /// <summary>
+        /// Save Room list into a file
+        /// </summary>
+        /// <param name="filename">string value (name and path)</param>
+        /// <exception cref="System.NullReferenceException">
+        /// Thrown when encounter null reference
+        /// </exception>
         public void SaveRoom(String filename)
         {
             String content = "ID, Class, No\n";
@@ -188,6 +288,13 @@ namespace LAB1
                 Console.WriteLine("SaveRoom : " + ex.Message);
             }
         }
+        /// <summary>
+        /// Save Teacher list into a file
+        /// </summary>
+        /// <param name="filename">string value (name and path)</param>
+        /// <exception cref="System.NullReferenceException">
+        /// Thrown when encounter null reference
+        /// </exception>
         public void SaveClass(String filename)
         {
             String content = "ID, Level, Room, Name\n";
@@ -212,6 +319,13 @@ namespace LAB1
                 Console.WriteLine("SaveClass : " + ex.Message);
             }
         }
+        /// <summary>
+        /// Save Student list into a file
+        /// </summary>
+        /// <param name="filename">string value (name and path)</param>
+        /// <exception cref="System.NullReferenceException">
+        /// Thrown when encounter null reference
+        /// </exception>
         public void SaveStudent(String filename)
         {
             String content = "ID, Name, Birthday, Gender, Class\n";
@@ -241,6 +355,13 @@ namespace LAB1
                 Console.WriteLine("SaveStudent : " + ex.Message);
             }
         }
+        /// <summary>
+        /// Save Grade list into a file
+        /// </summary>
+        /// <param name="filename">string value (name and path)</param>
+        /// <exception cref="System.NullReferenceException">
+        /// Thrown when encounter null reference
+        /// </exception>
         public void SaveGrade(String filename)
         {
             String content = "Subject, Student, Grade\n";
@@ -264,6 +385,13 @@ namespace LAB1
                 Console.WriteLine("SaveClass : " + ex.Message);
             }
         }
+        /// <summary>
+        /// Save Attendance list into a file
+        /// </summary>
+        /// <param name="filename">string value (name and path)</param>
+        /// <exception cref="System.NullReferenceException">
+        /// Thrown when encounter null reference
+        /// </exception>
         public void SaveAttendance(String filename)
         {
             String content = "Teacher, Class, Subject\n";
@@ -286,6 +414,10 @@ namespace LAB1
             {
                 Console.WriteLine("SaveAttendance : " + ex.Message);
             }
+        }
+        public void SaveSchool (string filename)
+        {
+            
         }
     }
 }

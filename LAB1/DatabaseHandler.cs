@@ -5,16 +5,37 @@ using System.Text;
 
 namespace LAB1
 {
+    /// <summary>
+    /// DatabaseHandler class
+    /// Contains methods that handles data from .csv file
+    /// </summary>
     class DatabaseHandler
     {
 
         //File reader
 
+        /// <summary>
+        /// The path to the folder of school data
+        /// </summary>
         private static string _directory_path;
+        /// <summary>
+        /// setter for _directory_path
+        /// </summary>
         public string DirectoryPath
         {
             set { _directory_path = value; }
         }
+        /// <summary>
+        /// Read a .csv file and return a list of lines
+        /// </summary>
+        /// <param name="path">A string value</param>
+        /// <returns>A list of string that contains data read from file</returns>
+        /// <exception cref="System.IO.FileNotFoundException">
+        /// Thrown when the file is not found
+        /// </exception>
+        /// <exception cref="System.IO.IOException">
+        /// Thrown when I/O error occurs
+        /// </exception>
         private static List<String> CsvFileReader (String path)
         {
             List<string> list = new List<string>();
@@ -41,6 +62,18 @@ namespace LAB1
             }
             return list;
         }
+        /// <summary>
+        /// Get a column index from .csv file
+        /// </summary>
+        /// <param name="path">A string value</param>
+        /// <param name="col">A string value</param>
+        /// <returns>An integer that is column index</returns>
+        /// <exception cref="System.IO.FileNotFoundException">
+        /// Thrown when the file is not found
+        /// </exception>
+        /// <exception cref="System.IO.IOException">
+        /// Thrown when I/O error occurs
+        /// </exception>
         private static int GetColumnID(string path, string col)
         {
             bool found = false;
@@ -71,6 +104,18 @@ namespace LAB1
             }
             return id;
         }
+        /// <summary>
+        /// Get all data from 1 column in a .csv file
+        /// </summary>
+        /// <param name="path">A string value</param>
+        /// <param name="col">A string value</param>
+        /// <returns>A list of string that contains data read from file</returns>
+        /// <exception cref="System.IO.FileNotFoundException">
+        /// Thrown when the file is not found
+        /// </exception>
+        /// <exception cref="System.IO.IOException">
+        /// Thrown when I/O error occurs
+        /// </exception>
         private static List<string> GetColumnData(string path, int col)
         {
             List<string> list = new List<string>();
@@ -98,6 +143,21 @@ namespace LAB1
             }
             return list;
         }
+
+        /// <summary>
+        /// Get data with a condition for 1 column from a .csv file
+        /// </summary>
+        /// <param name="path">a string value</param>
+        /// <param name="data">a string value</param>
+        /// <param name="col">a string value</param>
+        /// <returns>A list of string that contains data read from file</returns>
+        /// <exception cref="System.IO.FileNotFoundException">
+        /// Thrown when the file is not found
+        /// </exception>
+        /// <exception cref="System.IO.IOException">
+        /// Thrown when I/O error occurs
+        /// </exception>
+
         private static List<string> GetRowByData(string path,string data, int col)
         {
             List<string> list = new List<string>();
@@ -128,6 +188,19 @@ namespace LAB1
             }
             return list;
         }
+        /// <summary>
+        /// Get a single line of data
+        /// </summary>
+        /// <param name="path">a string value</param>
+        /// <param name="data">a string value</param>
+        /// <param name="col">a string value</param>
+        /// <returns>A single string value that contains data read from file</returns>
+        /// <exception cref="System.IO.FileNotFoundException">
+        /// Thrown when the file is not found
+        /// </exception>
+        /// <exception cref="System.IO.IOException">
+        /// Thrown when I/O error occurs
+        /// </exception>
         private static string GetSingleRowByData(string path, string data, int col)
         {
             bool found = false;
@@ -160,8 +233,13 @@ namespace LAB1
             return result;
         }
 
+
         //Level
 
+        /// <summary>
+        /// Get a list of Level from Level.csv
+        /// </summary>
+        /// <returns>return an array of Level</returns>
         public static Level[] GetLevelList()
         {
             List<string> list = CsvFileReader(_directory_path + "\\" + "Level.csv");
@@ -180,8 +258,11 @@ namespace LAB1
         }
 
         //Field
-
-        public static Field[] getFieldList()
+        /// <summary>
+        /// Get a list of Field from Field.csv
+        /// </summary>
+        /// <returns>return an array of Field</returns>
+        public static Field[] GetFieldList()
         {
             List<string> list = CsvFileReader(_directory_path + "\\" + "Field.csv");
             Field[] fieldList = new Field[list.Count];
@@ -197,7 +278,11 @@ namespace LAB1
             }
             return fieldList;
         }
-        public static string[] getFieldIDList()
+        /// <summary>
+        /// Get a list of Field ID from Field.csv
+        /// </summary>
+        /// <returns>Return an array of string (Field ID)</returns>
+        public static string[] GetFieldIDList()
         {
             int col = GetColumnID(_directory_path + "\\" + "Field.csv","ID");
 
@@ -210,9 +295,12 @@ namespace LAB1
             }
             return fieldIDList;
         }
-
         // Class
 
+        /// <summary>
+        /// Get a list of Class from Class.csv
+        /// </summary>
+        /// <returns>An array of Class</returns>
         public static Class[] GetClassList()
         {
 
@@ -233,6 +321,11 @@ namespace LAB1
             }
             return classList;
         }
+        /// <summary>
+        /// Get a list of Class ID by Level from Class.csv
+        /// </summary>
+        /// <param name="level">A string value</param>
+        /// <returns>Return an array of string (Class ID)</returns>
 
         public static string[] GetClassIDByLevelList(String level)
         {
@@ -251,6 +344,11 @@ namespace LAB1
             }
             return classIDList;
         }
+        /// <summary>
+        /// Get Level for a Class by Class ID
+        /// </summary>
+        /// <param name="id">A string value</param>
+        /// <returns>Return a string (class level)</returns>
         public static string GetClassLevelByID(String id)
         {
             int col = GetColumnID(_directory_path + "\\" + "Class.csv", "ID");
@@ -261,6 +359,11 @@ namespace LAB1
         }
 
         //Subject
+
+        /// <summary>
+        /// Get a list of Subject from Subject.csv
+        /// </summary>
+        /// <returns>An array of Subject</returns>
         public static Subject[] GetSubjectList()
         {
 
@@ -284,6 +387,11 @@ namespace LAB1
             }
             return subjectList;
         }
+        /// <summary>
+        /// Get a list of Subject ID by Level from Subject.csv
+        /// </summary>
+        /// <param name="level">a string value</param>
+        /// <returns>An array of string (Subject ID)</returns>
         public static string[] GetSubjectIDByLevelList(String level)
         {
             int col = GetColumnID(_directory_path + "\\" + "Subject.csv", "Level");
@@ -304,7 +412,11 @@ namespace LAB1
 
         //Student
 
-        public static Student[] getStudentIDClassList()
+        /// <summary>
+        /// Get a list of Student ID and CLass from Student.csv
+        /// </summary>
+        /// <returns>Return an array of Student</returns>
+        public static Student[] GetStudentIDClassList()
         {
             List<string> list = CsvFileReader(_directory_path + "\\" + "Student.csv");
             int idCol = GetColumnID(_directory_path + "\\" + "Student.csv", "ID");
@@ -326,6 +438,10 @@ namespace LAB1
 
         //Teacher
 
+        /// <summary>
+        /// Get a list of Teacher from Teacher.csv
+        /// </summary>
+        /// <returns>Return an array of Teacher</returns>
         public static Teacher[] GetTeacherList()
         {
             List<string> list = CsvFileReader(_directory_path + "\\" + "Teacher.csv");

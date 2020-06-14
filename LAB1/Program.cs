@@ -7,8 +7,16 @@ using System.Xml;
 
 namespace LAB1
 {
+    /// <summary>
+    /// The main Program Class
+    /// Contains main methods
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// Execute functions
+        /// </summary>
+        /// <param name="args">An array of string (command from command line)</param>
         
         static void Main(string[] args)
         {
@@ -44,22 +52,22 @@ namespace LAB1
                 school.SaveField(directoryPath + "\\" + "Field.csv");
 
                 //create subject
-                Subject[] subject_list = Subject.createSubject();
+                Subject[] subject_list = Subject.CreateSubject();
                 school.SubjectList = subject_list;
                 school.SaveSubject(directoryPath + "\\" + "Subject.csv");
 
                 //create Teacher
-                Teacher[] teacher_list = Teacher.createTeacher(30);
+                Teacher[] teacher_list = Teacher.CreateTeacher(30);
                 school.TeacherList = teacher_list;
                 school.SaveTeacher(directoryPath + "\\" + "Teacher.csv");
 
                 //create room and class
                 Dictionary<string, string> roomAndClassIDList = Utils.GenerateRoomAndClassID(roomAndClassNum);
-                Room[] room_list = Room.createRoom(roomAndClassIDList);
+                Room[] room_list = Room.CreateRoom(roomAndClassIDList);
                 school.RoomList = room_list;
                 school.SaveRoom(directoryPath + "\\" + "Room.csv");
 
-                Class[] class_list = Class.createClass(roomAndClassIDList);
+                Class[] class_list = Class.CreateClass(roomAndClassIDList);
                 school.ClassList = class_list;
                 school.SaveClass(directoryPath + "\\" + "Class.csv");
 

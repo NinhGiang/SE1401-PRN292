@@ -4,26 +4,52 @@ using System.Text;
 
 namespace LAB1
 {
+    /// <summary>
+    /// The CLIHandler Class.
+    /// Contains all methods regarding CLI
+    /// </summary>
     class CLIHandler
     {
+        /// <summary>
+        /// Name of school
+        /// </summary>
         private static string _school_name;
+        /// <summary>
+        /// Number of students
+        /// </summary>
         private static int _student_num;
+        /// <summary>
+        /// Number of rooms
+        /// </summary>
         private static int _room_num;
 
-
+        /// <summary>
+        /// Get name of school
+        /// </summary>
         public static string SchoolName
         {
             get { return _school_name; }
         }
+        /// <summary>
+        /// Get number of students
+        /// </summary>
         public static int StudentNum
         {
             get { return _student_num; }
         }
+        /// <summary>
+        /// Get number of rooms
+        /// </summary>
         public static int RoomNum
         {
             get { return _room_num; }
         }
-
+        /// <summary>
+        /// Check if the command line contains target word
+        /// </summary>
+        /// <param name="args">An array of string</param>
+        /// <param name="value">A string value</param>
+        /// <returns>Return the target word if found , return -1 if not </returns>
         public static int getIndexFromArray (string[] args, string value)
         {
             int result = -1;
@@ -37,7 +63,11 @@ namespace LAB1
             }
             return result;
         }
-
+        /// <summary>
+        /// Check CLI, show error if any
+        /// </summary>
+        /// <param name="args">An array of string</param>
+        /// <returns>Return CLI message </returns>
         public static string CheckCLI(string[] args)
         {
             string result = "";
@@ -77,7 +107,7 @@ namespace LAB1
                     }
                     else
                     {
-                        if (!Utils.CheckStudentNumber(studentNum))
+                        if (!Utils.CheckNumber(studentNum,500,3000))
                         {
                             result += "Error : Student number must be 500 to 3000 .\n";
                             foundError = true;
@@ -94,7 +124,7 @@ namespace LAB1
                     }
                     else
                     {
-                        if (!Utils.CheckRoomNumber(roomNum))
+                        if (!Utils.CheckNumber(roomNum,1,99))
                         {
                             result += "Error : Room number must be below 100 .\n";
                             foundError = true;

@@ -5,18 +5,48 @@ using System.Text;
 
 namespace LAB1
 {
+    /// <summary>
+    /// Student class
+    /// Contains methods and properties for Student
+    /// </summary>
     class Student
     {
+        /// <summary>
+        /// Student ID
+        /// </summary>
         protected string _uuid;
+        /// <summary>
+        /// Student Name
+        /// </summary>
         protected string _name;
+        /// <summary>
+        /// Student birthday
+        /// </summary>
         protected DateTime _birthday;
+        /// <summary>
+        /// Student gender
+        /// </summary>
         protected bool _gender;
+        /// <summary>
+        /// Class ID
+        /// </summary>
         protected string _class;
 
+        /// <summary>
+        /// Empty constructor for Student
+        /// </summary>
         public Student()
         {
         }
 
+        /// <summary>
+        /// Constructor for Student
+        /// </summary>
+        /// <param name="uuid">string value</param>
+        /// <param name="name">string value</param>
+        /// <param name="birthday">DateTime value</param>
+        /// <param name="gender">boolean value</param>
+        /// <param name="Class">string value</param>
         public Student(string uuid, string name, DateTime birthday, bool gender, string Class)
         {
             _uuid = uuid;
@@ -26,32 +56,52 @@ namespace LAB1
             _class = Class;
         }
 
+        /// <summary>
+        /// getter setter for Student ID
+        /// </summary>
         public string UUID
         {
             get { return _uuid; }
             set { _uuid = value; }
         }
+        /// <summary>
+        /// getter setter for Student Name
+        /// </summary>
         public string Name
         {
             get { return _name; }
             set { _name = value; }
         }
+        /// <summary>
+        /// getter setter for Student Birthday
+        /// </summary>
         public DateTime Birthday
         {
             get { return _birthday; }
             set { _birthday = value; }
         }
+        /// <summary>
+        /// getter setter for Student Gender
+        /// </summary>
         public bool Gender
         {
             get { return _gender; }
             set { _gender = value; }
         }
+        /// <summary>
+        /// getter setter for Class ID
+        /// </summary>
         public string Class
         {
             get { return _class; }
             set { _class = value; }
         }
 
+        /// <summary>
+        /// Create a list of Student and return result
+        /// </summary>
+        /// <param name="numberOfStudent">integer value</param>
+        /// <returns>Return an array of Student</returns>
         public static Student[] createStudent(int numberOfStudent)
         {
             Student[] list = new Student[numberOfStudent];
@@ -88,7 +138,7 @@ namespace LAB1
                         String name = Utils.GenerateRandomFullName(gender);
 
                         int age = Utils.GerateRandomAge(levelNum);
-                        DateTime birth = Utils.GenerateRandomDateTime(2020 - age);
+                        DateTime birth = Utils.GenerateRandomBirthday(2020 - age);
                         list[count++] = new Student(id, name, birth, gender, classID);
                     }
                 }
