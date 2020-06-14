@@ -34,6 +34,7 @@
       "On"
     ]
   },
+
   "GenderDataSet": {
     "GenderSet": [
       "Female",
@@ -47,7 +48,21 @@
       "11",
       "12"
     ]
-  }
+  },
 
+  "FieldDataSet": {
+    "FieldSet": [
+      "Math",
+      "Physics",
+      "Chemistry",
+      "Liturature",
+      "English",
+      "Physical Education",
+      "Geography",
+      "History",
+      "Civic Education",
+      "Computer Science"
+    ]
+  }
 
 }

@@ -10,6 +10,7 @@ namespace StudentGeneration
 		public NameDataSet NameDataSet { get; set; }
 		public GenderDataSet GenderDataSet { get; set; }
 		public LevelDataSet LevelDataSet { get; set; }
+		public FieldDataSet FieldDataSet { get; set; }
 	}
 
 	class NameDataSet
@@ -27,6 +28,11 @@ namespace StudentGeneration
 	class LevelDataSet
 	{
 		public String[] LevelSet { get; set; }
+	}
+
+	class FieldDataSet
+	{
+		public String[] FieldSet { get; set; }
 	}
 
 }
