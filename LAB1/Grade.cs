@@ -4,6 +4,10 @@ using System.Text;
 
 namespace LAB1
 {
+    /// <summary>
+    /// The Grade class
+    /// Contains create method and properties of Grade. 
+    /// </summary>
     class Grade
     {
         /// <summary>

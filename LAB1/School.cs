@@ -6,6 +6,10 @@ using Newtonsoft.Json;
 
 namespace LAB1
 {
+    /// <summary>
+    /// The School class.
+    /// Contains methods to save file.
+    /// </summary>
     class School
     {
         /// <summary>

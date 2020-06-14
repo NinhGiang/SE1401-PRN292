@@ -5,6 +5,10 @@ using System.Text;
 
 namespace LAB1
 {
+    /// <summary>
+    /// The CLIHelper class.
+    /// Contains all methods to show CLI in cmd
+    /// </summary>
     class CLIHelper
     {
         /// <summary>

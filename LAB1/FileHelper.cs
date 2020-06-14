@@ -8,7 +8,7 @@ namespace LAB1
 {
     /// <summary>
     /// The FileHelper class.
-    /// Contains all methods related to .csv file
+    /// Contains all methods which get data from .csv file
     /// </summary>
     class FileHelper
     {

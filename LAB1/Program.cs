@@ -83,14 +83,12 @@ namespace LAB1
                 Console.WriteLine("Succesful: You have a new school database with " + student + " students and " + room + " rooms");
 
                 school.SaveSchool(directoryPath + "\\" + schoolName + ".json");
-                Console.ReadLine();
+                Console.WriteLine();
             }
             else
             {
                 Console.WriteLine(info);
             }
-
-            Console.ReadLine();
         }
     }
 }
