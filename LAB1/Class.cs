@@ -112,10 +112,6 @@ namespace LAB1
         /// <summary>
         /// A constructor for class that contains all input parameters
         /// </summary>
-        /// <param name="id">A string value</param>
-        /// <param name="level">A string value</param>
-        /// <param name="room">A string value</param>
-        /// <param name="name">A string value</param>
         public Class(string id, string level, string room, string name)
         {
             _id = id;
@@ -181,8 +177,6 @@ namespace LAB1
         /// <summary>
         /// Get room name by room id
         /// </summary>
-        /// <param name="id">A string value</param>
-        /// <returns>The name of room</returns>
         private static string GetRoomNumber(string id)
         {
             string room = Readcsvjsonhelper.GetRoomNumber(id);

@@ -29,7 +29,7 @@ namespace LAB1
         /// Set uuid for level
         /// </summary>
         /// <param name="value">A string value</param>
-        public void SetId(string value)
+        public void SetUuid(string value)
         {
             __uuid = value;
         }
@@ -113,20 +113,19 @@ namespace LAB1
             //List of subject
             List<Subject> result = new List<Subject>();
 
-            for (int i = 0; i < levelList.Count; i++)
+            foreach (string line in levelList)
             {
-                for (int j = 0; j < fieldList.Count; j++)
+                foreach (string linee in fieldList)
                 {
                     //Generate uuid for subject as primary key
                     string uuid = Guid.NewGuid().ToString();
 
                     //Level
-                    string line = levelList[i];
                     string[] levels = line.Split(',');
                     string level = levels[0].Trim();
 
                     //field
-                    string[] fields = fieldList[j].Split(',');
+                    string[] fields = linee.Split(',');
                     string field = fields[0].Trim();
 
                     //name

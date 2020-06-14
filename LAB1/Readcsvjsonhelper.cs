@@ -152,6 +152,16 @@ namespace LAB1
             return GetCsvData(_class);
         }
 
+        public static List<string> GetTeacherList()
+        {
+            return GetCsvData(_teacher);
+        }
+
+        public static List<string> GetStudentList()
+        {
+            return GetCsvData(_student);
+        }
+
         private static DateTime GetRandomDate(int year)
         {
             DateTime begin = new DateTime(year, 1, 1);
@@ -228,6 +238,86 @@ namespace LAB1
                 Console.WriteLine("Loaddata _ NullReferenceException: " + ex.Message);
             }
             return LongName;
+        }
+
+        private static List<string> GetDataByForeignKey(string path, string foreignKey, int column)
+        {
+            List<string> list = new List<string>();
+            try
+            {
+                using(StreamReader sr = new StreamReader(path))
+                {
+                    sr.ReadLine();  //skip first line
+                    while (!sr.EndOfStream)
+                    {
+                        string line = sr.ReadLine();
+                        string[] split = line.Split(',');
+                        if (split[column].Trim().Equals(foreignKey.Trim()))
+                        {
+                            list.Add(line);
+                        }
+                    }
+                }
+                return list;
+
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("FileHelper GetDataByForeignKey _ FileNotFoundException: " + ex.Message);
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine("FileHelper GetDataByForeignKey _ IOException: " + ex.Message);
+            }
+            return list;
+        }
+
+        /// <summary>
+        /// Search for position of data
+        /// </summary>
+        private static int GetPosition(string path, string info)
+        {
+            try
+            {
+                using(StreamReader sr = new StreamReader(path))
+                {
+                    tring line = sr.ReadLine();
+                    string[] split = line.Split(',');
+                    for (int i = 0; i < split.Length; i++)
+                    {
+                        if (split[i].Trim().Equals(info.Trim()))
+                        {
+                            return i;
+                        }
+                    }
+                }
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("Readcsvjsonhelper _ FileNotFoundException: " + ex.Message);
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine("Readcsvjsonhelper _ IOException: " + ex.Message);
+            }
+            return -1;
+        }
+
+        public static List<string> GetFieldSubject(string id)
+        {
+            return GetDataByForeignKey(_subject, id, GetPosition(_subject, "Field"));
+        }
+
+        public static List<string> GetLevelClass(string id)
+        {
+            return GetDataByForeignKey(_class, id, GetPosition(_class, "Level"));
+        }
+
+        public static List<string> GetListOfSubjectOfStudent(string[] studentInfo)
+        {
+            string classId = studentInfo[4].Trim();
+            int column = GetColumn(_attendance, "Class");
+            return GetDataByForeignKey(_attendance, classId, column);
         }
 
 

@@ -29,7 +29,7 @@ namespace StudentGeneration
             _class = Class;
         }
 
-        public static Student[] Create(uint number_student)
+        public static Student[] Create(int number_student)
         {
             try
             {
@@ -86,10 +86,8 @@ namespace StudentGeneration
                         totalstudentamount++;
                     }
 
-
-                    result[i] = new Student(uuid,null,null,false,null);
                 }
-                return result;
+                return studentList;
             }
             catch( FileNotFoundException ex)
             {

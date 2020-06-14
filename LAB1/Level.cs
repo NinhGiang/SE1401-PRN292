@@ -27,7 +27,7 @@ namespace LAB1
         /// Set uuid for level
         /// </summary>
         /// <param name="value">A string value</param>
-        public void SetId(string value)
+        public void SetUuid(string value)
         {
             __uuid = value;
         }
