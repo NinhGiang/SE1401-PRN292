@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "LAB1": {
+      "commandName": "Project",
+      "commandLineArgs": "MySchool -s 1200 -r 30"
+    }
+  }
+}

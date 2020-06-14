@@ -82,7 +82,7 @@ namespace LAB1
                     {
                         result = "Incorrect CLI format";
                     }
-                    else if (Random.CheckStudentNumber(roomNumber) == -1)
+                    else if (Random.CheckRoomNumber(roomNumber) == -1)
                     {
                         result = "Room out of range!!!";
                     }
