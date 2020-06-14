@@ -21,10 +21,19 @@ namespace LAB1
             _grade = Grade_info;
         }
 
-        public static Grade[] Create(Student[] student, Subject[] subject)
+        public static Grade[] GradeCreate(Student[] student, Subject[] subject)
         {
-            Grade[] result = new Grade[4];
-
+            Random rnd = new Random();
+            int n = rnd.Next(30, 51);
+            int subLength = subject.Length;
+            Grade[] result = new Grade[n];
+            for (int i = 0; i < n; i++)
+            {
+                String stuName = student[i].StFullName.ToString();
+                int grade = rnd.Next(101);
+                String sub_name = subject[rnd.Next(subLength)].SubName.ToString();
+                result[i] = new Grade(sub_name, stuName, grade);
+            }
             return result;
         }
     }

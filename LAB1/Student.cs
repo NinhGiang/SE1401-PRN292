@@ -11,18 +11,18 @@ namespace LAB1
     {
         protected String _stuuid;
         protected String _stfullname;
-        protected DateTime _stbirthday;
+        protected String _stbirthday;
         protected String _stgender;
         protected String _class_info;
    
 
         public String StUUID { get { return _stuuid; } }
         public String StFullName { get { return _stfullname; } }
-        public DateTime StBirthday { get { return _stbirthday; } }
+        public String StBirthday { get { return _stbirthday; } }
         public String StGender { get { return _stgender; } }
         public String Class { get { return _class_info; } }
 
-        public Student(String StUUID, String StFullName, DateTime StBirthday, String StGender, String class_info)
+        public Student(String StUUID, String StFullName, String StBirthday, String StGender, String class_info)
         {
             _stuuid = StUUID;
             _stfullname = StFullName;
@@ -50,8 +50,10 @@ namespace LAB1
                 full_name += _.middle_name_set[middle_name_set] + " ";
                 full_name += _.first_name_set[first_name_set];
 
-                DateTime birthday = new DateTime(RandomNumberBetween(1999, 2001), RandomNumberBetween(1, 12), RandomNumberBetween(1, 30));
-
+                DateTime dateAndTime = RandomBirthday();
+                var date = dateAndTime.Date;
+                String dateStr = date.ToString();
+ 
                 int gender = rnd.Next(0, 2);
                 String genderStr = "Female";
                 if(gender == 1)
@@ -61,7 +63,7 @@ namespace LAB1
 
                 String class_info = Guid.NewGuid().ToString();
 
-                result[i] = new Student(uuid, full_name, birthday,genderStr,class_info);
+                result[i] = new Student(uuid, full_name,dateStr ,genderStr,class_info);
             }
             return result;
         }
@@ -71,11 +73,15 @@ namespace LAB1
             Console.WriteLine(_stuuid + " " + _stfullname + " " + _stbirthday + " " + _stgender + " " + _class_info);
         }
 
-        public static int RandomNumberBetween(int smallNum, int bigNum)
+        public static DateTime RandomBirthday()
         {
             Random rnd = new Random();
-            int randomValue = rnd.Next(smallNum, bigNum + 1);
-            return randomValue;
+            DateTime from = new DateTime(1999, 1, 1);
+            DateTime to = new DateTime(2005, 12, 31);
+            TimeSpan range = new TimeSpan(to.Ticks - from.Ticks);
+            TimeSpan rndTimeSpan = TimeSpan.FromSeconds(range.TotalSeconds - rnd.Next(0, (int)range.TotalSeconds));
+            DateTime birthday = from + rndTimeSpan;
+            return birthday;
         }
         
     }
