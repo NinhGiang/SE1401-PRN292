@@ -14,7 +14,7 @@ namespace LAB1
         protected bool _gender;
         protected string _class;
 
-        private static Random rd = new Random();
+        private static System.Random rd = new System.Random();
 
         public Student(string uuid, string name, DateTime birthday, bool gender, string @class)
         {
@@ -58,6 +58,17 @@ namespace LAB1
         private static String jsonFile = File.ReadAllText(@"..\..\..\Configure.json");
         private static Configure config = JsonSerializer.Deserialize<Configure>(jsonFile);
 
+        public static bool GenerateGender()
+        {
+            bool gender = false;
+            int random = rd.Next(1, 3);
+            if (random == 1)
+            {
+                gender = true;
+            }
+            return gender;
+        }
+
         public static String getName(Boolean gender)
         {
             String name;
@@ -78,6 +89,24 @@ namespace LAB1
                     + config.NameConfig.female_first_name[firstNameIndex];
             }
             return name;
+        }
+
+        public static int GenerateAge(int level)
+        {
+            int age = 0;
+            if (level == 10)
+            {
+                age = rd.Next(15, 19);
+            }
+            else if (level == 11)
+            {
+                age = rd.Next(16, 20);
+            }
+            else if (level == 12)
+            {
+                age = rd.Next(17, 21);
+            }
+            return age;
         }
     }
 }

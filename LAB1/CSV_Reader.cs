@@ -7,8 +7,6 @@ namespace LAB1
 {
     class CSV_Reader
     {
-        private static string directory;
-
         private static List<string> ReadCSVFile(string path)
         {
             List<string> list = new List<string>();
@@ -72,8 +70,8 @@ namespace LAB1
                 while (!sr.EndOfStream)
                 {
                     string line = sr.ReadLine();
-                    string[] lineData = line.Split(", ");
-                    list.Add(lineData[column]);
+                    string[] columnData = line.Split(", ");
+                    list.Add(columnData[column]);
                 }
                 sr.Close();
             }
@@ -88,6 +86,33 @@ namespace LAB1
             return list;
         }
 
-
+        private static List<string> ReadDataOfRow(string path, string data, int column)
+        {
+            List<string> list = new List<string>();
+            try
+            {
+                StreamReader sr = new StreamReader(path);
+                sr.ReadLine();
+                while (!sr.EndOfStream)
+                {
+                    string line = sr.ReadLine();
+                    string[] lineData = line.Split(", ");
+                    if (lineData.Equals(data))
+                    {
+                        list.Add(line);
+                    }
+                }
+                sr.Close();
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("ReadHeaderOfColumn FileNotFoundException: " + ex.Message);
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine("ReadHeaderOfColumn IOException: " + ex.Message);
+            }
+            return list;
+        }
     }
 }
