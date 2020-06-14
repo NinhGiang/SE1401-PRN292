@@ -33,15 +33,58 @@ namespace StudentGeneration
         {
             try
             {
-                Student[] result = new Student[number_student];
+                List<Student> studentList = new List<Student>();
                 string content = File.ReadAllText(@"..\..\..\Configure.json");
                 Configure config = JsonSerializer.Deserialize<Configure>(content);
 
+                //generate rnd for random purpose
                 Random rnd = new Random();
-                for (uint i = 0; i < number_student; i++)
+
+                // a flag unit for counting how much student have been generated
+                int totalstudentamount = 0;
+
+                //get Class's list for takeing classinfo
+                List<string> classList = Readcsvjsonhelper.GetClassList();
+
+                for (int i = 0; i < classList.Count; i++)
                 {
-                    //id
-                    String uuid = Guid.NewGuid().ToString();
+                    //a variable for counting how much student should have in a single class
+                    int studentAmount = 0;
+                    
+                    //splitting a string into an array
+                    string[] classinfo = classList[i].Split(',');
+                    string classid = classinfo[0].Trim();
+                    //use readcsvjsonhelper class to get level name by using level id as parameter
+                    string level = Readcsvjsonhelper.GetLevelName(classinfo[1].Trim());
+
+                    // if i == (classList.Count - 1) means if a loop reach a last class, number of student will be total student subtracts with totalstudentamount
+                    if (i == (classList.Count - 1))
+                    {
+                        studentAmount = number_student - totalstudentamount;
+                    }
+                    else
+                    {
+                        studentAmount = rnd.Next(30, 51);
+                    }
+
+                    for (int j = 0; j < studentAmount; j++)
+                    {
+                        //id
+                        String uuid = Guid.NewGuid().ToString();
+
+                        //birthday
+                        DateTime birthday = Readcsvjsonhelper.GetRandomBirthday(level);
+
+                        //gender
+                        bool gender = !(rnd.Next(2) == 2);
+
+                        //name
+                        string fullname = Readcsvjsonhelper.GetNameforGender(gender);
+
+                        studentList.Add(new Student(uuid, fullname, birthday, gender, classid));
+
+                        totalstudentamount++;
+                    }
 
 
                     result[i] = new Student(uuid,null,null,false,null);

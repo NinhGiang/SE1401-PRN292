@@ -56,6 +56,26 @@
     ]
   },
 
+  "FieldConfig": {
+    "field_type": [
+      "Maths",
+      "Physics",
+      "Chemistry",
+      "Literature",
+      "English",
+      "Biology",
+      "Music",
+      "History",
+      "Civic Education",
+      "Geography",
+      "Physical Education",
+      "Informatics",
+      "Technology",
+      "Sexual Education",
+      "Social Science"
+    ]
+  },
+
   "LevelConfig": {
     "level_set": [
       "10",
@@ -63,6 +83,4 @@
       "12"
     ]
   }
-
-
 }

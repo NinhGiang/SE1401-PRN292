@@ -76,13 +76,13 @@ namespace LAB1
 
             Configure config = JsonSerializer.Deserialize<Configure>(content);
 
-            LevelNameConfig x = config.LevelNameConfig;
+            LevelConfig x = config.LevelConfig;
 
             List<Level> result = new List<Level>();
 
-            for (int i = 0; i < x.level_name_set.Length; i++)
+            for (int i = 0; i < x.level_set.Length; i++)
             {
-                string name = x.level_name_set[i].ToString();
+                string name = x.level_set[i].ToString();
 
                 string uuid = Guid.NewGuid().ToString();
 

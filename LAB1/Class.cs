@@ -155,7 +155,7 @@ namespace LAB1
                 string roomId = list.ElementAt(i).Key;
 
                 //level
-                string[] level = listOfLevel[levelIndex].Split(',');
+                string[] level = levelList[levelIndex].Split(',');
                 string levelId = level[0].Trim();
 
                 //name
@@ -163,7 +163,7 @@ namespace LAB1
                 string roomName = GetRoomNumber(roomId);
                 string name = levelName + "A" + roomName;
 
-                result.Add(new ClassInfo(uuid, levelId, roomId, name));
+                result.Add(new Class(uuid, levelId, roomId, name));
                 //when a class created count ++
                 count++;
 
