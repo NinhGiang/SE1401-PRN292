@@ -16,7 +16,7 @@ namespace LAB1
             //Create directory
             string dir = ABC.createSchoolDir("Whatever");
             //Create student list, save csv and json
-            Student[] student_list = Student.Create(100);
+            Student[] student_list = Student.Create(1000);
             ABC.StudentList = new List<Student>(student_list); //add for other usage
             ABC.saveStudent(dir + "/Students.csv");
             ABC.saveStudent(dir + "/Students.json");

@@ -1,101 +1,1001 @@
-UUID, Fullname, Gender, Birthday
-4877c1cd-856b-43a8-93cb-435516dacd76, Nguyễn Anh Huy, True, 11/20/2002 4:10:46 AM
-60cfd3b7-4ef6-4500-9578-ec1e2460e093, Trần Hoàng Bảo Hưng, True, 10/6/2004 1:02:09 PM
-22fcef05-1ca4-4048-ba98-59ba00dc7028, Lưu Văn Đạt, True, 3/13/2003 5:25:11 PM
-28f0ef38-0171-4293-ab67-8284e8c70a0a, Nguyễn Gia Phúc, True, 10/8/2002 6:19:38 AM
-74e57d25-3004-4b7d-9f83-0d1ed663aeee, Hồ Phương Khánh, False, 11/30/2002 3:45:07 PM
-7ad229d2-ecb5-4cb1-bb19-de82515ff68e, Hoàng Anh Thành, True, 9/10/2002 5:38:22 PM
-70a3fd71-5602-40d5-9ca4-5ff502f554df, Nguyễn Thị Thanh Vy, False, 1/16/2002 11:11:51 AM
-5bfe3958-ea88-47e4-a9f4-86578ae33d00, Đặng Đăng Huy, True, 4/9/2001 1:18:25 PM
-085263c4-1ee3-4be3-bde5-c70fa4f729e7, Đoàn Thị Thanh Vy, False, 3/29/2004 7:24:34 AM
-7806994e-4df5-481d-b590-f775948d13af, Trần Trúc Lan, False, 1/3/2001 3:55:57 PM
-d2aa6635-7702-44bf-a60f-263f0e6e289d, Nguyễn Anh Long, True, 3/14/2006 8:50:39 PM
-cb2db699-40b2-42c2-a369-ace398dd21dc, Nguyễn Mai Trang, False, 1/11/2003 10:11:00 AM
-2acdc018-5612-4aaf-8022-8590bd87f1ac, Lưu Thái Hùng, True, 9/30/2001 11:54:10 PM
-46c4cb1c-dd25-4d11-a335-b50c4c5d5261, Đoàn Việt Bình, True, 11/17/2006 7:00:27 PM
-f14387ae-db2d-454d-8b4f-803556212a9e, Lưu Việt Hoàng, True, 8/9/2005 12:26:52 AM
-e2ae947a-1213-440f-b2a9-ffcf43baac50, Nguyễn Minh Hùng, True, 9/24/2004 11:03:07 AM
-0bae1e75-85cb-44cd-a16d-4ac9abd2e037, Lê Thái Nguyên, True, 1/4/2002 5:40:18 AM
-356b166e-a06a-4c9e-b48e-f8c76747ab03, Nguyễn Hoàng Bảo Dũng, True, 12/17/2006 7:24:25 AM
-df059efe-3129-4629-87ed-2fa736b1e7d5, Nguyễn Thảo Vy, False, 1/11/2005 2:26:57 PM
-508e8c43-3bee-4ae4-9d9a-cf239c819ca3, Đặng Đăng Sơn, True, 6/19/2005 10:06:36 PM
-968f84c0-b07e-48b0-bd04-a2dab8c63f93, Hoàng Mai Ngọc, False, 5/15/2004 1:05:52 AM
-f146a19d-7cc9-42c1-98ec-20fc3163e76e, Lưu Thảo Lan, False, 7/9/2004 9:27:31 AM
-9b31a865-c402-4a88-a7ad-b13853c53418, Võ Xuân Dũng, True, 7/15/2004 9:05:56 PM
-67f8d23f-9277-4c1a-bb55-b6ae1c81802b, Phạm Đăng Phúc, True, 7/6/2006 6:59:55 AM
-b42bca83-ddd7-4269-9916-3b63f384b79a, Nguyễn Mai Khánh, False, 12/4/2002 6:34:12 PM
-4bb99cab-8f42-4d0d-82b8-ab9861d30645, Nguyễn Trúc Khánh, False, 6/6/2003 4:49:42 AM
-3864d263-b79b-41ea-923c-8af85b8c91fa, Nguyễn Thiên Dương, True, 3/18/2004 9:47:22 PM
-824eca64-0551-4056-9fcf-bb3327126d72, Lê Đăng Thành, True, 1/15/2005 8:25:25 AM
-8168f31a-4b51-486c-8d56-5193a9489ba6, Nguyễn Việt Huy, True, 5/21/2001 11:59:15 AM
-dffd0536-a3f6-4c40-a561-4c02703e84e6, Đoàn Bảo Châu, False, 10/29/2001 1:00:31 PM
-71013d39-1451-41c8-ac21-9251af111bc5, Nguyễn Xuân Ngọc, False, 2/18/2002 3:09:40 AM
-4d0883b6-7706-4801-9ef0-b03fe7803d11, Lưu Bảo Khánh, False, 5/19/2006 2:53:09 PM
-322540c1-96e5-466e-9e79-6252e67dd81f, Võ Đăng Nguyên, True, 8/9/2002 4:51:53 AM
-466eb47b-a863-422c-981c-02c8b0966538, Phạm Việt Anh, True, 12/1/2001 8:47:10 PM
-44a114b1-d270-414a-b76b-8d69e9879532, Nguyễn Minh Hà, False, 1/27/2005 7:11:08 PM
-b7903395-0019-4779-85cc-9358de28b2fd, Nguyễn Hương Khánh, False, 7/19/2000 3:44:17 AM
-4e6fe5eb-e3a1-482c-8494-e87806239862, Phạm Hương Châu, False, 4/17/2006 1:20:01 AM
-d39ac0e3-aa5d-42b2-967b-573f03581ab0, Đoàn Thiên Duy, True, 7/18/2004 5:25:32 PM
-8e6eb633-cc9a-465d-9a87-ce86f2d070d4, Hồ Thiên Bình, True, 7/11/2005 3:54:23 PM
-bf1b2c5a-081d-4b56-8d77-cdb5686ca71b, Lê Minh Vy, False, 1/26/2005 12:30:05 PM
-5a12356c-3d3e-463c-882c-f589fb3adf05, Võ Ngọc Vân, False, 2/4/2001 7:01:01 AM
-80359ebf-9cf2-4689-9640-29b0f1a007ae, Nguyễn Mai Thư, False, 7/17/2002 10:38:07 AM
-a47d9246-8181-4dd6-a178-4e5a7a476668, Lưu Thị Thanh Linh, False, 1/3/2001 9:14:59 AM
-cf3775d7-59e6-4dbe-a68f-6c88ab8d606c, Đặng Việt Thành, True, 4/21/2005 1:55:09 PM
-f441cd30-1f48-4277-83c7-7e9f5fb7effd, Lưu Phương Ngọc, False, 5/17/2002 2:49:04 PM
-4f0b3281-249d-4511-9fc5-fe9705f24e42, Trần Minh Phúc, True, 3/1/2001 6:09:49 PM
-ae09c78d-7619-4e97-b1ab-55197e1dac74, Võ Thiên Huy, True, 6/6/2006 11:54:30 AM
-33dfd56d-4b5c-46ce-9016-98fc272204f5, Hồ Hương Trang, False, 12/9/2003 12:34:00 AM
-75c7d55b-695a-4ab5-a7e7-f81941f17902, Võ Thị Thanh Vy, False, 3/14/2004 4:20:01 PM
-b8dbd29d-ffea-4649-918b-f751594327cd, Hồ Minh Duy, True, 8/11/2000 6:59:31 PM
-ebdee8bd-7462-4c02-865f-eab5e31aacc7, Nguyễn Trúc Linh, False, 12/16/2004 1:41:54 AM
-90fdb111-9d95-4921-ab04-0ebbb78da4fe, Lê Hoàng Bảo Nguyên, True, 8/30/2006 12:02:56 PM
-18de1df8-250d-459d-9847-292098f47754, Nguyễn Trúc Nguyên, False, 12/5/2005 6:02:30 AM
-c8053c5d-57ed-4857-b5e3-8b613e58e9c4, Hoàng Anh Long, True, 12/21/2003 8:15:02 PM
-9c3bb6bf-b2cf-47a3-b9fe-f8a8c81bd758, Đoàn Minh Khánh, True, 5/31/2000 8:54:28 AM
-bab55002-9a12-4089-a1a8-3fd651a62edf, Phạm Phương Giang, False, 4/12/2006 9:28:34 PM
-63909bdb-80e4-4118-8756-d02ed6c55bdd, Lưu Minh Trang, False, 8/12/2003 8:11:51 PM
-fc7a8ae0-f4de-468f-8dca-6d86bf92bda5, Võ Việt Phúc, True, 8/8/2001 8:58:19 PM
-1350570c-8a0b-466c-a249-f3a8868f703c, Nguyễn Minh Phương, False, 1/14/2004 12:46:43 PM
-39c3e267-75ad-4bed-97c6-3dceca1df1c2, Nguyễn Minh Hưng, True, 5/29/2000 5:03:15 PM
-e9f63dd9-786c-4ce9-b9bc-d915cf34b3a6, Nguyễn Thái Khánh, True, 7/20/2004 7:48:18 AM
-27434765-5ed5-456b-a3b2-33a9e3b9876d, Hồ Đăng Phúc, True, 5/20/2005 2:22:39 PM
-0476801f-ab5b-47db-8f6b-f6592291d38e, Đặng Minh Vy, False, 7/19/2005 9:41:06 PM
-e7605d65-6aa9-4f89-a734-63d9010e3b54, Lê Ngọc Ngọc, False, 10/1/2003 5:52:31 PM
-8d0cfdb9-5f16-4891-aefd-e4ed84c8d4a1, Đoàn Mai Vân, False, 4/19/2000 10:05:05 AM
-147f5ea4-3175-4777-8c21-255fbaf54f94, Đặng Xuân Vân, False, 8/18/2003 8:46:49 AM
-fe8c7f4a-95b0-4072-a3c2-621c602e0864, Nguyễn Thảo Hương, False, 7/12/2004 5:47:19 PM
-19de035d-1af4-468c-a9cd-7cb81b9bf007, Trần Trúc Hương, False, 12/24/2004 7:29:17 PM
-457f0f95-d703-4c3c-91fa-42cde09a603d, Phạm Thu Châu, False, 9/25/2005 3:07:56 PM
-1df4a098-a0fc-4135-82f0-91a06c931f31, Trần Trúc Khánh, False, 7/25/2004 9:37:47 PM
-5b284a3d-8f20-45fe-94c1-1059542924fc, Lê Anh Anh, True, 3/21/2006 2:46:48 AM
-bafae703-a040-46f4-a290-c26314155d97, Phạm Minh Nguyên, True, 3/28/2000 6:04:01 PM
-0dabb157-c529-4dc4-95ff-342a015546d7, Hoàng Thảo Trang, False, 9/18/2006 9:46:53 PM
-1db92cd8-77f6-49ad-98cd-068fba0c4b86, Lưu Đăng Nguyên, True, 5/26/2006 7:23:25 PM
-2e466688-ccdb-451a-bd8e-eb3adf5416ef, Võ Thiên Thành, True, 5/27/2006 5:24:56 AM
-dd9dde40-ae2c-494b-b4fc-c9208a317ed1, Hồ Hoàng Bảo Sơn, True, 11/5/2003 4:04:54 PM
-1cd0974b-5306-45cf-bd7b-ca0795d7435c, Hoàng Anh Huy, True, 11/29/2002 4:47:36 PM
-d8939a3a-e588-4fc2-ad7f-46a4398d7828, Hoàng Xuân Uyên, False, 7/18/2000 1:29:18 PM
-165fd8f8-ff1b-4a3e-b03b-086ca4ec38cc, Hồ Xuân Dũng, True, 4/18/2006 4:18:25 AM
-fe8679b7-7992-413c-9412-453cb316f991, Trần Xuân Huy, True, 2/10/2001 8:48:04 PM
-cb24b537-9cc5-4d4a-87ee-914c9697658c, Nguyễn Thiên Huy, True, 4/26/2006 9:09:47 AM
-ba6921f4-2fba-498d-a0de-b7cad77057ee, Trần Thu Ngọc, False, 9/20/2006 9:14:56 PM
-30d7e8f9-19c5-4ac5-9ed4-72b1fdc63565, Hồ Anh Phúc, True, 2/25/2002 7:46:20 AM
-6637120a-8db5-4948-8379-929f22ed1b37, Đặng Minh Thanh, False, 1/27/2004 2:51:50 AM
-a56be7b6-9375-44ac-ba61-81aa1db49731, Lê Văn Thành, True, 10/27/2002 6:23:58 PM
-7717da19-54b8-45a5-9a79-19f27c0034b1, Lê Anh Dương, True, 11/13/2004 12:37:18 AM
-f3a17901-6442-4e7e-acbb-6fefda936730, Võ Trúc Giang, False, 4/13/2003 8:56:56 AM
-2de565e6-59d5-4f99-b218-8946600bc1ee, Võ Xuân Vân, False, 8/15/2004 12:10:03 AM
-92c27d21-97f1-4be0-b330-2ccabd2a2ad0, Nguyễn Anh Anh, True, 12/11/2004 9:51:36 AM
-de1a218e-afec-47f1-aabd-fe6229b5ce09, Nguyễn Gia Hoàng, True, 9/9/2005 8:08:14 AM
-755e8938-eaf2-45f7-b55b-67d16d2e9364, Võ Việt Nguyên, True, 8/29/2004 6:06:00 AM
-26f40e31-b823-40a4-bc8b-d255b3c1717e, Nguyễn Hoàng Bảo Phúc, True, 7/25/2005 9:01:56 AM
-5f4a042f-2cb5-4de0-98a0-480bad6ca95e, Võ Gia Huy, True, 4/16/2001 1:40:24 PM
-d52c2104-6ccd-45c4-81f0-65f419204b8e, Đoàn Phương Thanh, False, 4/29/2000 3:49:10 AM
-e44184b5-e115-4eb5-8d1a-a915bdd23a31, Trần Văn Duy, True, 1/22/2002 11:03:24 PM
-3a5fdcb1-7b27-41b6-8c17-ab7d6a206f4a, Nguyễn Xuân Châu, False, 1/20/2001 10:59:45 AM
-5769eac7-2f11-4838-b15c-ce456b66e1c5, Đoàn Gia Hùng, True, 2/21/2005 9:42:40 PM
-d2e98bc3-c8e9-46a1-a83c-24772e704919, Nguyễn Trúc Châu, False, 3/6/2001 12:19:27 PM
-868a59e4-40bb-4534-bd76-390d58bf294d, Lưu Hương Vy, False, 11/9/2003 6:59:19 AM
-af41613d-dbf0-45c6-9f91-e1ccd45293ac, Phạm Phương Linh, False, 10/13/2006 1:33:35 AM
+UUID, Fullname, Gender, Birthday, Class
+6ba371ad-597d-478d-93a0-bb3008f3097f, Lưu Thái Nguyên, True, 7/12/2001 12:00:38 AM
+07e78536-d96c-4586-b603-00b23cd58e34, Nguyễn Việt Khánh, True, 1/20/2003 3:46:23 AM
+60e78427-24e2-41b6-b9c9-0d97e115fb40, Nguyễn Thu Châu, False, 9/4/2001 6:09:08 PM
+f53b2e51-895e-43e3-a08f-17a54967d550, Đoàn Thiên Anh, True, 1/24/2000 7:16:11 AM
+e961a9f9-6c4a-4019-a6a3-21d2492280d2, Nguyễn Xuân Sơn, True, 11/24/2006 3:07:29 PM
+9207e6f1-95db-4ef5-9f17-43e7bd34052d, Phạm Xuân Dũng, True, 6/19/2002 5:25:12 PM
+3c815f9e-65ac-4d71-8485-87ff5de73e95, Trần Phương Hương, False, 2/14/2004 3:21:46 PM
+5fd5a12a-1918-4013-9ff3-cff954462f56, Nguyễn Đăng Hưng, True, 4/9/2002 10:25:51 AM
+7a91a604-9b25-4207-ad4a-52109bb0181a, Đoàn Thu Thư, False, 1/16/2006 6:58:30 PM
+e6e7b1c5-cf57-47f1-a4c4-5a36c4b984d0, Đặng Xuân Đạt, True, 3/26/2001 2:34:34 PM
+70daac72-eff8-49c8-ae4f-3bbd6d8df5cb, Nguyễn Xuân Khánh, False, 10/6/2004 10:07:19 AM
+088cf1f6-65b1-4903-8caa-64c079a9437f, Lê Xuân Khánh, False, 3/21/2003 11:53:12 PM
+a3fcaf28-a63c-4b15-9b6d-e4abf4b4f286, Lê Đăng Hoàng, True, 7/4/2003 11:25:33 AM
+1b5d2a50-1b5a-4596-820d-552a9ed25606, Nguyễn Thái Hoàng, True, 8/26/2006 12:35:26 PM
+d81b7764-bbd9-48f4-8426-eea47594e6b8, Trần Xuân Bình, True, 1/10/2004 5:09:51 AM
+d5dac51e-e858-46dd-9a2a-f21b3e80831e, Nguyễn Thái Huy, True, 8/2/2001 11:32:00 AM
+172636ce-364a-4556-a592-9bf4bd75e96b, Võ Thu Hà, False, 3/16/2001 4:53:42 AM
+a4976d4d-9d6f-462f-8f8b-59669fcf983c, Hồ Thu Linh, False, 7/20/2006 6:49:02 PM
+dd0357e9-1950-40d1-af16-3c801569eadd, Đặng Minh Khánh, True, 10/27/2005 1:57:54 PM
+d493c734-c750-48fa-bd8d-5d531700c180, Trần Phương Khánh, False, 4/19/2001 8:19:43 AM
+bd92f11e-1310-44d2-a636-fdbff338d0c1, Nguyễn Minh Bình, True, 8/1/2005 10:39:58 AM
+9b4e01b8-4ecf-4056-bb59-a1db8a926c5c, Lê Hương Khánh, False, 7/14/2005 10:05:55 PM
+86d00be5-0ab4-402a-b49f-a9c6b7d8be56, Đoàn Thu Vân, False, 7/20/2000 10:07:23 PM
+768ba936-ebf3-4a7e-aa60-cf0328c09498, Trần Hoàng Bảo Bình, True, 6/12/2004 6:57:29 AM
+6e515c86-779d-45f5-b93c-2fa66c4cee90, Lê Bảo Hương, False, 3/21/2003 2:58:47 PM
+3f0f746d-a838-47d9-8a10-f808a60fea45, Nguyễn Anh Bình, True, 1/29/2001 8:14:57 AM
+c55cabbd-7f05-4e7d-b505-9add6ec62ee6, Lê Ngọc Hương, False, 6/26/2005 4:41:43 AM
+14421462-1b2f-4b08-ba5a-ab5cc98c4d44, Nguyễn Minh Thành, True, 3/8/2003 5:32:16 AM
+1c0a4cb0-4026-4946-9602-84517ef25e7f, Nguyễn Văn Nguyên, True, 4/21/2001 5:09:05 AM
+626c7db8-7703-4627-8ace-6fabff000cb2, Phạm Thị Thanh Uyên, False, 7/6/2001 10:38:54 PM
+9f19accb-0748-4d19-a019-f4c65cfc0016, Lê Minh Nguyên, False, 6/19/2004 5:59:40 AM
+30429fef-5d2b-4db2-b09f-7ee1def5f868, Phạm Thái Hưng, True, 10/13/2002 9:44:18 PM
+f92782b8-1223-4d3e-9410-ddf61cf1ae3e, Phạm Văn Duy, True, 1/22/2002 6:24:51 PM
+d6b3c49b-060f-41ab-92e6-0ed7bb033ac1, Võ Minh Hưng, True, 3/21/2001 8:03:53 AM
+fb060458-f0b7-430f-b8d0-771ad99746ac, Hồ Thu Thư, False, 1/4/2001 2:38:46 PM
+81f26e08-e292-40f4-9a71-7796d5f0c942, Lưu Mai Hương, False, 12/19/2006 3:54:05 PM
+51357d1e-e182-4318-8434-8f54a203243a, Đoàn Thu Lan, False, 9/26/2000 4:32:45 PM
+2412cc0e-f726-4ba5-8ee6-4258d577a0dd, Lưu Thị Thanh Hà, False, 5/3/2005 11:30:00 AM
+cfa77b3c-14d9-409f-a636-2474d226b072, Hoàng Thu Trang, False, 11/26/2000 6:13:06 AM
+6b24c919-f4da-4644-86fd-6634a0676fbb, Lê Ngọc Phương, False, 10/24/2001 10:08:50 AM
+1125c77e-d683-4f31-ac4a-2205167a2b36, Lưu Hoàng Bảo Sơn, True, 2/26/2006 9:09:13 PM
+f211f184-2dbd-4a75-9fb3-bf1acbf3ae70, Trần Minh Phúc, True, 12/23/2003 7:47:58 AM
+e9430cce-52b7-4f3f-aaa4-dc6b0876d57e, Hồ Hoàng Bảo Khánh, True, 10/10/2001 12:25:51 AM
+51a69e55-c95d-40ed-81c2-d3955acc13ec, Nguyễn Văn Sơn, True, 5/18/2000 11:47:44 PM
+38b9dd7a-94d5-403c-84a4-802646cd6c8d, Hồ Bảo Hà, False, 6/10/2001 5:02:40 AM
+ff1ffeb5-c18e-40b8-8fe7-c8899276a1ec, Hồ Bảo Lan, False, 2/13/2004 3:17:06 PM
+99c925cd-ba84-48a7-912f-fb4d353b9e1a, Võ Minh Đạt, True, 4/13/2003 2:14:16 AM
+bafa1267-c2ee-42de-9c10-65f6dac3d32b, Lưu Xuân Hoàng, True, 9/30/2002 5:58:11 PM
+6e86a031-c597-43da-b046-6bc006c59714, Lưu Văn Hoàng, True, 9/7/2006 2:44:33 AM
+bca2e913-401f-4f42-9a14-974257c10d44, Phạm Minh Châu, False, 7/3/2006 11:51:31 AM
+ddcf47ff-14a8-46a0-85aa-061933cb7f8e, Đoàn Thái Duy, True, 3/15/2000 2:43:09 PM
+ef986db3-d198-44e2-a7df-ac6c46b3da5a, Võ Ngọc Khánh, False, 8/21/2003 5:28:18 PM
+d17f003e-e1e9-4bc3-9413-ee6036333772, Trần Ngọc Giang, False, 12/1/2004 1:31:33 PM
+5909a75d-b4fb-4bd1-8a66-8f844471decc, Nguyễn Anh Long, True, 7/5/2001 4:24:44 AM
+06aa623e-2383-4fd8-bce2-e017dfd1f2fc, Phạm Minh Long, True, 9/16/2004 5:04:52 PM
+c7b61ac0-09bc-4f20-b5ef-213a36d59ea8, Nguyễn Xuân Phương, False, 3/4/2003 3:26:41 AM
+4593593e-9760-4de5-96f4-c9dd1848b78e, Nguyễn Minh Trang, False, 1/14/2005 12:39:30 AM
+5cab6aa1-bd39-4107-9f1d-dc8e20f2ae54, Nguyễn Đăng Nguyên, True, 1/21/2006 11:28:58 PM
+dce3701a-341c-4f36-a876-a2197bcf74ff, Nguyễn Thị Thanh Thư, False, 2/13/2004 11:42:30 AM
+047a539c-cd56-41f6-a6fa-feac95db4893, Đoàn Trúc Nguyên, False, 7/18/2001 6:26:38 PM
+540f2da9-1eac-48fa-9fc9-2b77e3e07946, Nguyễn Bảo Thư, False, 4/9/2006 8:45:57 PM
+4b4ea66e-af86-4b74-99a4-5f7cc3ded708, Phạm Thiên Bình, True, 8/25/2006 9:23:04 PM
+c57cee8f-4809-4d1c-95e4-3203fce92444, Võ Thảo Vy, False, 6/1/2000 1:24:57 AM
+9d0aa80f-7244-45a7-8600-99025908f405, Nguyễn Thái Long, True, 5/6/2003 9:25:44 PM
+f81664c2-dcf0-43e9-a868-0f33a0ec6f05, Hồ Mai Trang, False, 5/30/2001 8:06:17 AM
+b040fe92-2857-40f6-9bd6-822e7f364fa4, Hoàng Bảo Phương, False, 11/23/2000 6:12:17 PM
+967350cb-e447-4888-bd19-a50ca505cc3e, Võ Bảo Hương, False, 11/4/2002 5:39:27 AM
+6ac08fae-778d-47db-a76c-c8acab4c9b1e, Nguyễn Đăng Khánh, True, 10/6/2002 9:47:38 AM
+dc09a33f-2bda-43ed-bcbb-6439111f7f57, Đặng Thiên Nguyên, True, 5/7/2000 11:53:33 PM
+ac259460-022f-45e6-a555-2f8dc36b0c17, Phạm Minh Duy, True, 4/10/2000 3:45:16 AM
+78591312-f211-4257-9539-745c6df3fae0, Nguyễn Thị Thanh Thanh, False, 8/24/2005 1:53:47 PM
+c925eeab-0563-471e-97f2-56c898056293, Nguyễn Phương Hương, False, 11/2/2004 7:50:12 AM
+c1d256c5-91c9-460b-adf8-34e4300ed281, Nguyễn Thị Thanh Khánh, False, 4/5/2006 2:12:26 AM
+00f438d9-c927-491e-8056-1bc0cc2c493b, Phạm Ngọc Hương, False, 11/14/2001 3:38:46 AM
+1af8495c-edc0-42fd-bab6-eeaa91262372, Nguyễn Hương Giang, False, 4/3/2005 2:37:00 PM
+de1f3fdd-22f2-4e4f-be94-29eba15187d6, Trần Mai Khánh, False, 1/4/2004 11:31:31 PM
+0796dc52-31ae-4c6e-ae8a-500852c90af2, Nguyễn Ngọc Lan, False, 9/2/2001 11:15:00 PM
+b86ed18b-adbf-41f6-82f5-d10ffba1a112, Đoàn Gia Nguyên, True, 10/4/2006 9:21:10 PM
+8c6724c7-b8b6-45a9-9d72-7fc3c574fab9, Đoàn Minh Linh, False, 7/15/2000 11:45:50 AM
+6dc103a4-6137-4d7e-b42a-f4e33362e0fe, Phạm Thái Bình, True, 5/16/2002 6:28:04 PM
+3ebe3e67-22a1-438e-a078-d00d26248ea6, Nguyễn Hoàng Bảo Sơn, True, 12/20/2005 10:32:36 PM
+42edcb92-146a-4b87-ad20-353cc4930b84, Nguyễn Trúc Vân, False, 6/20/2005 7:19:29 PM
+d1e9a509-3084-46cf-af8d-ccc33c59a58b, Lưu Thảo Ngọc, False, 4/22/2000 11:35:15 PM
+24d503a9-e9f4-484c-898b-7db5bae2642e, Nguyễn Xuân Vy, False, 2/17/2002 12:12:52 PM
+5507eb00-77c3-4236-884a-73ac8406c979, Hoàng Hoàng Bảo Sơn, True, 2/24/2002 11:00:42 PM
+00f5ed05-21cf-4a53-9177-e02dd43215f5, Nguyễn Thảo Lan, False, 1/18/2005 10:29:19 AM
+49d534ab-4daa-4bee-b04b-b8cf10812b09, Trần Ngọc Vy, False, 6/6/2002 4:44:43 AM
+f378cdd9-e8f0-4125-8257-9df77281b14b, Hồ Việt Phúc, True, 11/13/2006 7:36:25 AM
+f3363fc3-d93d-47df-85c0-aa8a31d1b02b, Nguyễn Hoàng Bảo Đạt, True, 3/11/2002 10:45:56 PM
+a8c1d1fa-0eb2-4915-8e5c-348efab32af0, Phạm Thu Thư, False, 11/17/2000 1:21:49 PM
+8c4ca595-80e3-4f0e-9514-cc86b0981947, Phạm Minh Thanh, False, 1/14/2004 6:51:33 PM
+0d1215f3-5806-41d8-8a10-3078465f370a, Nguyễn Minh Vy, False, 1/24/2003 7:10:00 AM
+13a2c2ed-e9ae-4011-952f-2ec705d24905, Trần Văn Hùng, True, 9/23/2002 6:24:24 AM
+b3708faf-078c-49cb-bc03-9df17856266b, Đoàn Thu Hà, False, 9/2/2003 11:49:48 PM
+0661de6f-d673-414b-8b38-efd12b8c9250, Đặng Đăng Bình, True, 2/20/2006 1:14:14 PM
+c25afd97-17b6-4086-8427-9865dd241d8b, Nguyễn Mai Uyên, False, 4/24/2000 2:26:09 PM
+388dcda1-37b1-4a32-922e-e82b93f6958d, Phạm Thị Thanh Nguyên, False, 12/8/2001 1:49:24 AM
+d459520b-574a-47d5-98b7-887daff2eb0d, Hồ Anh Duy, True, 12/11/2002 10:44:03 AM
+f348276b-2cf1-41c9-9d06-d2126661472a, Đặng Thái Nguyên, True, 6/14/2004 11:18:54 AM
+3164fb97-f7d9-4838-bb72-b4ca64a494fb, Phạm Bảo Vân, False, 11/26/2003 10:52:57 AM
+54da0ee9-7d45-4114-ae4f-850ca6aa3877, Lưu Thiên Sơn, True, 1/27/2000 5:42:53 PM
+fb254606-fe10-48c4-8f9b-8a3c986c72a2, Nguyễn Văn Long, True, 9/22/2002 10:50:18 AM
+744deb9a-5cc4-4e55-b3d7-6d86db446bfa, Nguyễn Thái Nguyên, True, 2/18/2003 12:19:14 AM
+59dc3015-3f33-4433-8dfa-cc97bcd7082c, Nguyễn Bảo Hương, False, 1/23/2000 10:14:03 AM
+bbfd2cc9-8568-4d8e-945f-9d7016d7fe6f, Lưu Hoàng Bảo Đạt, True, 9/10/2004 5:36:24 AM
+c6fa53fd-5a0f-4feb-95c4-04b808e7bf5f, Phạm Hoàng Bảo Hoàng, True, 5/1/2004 2:04:53 AM
+ebf2d784-847e-482d-81d7-f5d56363fdaa, Đoàn Thảo Uyên, False, 8/17/2003 4:05:11 AM
+e87b50d4-937f-4f84-8bdf-4b067fce932c, Đặng Đăng Hưng, True, 11/8/2001 12:51:12 PM
+6b1747d0-67a8-4666-a571-848d01de2ab3, Trần Văn Duy, True, 8/21/2001 10:12:44 PM
+82c170dc-8ef3-4241-865a-740965f3216b, Trần Đăng Bình, True, 9/16/2004 6:24:47 PM
+d8499fe1-0640-4714-b9aa-b74b053c85dc, Trần Minh Nguyên, True, 12/27/2002 4:32:36 AM
+93737a95-7293-432f-b91f-3277933651c0, Lê Minh Thư, False, 2/6/2000 10:02:28 PM
+4f1a4c4e-24b3-457c-bcc2-2ea657650f31, Đặng Phương Ngọc, False, 9/22/2003 4:14:51 AM
+ecc858c5-c55f-4ead-8127-fa2d3f9ab267, Nguyễn Hương Lan, False, 10/1/2005 10:34:53 AM
+12cb7222-ed1f-467d-9bf5-5feaa68f6c29, Nguyễn Phương Trang, False, 7/28/2001 7:11:59 AM
+4d3069c6-1f52-4eeb-8ded-65b6b7a26da4, Đoàn Việt Duy, True, 3/13/2003 9:14:34 AM
+3c19a5bc-a403-424c-90dd-f3546669ace7, Nguyễn Hoàng Bảo Anh, True, 3/29/2005 2:01:40 PM
+985038c5-40ff-4c2b-ae56-0864df3255ea, Đặng Văn Nguyên, True, 5/24/2004 5:01:16 PM
+0e8f783a-3959-4a39-9dee-8e32805885df, Hoàng Xuân Sơn, True, 6/12/2006 2:07:08 PM
+3d77ee32-cc64-4f53-a1e6-ec41aa8970f0, Trần Gia Phúc, True, 5/15/2006 2:43:51 AM
+285edea5-ca1d-476a-8bad-5904755c4a1b, Hoàng Anh Duy, True, 9/21/2002 7:34:27 AM
+c4a42916-631d-4861-8c4b-fa2a35ce45d7, Trần Xuân Thư, False, 3/13/2003 12:04:29 AM
+5beae206-1e55-4e38-9dd9-58f6a851d0f3, Võ Thị Thanh Lan, False, 2/16/2003 6:29:08 PM
+da14d9bd-3dad-4520-b1c7-e2240b5f210a, Lê Minh Hùng, True, 4/11/2004 4:02:57 AM
+8838ce42-eead-4f6b-8690-3c42adf8c8f2, Nguyễn Bảo Châu, False, 7/11/2006 5:07:18 PM
+98bd4af3-524e-45d3-8b96-0962de83412d, Lê Minh Phúc, True, 9/2/2004 5:02:25 AM
+e902e453-efae-4fa1-ae0a-135bdae0242f, Nguyễn Đăng Huy, True, 7/26/2003 2:56:14 PM
+becfb8db-10ec-4e07-9d64-d9e1fcda54c8, Nguyễn Thái Long, True, 9/2/2004 2:32:33 AM
+b36a04c5-16d9-438c-aa2b-d92eded43974, Nguyễn Xuân Long, True, 5/2/2000 10:55:59 AM
+8b15e501-635f-417d-9945-ccee4ecde1da, Nguyễn Thiên Duy, True, 1/10/2004 3:50:10 AM
+989589a6-770f-4715-bc8c-e0900dc53746, Võ Thị Thanh Giang, False, 9/14/2005 8:21:47 AM
+990be2ae-8df2-420b-88ad-206deb3d39da, Phạm Thu Phương, False, 5/13/2006 1:46:57 AM
+975bbd51-7697-4781-b76f-c73abdc37f70, Nguyễn Đăng Duy, True, 12/17/2006 3:50:06 AM
+201222f7-2813-4a15-9883-4cb536a75df2, Hoàng Gia Dương, True, 7/31/2005 5:58:08 AM
+ef42ef03-147e-45d8-8897-d516fa2cf8eb, Lưu Văn Thành, True, 12/11/2000 3:20:26 AM
+fb620062-2256-48f2-8a87-469cd25c5b05, Nguyễn Thảo Phương, False, 12/23/2002 9:55:44 PM
+7d80ac10-9c2e-4069-8568-35113e0967fc, Nguyễn Phương Trang, False, 8/12/2005 11:20:53 AM
+eff35fac-880e-4d8b-99ba-f8d38898a1b1, Nguyễn Ngọc Giang, False, 4/30/2005 8:03:55 PM
+bfa723bc-ba2d-4450-91da-7e26ba2757a6, Phạm Phương Hà, False, 1/26/2003 11:33:58 PM
+5b5b9e85-9bf4-405f-92cf-3b27744cc6ad, Nguyễn Xuân Thư, False, 11/26/2003 2:42:30 AM
+bbd7670b-01c6-4f69-9f66-5608b84ce75f, Trần Văn Hùng, True, 11/12/2006 1:09:44 PM
+1cc8d57e-927b-4e1c-ae0f-9a7a062e5645, Hồ Đăng Khánh, True, 9/9/2005 2:52:44 PM
+66dfbe09-ff1d-4eab-bd0a-a641f9321689, Đặng Đăng Sơn, True, 11/24/2003 7:31:51 PM
+7d5c813a-46b9-417f-a266-6450ab6e6c99, Võ Minh Uyên, False, 11/8/2000 3:20:25 AM
+5194c64a-ff1a-4d90-b8bf-94f06c53bb7d, Nguyễn Phương Giang, False, 3/8/2001 3:23:09 AM
+3bfa7d50-548c-45a1-8e19-b0a94b077080, Nguyễn Thảo Vân, False, 2/6/2004 10:46:05 PM
+6d9de246-845c-4a31-820b-e747cb88b9ad, Hoàng Thảo Vy, False, 11/21/2000 4:33:05 PM
+0f0eddc4-df84-4e87-adbc-8f78743b154a, Phạm Thái Thành, True, 1/21/2005 4:46:12 PM
+d02f7075-52b6-4915-a0af-c5c45f216367, Đặng Thái Hoàng, True, 5/12/2002 7:22:46 PM
+8546f6d6-fc7c-4813-938e-e37bc59c370a, Nguyễn Hương Trang, False, 8/8/2001 7:26:57 AM
+cdf6a0c5-0189-4368-a439-d62ca5fe30c2, Nguyễn Hương Phương, False, 9/22/2001 12:01:04 AM
+cb152a1e-a9ca-472b-ba95-5bb4f3dca5b7, Đoàn Minh Bình, True, 3/27/2001 9:03:46 AM
+e25a057d-f15e-4f8c-bf36-edd5995ac92f, Nguyễn Hương Linh, False, 8/18/2005 3:15:07 PM
+d48ef383-c882-41f0-94fa-77787f98d978, Nguyễn Việt Dũng, True, 3/5/2005 8:24:55 AM
+c9de339d-baff-4ad9-9689-d8c92586eebe, Lê Thảo Nguyên, False, 6/22/2002 4:07:36 PM
+e6ac2aad-c6b2-4fe6-8177-5698b2907814, Nguyễn Xuân Lan, False, 12/10/2004 6:00:42 PM
+b2884c18-6fed-4e65-bf8c-0a057283e76b, Đặng Gia Thành, True, 3/7/2006 6:46:39 PM
+b68d47ff-94c9-4d3a-8fd2-d8b52e4f75a8, Nguyễn Xuân Phương, False, 5/13/2002 12:26:57 AM
+57b3c7a1-03d7-4b41-ab74-0228c7089d79, Hoàng Trúc Hà, False, 9/3/2006 11:52:44 PM
+b86bacb2-f525-4a79-9429-a69b16476168, Nguyễn Phương Phương, False, 12/23/2006 6:07:58 PM
+c3aa3905-99df-47d6-9d54-0a8bd33c9988, Trần Minh Thanh, False, 8/13/2003 11:55:39 PM
+57cb035a-c2c3-47e4-8015-3f7a50aae850, Đặng Anh Bình, True, 10/12/2005 9:51:17 AM
+4355d2a9-303b-4bf0-be8b-d1c211985e94, Lưu Anh Hưng, True, 4/21/2001 9:52:44 PM
+798c51a9-0bf9-4afe-a00f-7ae73449bc16, Đặng Minh Dũng, True, 4/29/2006 3:26:14 PM
+b7a4a437-5c30-4a7a-983c-58250984ebec, Nguyễn Trúc Uyên, False, 1/9/2005 9:26:48 PM
+9b89eebc-9299-4699-90e5-22eb2e9cbb58, Hoàng Mai Khánh, False, 12/5/2004 8:23:42 PM
+29700dae-96da-4af6-b27e-3c0ebe837bbe, Hồ Thị Thanh Châu, False, 9/23/2003 8:18:10 AM
+6c0b94f1-6d23-4e78-b905-a369ab69af5d, Lê Hương Phương, False, 8/25/2005 4:13:49 AM
+e959fdbe-31ed-459e-a46a-a810005bfebd, Nguyễn Anh Nguyên, True, 7/27/2005 9:28:45 AM
+8785f0a8-9580-47b7-8ab0-330a1a199df3, Trần Minh Thành, True, 12/4/2005 11:10:41 AM
+426a75d0-09a0-4e23-a0ce-7042a9d88c94, Phạm Minh Sơn, True, 3/9/2002 7:16:46 PM
+de548974-076a-4b90-8f92-569fd9fdd04f, Trần Thiên Duy, True, 2/9/2006 12:14:15 AM
+3ea33969-b234-4ec0-b649-099e9e50a8ff, Phạm Hương Giang, False, 10/1/2002 12:46:16 PM
+8ee3fee3-f233-423f-9898-dc9cc3ff337f, Lê Thảo Phương, False, 4/30/2004 1:07:42 AM
+f64cb1c5-81d0-47c4-8b1c-77180c55fd0b, Hoàng Gia Anh, True, 6/18/2000 3:59:48 AM
+5629ecd7-b101-4639-b33c-447d49e59870, Hoàng Xuân Linh, False, 10/6/2001 12:25:20 PM
+6e2f1a00-7602-4d5f-9dda-95f3cfb70862, Lưu Thảo Linh, False, 2/22/2002 6:51:54 AM
+ca6e496f-d718-4bde-b6a1-79c57df23973, Phạm Thị Thanh Giang, False, 12/16/2001 7:00:51 AM
+f4316f56-9956-4abc-b26d-a9c44eeb8bc3, Nguyễn Thị Thanh Vân, False, 11/21/2003 5:06:12 AM
+af3bdebe-b57a-4e4e-a433-d616ab378aaa, Nguyễn Thiên Sơn, True, 6/19/2001 5:02:14 AM
+5a1f759d-aa7b-4096-bf49-12bd2dd35bd3, Nguyễn Thảo Khánh, False, 7/9/2003 2:26:31 AM
+c58de313-3934-45b2-a1be-04771dc5f62c, Nguyễn Hương Lan, False, 4/11/2004 1:04:50 PM
+cf2719f6-69d7-47cb-b076-4cd5d6083d72, Đoàn Đăng Thành, True, 6/19/2004 11:06:40 AM
+264e3615-da39-4c64-9b97-3f9164460f0b, Phạm Phương Trang, False, 5/29/2003 1:37:19 PM
+6e688ffd-f5b0-4784-b1a5-74e5f6d08541, Đoàn Minh Dũng, True, 12/7/2003 9:07:41 PM
+7a8e2965-3501-4701-9b63-20a0af6b144e, Nguyễn Đăng Bình, True, 12/9/2000 2:35:40 PM
+48b51b96-0f3d-4d85-81c7-93d677b61a4c, Võ Bảo Vy, False, 9/26/2005 1:28:10 AM
+7eb13cef-b5cb-4b04-940f-64f32f58f1f4, Nguyễn Ngọc Hà, False, 9/1/2001 6:16:54 AM
+9cbbe256-3d7e-4efb-92e4-c7eddfda0c3d, Nguyễn Hoàng Bảo Bình, True, 8/7/2006 5:59:54 PM
+9d5e1eb5-cd06-4eec-b28e-94b67e641b3f, Trần Minh Khánh, False, 12/4/2001 4:09:49 PM
+4944117f-19ce-487f-ab1e-755a1927b512, Trần Xuân Nguyên, True, 10/27/2005 8:14:24 AM
+cf79a680-57f2-438a-af81-5832e08fdbc7, Đoàn Hoàng Bảo Nguyên, True, 10/11/2000 6:15:52 PM
+4fa904a8-cb76-4f37-922e-ccfd701328d4, Nguyễn Thảo Lan, False, 9/23/2000 6:33:01 AM
+5842aad2-fe94-463f-a397-ce49a8bf61fc, Nguyễn Mai Linh, False, 8/7/2002 12:13:04 AM
+cf5eac00-78ee-4e81-af4f-b7b3e5cd86fa, Lưu Đăng Huy, True, 1/20/2001 7:42:20 PM
+bb75daee-d150-4bf7-9bbc-719d1375304f, Trần Thị Thanh Châu, False, 3/30/2002 6:42:37 PM
+6f99c2d6-ba22-4279-a80a-518e8498f142, Nguyễn Thu Hương, False, 1/19/2000 6:13:47 AM
+dbd9b039-7028-4280-8e7e-ac0caebda7f8, Hồ Hương Nguyên, False, 3/24/2006 7:24:40 AM
+5dec4593-0e9f-422e-aaf8-e0249e80393a, Nguyễn Xuân Thanh, False, 8/28/2006 12:31:15 AM
+9b96dc6b-05e4-4024-b68e-4493c87c547b, Trần Hương Thanh, False, 6/27/2000 8:46:21 PM
+a3e384da-2c7c-4cdc-ab61-267f1eaa695d, Trần Minh Phương, False, 5/1/2006 4:26:27 PM
+a15fe2ac-fdf6-48c0-a748-48813d676e57, Đoàn Mai Châu, False, 6/24/2006 4:11:27 AM
+5c3c9bf0-610b-47d8-9f9c-3e01efec318e, Nguyễn Thị Thanh Ngọc, False, 4/29/2004 5:48:29 AM
+99a498c0-50c0-4e37-8b2a-e60c7d0c289b, Võ Thiên Phúc, True, 6/7/2001 1:08:09 PM
+8b03c58f-961e-4893-96be-3870c803c7c5, Lưu Xuân Linh, False, 10/6/2001 7:28:57 PM
+0578af60-2fba-4242-943f-40797cb9b445, Nguyễn Việt Phúc, True, 7/10/2005 8:06:21 AM
+2633cb13-e185-4746-be2f-d84b1da7ee80, Võ Bảo Vy, False, 3/2/2002 3:10:20 AM
+ae84ffde-9a58-4b22-8f23-653e5bca98f7, Lưu Thị Thanh Nguyên, False, 6/18/2000 1:58:00 AM
+97d4036d-3659-42a4-8e2b-9d32ea521bb3, Nguyễn Xuân Thành, True, 9/22/2005 10:39:35 AM
+e088c05b-a3c5-454a-a7bf-2f1d5e095e7e, Phạm Minh Long, True, 12/28/2001 7:54:39 PM
+0bcd3c86-ba74-4044-922b-4f12e5e907a3, Nguyễn Gia Sơn, True, 7/30/2004 8:22:39 PM
+ecd984bb-2dca-47d5-9f5e-83462514597f, Đặng Bảo Linh, False, 9/19/2000 4:37:21 PM
+26ead38d-3309-4b00-ab4a-c8479b8c330f, Đoàn Hoàng Bảo Hoàng, True, 8/20/2003 9:03:03 PM
+9aa1b100-d085-4a74-983a-678bc51e4d7b, Võ Minh Lan, False, 8/1/2000 1:18:11 PM
+c2febce5-0be6-4f63-83e9-3f0a19597dc7, Nguyễn Thái Anh, True, 3/7/2000 11:30:01 AM
+f71435bc-89fc-4d52-bbb7-1d5cefd12a02, Lưu Bảo Nguyên, False, 9/10/2006 3:28:45 AM
+6f0a911d-4aea-4442-9e94-6df95f687fae, Đoàn Việt Hoàng, True, 10/23/2005 12:54:20 AM
+1bf7f22d-8c03-4fad-8514-dcfdb9e595af, Hoàng Anh Khánh, True, 6/19/2002 12:39:02 PM
+42c7c4bb-5417-4c9a-ab49-cf5b7ff88031, Hoàng Thái Đạt, True, 8/15/2003 10:50:48 PM
+f53937f9-4da8-458e-b4a6-8c2159f86739, Nguyễn Thiên Dương, True, 5/4/2006 2:46:58 PM
+e1892917-ff66-4522-b647-e951ca16538e, Võ Mai Thanh, False, 4/2/2004 1:03:27 PM
+0e90ab60-b5e2-474f-8749-be0ff46941c7, Nguyễn Hương Hà, False, 7/17/2001 11:17:43 PM
+bf151a4c-3a2b-43c6-af5e-438b5c2c6f2b, Nguyễn Đăng Hưng, True, 5/30/2005 6:48:59 AM
+89e62ac9-9c51-4400-a3c2-81cae904127f, Phạm Bảo Linh, False, 9/1/2006 6:42:55 AM
+6666a56d-cc90-46cf-8fae-c77862b69882, Lưu Thiên Anh, True, 10/22/2005 4:32:31 PM
+5dfa0ed5-c664-457c-838f-fbe4049f4222, Hồ Thái Duy, True, 4/2/2002 12:41:23 PM
+329336bd-873e-468e-b081-b79ee5f81b9f, Võ Hoàng Bảo Duy, True, 6/13/2005 3:29:37 PM
+6fd4d7e7-b682-454a-8caf-7c67e2a0a896, Nguyễn Bảo Uyên, False, 11/18/2000 7:10:56 PM
+e3f8acdc-4410-4d33-988d-07781870c280, Võ Ngọc Vy, False, 8/20/2006 10:16:28 AM
+a2b52c6d-01ed-4756-9bcd-04ac8df23289, Lê Xuân Nguyên, False, 2/7/2000 5:22:23 PM
+b9fbd120-c7e7-498a-987c-033633979ae1, Đoàn Bảo Linh, False, 1/3/2003 2:40:59 PM
+7cc91a55-38af-44bc-87de-fed639d760a9, Nguyễn Thu Hương, False, 1/28/2005 12:38:29 AM
+dd60e2c0-997d-4e68-b255-ba14ccda7278, Đặng Minh Bình, True, 10/1/2001 3:14:07 PM
+edc973c0-dde5-49be-ba75-a16c5067a541, Hồ Văn Bình, True, 9/5/2004 1:31:54 AM
+730fbace-e1c6-461b-a8c9-9aa6d2e9d007, Lưu Việt Hưng, True, 8/19/2001 2:10:29 AM
+c26355d0-13d6-4fff-8a3c-190150d5f3a6, Trần Thu Thư, False, 2/13/2004 7:51:23 AM
+b5fb76d8-0016-4bd4-ba18-5f4a83b38a97, Nguyễn Hoàng Bảo Nguyên, True, 10/18/2002 2:44:27 AM
+911dc5b0-0e7b-4bbb-98c1-dc64b34e5a66, Đặng Việt Hoàng, True, 4/26/2006 9:30:23 AM
+1b1a88fd-c87e-4a42-b771-3d34e3bbe7bc, Phạm Trúc Phương, False, 10/9/2004 8:59:07 AM
+600d931c-42c5-4c88-8800-6ce38f7c6a26, Đặng Bảo Hà, False, 12/17/2003 1:07:27 AM
+283e555c-55f5-4c57-856e-9c62abd6957f, Trần Hoàng Bảo Bình, True, 12/20/2006 11:25:18 PM
+5b030939-18b7-4e8f-abca-b408b05efee2, Nguyễn Thị Thanh Nguyên, False, 5/23/2004 5:30:18 PM
+506f6d2f-9970-4974-9dc9-9ea3f72185f9, Nguyễn Đăng Dương, True, 2/16/2000 2:24:38 PM
+aa738b94-9227-4906-9786-efbd19b72928, Đặng Minh Hùng, True, 10/9/2005 12:42:50 AM
+95205fc1-1769-4e42-b668-71ba31ec687d, Nguyễn Anh Long, True, 5/31/2003 9:50:16 AM
+ab2ef03c-339f-4c09-ab65-0004ac4599d2, Lê Đăng Bình, True, 8/18/2000 9:09:53 PM
+ddb7a842-252c-485e-8cf3-352ad05d09d3, Nguyễn Thảo Châu, False, 8/29/2002 1:18:08 PM
+e10f4156-91a2-402d-875a-f44099524955, Nguyễn Bảo Hương, False, 2/3/2000 5:46:47 AM
+7c01c6cd-8735-4578-8065-d55a1fcd0f83, Hồ Thị Thanh Nguyên, False, 9/20/2000 10:37:39 AM
+04d9f47e-877d-448f-ba44-91fc00b8c58e, Nguyễn Đăng Dũng, True, 1/8/2001 4:57:57 AM
+8582ee88-33cd-47f9-9db7-5f1ae69f4da8, Trần Thu Hà, False, 5/6/2005 5:26:47 AM
+61c611ec-d8b1-404e-860d-498915f260e4, Hồ Minh Linh, False, 12/10/2001 8:38:14 AM
+3dff578a-9ff9-4a63-beb9-874174eae9ad, Nguyễn Hương Vân, False, 5/19/2001 5:19:03 PM
+d9c26e72-acd2-485c-b1cc-5923463f64c3, Nguyễn Thảo Phương, False, 7/26/2003 5:54:20 PM
+d803bbad-ea64-4b47-b330-554ef2b1fda5, Đoàn Thảo Thanh, False, 5/28/2000 7:26:25 AM
+147f7b84-79f4-4eca-b23a-637825625a2e, Nguyễn Bảo Giang, False, 11/10/2005 3:04:47 PM
+935bfa3f-d787-4ce0-bd4a-fc201fcd7c58, Lê Mai Phương, False, 11/17/2005 5:09:57 PM
+3ea25dd5-ad13-4a93-a62d-fa7bf5e4d386, Lưu Minh Bình, True, 1/11/2004 7:24:34 AM
+50b4acb4-8849-44bc-8b23-443a331a5093, Đoàn Minh Nguyên, True, 3/11/2005 2:44:45 PM
+6bc1f28a-ca50-4bb2-9670-925b16994f6b, Nguyễn Trúc Lan, False, 2/20/2003 6:47:52 PM
+46621660-6736-479d-b7f6-2def6d1ce1f8, Hoàng Xuân Bình, True, 2/7/2003 3:08:29 PM
+c1321d08-2262-4da7-a1c5-6dfc24d21cce, Nguyễn Anh Khánh, True, 3/17/2000 12:35:10 AM
+a341765d-74ff-4554-bbf4-d534774910aa, Hồ Đăng Dương, True, 10/29/2006 8:24:37 PM
+a7e6cd83-6282-4974-8f13-3b6209513395, Võ Hoàng Bảo Đạt, True, 9/11/2003 8:37:52 PM
+a3fb327d-124f-4ff9-8bb4-7bd289b380c6, Nguyễn Đăng Khánh, True, 6/22/2003 3:59:25 PM
+36161c7d-c08a-4f38-b68c-e8b574745384, Hoàng Xuân Sơn, True, 6/14/2004 12:44:36 AM
+3441ea1d-84d0-4867-8a4e-30ad1f0e8ca6, Đoàn Hương Hương, False, 10/9/2003 12:15:00 PM
+8ffd2457-609e-498c-905f-498e3c0d3661, Hồ Trúc Hà, False, 3/14/2005 2:59:03 PM
+85e98bff-10ff-4347-b8ca-09cbabcdaf10, Trần Đăng Dương, True, 10/2/2004 10:50:09 PM
+7600343a-e046-4ccc-84c8-c5e1cf6c50bf, Nguyễn Hương Uyên, False, 4/3/2006 5:54:50 AM
+cda10c66-735f-480e-9668-e8c9270bd580, Hoàng Văn Khánh, True, 11/20/2003 1:44:29 AM
+f00cbfe9-e476-4d7c-ad91-baa80146bd14, Nguyễn Thiên Hưng, True, 6/4/2004 8:38:08 AM
+542b26de-8be6-4455-98fe-86245d65b988, Trần Việt Hoàng, True, 5/28/2004 9:17:46 PM
+3710ed94-5352-46b4-bb0a-a979758de6db, Đặng Thái Dương, True, 1/28/2000 10:41:30 PM
+38053e25-98d3-4dc1-9d55-b9517895a9ae, Nguyễn Ngọc Nguyên, False, 12/20/2005 2:48:31 PM
+38975dfb-f427-44cc-9e62-60d8e4a77428, Võ Xuân Hưng, True, 1/8/2004 9:51:47 AM
+ca58cda2-74d1-454a-9f29-3326641739b4, Nguyễn Việt Anh, True, 10/12/2002 6:57:50 PM
+f9168b6c-7f14-41ab-9859-2691453c62c8, Đặng Hoàng Bảo Phúc, True, 8/20/2002 3:32:19 AM
+92b63a92-53e7-45ee-a6f4-c19824dbd642, Trần Bảo Châu, False, 2/6/2001 10:40:49 PM
+d407488a-28ce-4e82-9da8-3be96cbc0ad6, Phạm Hương Ngọc, False, 3/8/2006 1:44:33 PM
+7b32f078-0df9-4450-a810-03963e0784f8, Nguyễn Thái Hoàng, True, 2/17/2001 10:23:15 PM
+4a20d754-f26e-4b21-b74e-fe9ecb72386b, Đoàn Văn Hùng, True, 2/25/2000 8:43:01 PM
+67b25097-8885-41ca-9cd3-0a7fe6710ce8, Phạm Văn Hùng, True, 5/13/2003 11:52:43 PM
+c2757f7e-3744-4ea6-a6c2-1adf6e4799c4, Lưu Minh Long, True, 7/21/2002 6:18:14 PM
+2727ca5a-406b-41dd-8815-92d2d68668c6, Nguyễn Ngọc Khánh, False, 8/7/2005 11:10:46 PM
+7321da63-3d48-44ba-a964-08559cb3b2b2, Nguyễn Hoàng Bảo Sơn, True, 4/7/2001 12:22:24 AM
+63fdac28-62bb-49cb-bd50-aaed3f6b7066, Hoàng Gia Hoàng, True, 3/8/2000 1:11:42 PM
+b1f2f56c-e45d-42f6-9ec6-1a0d26f3d01a, Hồ Bảo Hương, False, 3/15/2003 3:11:47 AM
+65f4f7ac-2d5a-4ecc-8046-b7bb230527b1, Phạm Xuân Thành, True, 7/18/2006 6:29:53 AM
+4142b411-67cf-4a85-ac1c-83d2905a7f04, Nguyễn Phương Lan, False, 8/31/2000 7:47:43 AM
+608a3a8c-422a-4b83-ab69-82d56d035514, Nguyễn Minh Anh, True, 11/2/2002 3:41:22 AM
+c36aedfe-e363-4109-a13d-91838310250d, Nguyễn Gia Hưng, True, 5/27/2006 2:51:41 AM
+b999dff5-cf54-4f86-b6f5-329573c2e88a, Võ Anh Phúc, True, 8/17/2005 8:29:29 AM
+e995271c-c5c8-421f-b6ce-a9931ccc61fa, Đặng Đăng Hùng, True, 10/18/2005 7:58:44 PM
+7cdbe43a-502d-4999-bac6-16fe73175a8c, Hoàng Gia Long, True, 6/28/2005 5:07:35 PM
+60985ce9-5be2-43ad-8b85-578b8ffea57c, Nguyễn Thị Thanh Châu, False, 8/16/2002 9:09:04 PM
+ca26d696-f21c-40f3-85ca-c4edd606c351, Phạm Minh Khánh, True, 11/26/2000 3:47:04 AM
+83d8a70c-bcd4-4f96-b902-f6ec363bfcd2, Đặng Xuân Bình, True, 12/3/2005 11:42:45 PM
+62d596cd-b439-4e38-8bdc-88a4d2814d3c, Lê Minh Uyên, False, 4/6/2000 7:56:46 AM
+4fb351d7-5770-4b63-a4cf-f7dd166fc096, Nguyễn Việt Khánh, True, 8/18/2003 8:45:14 PM
+38eee5b1-002a-4d90-b05f-349169b408dd, Nguyễn Minh Nguyên, False, 1/19/2004 6:41:18 AM
+17ee0c40-1054-4e1c-87bb-032566c3ef8e, Đặng Thiên Dũng, True, 12/25/2004 7:21:30 AM
+87610203-0064-429a-8edc-6e3b5ad0e40c, Nguyễn Hoàng Bảo Thành, True, 8/28/2003 3:42:49 AM
+2fad2a2c-c4be-490e-b4cd-9acaf2385e4a, Hoàng Thu Giang, False, 4/13/2006 2:02:19 PM
+83058706-304b-4f88-a29b-d87403b9d4bf, Nguyễn Gia Đạt, True, 6/30/2006 6:57:11 AM
+60c3a847-b4f3-409d-a358-53e3dbbbaf9d, Hồ Thu Nguyên, False, 3/3/2001 3:53:10 PM
+c0b80c9f-f15e-4c51-8ea4-dc9ae5270445, Lê Thu Ngọc, False, 3/23/2004 10:39:58 AM
+0e34ec13-5926-4e08-bd3a-a896558c00b0, Trần Thiên Huy, True, 2/11/2005 4:18:56 PM
+ee65b451-5c7f-4b16-b8d4-639d36ff5635, Lưu Thị Thanh Phương, False, 10/20/2005 7:57:29 PM
+21ee420e-d9fd-487b-9001-e65728313904, Đoàn Thiên Nguyên, True, 12/11/2004 9:39:34 AM
+8751f05b-dc4c-4fe5-89f8-6100c45c999f, Nguyễn Hương Vân, False, 4/10/2003 5:57:35 PM
+05847051-2866-4cbc-97fe-7ceaad40fe7b, Nguyễn Trúc Trang, False, 9/23/2005 10:17:28 PM
+552bed86-ef01-43b6-b2f3-b338837770cb, Hoàng Anh Thành, True, 9/12/2000 3:59:53 AM
+47fb8002-2516-42f0-a76d-e92c1af76cf9, Nguyễn Đăng Duy, True, 10/16/2000 7:59:42 AM
+8bd2a265-76d5-4e79-9cf3-458e7daf959b, Lê Hương Lan, False, 10/31/2006 9:04:05 PM
+cd9a1d22-4d3b-4528-a75d-5858f71bf8e9, Nguyễn Hoàng Bảo Anh, True, 3/5/2000 11:13:52 AM
+a50e0edf-3722-447f-bdc9-f4bf9efd383f, Nguyễn Đăng Duy, True, 7/21/2003 3:07:20 AM
+2bba8cdf-fd1c-4779-94d1-a471485f8fd4, Trần Minh Anh, True, 10/8/2002 10:35:20 AM
+67a63471-f51e-4db2-b2ef-3c1927c813ad, Hồ Việt Dũng, True, 4/3/2003 8:10:34 PM
+ab3fc097-f11f-4cc0-bc73-6de6f847068a, Nguyễn Gia Anh, True, 2/26/2001 3:05:02 AM
+d369268d-4054-4c32-879d-85f29375bbc5, Nguyễn Việt Duy, True, 7/6/2004 6:13:12 AM
+4bb05a62-79f9-43f0-9ec5-8b545403d9c7, Hoàng Bảo Thanh, False, 8/28/2005 1:28:26 AM
+8f3d2bde-a94d-449c-a2e7-693b8f6ee8b3, Lưu Xuân Hưng, True, 2/11/2004 7:32:38 PM
+949a1c98-a634-4cc3-8ea7-7483d2efca97, Lê Anh Thành, True, 1/15/2004 2:25:12 AM
+0c9c46a1-d38a-45fb-a864-4c9b58fdeb19, Nguyễn Thu Trang, False, 8/25/2004 5:34:40 PM
+89c8ea1b-35a9-4a9f-9a35-8525b99def58, Nguyễn Đăng Bình, True, 4/21/2001 3:08:08 AM
+d36d39bb-14fe-44f8-a57a-f722205d69fb, Lê Anh Dũng, True, 3/13/2001 10:33:25 PM
+2608264f-5360-4f4b-b654-3220a8d126b4, Nguyễn Đăng Duy, True, 7/10/2003 5:00:29 PM
+132c76bb-72ff-4197-afca-05d7f11efc1a, Nguyễn Văn Dương, True, 9/14/2002 1:19:32 PM
+6ca4c4c3-7d36-46be-834f-f512fac5bfad, Nguyễn Minh Vân, False, 6/10/2003 4:20:04 PM
+11c1f3c9-7abf-4436-bc4f-145e7521f158, Đặng Thái Bình, True, 12/7/2003 11:09:43 PM
+6a1bc3f3-06e1-4047-8a5a-4e3db6f15071, Hoàng Thảo Nguyên, False, 8/14/2006 4:44:29 PM
+cb169488-6415-42c8-86cf-925c9e1dbe17, Nguyễn Văn Khánh, True, 9/7/2006 11:58:16 PM
+12010ea2-2d58-4fbe-9fe2-cbfcbbc782b8, Phạm Ngọc Vy, False, 6/23/2005 7:36:47 PM
+e9402554-d78c-469b-a466-b28cc0781028, Nguyễn Anh Anh, True, 11/22/2006 8:44:19 PM
+10c2fc43-9825-4424-98cb-3cdc722545a0, Hồ Thiên Sơn, True, 12/8/2004 2:09:05 AM
+aec6ecbe-7966-4139-b5d9-6dd73911c549, Hoàng Ngọc Khánh, False, 8/26/2000 6:17:40 AM
+730f90f9-867b-4c5d-8a48-e552f399f5c2, Hoàng Thiên Sơn, True, 9/16/2006 3:08:24 PM
+d57cc5fa-b23e-49c5-a3d5-601ed22dd941, Lê Hoàng Bảo Long, True, 3/28/2000 4:45:08 PM
+fd71956f-56f3-4714-9854-0f0725276087, Nguyễn Thảo Hương, False, 12/5/2001 3:52:52 PM
+52e2bac9-400a-4d14-a251-0c0fb043f375, Nguyễn Văn Đạt, True, 12/16/2006 7:49:42 PM
+69e5ba67-ff9a-421a-8adf-2f2503723ffb, Đoàn Anh Bình, True, 9/25/2005 10:20:28 PM
+1e152b5e-0762-4aae-ad7b-f5df8e76f582, Nguyễn Trúc Vy, False, 10/14/2004 7:16:04 PM
+19823f0c-59fe-4d58-9f5f-902f500b0e1c, Lê Xuân Khánh, False, 8/9/2006 9:51:36 AM
+8d3412f5-8d54-4d89-b086-f00394802826, Nguyễn Xuân Thư, False, 6/12/2001 1:55:53 PM
+d070b2f6-915c-4818-b050-68ba9d365252, Võ Thị Thanh Thanh, False, 9/24/2000 8:27:13 PM
+adb736ef-e5df-4226-a297-4fed2c360ebb, Võ Ngọc Ngọc, False, 5/5/2003 4:00:58 PM
+eb1079a7-ef8e-4c6d-8ec2-9598adb15dba, Hoàng Mai Vân, False, 7/16/2001 11:33:55 AM
+20b8f779-12ce-4d10-b48d-3b75d07fe769, Lưu Mai Thanh, False, 1/29/2004 9:07:31 PM
+4239f4bb-afbb-4eb2-a828-865b3f31f615, Võ Thái Duy, True, 9/10/2002 1:01:38 PM
+00db20ee-2895-4f1e-95a8-c7c9d3a394ad, Nguyễn Thị Thanh Hương, False, 11/10/2004 5:11:56 AM
+9209ee1d-5ecb-4f72-95bb-833a89deece3, Võ Đăng Thành, True, 1/7/2005 10:17:29 PM
+fae2d54e-b4e5-4161-a97a-d469050195ce, Lưu Gia Nguyên, True, 4/16/2002 6:53:00 PM
+446d42ee-85b8-4ff3-ae8a-741cb6ab4515, Nguyễn Thiên Dương, True, 8/9/2006 10:31:50 AM
+cfcf2d78-3f7d-47fd-aff9-cb8c74648ad1, Hoàng Thiên Nguyên, True, 9/22/2004 11:51:15 PM
+3f7d6c2a-c0f4-49fe-802c-9be7ecb3190e, Lê Thiên Anh, True, 6/17/2005 12:48:19 PM
+e0166718-5b50-4094-93e8-6839fb738c86, Lê Minh Duy, True, 11/24/2006 2:57:59 AM
+2f5a0c44-aab2-4a62-bd2c-d888bb610639, Nguyễn Anh Sơn, True, 5/6/2004 11:00:54 PM
+80d1030a-365a-48f1-bd9e-9a6687eb70dd, Nguyễn Văn Sơn, True, 1/12/2002 3:40:55 PM
+966f13a9-e578-4984-b87b-d0cefd5876e8, Nguyễn Thị Thanh Giang, False, 9/5/2006 2:48:19 PM
+f49ddba6-ff90-466b-bb93-0152ae69c216, Phạm Thị Thanh Nguyên, False, 4/5/2003 7:55:14 AM
+b97ffe97-7651-4288-8260-f99222719ca4, Trần Thị Thanh Hương, False, 10/13/2006 5:39:56 AM
+01fcf25e-f4be-4e18-a697-07dc210cc60b, Lê Thu Thư, False, 10/18/2000 9:32:25 AM
+f804da58-38ad-4a44-91fc-7c885c90c2e1, Nguyễn Gia Hưng, True, 2/4/2002 9:53:42 PM
+7dea786b-4093-4a20-93ad-770374331dc1, Nguyễn Hương Linh, False, 5/22/2004 1:43:27 AM
+e0c09170-4681-4cae-8b42-ba8e068e083c, Đặng Thu Giang, False, 3/19/2004 3:31:03 PM
+b33ec9d8-83f4-49d5-b371-1fa2b422784b, Phạm Gia Long, True, 2/7/2002 12:31:52 PM
+65afd000-94a9-462c-8488-3543359c7840, Nguyễn Ngọc Ngọc, False, 4/6/2004 12:08:11 PM
+80fb1c10-857e-4c45-8de9-90069949ba5d, Lưu Anh Huy, True, 11/3/2006 12:57:12 PM
+dfbfd2ff-1f75-4923-a9c9-2c84b6c50ce3, Nguyễn Mai Thanh, False, 12/13/2001 11:48:17 PM
+55d54112-9b18-4774-9b9d-1d723d98d905, Lưu Minh Giang, False, 6/1/2006 12:38:29 PM
+69ab7393-1844-4fef-a3b4-45e5b689350a, Nguyễn Mai Trang, False, 6/10/2005 7:32:26 PM
+dac19685-12a5-4a6a-bf72-cdd7d9ea9c3c, Lưu Thị Thanh Thanh, False, 5/9/2003 8:39:37 AM
+77458c46-9b47-447b-9f3d-047619efabe7, Đặng Phương Phương, False, 5/23/2005 12:08:07 PM
+71a95acd-9521-426c-9d7b-5a43f05c2865, Đoàn Bảo Thanh, False, 12/13/2001 3:45:25 PM
+4142946c-0b12-424b-9b77-df3f0ca11938, Đặng Minh Huy, True, 10/22/2003 12:24:14 PM
+30bf8512-08c7-402a-b3f0-e96f58c8fe3f, Đặng Ngọc Lan, False, 6/26/2002 2:01:01 PM
+56f2a6da-799f-46b5-b38f-c1ec843adc13, Hồ Trúc Vân, False, 1/20/2005 8:53:50 PM
+640604e2-3a46-4507-a326-96b8543fc265, Lưu Văn Đạt, True, 11/1/2005 5:45:22 AM
+5f6838fa-b957-4a85-b52b-ed4623610869, Đoàn Văn Phúc, True, 9/9/2000 2:29:25 PM
+4a9e8e91-8eae-41b6-b3cd-5a2fc37066a4, Hoàng Thái Dũng, True, 8/8/2006 4:10:54 AM
+0a6ea12a-e1ed-4517-9edb-0c2e69238c3c, Nguyễn Thị Thanh Lan, False, 1/7/2006 4:58:15 AM
+28a21399-03ab-47cd-bafc-cea9e035e53b, Hoàng Thái Dũng, True, 11/18/2004 6:01:22 PM
+9c761941-30b5-4e76-9717-501d51f665f3, Phạm Hoàng Bảo Nguyên, True, 6/24/2001 8:58:48 PM
+f51aebc0-8814-44e2-9ee9-3c19c89d1d5f, Đoàn Phương Châu, False, 5/10/2004 3:09:52 PM
+eee5c803-3713-407c-bf8e-e458f9145e53, Nguyễn Trúc Vy, False, 1/13/2006 2:34:40 PM
+f9bee542-9aad-4f5b-a3b0-b131fb945e0f, Hoàng Minh Khánh, False, 9/22/2000 2:17:40 AM
+1ee5eaeb-838a-4c99-b9da-3578aae8a9a4, Nguyễn Việt Thành, True, 3/27/2006 7:10:45 AM
+9c8f8988-621f-4a5d-83fe-b987dc7743bd, Nguyễn Anh Huy, True, 5/27/2000 12:18:09 PM
+6dcfc34d-8402-4195-89cf-165ba6b340b2, Lê Việt Huy, True, 5/17/2005 9:37:07 PM
+d82c5e8a-d0e8-4555-8b49-7381604e1ca8, Nguyễn Ngọc Giang, False, 8/31/2000 9:47:49 PM
+cf1d4a9a-e9a0-4764-8e69-6fddb3889a5d, Phạm Đăng Dương, True, 12/25/2006 10:37:47 AM
+12ad8810-6420-4364-96ff-357dadc338ee, Võ Ngọc Giang, False, 4/26/2003 5:52:15 PM
+3d33c65a-9b22-4892-9816-e32558612a3f, Đoàn Văn Dũng, True, 2/24/2000 2:34:11 PM
+eb23dc56-60d2-4c9d-a113-837729c28ceb, Trần Xuân Dương, True, 5/18/2003 8:50:12 AM
+2bc4344b-96b8-4055-a85f-9a5d36b35d36, Đoàn Việt Dũng, True, 8/28/2004 8:21:45 PM
+b1c05970-93a5-4865-ba09-a875b4d83927, Trần Việt Anh, True, 1/1/2004 5:10:27 AM
+9f21801a-6a26-4857-b5ad-8e249fae80d3, Trần Xuân Anh, True, 3/23/2003 8:31:24 AM
+513cd43e-a89a-4a69-ad05-4d4822fce006, Lưu Đăng Huy, True, 8/5/2002 6:55:01 AM
+9929fb48-a82c-474e-90f6-d7ad58f136e2, Đặng Thiên Long, True, 3/6/2004 7:55:08 PM
+63d6f5a6-cde8-4ec0-a45f-a339e49f30d6, Lưu Văn Khánh, True, 9/17/2006 1:01:16 PM
+278ef140-ecb1-492d-9905-5ddb4dd28865, Nguyễn Đăng Dương, True, 12/13/2004 1:22:57 PM
+287342bb-6df2-40b9-8c34-57ee395ab34d, Nguyễn Phương Uyên, False, 10/11/2002 9:22:44 AM
+f923069a-09a6-4a06-a5a7-580e6d8a008f, Lưu Mai Vân, False, 1/19/2004 4:51:30 AM
+c6c8c517-5e2b-4adc-8b82-0cab1a2d35d1, Lê Đăng Long, True, 10/14/2004 2:30:16 AM
+9be83ede-af77-477a-a6dc-0ce649291bfc, Nguyễn Mai Châu, False, 6/16/2001 11:07:07 AM
+508610d0-a60d-4b4e-a1f7-9b0d0c240820, Hoàng Thị Thanh Hà, False, 2/18/2003 6:28:13 AM
+eb883dc8-b32f-41bb-a41c-e7d8bb25354e, Nguyễn Việt Khánh, True, 1/30/2006 5:15:30 PM
+2c0952ef-bfee-4096-b6d6-d935dbf48e21, Nguyễn Xuân Khánh, False, 8/3/2002 12:45:15 AM
+5eec68eb-9740-4f49-8509-974cb5c61d0f, Nguyễn Xuân Ngọc, False, 1/5/2003 2:38:49 AM
+90e6fa32-bc85-4cd3-85b8-4d76d597d542, Lê Thiên Duy, True, 5/10/2001 10:54:53 AM
+ecf05a11-16be-4568-912e-a2bd600fc2dd, Lưu Minh Dũng, True, 9/19/2002 7:38:29 PM
+e7aebfa4-0183-453b-bad2-b1391830386d, Nguyễn Anh Đạt, True, 8/3/2003 4:02:29 PM
+1616cb42-2402-445e-98c7-95e73a0d902d, Hồ Thị Thanh Ngọc, False, 8/31/2000 9:57:13 PM
+c9e9b439-4202-4c20-b2f9-3e753010574e, Lê Xuân Hưng, True, 11/10/2004 2:46:10 AM
+729df106-ddbe-4cde-8991-afe4c4a634c2, Lưu Xuân Khánh, True, 3/19/2006 7:08:40 AM
+b33da246-4a5a-4a8d-8caa-ac33ccf9322d, Lê Minh Dương, True, 9/17/2001 3:19:39 AM
+a9099776-2b9f-4259-9916-d739129692b5, Nguyễn Thái Long, True, 10/31/2002 12:31:47 AM
+012851fa-f244-4e6e-a0df-8e1edc103440, Nguyễn Gia Hưng, True, 7/29/2002 12:49:51 AM
+ecf13460-676a-4081-99b5-aa6c6c56fe67, Hồ Phương Khánh, False, 6/12/2001 11:07:33 AM
+ef8c5d6c-7342-4831-9c80-3926e6457b0f, Nguyễn Anh Nguyên, True, 6/3/2004 12:02:44 AM
+c269b112-3fb3-435f-9433-32f3070fbff3, Trần Trúc Phương, False, 5/30/2001 10:49:26 PM
+c7e757b9-6702-4726-a9cf-072377cdcd0e, Nguyễn Hương Nguyên, False, 12/25/2003 8:48:29 AM
+e233f4ec-1fcc-4d45-8a81-41f861c006ff, Lê Minh Khánh, False, 8/11/2006 1:31:27 AM
+c4523313-48a5-4155-bbb1-7d222e6eb845, Đoàn Trúc Nguyên, False, 3/9/2000 4:13:49 PM
+f012fa59-7543-4839-b47f-6335686357ed, Đặng Minh Khánh, True, 4/2/2006 2:08:48 AM
+59ba7c86-c1ce-46e7-9f97-55aa94edda61, Phạm Bảo Ngọc, False, 8/22/2004 9:28:04 PM
+55ae3d19-f089-4129-9531-9413d4bc4b11, Hồ Hoàng Bảo Đạt, True, 3/21/2005 10:50:12 PM
+99079fc0-3701-4a42-8ae2-b966e4d273b2, Nguyễn Văn Duy, True, 10/31/2002 5:37:27 AM
+d993ae2c-3dd0-4313-b1d1-9f7d9c71620f, Nguyễn Gia Dũng, True, 5/11/2003 10:43:23 AM
+0f530a38-fd1c-429e-ba57-cadb88f61d1a, Hồ Minh Trang, False, 3/15/2003 11:21:02 AM
+8a3869fa-5260-4ff0-8b7f-e9e3836af390, Võ Phương Linh, False, 9/26/2005 1:16:38 AM
+08898345-d646-4d49-acc1-cf4180602e45, Lê Hương Ngọc, False, 4/3/2005 5:42:33 PM
+a59a4a5f-35bd-4383-884b-842bd356dc1a, Hồ Ngọc Thư, False, 5/31/2002 1:02:57 PM
+37ede13a-016a-4cf9-a39f-7f1c3585d17f, Hồ Ngọc Hương, False, 3/1/2001 7:37:39 AM
+01168115-2534-43f6-99ad-a72e746edd35, Nguyễn Trúc Linh, False, 12/27/2001 1:06:17 PM
+975c7462-626a-442e-ac50-0c800e143e28, Lưu Thảo Vân, False, 12/5/2003 1:06:17 PM
+3a08e3cc-529f-49fa-9207-5136c9f54ea1, Phạm Bảo Nguyên, False, 8/14/2005 5:09:50 AM
+8385351d-4003-44b2-a3e7-1f3d59f93476, Nguyễn Hoàng Bảo Bình, True, 4/11/2006 7:59:16 PM
+b0f827a0-2d83-4b68-9744-0ebf8a2b9205, Lê Hoàng Bảo Dũng, True, 8/23/2005 10:14:24 AM
+8326f560-7e5c-4fa3-ab53-e59d9c34ed26, Võ Hoàng Bảo Thành, True, 5/29/2000 7:35:07 AM
+585e8614-08c4-424a-a35d-9e515e33fa59, Nguyễn Minh Vy, False, 4/1/2002 9:43:26 PM
+365a3994-03d1-47d5-a95d-80d59b2fc51f, Lưu Minh Bình, True, 4/16/2003 1:23:45 PM
+8ade98c6-5bd5-470f-b043-b03bc29f2d42, Nguyễn Minh Anh, True, 8/28/2000 6:02:16 PM
+2108131a-3913-460f-b2ab-68a4ee54c77f, Đoàn Minh Lan, False, 1/31/2006 3:05:21 AM
+5a9dbc19-a10e-4232-943e-b2ce70204854, Lưu Thu Phương, False, 7/21/2004 1:25:54 AM
+33a3e8b0-a0bc-49af-b04c-1993418b94da, Nguyễn Minh Hưng, True, 11/26/2001 12:31:36 AM
+94ad5b7d-c8ad-447e-8f0e-c8758832eb71, Trần Việt Khánh, True, 6/3/2001 8:54:14 PM
+ac32e81a-ebfa-47bc-8005-4721d8b1c907, Nguyễn Xuân Vy, False, 4/25/2002 5:50:41 PM
+d7173d27-4027-478d-9c1f-de9c0cb71d76, Lê Hoàng Bảo Huy, True, 12/25/2005 5:08:25 AM
+293e4182-7c68-4fc3-84e1-89f84f3afbcf, Nguyễn Thiên Nguyên, True, 7/26/2005 2:10:19 PM
+38604a37-9b54-477f-b4d4-7009d858d279, Đặng Xuân Thanh, False, 1/1/2002 4:08:49 PM
+296b50f2-b9a7-4d35-a903-ebd6c2dc7562, Phạm Hoàng Bảo Đạt, True, 5/12/2003 4:26:13 AM
+7065a267-ee36-4493-8434-0761fa5dca48, Đoàn Minh Sơn, True, 6/16/2002 3:53:34 AM
+cd157c9c-95bd-4cad-9daa-df3f440df38d, Võ Bảo Thư, False, 4/11/2001 11:39:22 AM
+355767d1-0ff5-4610-8caf-768668ef92ad, Đặng Việt Thành, True, 7/19/2003 12:03:49 PM
+c8c75bc7-0a59-4141-9793-eba597dbc9a2, Võ Thu Nguyên, False, 10/6/2006 5:04:41 PM
+3c986ffc-7d14-435b-90a7-9680cc7f3d8b, Nguyễn Minh Hà, False, 3/7/2001 3:13:46 AM
+f822f72d-e5ef-4b01-a030-c74922917e8e, Đoàn Đăng Dũng, True, 3/15/2003 10:48:21 PM
+e9ed827a-8645-442a-98a0-12199295afbd, Phạm Hoàng Bảo Sơn, True, 1/7/2000 9:15:30 AM
+966426b6-9ca5-4203-a686-77a095762cf6, Võ Thảo Giang, False, 4/20/2006 4:14:11 PM
+a45e7a89-9e86-44e7-8bfd-bd15729718f5, Đặng Thảo Vân, False, 2/3/2004 7:14:34 AM
+b042200f-c9fa-4899-86bc-6f9ef8d3acfe, Nguyễn Minh Uyên, False, 10/27/2001 5:07:50 PM
+438b2e43-7aa9-43b3-926e-ceec409ef8a6, Nguyễn Gia Hùng, True, 6/13/2001 12:21:18 PM
+5f19e000-15a6-4648-9b42-6ac7cae1c194, Võ Thiên Dương, True, 6/4/2002 3:13:11 AM
+201a060e-bd2c-43bf-8cdb-bb4c700ca661, Hồ Thái Dương, True, 8/9/2003 2:04:20 AM
+5e1d5589-e1ec-4c23-81d6-7948551e9f8c, Nguyễn Gia Khánh, True, 5/30/2003 11:12:49 PM
+b246d2f8-42fe-428b-83fa-b4775d624aa0, Nguyễn Hoàng Bảo Hưng, True, 9/6/2005 3:21:06 AM
+46bcd8df-1853-48ba-8cb8-dad224c0bac6, Nguyễn Ngọc Hương, False, 10/26/2003 4:01:57 AM
+fe505699-b2c1-41e8-8a4f-e702e738b871, Hồ Việt Dương, True, 1/17/2002 3:23:54 AM
+5beea347-c64e-4129-92ca-155efb9234a7, Phạm Minh Hương, False, 4/30/2002 5:07:04 PM
+9980dcfd-4d9d-4b4f-8c49-58e09256380f, Đặng Phương Nguyên, False, 10/12/2001 8:58:31 PM
+8172290b-a661-437f-909f-2a6eb188d91f, Đoàn Bảo Ngọc, False, 2/12/2001 1:00:56 AM
+4a644793-d819-4c82-ac5e-e23ed9a61ea1, Nguyễn Xuân Vân, False, 11/10/2002 6:36:38 AM
+771e407d-c2e6-4dba-b8c8-a03e6071225c, Hoàng Gia Long, True, 4/6/2003 7:37:02 PM
+202995ab-523d-49bf-a873-cc2452dd0db1, Lê Thái Dũng, True, 11/29/2005 10:01:37 PM
+ed3abd59-cf7e-41e8-986b-8d6979bcb9a9, Phạm Thiên Dũng, True, 7/5/2004 1:12:10 AM
+cc40eaaf-416d-4438-a41c-d8f5537f527c, Đoàn Hương Hương, False, 12/12/2006 3:14:53 PM
+1b07f2f3-b9ad-4f89-a194-041fb02d7ac9, Nguyễn Việt Thành, True, 9/10/2002 9:12:31 PM
+07ae4e01-538d-4524-be40-62b1ff35aad8, Nguyễn Thái Dương, True, 3/4/2006 4:15:50 PM
+a2392253-de42-4294-94e9-1c6d2df57f51, Nguyễn Minh Long, True, 6/5/2000 8:32:46 PM
+85270f6e-d28d-4c71-9526-443a19100564, Nguyễn Thái Hưng, True, 2/13/2006 1:30:19 AM
+9af50a69-2664-4120-9190-b129fcb4ba8a, Hồ Việt Anh, True, 1/29/2001 4:36:51 PM
+97584e69-321d-45a4-89db-f7729cd813f7, Hồ Thị Thanh Phương, False, 8/31/2002 6:41:25 PM
+369f2e36-63f9-472d-91b9-548345fe0950, Lê Xuân Sơn, True, 11/24/2003 4:41:00 AM
+c836eedf-bcf0-45b8-a45e-3eff7fc6a8b8, Đoàn Thảo Phương, False, 7/5/2004 6:18:43 AM
+376f709e-5993-425a-9e24-d62a0320e6f3, Phạm Trúc Linh, False, 2/12/2006 6:30:16 AM
+8074065e-b4ee-44d6-9f7c-06d169796d2f, Lưu Trúc Hà, False, 6/28/2000 2:00:32 AM
+0bd00ed0-faad-463e-84f0-435e0b55c62e, Nguyễn Bảo Lan, False, 2/4/2006 10:40:55 AM
+12962e6a-2b96-4887-afe5-1c52265f67dd, Nguyễn Đăng Đạt, True, 9/23/2006 1:15:33 AM
+e011dc3d-8000-4b81-adb3-5c86605f5218, Trần Bảo Linh, False, 3/21/2005 12:35:35 PM
+830e0135-06e7-44fb-bcdd-f951be7ccbc6, Võ Trúc Linh, False, 5/23/2005 3:36:40 PM
+2ee2c104-7315-4dcd-8a39-31383a9b4602, Lưu Thảo Lan, False, 1/31/2006 2:51:54 PM
+a96116d0-0657-4812-aeb6-792648fe83d4, Nguyễn Ngọc Vy, False, 8/5/2004 1:04:42 PM
+9ebc7506-3915-4728-a8a3-b16cba385e89, Lê Thảo Trang, False, 12/1/2002 9:26:08 PM
+2373f21f-8c4f-4b6e-b277-192b02891ed3, Hồ Bảo Nguyên, False, 10/16/2004 1:55:57 PM
+d5ec5d18-c05f-421e-9137-8a0b17c57528, Nguyễn Gia Hưng, True, 1/14/2006 4:34:59 AM
+a41c45b0-8f89-4c1f-b911-e432f0656f95, Võ Hoàng Bảo Hoàng, True, 2/6/2006 6:11:14 AM
+c6252443-c5c0-462b-9315-fe8267128e61, Võ Xuân Huy, True, 12/25/2000 11:19:23 PM
+8b0639b6-e991-45e6-8e17-423a39163f2d, Trần Việt Khánh, True, 12/30/2000 2:19:34 PM
+2c3c6f46-c1e4-4b4e-b0aa-0bb6f393d343, Đặng Minh Duy, True, 1/11/2000 10:00:57 AM
+cebbde72-39b8-404f-8d57-7fe3c9db1c09, Hoàng Thị Thanh Phương, False, 9/4/2002 3:32:20 AM
+0731d063-f03f-48a2-b426-b74a15e059fc, Nguyễn Hoàng Bảo Huy, True, 12/18/2000 8:57:50 PM
+8735dc9b-d821-4db7-b6a1-024d01c6de3e, Nguyễn Anh Hoàng, True, 1/4/2004 10:58:50 PM
+5bfb27dc-8bfc-4a4f-8c28-7ba66ffa7fec, Nguyễn Thiên Sơn, True, 8/15/2003 3:11:11 PM
+f8d769d4-4347-4b6c-a393-86810ee35589, Nguyễn Hương Linh, False, 6/7/2002 10:30:03 AM
+068a5e92-f263-4251-8ce7-4d87b64c613c, Lưu Việt Thành, True, 1/1/2004 6:15:49 PM
+758c36c9-9cdb-49ca-b134-a155edacae73, Đoàn Việt Duy, True, 8/7/2005 9:01:28 AM
+033bc6c1-4d76-4cb7-a5a5-59de9e0f02b0, Võ Hoàng Bảo Bình, True, 3/31/2006 10:57:14 AM
+0f677ec0-d16a-43fa-a8c8-062fb87c070a, Nguyễn Xuân Uyên, False, 6/15/2003 9:19:52 PM
+49eb51f0-999b-40c5-859b-caef00902cb4, Lê Minh Hoàng, True, 8/15/2001 10:59:48 AM
+ad994cbc-bfa8-4ca0-bd55-341c3112be9b, Trần Thảo Vân, False, 5/15/2004 9:27:06 AM
+1f166f6a-791f-4d46-a38a-10313aa6e6e3, Lê Hoàng Bảo Đạt, True, 6/23/2005 4:37:13 AM
+9487f468-9407-4ce6-b67a-fec0f5f26054, Nguyễn Hương Giang, False, 6/25/2005 8:42:18 PM
+e047d216-d7f3-45fd-9330-7de68331a473, Nguyễn Hương Linh, False, 11/5/2006 4:14:11 AM
+82b26d8c-452c-4df5-9c2e-a9ac0e36fc3e, Nguyễn Thị Thanh Hương, False, 11/3/2001 8:51:40 AM
+9e3ad227-3976-4afc-8b6e-9697725eb8f5, Võ Thái Hùng, True, 3/20/2004 1:56:43 PM
+77694ec7-5f81-4dd7-a499-9c8f4557d5a0, Phạm Minh Thanh, False, 6/19/2001 9:11:13 AM
+42ba99a7-526a-4bd3-83d4-282c5618ed34, Hoàng Việt Hưng, True, 4/29/2006 7:23:42 PM
+a479c3c0-87a4-4fe5-8632-dd0e32d7e500, Nguyễn Thu Vy, False, 7/25/2002 2:56:27 PM
+0bcb84b0-38f1-421f-bf93-e7c062d0e5bc, Đoàn Xuân Lan, False, 7/28/2000 10:38:44 AM
+65a1e154-c945-43ba-848a-42dbff4796ed, Hoàng Thị Thanh Ngọc, False, 7/18/2004 8:20:40 AM
+b4498914-6e75-43de-8f1a-f552834e98ed, Trần Văn Sơn, True, 1/27/2003 3:40:00 AM
+dfa01cc6-0187-4a99-8252-5a39a6d7de6c, Lê Trúc Vy, False, 7/2/2005 3:52:04 AM
+966a0ed4-5ff0-48ff-b79c-127a2f5139ed, Lê Đăng Long, True, 3/17/2000 12:36:02 PM
+7dccc202-a92f-4f2c-925a-0529d6982284, Phạm Minh Đạt, True, 9/11/2003 11:08:46 AM
+455e50a5-2801-46cb-a27b-f3b907c1a1ef, Trần Mai Khánh, False, 1/23/2003 2:45:11 AM
+54b00338-52a9-47f4-95f8-ff831ccc25a3, Phạm Thái Hưng, True, 4/7/2005 11:59:31 PM
+860f8a42-cfa8-4b48-9b9b-f3969f1f6cb3, Đoàn Thiên Dương, True, 1/14/2002 6:53:47 PM
+bfc54202-efed-40a7-9458-ed216f3ff694, Hồ Trúc Vy, False, 4/25/2000 2:32:52 AM
+820eb8aa-e2f9-476b-aa0e-118d99c2bde4, Trần Ngọc Ngọc, False, 9/25/2004 12:42:44 PM
+bd212a04-fa36-485f-8c66-f889020fecf6, Lưu Mai Lan, False, 12/26/2000 6:03:25 PM
+103577be-c3ee-4a7a-ad37-9830462bca9a, Lưu Phương Vân, False, 5/14/2005 6:02:26 PM
+f8dc1b45-7d35-447e-b956-dfe6936a86cc, Hồ Đăng Dương, True, 5/4/2001 1:52:28 AM
+5ca2ebb2-e73b-46f4-aeea-aedef798725a, Đặng Anh Hùng, True, 6/30/2003 7:18:10 PM
+d3395e52-3841-4f4f-9f60-1ed52d903a09, Nguyễn Gia Bình, True, 12/14/2006 8:37:12 PM
+49192760-a293-4abb-8744-dd36d4eeeb69, Nguyễn Minh Trang, False, 2/28/2003 7:37:32 AM
+8397e88b-4c69-49f4-8cbc-948f50cac347, Phạm Thiên Nguyên, True, 11/30/2003 8:56:17 PM
+e1783017-820f-4cc3-8798-19a63fb1f180, Nguyễn Thảo Ngọc, False, 8/9/2003 1:37:10 AM
+e665330e-9f2b-4201-983f-fae157fbcc2a, Võ Xuân Khánh, False, 2/26/2004 10:39:08 AM
+64ea4c5a-8b9e-4301-b971-3a5c58615b34, Đoàn Thị Thanh Phương, False, 2/27/2001 3:45:54 AM
+fb10acad-1d5a-45da-815c-198fe03c7949, Đoàn Hoàng Bảo Khánh, True, 9/23/2002 5:37:31 AM
+8683f98c-cab8-4c8d-bf4e-60b73a76d14b, Hoàng Đăng Hưng, True, 6/6/2002 2:41:52 AM
+8b2daa8d-d1d4-4cbe-bb9c-70ce8e9ad071, Hồ Anh Nguyên, True, 1/28/2000 3:46:43 AM
+7569e7fe-c26c-4c89-ae48-eae9fb3a9fa0, Phạm Hương Thanh, False, 12/9/2000 2:47:15 PM
+633dab97-c2dd-430f-a175-8000f9d4f238, Hoàng Ngọc Thanh, False, 4/28/2002 11:28:18 PM
+416b2cac-0ab8-418d-95c1-bbca649646a2, Phạm Hương Lan, False, 3/4/2006 1:51:23 PM
+bf898026-6d17-4571-901a-93df994f9046, Nguyễn Phương Khánh, False, 7/12/2004 11:18:20 PM
+dfe54196-1bdd-4a76-b0b3-b61cbdbdcee8, Hồ Hoàng Bảo Duy, True, 5/20/2002 11:12:04 PM
+40924052-83e4-4383-881a-52cb171bcbed, Nguyễn Mai Phương, False, 9/16/2006 4:09:11 AM
+141151ec-3e6c-49ec-b461-a8d1d0e52607, Nguyễn Việt Sơn, True, 12/16/2002 6:25:18 PM
+3ab6f016-14ff-4fc1-8713-d5f8038016b2, Hồ Thái Anh, True, 4/27/2006 12:46:41 AM
+fa7efe0c-35ac-4581-8b86-933bc32d1ba3, Nguyễn Thiên Nguyên, True, 12/9/2003 10:55:16 AM
+bf31fa40-c9e9-40b2-8ea4-58beac23aa89, Võ Thị Thanh Hương, False, 6/21/2002 8:04:26 AM
+23c8257a-2ee1-4edc-b6f2-322106aa6ce7, Lê Xuân Khánh, False, 10/14/2006 4:20:14 AM
+bc31ca98-d84d-40ab-963c-5a59561fc9f5, Nguyễn Thị Thanh Phương, False, 2/18/2001 4:38:24 AM
+d17b1d80-a035-48a8-9274-04d133d6da31, Hoàng Minh Đạt, True, 4/19/2002 10:55:35 AM
+4f594768-f2fb-41e9-b3ab-800191dddcca, Hoàng Ngọc Ngọc, False, 9/1/2006 12:16:18 PM
+941543b1-28d1-4456-95fa-ff9d244141b7, Nguyễn Thu Hà, False, 3/31/2005 10:16:59 PM
+a079096f-071f-4586-94cf-eb90aec843f3, Nguyễn Hoàng Bảo Huy, True, 9/17/2000 3:12:11 AM
+ad31e96c-8341-411c-b858-eee2464e7c77, Đặng Mai Ngọc, False, 7/19/2006 8:02:33 AM
+7f4e9277-1489-46e4-ae21-690837245d8e, Lê Thảo Hà, False, 11/30/2006 5:25:36 AM
+1b6a5cf1-fa22-4219-a962-f527637f4933, Đặng Ngọc Thư, False, 7/29/2005 7:47:06 PM
+31fb85a3-040d-4d00-8d73-cd75b3f45a0d, Đoàn Hoàng Bảo Duy, True, 7/17/2004 10:09:22 AM
+6b50fd5b-8894-40df-b96b-c7edce8d49f7, Nguyễn Mai Thanh, False, 6/25/2004 7:43:08 PM
+698aacda-a8a9-40c6-adcf-63325b22bfd7, Đoàn Bảo Vân, False, 10/11/2005 8:30:52 PM
+a516dff1-7662-45b6-a1e0-22f027013b71, Nguyễn Xuân Dương, True, 1/8/2000 7:59:52 AM
+4b711895-67ab-4e53-b73d-2f3d09ba9b43, Hồ Hương Khánh, False, 7/18/2000 7:30:56 AM
+34863eaa-20f4-4edf-bd47-f016b39ea1b9, Hồ Minh Nguyên, False, 12/28/2003 10:46:26 AM
+6d87f3d9-2316-4f1f-8c6f-9cd77f14c946, Trần Hoàng Bảo Khánh, True, 4/14/2001 8:36:20 AM
+ce8cba7e-13be-4a1a-aa76-6382c72fcd2c, Hoàng Xuân Ngọc, False, 4/27/2006 3:12:43 PM
+414840d7-5fe3-4750-bc26-deba00aa28ce, Đặng Bảo Thanh, False, 12/2/2006 12:52:25 PM
+4133feba-35f8-4995-9589-e7ac594136e9, Phạm Văn Duy, True, 2/10/2002 5:16:08 PM
+029422ea-eab8-4cac-b2eb-219022745bb3, Đặng Trúc Châu, False, 2/9/2002 10:45:32 PM
+1297b6d4-0370-488f-aeac-a442ef35db8e, Nguyễn Mai Thanh, False, 2/25/2005 1:52:22 AM
+20c82e54-72c1-48be-9973-c748328fb8b9, Đoàn Mai Uyên, False, 6/11/2001 8:17:10 AM
+9df5fa4f-5355-42d9-ade0-eedbbf406204, Phạm Anh Đạt, True, 10/12/2004 4:09:02 AM
+68c67702-7a71-49f9-9421-5eab40e4c324, Phạm Minh Anh, True, 6/14/2006 8:27:14 AM
+bb7d9291-559d-4b70-8d1e-e999ad228be5, Nguyễn Gia Sơn, True, 1/6/2004 7:05:29 AM
+eed4ed70-1025-4849-8cf7-884f0e7f55f2, Đoàn Bảo Vân, False, 8/25/2000 5:09:00 AM
+a28a7fb6-c431-48e2-866e-15305881ec29, Hoàng Thị Thanh Uyên, False, 10/17/2002 4:27:28 PM
+48d54a0a-82ec-4f01-a8e2-2c2869f4afdf, Võ Thiên Sơn, True, 11/26/2006 2:27:08 AM
+d34f6896-6246-49cc-9da1-aaf240abe782, Đoàn Mai Nguyên, False, 6/30/2002 1:05:28 AM
+f51c83a5-30ff-416c-b153-c51d93003559, Nguyễn Hương Lan, False, 8/31/2004 2:18:35 AM
+d8c5324f-f91c-40cc-90a5-43d858250f28, Phạm Thị Thanh Hương, False, 1/4/2004 1:55:05 PM
+45e45be8-8e98-4ccc-b16f-37b27f04f043, Lưu Phương Ngọc, False, 5/28/2005 10:48:55 AM
+501eac22-f5ee-451f-abef-1759758841f6, Đoàn Thị Thanh Lan, False, 2/15/2002 6:01:30 PM
+c9276bf8-954e-4c74-b80b-a21f12b42b2b, Đặng Phương Châu, False, 11/14/2003 12:54:44 PM
+87c8e313-c487-4512-b960-ccef3bece9fc, Nguyễn Gia Hùng, True, 8/3/2006 1:29:30 AM
+5a55eda7-ab0e-49ab-a0b1-724b26852173, Trần Phương Trang, False, 4/1/2003 12:43:24 PM
+9370c9e9-67b6-4385-9f75-e28f0f591f83, Trần Anh Huy, True, 5/31/2005 7:23:31 AM
+008504cc-ba44-4c0d-b683-0accae9b7927, Nguyễn Văn Long, True, 1/24/2000 8:36:59 AM
+69654a5c-9854-4a13-85d8-797dae734da7, Lưu Gia Sơn, True, 9/20/2002 9:57:35 PM
+3ef246b8-9d5c-4908-87d5-375c882bda6a, Nguyễn Xuân Hùng, True, 8/26/2002 2:05:53 AM
+90d8be0d-45d3-46f3-ae36-1adfc28b43d7, Nguyễn Đăng Nguyên, True, 5/31/2002 2:35:43 AM
+32829362-5aee-46e1-9982-fb349893a63a, Nguyễn Thu Trang, False, 12/3/2002 6:45:59 AM
+e4d61e66-bd77-4977-a130-a8f49c2b4831, Trần Đăng Dũng, True, 4/24/2002 7:29:22 PM
+98d6763a-c43b-48c5-9715-517601a68ecd, Hoàng Văn Phúc, True, 7/26/2000 6:11:43 AM
+d8d8de06-38fb-4bf8-b9fa-0c6ffc139593, Đoàn Xuân Bình, True, 8/20/2001 6:56:34 AM
+a82ef6c8-d15e-4b7e-b588-eacead3c71e7, Nguyễn Xuân Dũng, True, 11/11/2000 4:07:15 AM
+f39649b9-1ce1-47bf-b9ac-c626c7c6de0f, Đặng Xuân Anh, True, 7/16/2001 9:39:09 AM
+5c049978-1927-4aeb-8dba-9e7e17bd8ff0, Võ Thiên Phúc, True, 10/10/2005 11:34:45 PM
+d4162ce0-68b0-4b78-98a0-00b2c4e97bf0, Nguyễn Minh Trang, False, 11/4/2002 9:07:59 AM
+147e8a97-48fa-4c2f-acdf-d7299bf01f94, Lê Bảo Phương, False, 5/7/2002 5:21:51 AM
+9d8b434c-7004-4f78-9444-bc1198e60c9c, Trần Thiên Long, True, 1/15/2002 3:57:45 AM
+dec0276c-e1d5-4562-aad2-1b0f6ede9ccb, Hồ Hoàng Bảo Dương, True, 5/25/2005 9:13:21 PM
+5af12f94-9e5c-4a9b-bb2e-c9ba56201073, Lê Trúc Giang, False, 9/18/2000 7:32:10 PM
+5a613ed1-5d78-4032-9690-bb003279ccde, Lê Thái Sơn, True, 8/31/2001 7:52:45 PM
+abd31952-9bbf-4cd6-8563-6819e805c117, Hồ Thu Nguyên, False, 3/22/2002 9:57:14 PM
+e828f058-f9e2-4ba5-9202-28ef8ddf631f, Hoàng Xuân Hoàng, True, 6/26/2005 5:25:32 AM
+0c79c260-e039-47cd-9fcd-47060553feaa, Nguyễn Minh Thanh, False, 5/22/2006 8:17:01 AM
+ff4b69be-6a9c-4077-a559-affe7e5bfa1c, Nguyễn Đăng Duy, True, 2/4/2003 10:58:25 AM
+79be3acf-9b90-4c81-8bc2-ba6745240d1c, Đoàn Phương Nguyên, False, 11/17/2004 1:58:39 AM
+c16853b8-e553-4dba-85bb-c1517eb0cbbb, Nguyễn Xuân Long, True, 7/7/2002 12:43:47 AM
+e9265bb6-87f1-4442-80bb-660c327c32d7, Nguyễn Thái Hùng, True, 2/8/2006 12:21:43 AM
+b9172df9-bcee-4adb-9705-387319c97e50, Phạm Việt Hoàng, True, 5/21/2001 5:59:40 AM
+faefb85e-4d81-42b1-ad80-92505b799767, Lê Minh Nguyên, False, 9/10/2005 2:12:19 PM
+465ee31e-1d4d-4944-aa08-be6fd1541d9e, Trần Xuân Khánh, True, 4/25/2006 9:26:36 PM
+88a8ff13-cf1a-4f67-b529-255b963982a2, Nguyễn Đăng Duy, True, 11/3/2002 5:17:48 PM
+976f7e4a-3111-4607-b033-c72a1d9b641f, Đặng Mai Lan, False, 4/10/2006 8:53:23 AM
+db61cc07-01dd-4174-94e9-1b8532840d35, Nguyễn Thị Thanh Giang, False, 3/6/2001 7:27:56 AM
+c4972678-ba4a-4885-9cfe-f3d603c82e6b, Đoàn Thị Thanh Nguyên, False, 2/12/2000 5:30:54 PM
+9f5b5f67-63af-4087-9bb4-45cc1d4f0196, Nguyễn Thiên Huy, True, 2/14/2001 1:05:43 AM
+92aaa401-0656-4980-8389-2a48d8744435, Nguyễn Đăng Hoàng, True, 10/22/2005 5:47:55 PM
+d82e945a-df0b-4d74-9c8c-e7c7371a1485, Trần Đăng Thành, True, 6/9/2004 1:01:27 PM
+b57f8077-bbf3-4611-96f4-b404491f4175, Đoàn Hương Linh, False, 11/5/2000 4:19:15 PM
+7833b4a5-71b8-4c26-8156-2c05507c6a06, Lưu Anh Phúc, True, 4/16/2003 7:25:07 PM
+ee8975b4-9531-4e07-88c1-42193d8b8ace, Võ Việt Long, True, 10/22/2005 11:07:45 PM
+86e6b2b0-41c1-46ef-8ec5-8dd91aa6e4c7, Đặng Văn Đạt, True, 11/3/2004 2:51:37 AM
+650d47ae-37df-43aa-b103-8e7425ddb8cb, Đoàn Gia Bình, True, 3/15/2003 9:33:29 AM
+926b65e1-4f51-442c-8d62-7883e4c11fd2, Nguyễn Hoàng Bảo Đạt, True, 4/23/2003 5:01:34 PM
+2a126da5-e7c5-49fe-919a-33bad90b580d, Nguyễn Văn Bình, True, 5/17/2001 6:32:06 AM
+a5f3ce41-7d4c-4d77-a2bb-131cc6bc47d6, Lê Đăng Hoàng, True, 11/22/2001 2:56:22 AM
+046b485e-1d9a-4fd9-883c-6c8b12b74620, Lưu Thiên Duy, True, 1/5/2004 5:44:13 AM
+ac1aec81-fd00-4508-96c4-ae6b80f1bc29, Nguyễn Việt Duy, True, 8/6/2002 1:02:57 PM
+84a420c4-bdb1-4af0-ae87-0a2402fd747b, Võ Trúc Hương, False, 7/23/2001 3:15:37 AM
+8a51c2e3-5fba-48ff-a25f-46aaa481bfe7, Lê Minh Khánh, False, 12/23/2001 2:28:34 AM
+350852b4-482b-4759-b08c-d5dd1aa5aa18, Nguyễn Thị Thanh Thư, False, 4/3/2006 9:21:31 AM
+a895a5bb-f5c6-4763-880e-583bf10ee2cc, Nguyễn Thu Lan, False, 12/31/2003 12:05:26 PM
+883767ac-db9e-488f-bdc8-0f4ec4af850e, Nguyễn Thị Thanh Giang, False, 3/29/2005 5:00:26 AM
+f0ad5c5f-e291-400d-9def-2641a76c0818, Phạm Thị Thanh Uyên, False, 1/11/2001 3:05:45 AM
+70443cfe-634f-4d65-b427-23bf590d5104, Võ Thị Thanh Hương, False, 1/15/2006 2:08:34 PM
+86e25b22-f526-4a00-96c7-5816b7bc33eb, Trần Xuân Lan, False, 8/28/2006 11:14:37 PM
+3d7ef04b-108a-443d-b3f6-529c4e98faa0, Trần Hoàng Bảo Anh, True, 10/12/2002 8:29:56 PM
+e319a84e-f1d7-4b13-b86b-42e9304c632c, Hoàng Minh Bình, True, 11/16/2005 3:23:47 AM
+9166d106-8c3c-4bbb-9f2e-949fa086a03d, Nguyễn Hương Vy, False, 8/27/2001 7:03:09 AM
+949e6a66-4c23-4b83-a9b1-5bfff30b873a, Nguyễn Thu Thư, False, 5/23/2001 6:48:41 PM
+4690df75-547e-40bc-a677-9f93398f2659, Nguyễn Xuân Khánh, True, 9/7/2001 12:48:30 PM
+5cae9235-9050-4365-bf02-883d0dc865e7, Nguyễn Thảo Uyên, False, 11/3/2005 1:44:55 AM
+e05884ce-7ee7-45c5-b665-24f47fe4fc61, Phạm Ngọc Lan, False, 4/11/2006 9:03:27 AM
+fe0adb13-2bb8-4f72-aa96-9cecdc274367, Trần Hương Khánh, False, 1/26/2000 10:46:19 PM
+6dbde741-8ff6-47e3-ab61-97ecb1716e0a, Võ Thị Thanh Ngọc, False, 1/15/2003 12:08:16 AM
+fb8a916e-d9ee-49b3-b845-ff1fa7f94660, Lê Xuân Lan, False, 10/22/2002 3:15:55 AM
+f42a52fd-3150-470a-9b32-4435c572e17f, Phạm Phương Lan, False, 9/19/2002 5:39:04 AM
+c0b04ca5-9b0a-4a9e-8c6f-628f80f1974e, Hồ Anh Huy, True, 12/28/2006 5:34:10 AM
+b3c81e61-28ce-4ac7-b2b3-dfc592a8e6e1, Trần Minh Hùng, True, 8/28/2002 10:55:08 PM
+02a992cc-ee57-4154-8126-cdc90a4479cf, Phạm Hương Thanh, False, 1/22/2004 3:56:21 PM
+b538463f-c4bc-433c-a674-361f9b6cc2f5, Phạm Thảo Uyên, False, 7/29/2006 11:00:22 AM
+0689cca9-91dc-488a-8356-607349afeb88, Trần Minh Hoàng, True, 8/9/2006 1:09:09 AM
+8a8046f5-1cde-4237-aef4-bb888c2fd70f, Nguyễn Việt Dương, True, 5/6/2002 11:56:38 PM
+937d4812-59a9-46ab-9f75-54dcb838a7c4, Phạm Thiên Sơn, True, 3/17/2001 3:52:26 PM
+d5374859-4e8b-4829-a371-8ab700f39b1b, Võ Ngọc Ngọc, False, 10/24/2006 9:56:50 AM
+ed4103d9-7bac-4d39-b118-43dc195388dd, Hồ Thu Nguyên, False, 10/8/2001 1:48:40 PM
+91127687-f46b-4f04-92ff-f2ef77432ccc, Lưu Thiên Bình, True, 2/23/2000 3:01:51 PM
+68b4aa51-40cb-4ce5-b242-8c6b09daaece, Đặng Đăng Phúc, True, 6/8/2004 4:30:45 PM
+b173df03-c18f-4110-a7dc-81cc7d877a94, Võ Hương Ngọc, False, 4/19/2001 5:49:25 PM
+48d56f6a-67fe-47f0-9405-421e815952b7, Trần Minh Uyên, False, 2/19/2004 10:26:23 PM
+01fb87e0-f632-4ff5-a6e4-3b81f95f6dc4, Võ Bảo Khánh, False, 10/30/2000 9:09:35 PM
+fe70b49b-d697-409b-875f-762cb6d4df47, Nguyễn Việt Thành, True, 9/24/2001 4:00:15 AM
+12b186f2-6b98-4842-9a4f-d78cef59d5d8, Trần Thị Thanh Nguyên, False, 8/21/2006 6:28:13 PM
+9545cd16-d3da-4f2f-806b-af9ecfeea314, Hồ Anh Nguyên, True, 7/24/2000 10:14:23 PM
+0d84f216-5238-4b32-bd62-bb36f036f9ab, Đặng Thái Nguyên, True, 11/7/2000 7:51:44 PM
+9c452015-033e-4501-855d-91a03c72c833, Trần Gia Hoàng, True, 1/14/2002 7:13:07 AM
+38290185-b2f0-43f2-b7ee-dcd14c077fea, Lê Thiên Dương, True, 8/25/2002 1:28:42 PM
+c0e4ec71-fd85-4fa9-834f-8cdcfa37eb94, Trần Xuân Linh, False, 4/29/2002 6:04:57 AM
+8ebf5e4c-1116-4af3-9a31-0e2d50946531, Nguyễn Trúc Phương, False, 5/30/2001 4:24:59 AM
+fd65de85-f28c-4a30-bda0-f342edbe013c, Nguyễn Minh Hùng, True, 7/9/2006 12:48:16 PM
+9553f15d-77e6-455a-9adf-cb0398390d7d, Lê Xuân Huy, True, 8/1/2003 12:41:02 AM
+6803b1c0-3fbd-47bc-a85a-ee67a71370d0, Nguyễn Thiên Bình, True, 9/8/2003 8:43:58 AM
+61c244ef-e523-4888-83a4-376a2c4615e7, Võ Minh Khánh, False, 7/28/2005 3:58:16 PM
+abd06e4c-f66a-408a-b691-536469228bc7, Lưu Minh Trang, False, 6/1/2004 9:02:44 PM
+1a23941b-314a-45e5-8b1a-db9b993c558f, Nguyễn Anh Hùng, True, 7/28/2001 4:01:10 PM
+4fbccd72-7c18-4a42-a102-502f7dc83a41, Lê Phương Phương, False, 3/21/2005 5:59:37 PM
+118ded54-2dc9-48b6-bdaf-f1930b017b12, Đặng Gia Bình, True, 10/13/2001 11:05:10 PM
+9aff066d-e9ed-4833-957b-6bbe37b4f29a, Võ Gia Hoàng, True, 6/17/2000 10:11:12 AM
+f3448727-398a-4111-a48f-ac454bf755b4, Nguyễn Đăng Duy, True, 1/18/2001 4:20:04 PM
+8040e62c-49f6-4af6-8750-1c0e97821cc6, Nguyễn Văn Hùng, True, 6/13/2000 5:29:20 AM
+bb38d1e8-f060-4fe6-a4ab-eda76358d7f1, Nguyễn Xuân Duy, True, 7/18/2003 8:02:01 AM
+19860918-f5b6-403e-9f0a-5cc5769c435c, Võ Trúc Châu, False, 11/25/2000 10:38:18 PM
+2f558581-b89d-418e-9c8d-60a3731dc7ed, Đoàn Ngọc Linh, False, 4/1/2001 6:16:53 PM
+78f87efe-9436-4cf8-8cbe-33fda0097740, Võ Ngọc Hà, False, 4/7/2005 10:05:43 AM
+7d152e42-4260-42b0-adb3-cca0348020fd, Phạm Minh Hoàng, True, 3/8/2003 3:37:22 PM
+41c17c49-7597-401a-a93f-c3a63fcc2aeb, Lê Đăng Hoàng, True, 1/20/2000 3:45:48 PM
+be9207b6-98d8-4b19-8c9d-fae9fca4134b, Nguyễn Thảo Lan, False, 1/10/2000 6:07:03 PM
+5c63092f-186d-4d88-974b-643474e57433, Phạm Bảo Thư, False, 12/2/2002 2:59:09 PM
+5b8e8671-89d5-4df3-a1ed-f2612cb4959f, Trần Phương Thanh, False, 1/18/2005 12:45:55 PM
+2c656d12-cf01-4ab2-9a17-3b3a8ed4755d, Võ Trúc Linh, False, 8/22/2003 9:10:32 AM
+b9e45d03-3433-4b8c-b522-9963eea3cf39, Nguyễn Hoàng Bảo Khánh, True, 10/10/2001 10:11:28 PM
+a166f468-c499-431e-b95d-a9f5dfbfbe79, Võ Gia Nguyên, True, 10/10/2005 10:01:18 AM
+433816f0-2295-405e-9aef-eeaa465c698c, Nguyễn Gia Dương, True, 3/11/2003 5:56:59 AM
+2a67eb26-ffd9-45fc-9698-981533acc37c, Lưu Ngọc Trang, False, 1/18/2005 3:58:55 PM
+da7a8e81-bf42-4665-9b2a-23d538a09e02, Nguyễn Trúc Giang, False, 12/13/2004 9:39:11 PM
+f8f418c0-6822-47e9-a7c0-be4edb947156, Hồ Ngọc Giang, False, 5/3/2001 3:16:12 PM
+a0540c14-2b64-4023-8049-a22d11d94f6f, Nguyễn Thái Hùng, True, 6/13/2005 9:17:14 PM
+bb792b9c-d905-478c-9231-89c2a94d5e86, Lê Việt Duy, True, 11/21/2002 1:25:32 AM
+816e4b05-89a1-41fd-93a4-a77fd3d73cb1, Võ Gia Duy, True, 9/19/2001 12:45:44 PM
+6db63de6-82a3-41d9-b36c-91880cade776, Đoàn Thu Khánh, False, 12/31/2000 12:15:55 PM
+c25deb91-0604-4b5c-80f3-673da342f64c, Đặng Phương Uyên, False, 6/12/2000 2:36:26 AM
+18745759-a881-4262-ac2f-2c9c585ba49f, Nguyễn Trúc Giang, False, 3/5/2001 8:45:32 AM
+805ba052-bd78-4413-9868-ab95e1dc303b, Lê Minh Phương, False, 3/31/2006 12:39:27 AM
+31133bfb-1e6f-42ff-b127-e9b06f4c20f6, Nguyễn Thị Thanh Thư, False, 8/29/2005 5:25:32 PM
+867e1d51-a8d3-4076-97a3-77134e2165b2, Lưu Minh Vy, False, 8/24/2003 6:12:54 AM
+54683b60-87c4-4810-ba1e-067400cdfab0, Đoàn Trúc Phương, False, 1/19/2001 5:39:18 AM
+7280b204-c50a-4502-a3cf-f1faa6a2d6dd, Phạm Mai Uyên, False, 2/27/2005 6:42:00 PM
+b2d6b8fa-a858-4e1c-9217-0d885602c82c, Đặng Thiên Sơn, True, 5/18/2002 5:20:50 PM
+f82d1b7f-d658-4e27-9fe0-050f256c2690, Nguyễn Văn Dương, True, 1/11/2006 7:57:21 PM
+1981bf87-c66a-4033-be4e-a628fc6ae428, Hoàng Trúc Uyên, False, 7/19/2002 10:31:21 AM
+9b03ef36-6b08-4544-a316-39deca2d2f02, Nguyễn Bảo Thư, False, 7/18/2001 3:03:37 PM
+7789f96e-0f7d-48a2-a7b9-ff15dc4898ae, Lưu Thu Ngọc, False, 8/28/2003 5:30:36 AM
+e82beb2f-cc6e-4651-bb2f-6a21b6d194af, Nguyễn Minh Vân, False, 10/20/2006 8:07:24 AM
+7311b9d0-986b-4e5d-928a-652facecf336, Nguyễn Ngọc Châu, False, 5/17/2006 7:55:29 AM
+013bfbb1-c916-4ccb-977b-d5da79393a82, Lê Văn Hoàng, True, 10/26/2000 6:26:27 AM
+5440e8a3-e7c0-4ed8-ad35-01fc2862ab48, Nguyễn Gia Huy, True, 8/2/2006 9:39:55 PM
+ce32a97f-7338-45be-bb44-dc792c4d208c, Nguyễn Văn Dương, True, 10/29/2006 7:47:16 PM
+fff81614-c96c-4bd0-b273-1881cf773a5b, Phạm Thu Thanh, False, 1/29/2003 8:33:11 AM
+0e5b4cee-5fff-45f2-ba61-065017095e97, Lưu Mai Linh, False, 12/7/2003 4:27:29 AM
+f9415d25-d465-430f-90b3-f1351fbc1219, Nguyễn Xuân Châu, False, 10/21/2001 8:14:11 PM
+8a81eaa7-b1db-4fc7-98df-cb9872822a17, Hoàng Xuân Vân, False, 7/20/2002 10:59:16 PM
+61d532d4-c47d-40e8-b1c1-dedae459f552, Đặng Minh Ngọc, False, 1/7/2006 12:47:24 AM
+33d807db-f443-4f68-ac16-1d6670fd4e48, Lê Thái Sơn, True, 3/6/2004 6:30:24 AM
+36b269c9-968f-470e-9734-4f8bed409c6b, Đoàn Gia Nguyên, True, 10/9/2001 1:26:14 PM
+7404fe8d-4ea6-4142-8af7-186854e75194, Đặng Minh Đạt, True, 2/8/2003 4:58:25 PM
+7e5d3215-b1d9-4947-b1d6-77f07ddc6043, Nguyễn Gia Đạt, True, 11/21/2000 12:18:13 AM
+c9fe1869-8f9c-4cd3-9b14-1321a2aba55d, Lưu Việt Dũng, True, 6/2/2006 6:24:12 PM
+37ec7109-a7bf-45fc-9f4e-91ce966ffd40, Hồ Hương Hương, False, 3/3/2001 7:12:29 AM
+46e903d1-7df8-4acf-b8bb-70925d5d4626, Lưu Anh Đạt, True, 7/5/2006 1:34:54 PM
+166d40c4-862d-411b-b37e-1e2b809565de, Lưu Văn Nguyên, True, 8/5/2000 12:27:48 PM
+9448190e-4df4-4af2-8365-635082f48546, Đặng Minh Ngọc, False, 11/8/2001 10:43:16 AM
+d91a14e8-cfd4-4ea0-a9ca-264f4776ed4d, Nguyễn Trúc Giang, False, 5/4/2004 3:16:54 AM
+aaa68d36-3c67-40cc-8ae6-8afaf27febe2, Nguyễn Thị Thanh Thư, False, 6/8/2001 9:57:13 PM
+ecee08dd-3a2d-40a6-bbb7-70f4ff7b41fe, Lưu Thị Thanh Giang, False, 5/17/2004 3:57:40 PM
+088c8d5c-b3b5-425c-94cb-285fc0fce560, Lưu Bảo Ngọc, False, 12/29/2002 1:48:27 PM
+1e5b8da2-fb38-4b32-b500-6f18f78aad44, Lê Xuân Hoàng, True, 5/20/2003 12:36:35 PM
+59704b22-6c3f-4e03-9648-4c917d906fb6, Trần Thu Linh, False, 6/6/2006 10:49:42 PM
+8e40be15-4779-45fd-a2e4-715498d5e42b, Nguyễn Thu Phương, False, 12/9/2002 6:31:28 AM
+68caf9c4-3fe9-4bf7-af03-bcbd1ffb77f1, Đoàn Việt Long, True, 11/15/2006 6:54:57 AM
+81356f4c-a32c-4eae-92d5-8bd5c03e51e3, Phạm Gia Long, True, 11/14/2005 11:31:21 AM
+395f951c-7852-47d3-8042-a8ec9b44c256, Hoàng Thảo Khánh, False, 3/27/2004 9:20:36 AM
+41ba6709-4b85-41ee-a822-a502e514f44b, Hồ Xuân Phúc, True, 9/30/2006 1:58:47 AM
+8e9ef9ec-ade2-43db-bb73-d09d812e6ce8, Võ Việt Khánh, True, 6/20/2001 9:40:49 PM
+b2c84bd0-5657-4efd-ae76-d7ba625ce22e, Nguyễn Hoàng Bảo Nguyên, True, 2/21/2005 11:44:16 PM
+2b43e78e-4cce-4faa-a1a6-1225a3d329bc, Lê Thu Phương, False, 8/21/2004 11:51:47 PM
+2657bd63-479d-4bff-81fc-0eead2ab0662, Nguyễn Thiên Huy, True, 4/22/2002 12:22:58 AM
+d2a6fe6d-3703-461b-b9c0-47afae76e377, Nguyễn Thu Giang, False, 11/20/2005 9:54:36 PM
+bc91eb2f-0414-4301-84ea-dfbc7fe6f5a4, Trần Gia Hưng, True, 3/18/2004 10:39:42 AM
+0d8260e4-2185-4cd5-853c-bd5b755ea670, Nguyễn Văn Bình, True, 12/10/2004 11:05:37 PM
+3c497d7a-6c6a-4edb-877f-9bbb19aeb994, Nguyễn Xuân Uyên, False, 11/7/2000 2:54:44 AM
+4e9e49f1-6bc1-45be-ae44-cccf298e41ed, Võ Thảo Ngọc, False, 4/29/2006 6:24:39 PM
+8f3b0ce2-66e8-4725-baa6-17d4309e15af, Phạm Hoàng Bảo Hoàng, True, 12/8/2005 10:58:15 PM
+85362bd2-4a73-43cc-a9cd-63878fc52ceb, Nguyễn Mai Linh, False, 11/26/2000 12:11:07 PM
+bef38f86-6c94-4e5d-baad-c8951a25e193, Đoàn Thảo Khánh, False, 1/29/2005 5:15:48 PM
+d08403b1-38a3-44dc-84b0-ad2f16fec97b, Trần Gia Huy, True, 1/3/2004 10:17:05 PM
+4b690420-fb8e-4351-a6b2-376d0f8b45e0, Hoàng Văn Khánh, True, 8/30/2005 10:25:52 AM
+fe1113db-57e5-40cc-a12a-00592c7a2cb5, Hồ Trúc Khánh, False, 7/31/2000 12:42:47 AM
+d51e0ce7-dffe-4afb-b3cd-47090f62a095, Hồ Văn Sơn, True, 3/26/2005 8:20:55 AM
+7671165d-cc04-4b1a-b37a-60a645ef025f, Nguyễn Thiên Hưng, True, 1/25/2002 10:15:49 PM
+8c30d175-3ed0-405a-8396-effe68346e9f, Đoàn Thảo Giang, False, 7/1/2005 8:05:19 PM
+918744c8-9ad1-4006-a1f3-f173bfa38eaf, Đoàn Xuân Hoàng, True, 7/22/2002 4:55:26 PM
+d101dce6-86fe-4d72-a8c4-a0afe9317bd8, Trần Văn Anh, True, 6/8/2001 2:00:51 AM
+23bd7399-ef0f-4fc4-9119-98596f0c3972, Võ Gia Huy, True, 5/20/2006 4:08:46 AM
+4661b84c-0c95-4f4e-be74-9c9a62bb96fd, Võ Hoàng Bảo Khánh, True, 2/16/2000 3:21:00 AM
+10e6d80d-e822-4924-8117-1b9bc29c571c, Đoàn Gia Khánh, True, 6/9/2001 10:04:58 PM
+8ea55b79-4b0e-4fe2-a873-2c151966e135, Nguyễn Minh Thành, True, 3/16/2006 6:22:23 AM
+3e7292e9-8ac5-4730-be8c-684fbb93e913, Hoàng Việt Thành, True, 1/2/2002 12:25:35 PM
+7dce40d6-16a4-4d88-a700-b3acdf0af8c6, Nguyễn Đăng Khánh, True, 3/8/2004 3:59:46 AM
+ebad9576-6c84-4aae-b012-f43d92ef2bf2, Nguyễn Xuân Nguyên, True, 2/24/2001 12:06:40 PM
+f0fd2aed-9c74-416e-84fa-37eeba024a1f, Nguyễn Hương Ngọc, False, 10/29/2000 1:32:21 AM
+02d6a372-4796-4909-96e5-069f0606e00e, Đặng Phương Uyên, False, 4/26/2005 10:02:23 AM
+639da283-a2b8-4f02-9c34-d63e282c7283, Đoàn Thị Thanh Uyên, False, 1/18/2006 10:26:53 PM
+5f47391a-27fc-4dab-b4be-78ebd3c79f1b, Nguyễn Bảo Ngọc, False, 10/27/2001 1:53:40 AM
+49fb0afe-5141-482b-a402-268bb60f2abe, Lưu Minh Huy, True, 8/14/2001 3:13:07 AM
+aaf8689a-fff8-4950-a496-aa7f5fb56a94, Hồ Đăng Khánh, True, 5/9/2000 8:53:57 PM
+9e0b6742-8514-4dd7-a863-af7b15503f99, Lưu Mai Ngọc, False, 3/12/2003 10:08:22 AM
+67efdd10-8c3f-4f1e-90b1-357eb3141e8c, Nguyễn Bảo Giang, False, 1/30/2004 5:31:36 PM
+faa6146e-be57-4e43-9102-83f8c57e81ce, Nguyễn Ngọc Giang, False, 6/17/2004 7:11:48 AM
+498cc8ba-1b46-49a4-9599-98998bb69ea8, Hoàng Gia Sơn, True, 4/19/2002 6:19:01 PM
+376e5dd7-d60d-4ea8-9088-adb7001d87ae, Nguyễn Thiên Dương, True, 4/26/2003 8:49:35 PM
+72f27297-b962-4c99-97c0-5163cabb3be8, Đặng Xuân Anh, True, 3/22/2003 12:25:58 PM
+58e98010-cda6-4d6d-a43b-e81513debce9, Phạm Trúc Châu, False, 9/14/2003 5:13:18 AM
+87d17f09-ff12-4d63-baec-cdc3b422f6a5, Nguyễn Phương Ngọc, False, 5/26/2002 1:57:50 PM
+7a06a280-0a56-42e0-b83d-bd8d5885a1a6, Nguyễn Minh Lan, False, 11/1/2001 7:12:51 AM
+88687f70-008b-40f4-9a28-a9e9a02a023c, Nguyễn Văn Dương, True, 4/27/2006 2:06:51 PM
+cd5bdfa6-9513-4331-ad29-da7627b6eb8b, Nguyễn Ngọc Lan, False, 12/9/2002 9:05:58 AM
+4262fc99-508f-44c2-b027-6fed60a1da62, Lê Minh Hà, False, 8/23/2005 12:49:49 PM
+663fb927-2d77-4be9-a804-972dd524558a, Đoàn Thu Thanh, False, 4/28/2005 5:11:11 AM
+827b1f6e-4aa5-47fe-879a-ce6856197e5a, Phạm Việt Khánh, True, 3/18/2002 2:57:51 PM
+a4b12213-5c57-4713-a459-c867785246c0, Lê Mai Vy, False, 11/2/2000 12:03:03 PM
+d1272459-e5ca-48f2-9551-6720cd321916, Võ Thái Thành, True, 11/11/2002 8:55:32 PM
+4d543569-ac91-42c4-b135-bb4be397eac5, Hoàng Hoàng Bảo Sơn, True, 8/29/2006 3:49:54 PM
+a47b6e0f-317e-4870-a6b4-e7600a41a80f, Phạm Phương Lan, False, 9/4/2006 10:55:01 PM
+f7c9952f-9016-427d-b795-b37c9f0bac8c, Đặng Xuân Phúc, True, 1/31/2006 3:34:03 PM
+568ac8e2-eac2-4833-b978-ce9e47f320a8, Nguyễn Trúc Giang, False, 10/21/2002 9:59:28 PM
+a4419194-0706-4c52-9ba7-175a3640ae5b, Hồ Văn Anh, True, 2/8/2004 11:31:54 AM
+455e999f-10d4-49b9-bbc8-1666a947f421, Đặng Đăng Dũng, True, 6/8/2004 1:10:46 AM
+5078a293-6392-4623-9591-adb8a4599490, Võ Xuân Uyên, False, 6/12/2002 5:03:57 AM
+14341390-82f1-43b7-8b5b-c65fccb3f910, Đặng Phương Trang, False, 5/4/2002 12:48:06 PM
+192e96d3-f320-4968-bbac-3fe7e6b6019a, Đoàn Việt Thành, True, 9/28/2002 8:42:06 AM
+2f08098e-765a-4baa-a975-8badcb67aec4, Phạm Anh Sơn, True, 1/2/2002 4:59:58 AM
+0c81f10f-4949-4b22-b03a-fbe77dee46ee, Phạm Thiên Duy, True, 1/17/2003 10:13:43 AM
+f0b897a1-f28d-4059-ac36-f0dce8b4e4ca, Võ Minh Hùng, True, 4/3/2004 3:04:17 AM
+6a273d05-d1c7-45da-8760-b3111edb8cca, Nguyễn Phương Hương, False, 3/11/2001 8:01:55 PM
+7f2e76d5-71ee-4f62-917e-a1e6c168f199, Lê Thiên Huy, True, 1/31/2003 6:06:59 PM
+baa77009-cdb2-4249-8f97-12ddaf16b81d, Đặng Ngọc Khánh, False, 10/22/2004 6:29:53 AM
+6b239ba4-59f2-4b90-a978-4e869156fdc6, Nguyễn Thái Bình, True, 6/10/2004 2:44:15 PM
+482710f1-759d-4750-b65c-e2e2f4a9cb4e, Lê Phương Châu, False, 9/18/2004 3:18:47 AM
+f88ff8d2-066b-4455-98a5-3a1f61bf9c85, Đoàn Thiên Phúc, True, 7/10/2004 10:54:51 PM
+b3a1d2b0-fe9f-4398-9a30-a5a0f0f2575a, Hoàng Thảo Thanh, False, 11/17/2001 11:46:09 AM
+c7b68130-256f-4877-8315-ecd2da214f6c, Võ Thị Thanh Phương, False, 10/29/2000 2:25:01 AM
+ae02670c-328e-40e5-961a-068ddd681268, Lưu Thị Thanh Thư, False, 8/12/2006 6:55:07 AM
+9237b5ca-3413-4c05-b338-3fe0350d47d6, Hồ Hoàng Bảo Huy, True, 9/7/2004 8:27:38 AM
+dbff2389-9331-4afb-963c-8e02133ce2de, Nguyễn Việt Hoàng, True, 7/6/2001 5:20:04 AM
+da670c57-479a-4fb0-b3cc-4b052421a984, Hồ Phương Trang, False, 1/12/2003 9:21:55 PM
+033d33d2-9888-4c96-80d8-4f9f0426ca85, Nguyễn Gia Huy, True, 4/13/2003 7:44:37 AM
+02f33dd1-7a12-4867-8760-a98cc9a806ff, Võ Trúc Hương, False, 1/29/2000 11:28:07 PM
+a94d16ac-1c17-4ba3-8b29-d06973b1418a, Hồ Minh Long, True, 3/25/2002 2:13:39 PM
+2539b6ca-1594-42ec-aefb-88631e288e19, Nguyễn Mai Hà, False, 2/23/2000 10:02:23 PM
+18d636ce-aa42-488f-b609-ca72f800db45, Nguyễn Anh Dũng, True, 2/27/2003 5:55:23 PM
+ff47130c-b13e-47f1-bb7a-540aa90e909b, Võ Hương Châu, False, 12/19/2006 7:40:17 PM
+42d82942-6361-41a0-8f2d-fcbdff9e5d8b, Lưu Gia Đạt, True, 5/29/2003 4:12:57 AM
+7a1f15f6-10c7-4453-9b13-89e165493f80, Nguyễn Bảo Ngọc, False, 12/6/2006 7:20:00 AM
+b277e71b-c0b0-4966-b189-ba48f52c71b6, Nguyễn Đăng Anh, True, 11/5/2006 4:51:59 AM
+8dcc5621-476e-4924-80b3-5a402054de85, Nguyễn Hương Châu, False, 2/20/2000 3:00:31 PM
+b99c49f9-7ae9-4954-be6e-dc9e5017dcea, Nguyễn Xuân Vân, False, 2/25/2006 8:17:37 AM
+bca6aae7-f73c-442e-91b5-4120134c85e3, Đoàn Anh Đạt, True, 3/17/2003 1:12:41 PM
+5b296e4c-7325-4366-ae3a-d0b6f4b0db1a, Nguyễn Minh Châu, False, 8/18/2004 3:40:19 AM
+fe8537e0-148d-4ee5-9008-0d7d35f3c6d2, Phạm Minh Dương, True, 1/14/2000 12:49:15 AM
+e2f530f7-cc50-4fea-b4b8-6661a7d6b209, Nguyễn Xuân Phúc, True, 9/9/2000 7:55:38 AM
+5bd998cb-3ea7-4585-92ef-1a966643ec03, Đoàn Thái Sơn, True, 12/27/2002 8:33:14 PM
+10de48f1-e6ab-402d-8a98-cc919cd6789b, Lê Anh Hoàng, True, 8/20/2006 10:55:42 PM
+aa5395be-8617-4e02-89aa-070fea6645c6, Nguyễn Xuân Sơn, True, 1/20/2005 4:52:49 PM
+05b6c76b-8837-4b1f-911f-eb5fe41a51c5, Nguyễn Trúc Hương, False, 9/9/2005 8:24:02 PM
+db85cba0-ca53-4df8-8c00-7411baad8b77, Lê Gia Anh, True, 7/20/2004 5:22:17 PM
+32beb6e8-2fff-4a91-9578-7b975d8cf9a7, Võ Thảo Linh, False, 7/15/2001 9:57:07 PM
+32277a95-41b5-4e3f-a3f1-5f2495964e2b, Nguyễn Xuân Khánh, True, 1/18/2000 9:11:12 AM
+373ed63d-ed6e-4e1b-a9e1-bcdc9d2e48ca, Lê Minh Hoàng, True, 11/30/2006 2:39:03 AM
+7bcd3ab4-4d55-4ee4-aebc-2d6aae4dcf39, Hoàng Thảo Vy, False, 5/30/2006 6:51:06 AM
+bc37f23d-f30c-4a8a-8781-451ebb93cc85, Đặng Ngọc Hà, False, 6/17/2004 3:51:35 PM
+9381b0fb-6c90-4da9-b132-10faf3e6709c, Trần Thiên Khánh, True, 8/7/2002 5:02:58 PM
+bd83f629-3b28-4a68-b926-b58f6032a041, Nguyễn Phương Thanh, False, 8/6/2004 7:08:46 PM
+9e753223-299b-46df-90f8-e471d10cc4f3, Đặng Đăng Hưng, True, 6/7/2003 12:19:04 PM
+843f6386-6285-464f-84c7-71495338755b, Võ Gia Bình, True, 9/11/2002 7:08:48 PM
+55b4c794-bc6d-470e-bfdd-917b9a464fcc, Nguyễn Ngọc Vy, False, 3/13/2006 11:31:26 AM
+309e39de-b807-4caa-88fe-21fd68330708, Đặng Minh Phúc, True, 1/31/2000 10:29:28 PM
+2f74e768-2199-4512-b960-f1e7dc2d7863, Trần Minh Duy, True, 4/19/2004 5:47:34 AM
+de4eee46-ee56-40e5-853c-688eecb07fe1, Nguyễn Anh Bình, True, 3/9/2005 5:01:23 AM
+974184db-4119-4e42-b7fe-aebc5d93bbb0, Đặng Thị Thanh Vân, False, 2/6/2006 6:28:33 AM
+1b994c0b-04f8-48f8-aa5d-642b0394975c, Lưu Hoàng Bảo Dũng, True, 11/17/2005 9:38:12 PM
+37d5093f-00e7-4766-a5e9-64762fc4dc87, Hồ Thiên Huy, True, 10/24/2005 7:29:21 AM
+7edc619a-7f90-4bc3-bfc4-0eba7fa1a369, Lê Bảo Vy, False, 1/8/2003 11:26:26 PM
+3316cf79-8739-4913-a8e9-dfc02351425d, Hồ Hoàng Bảo Duy, True, 10/19/2000 2:45:59 PM
+848dd799-54df-44d8-b866-959848952e39, Đặng Việt Bình, True, 9/22/2000 6:05:56 PM
+5f8636ef-8019-495f-91e7-af56fac277be, Nguyễn Hương Lan, False, 11/23/2002 2:09:14 AM
+8b34612c-b0a9-4748-ac51-55ee00721b58, Nguyễn Xuân Hưng, True, 6/20/2002 12:16:25 AM
+280f8f6d-620e-4c8c-b924-93b274c886fb, Võ Đăng Dương, True, 4/17/2001 10:43:03 PM
+303437e0-05df-48ca-af4c-4dd3b32a4762, Nguyễn Anh Đạt, True, 12/3/2000 2:38:11 AM
+364beda4-cb85-4efb-a97b-4201ba0bc0a9, Nguyễn Thu Linh, False, 3/7/2000 9:47:16 AM
+930f55a4-a6d3-4485-ac9a-a140621f498f, Đoàn Thái Nguyên, True, 6/12/2000 12:31:08 AM
+c160eaeb-f9ca-495d-862e-71997a53e885, Hoàng Bảo Linh, False, 12/7/2005 3:00:28 PM
+466491b7-ef68-45b4-8b40-016b6e705bcf, Hoàng Trúc Ngọc, False, 2/5/2004 11:24:34 PM
+b762582c-1bec-4090-b416-959768570700, Đặng Mai Uyên, False, 9/18/2000 4:22:37 PM
+6b274839-0693-42b4-b289-b897b43b0378, Nguyễn Thái Huy, True, 9/14/2002 7:05:18 AM
+06253808-cfa5-4b58-ae53-672752b47e06, Hoàng Minh Châu, False, 2/10/2000 12:44:31 AM
+d5b0fb92-5478-4b94-ae67-be109b0f293c, Hồ Bảo Giang, False, 10/29/2003 11:09:53 PM
+e0ee77ac-40a0-4128-b53c-e91c4ab58f32, Võ Thảo Nguyên, False, 6/29/2000 2:07:59 PM
+cc59e666-ab19-4517-8023-3d31f1ceb68c, Đoàn Bảo Hương, False, 1/20/2001 3:15:27 PM
+bd256903-d0cb-4fc6-a404-72d4f1535b8e, Hoàng Bảo Thư, False, 11/10/2005 5:17:51 AM
+9fe6b747-c30f-42a3-8307-db52d6b7cab3, Phạm Xuân Thư, False, 4/18/2000 6:33:40 AM
+d919856a-bd5d-49a3-b43b-9972bad0ab72, Đặng Việt Dũng, True, 6/4/2000 5:40:19 PM
+84710761-8d70-43bc-8a01-ad3adb1a598a, Hoàng Thu Lan, False, 7/4/2004 1:12:47 PM
+2009ab32-583d-48d0-83f7-cc6fc33c5f90, Hoàng Thái Thành, True, 3/27/2003 12:28:04 AM
+ae35558e-1786-45d1-901c-6a02f79944b2, Lê Mai Nguyên, False, 4/23/2001 1:16:22 AM
+29265fce-a4bf-44c4-84db-16b56674c1b7, Nguyễn Thái Đạt, True, 12/5/2002 3:46:28 PM
+f40aeced-abad-429b-9e9f-e9feae8238be, Trần Gia Khánh, True, 1/19/2004 10:57:25 AM
+ac14e722-3292-471b-b324-a349bb05b8f7, Võ Mai Giang, False, 5/26/2006 12:37:28 AM
+18e03abb-1f25-45a8-a1e4-b0f7b0a02f6e, Võ Anh Nguyên, True, 3/21/2004 9:17:52 AM
+9fa9bd45-6f32-426f-9f52-21f7e3d5a6c4, Nguyễn Xuân Thư, False, 5/4/2000 4:57:58 AM
+b76cadb9-fa36-4cc7-b297-3401114cef91, Phạm Hoàng Bảo Nguyên, True, 4/16/2001 9:37:16 AM
+3cee8802-f169-4d44-9c4b-79989fd7d490, Hoàng Hoàng Bảo Nguyên, True, 12/26/2001 4:46:21 PM
+25ebf79e-c515-46fd-bc44-d3f881d547ff, Phạm Phương Uyên, False, 8/28/2004 3:28:04 PM
+1b4151e8-a1c7-45c1-9134-87f64a8a6e4b, Đặng Trúc Hà, False, 8/1/2000 7:51:11 PM
+c2651615-0a69-40be-b1dd-fd9c708d723c, Trần Văn Thành, True, 10/1/2001 3:36:53 PM
+ba47c87d-3d0f-47ae-8014-985e56369ab9, Võ Xuân Sơn, True, 9/26/2004 11:39:05 PM
+463e0f84-f493-4ec0-ac8a-b8b2c64a4156, Phạm Hoàng Bảo Hoàng, True, 9/24/2006 5:03:57 PM
+4a95f9e0-ad76-4532-9f18-6dfdbbe6b107, Lê Bảo Nguyên, False, 10/9/2002 12:24:47 AM
+65ea6017-2463-4e7c-9b26-e52e3746d90f, Lưu Thiên Huy, True, 10/3/2005 9:54:48 AM
+f04a68a3-b49b-4742-b7e0-d0cc9945d19c, Hoàng Thảo Hương, False, 6/21/2005 11:30:01 PM
+8a7f7a18-96eb-4b12-b927-285d84385f11, Trần Thu Hương, False, 7/4/2001 8:25:12 PM
+c0be91bf-9f79-4458-8941-1d56e01260b2, Hoàng Trúc Lan, False, 7/4/2002 8:31:27 PM
+19886a1d-f37f-437a-b326-a91034fef807, Đặng Thiên Bình, True, 5/24/2003 12:54:38 PM
+5dc7813c-1998-4607-bee8-c29145c97d18, Hồ Đăng Dũng, True, 2/13/2006 9:56:44 PM
+497a987c-33ed-45cb-b6cf-d47218bed6a7, Nguyễn Mai Trang, False, 1/12/2003 12:29:28 AM
+97455cc7-04ee-4716-aa2a-9e3e4113e094, Nguyễn Xuân Linh, False, 9/22/2003 7:06:12 AM
+eb753c56-8349-4ca1-a250-3b7b320e7d90, Hoàng Việt Nguyên, True, 7/16/2000 2:21:58 AM
+3f7c0bb5-6cc0-4327-a7a6-17d3fb1a86a9, Nguyễn Anh Hưng, True, 11/23/2001 1:29:43 AM
+81d7ea4f-8b56-4d78-a8d3-e8d4c1849fce, Hồ Văn Thành, True, 11/19/2002 1:48:17 AM
+b3802767-047b-4a08-9c78-4e09a0eb5927, Lưu Thảo Ngọc, False, 10/29/2003 9:10:44 PM
+612256a7-cfee-4505-a0f3-9c8e77410e91, Phạm Gia Hùng, True, 10/5/2002 12:44:03 PM
+44261413-b596-4f78-acf6-ba348b664e39, Nguyễn Việt Duy, True, 6/10/2000 6:56:55 AM
+633842ee-3fb6-4ee0-9d4c-c287617412db, Phạm Gia Dương, True, 10/13/2006 10:35:40 PM
+c8b66e66-7196-4b29-a448-7c347691a52a, Nguyễn Gia Khánh, True, 11/8/2004 8:49:30 AM
+93ecb783-4406-4d9b-96d9-0cd1dac0a6a1, Nguyễn Thái Long, True, 6/20/2002 5:33:28 PM
+8e19327d-b434-474f-92a8-3f008d730019, Nguyễn Đăng Đạt, True, 8/5/2004 10:24:39 PM
+d611fb89-7418-45ab-9013-ad608b7c6573, Hồ Ngọc Linh, False, 10/12/2000 5:55:35 AM
+82a2d42e-68ae-4abd-af1b-af2088786728, Trần Hương Trang, False, 8/23/2005 8:26:11 AM
+f25b7bf3-7cd8-4a23-b4ec-9c31e4696b80, Trần Việt Duy, True, 7/20/2001 11:40:09 PM
+6a301834-5dc5-4c2e-b876-1988d9b393d8, Hồ Việt Anh, True, 1/26/2006 8:24:26 PM
+9da1f651-2934-4cc2-a4c0-85b7a485e28d, Hồ Thiên Hưng, True, 1/16/2006 2:11:38 AM
+30b0f3a7-fc38-441c-8db9-ab867791be49, Phạm Trúc Phương, False, 9/21/2003 11:32:04 AM
+37aef114-eed7-473a-980b-0a874becafa4, Lê Minh Khánh, False, 2/26/2006 2:30:10 PM
+21363fee-1658-44e2-b995-cdc7c7c482e8, Nguyễn Hương Hà, False, 9/12/2001 4:24:57 AM
+83a70707-75c6-4252-90f2-571d095d9c6b, Nguyễn Phương Hương, False, 1/8/2006 9:24:32 PM
+c0fa3184-3057-4383-aa5e-936f46120366, Nguyễn Thiên Khánh, True, 10/26/2002 10:29:55 AM
+2747070e-d941-420b-bb75-55b565b7314e, Phạm Gia Dũng, True, 10/23/2001 6:25:24 PM
+5c0a19dc-611e-4abc-a202-c83b67180e94, Đoàn Trúc Châu, False, 1/1/2000 1:52:05 PM
+76a46f15-a7e9-4fe6-b1e7-b406b79408fe, Đoàn Bảo Hương, False, 3/11/2005 12:17:07 AM
+c2f58c93-737f-43d0-8ac6-a3ef47ca163a, Lưu Việt Sơn, True, 4/5/2004 11:38:53 PM
+1c1ebfe0-b21e-417a-ac81-d57b954c52fa, Lưu Xuân Sơn, True, 10/14/2003 12:16:08 AM
+7579ff23-7b9d-45a0-8797-2367596d8e05, Đặng Đăng Khánh, True, 2/21/2004 7:32:39 PM
+c457e6f0-f83b-47e3-b99e-5ee25d668955, Lê Gia Phúc, True, 9/7/2005 8:03:05 PM
+a32536da-4878-4213-8623-04091e4d6ae2, Lê Văn Hoàng, True, 9/9/2002 8:10:14 AM
+409ffb03-f738-4fd8-b251-5d80e1c9f309, Nguyễn Văn Hưng, True, 11/14/2002 4:53:54 AM
+f353e8cc-6990-49a6-ae56-70ae6e7b613e, Võ Gia Bình, True, 10/4/2006 12:20:27 AM
+864104b0-bf48-4cda-8bc5-f2215f3172cb, Nguyễn Thái Hưng, True, 7/3/2000 5:09:18 PM
+bfa96170-ccc8-4a3b-80a5-333e795f03fa, Đặng Bảo Vy, False, 6/24/2005 8:53:58 PM
+b10bc60d-0140-4770-9587-6c2a807bd3d3, Trần Anh Nguyên, True, 7/23/2006 1:41:09 PM
+7f438b95-5ba3-44c9-b6a5-4f8ce6a08303, Lưu Minh Thành, True, 10/23/2003 2:55:32 PM
+74841c74-c811-4c3c-bc33-9d49516a5441, Trần Hương Thanh, False, 9/30/2006 6:50:19 AM
+1b212cfd-ec67-4890-b05f-6db715db232f, Hồ Thảo Phương, False, 11/3/2006 4:29:45 AM
+95fd7ca4-46bb-4b63-892c-62f849f4a274, Trần Phương Hà, False, 9/13/2000 6:52:52 AM
+58a7bc8f-fefb-4cb7-bd47-cabb5c9aa0e3, Hoàng Ngọc Vân, False, 4/8/2005 9:13:46 PM
+b73dd162-7c1f-46bb-8327-6ed547f84019, Nguyễn Đăng Huy, True, 8/30/2004 12:12:14 AM
+0626e027-844e-4950-86f4-85d8c3420d88, Trần Phương Vân, False, 7/18/2003 8:14:22 PM
+eeb45d96-21af-42ca-8f0d-b4066a9c41fc, Lê Minh Hoàng, True, 1/7/2005 3:04:51 AM
+3c380c7a-20a1-49e8-ba33-3591d01648ad, Nguyễn Xuân Linh, False, 11/30/2000 8:34:25 AM
+ccf7f272-9512-4b63-bef9-6cc3758373df, Hồ Xuân Thành, True, 3/11/2001 10:51:15 AM
+e079a24a-7899-487e-aa4e-fcf19777baed, Nguyễn Phương Ngọc, False, 3/13/2000 2:22:41 AM
+332c012a-c0eb-444a-adfe-8544174022a4, Nguyễn Trúc Lan, False, 3/5/2000 11:51:46 AM
+d117df31-73c0-4567-82bd-fa5278ac7612, Trần Phương Vân, False, 12/1/2006 10:19:42 PM
+9a0f8b3c-3cf6-4529-8c05-a66225fe0ee1, Đoàn Hương Giang, False, 5/13/2002 1:26:58 PM
+bdd8ddf2-6854-46e8-9ce1-9c036dcb9c8e, Nguyễn Thiên Sơn, True, 10/13/2003 5:18:44 AM
+0265e02f-805c-46b2-bb0b-ee72d44e7a3d, Đặng Thị Thanh Thư, False, 4/18/2000 10:00:56 AM
+d18926cf-9c61-47dc-b841-297aa3d706b0, Nguyễn Thiên Thành, True, 6/4/2001 2:24:22 AM
+94305d9c-8bdf-4548-aab4-60e9c2ae6277, Võ Trúc Nguyên, False, 5/29/2003 1:10:24 PM
+579de2c0-e3e8-482a-9e8e-dec52ae0efc5, Nguyễn Đăng Đạt, True, 6/21/2001 4:04:13 AM
+2ba81195-6204-4bbd-8af0-1426a5d24092, Nguyễn Hoàng Bảo Hùng, True, 8/31/2003 4:58:36 AM
+dfb95a8d-80b4-4551-bc8c-510be6278e20, Lưu Gia Hưng, True, 6/17/2005 9:29:14 AM
+3df2ab48-6b9d-4b17-9acd-5eac14d57230, Lê Gia Nguyên, True, 9/9/2001 11:27:04 PM
+a3e03da5-e4ac-436c-b0cf-03c57c4a2165, Võ Thiên Anh, True, 1/6/2006 9:56:17 AM
+5ab900f0-3460-46f4-bea7-2ff51498e4bc, Hồ Xuân Vân, False, 5/19/2002 12:28:23 AM
+dc9b618c-3541-4a8e-a145-629021536695, Đoàn Gia Duy, True, 3/19/2005 7:45:53 PM
+3080a4ec-c49b-4a3a-8f39-f9497510a855, Lưu Đăng Hưng, True, 9/16/2004 9:42:41 AM
+5b4d76a1-efee-44aa-b820-5819218c8a11, Đặng Thiên Huy, True, 9/3/2001 1:26:24 AM
+00f6e00f-da4c-4588-8fe9-cb8dd1526c8f, Lê Đăng Nguyên, True, 6/20/2000 12:43:06 PM
+e80632d3-dfc2-4acd-b8f4-3a27e576a3d5, Đặng Xuân Giang, False, 3/24/2000 1:48:20 AM
+71b38987-8d45-4487-94a2-1e35d8e22508, Hồ Minh Sơn, True, 10/9/2006 8:16:56 AM
+953e2d85-9b3d-41bc-871e-db56360dccca, Lê Ngọc Châu, False, 1/13/2002 12:48:08 AM
+b8ff4bf7-7a62-4a17-b082-b1d0704ff117, Lê Thu Ngọc, False, 4/29/2000 2:01:29 AM
+3c8292a6-ae7b-40ba-90cd-5b143a25f265, Nguyễn Phương Phương, False, 6/22/2003 1:55:09 PM
+41d2e152-6a55-4e30-8d9f-f1f2deb08db5, Lê Hoàng Bảo Duy, True, 5/10/2002 6:29:24 AM
+cbfec108-5015-47fd-9a50-7f567c1b75b8, Hồ Minh Hoàng, True, 4/6/2001 6:44:07 AM
+02e9bce2-1d28-495d-aa46-c6473047bf6d, Đặng Thiên Hoàng, True, 11/16/2003 12:08:35 AM
+e148ef78-111c-44e9-b5a7-ff9d03518301, Nguyễn Trúc Trang, False, 9/22/2002 12:07:19 PM
+e7ec3b2b-460d-4601-bacb-4a4e748e2b59, Nguyễn Hương Châu, False, 8/20/2002 10:09:10 PM
+eaf2a6f3-8751-4fa1-84e5-a47a2456df9e, Phạm Xuân Phương, False, 7/11/2005 3:07:40 PM
+2d279119-3f67-4eb7-83da-e461758e8421, Trần Gia Hưng, True, 1/16/2004 11:26:10 AM
+a50bc689-79f9-4bc4-8cfb-1d340de638d2, Lưu Xuân Phúc, True, 8/24/2004 12:55:38 AM
+7ab7d763-152d-4f44-b897-24ce8b8e8c49, Đặng Việt Dũng, True, 1/31/2001 9:22:22 AM
+675b882f-fd3f-415d-863f-583977424f6c, Lê Bảo Thanh, False, 12/26/2000 11:11:13 PM
+ce567abc-485f-4beb-b854-6860745b370b, Phạm Thái Hưng, True, 8/20/2005 7:08:20 PM
+c281dd67-93d4-470b-b6f1-be3e2c0628c2, Lưu Anh Dũng, True, 9/27/2002 10:51:42 AM
+7bed8008-ff78-476b-baf8-524931c6ff67, Hoàng Văn Nguyên, True, 4/19/2006 5:20:28 PM
+2434ac14-90cd-4a02-ae16-b0bd22324376, Nguyễn Thảo Uyên, False, 4/29/2003 5:11:16 AM
+e44a1fb4-1576-4f3b-98fe-ac4ba838748c, Võ Thị Thanh Thư, False, 8/25/2001 7:05:20 PM
+83451e54-02ef-4df1-bd3d-0d0e16f28835, Đoàn Gia Hưng, True, 6/12/2000 8:32:18 PM
+7835bad1-a1ce-46bc-bf78-fd994ed5da23, Phạm Thảo Ngọc, False, 10/22/2000 8:41:35 PM
+a83935d0-9ec9-43d4-ab20-c53f77ba1926, Hoàng Thiên Hưng, True, 5/31/2000 2:54:02 PM
+ed91261b-fa09-43fa-ad78-3dba345f6f09, Võ Ngọc Vân, False, 10/2/2003 2:59:27 PM
+9ddd91ed-f028-4d05-97c6-b4b7bd840930, Phạm Thiên Dũng, True, 8/31/2006 2:19:05 AM
+d5dbbb61-3f24-4bf6-9e22-5c48ebc0288e, Hoàng Phương Phương, False, 7/3/2003 3:37:43 AM
+f8ea402a-92ea-4042-86d2-f45ffa92329b, Nguyễn Mai Thanh, False, 6/21/2006 1:09:40 AM
+95f5f544-bd23-4154-a5e8-d47d8f91cb4a, Nguyễn Thiên Bình, True, 4/27/2000 3:30:06 PM
+ca17cc30-a32b-4be0-a85c-c6dce9ef4127, Phạm Minh Duy, True, 10/15/2000 6:33:34 PM
+964080ce-d6b7-4006-9b32-eff30a0f758d, Nguyễn Việt Phúc, True, 1/27/2000 8:00:42 PM
+dd6903e3-f5ac-42c9-a9ab-48d26b01c55c, Võ Hương Vân, False, 1/13/2000 12:50:08 PM
+b37f4cf2-cfe3-4e9e-8dbc-2e97314d2899, Đoàn Thái Sơn, True, 5/11/2006 5:28:22 AM
+31a27f69-6f34-478c-a5f5-62a0b548a252, Hồ Hoàng Bảo Duy, True, 2/20/2002 12:02:32 PM
+7556d518-bcbd-4e2a-ae3c-ca9a18589884, Đặng Anh Hùng, True, 4/13/2000 12:58:04 PM
+3de66502-f71a-4381-a152-87a90bc93eda, Đặng Xuân Bình, True, 6/9/2000 1:01:30 AM
+7afbe6fb-769d-41dd-991a-a30f7d545316, Phạm Anh Khánh, True, 3/21/2006 5:23:31 PM
+525114a7-6498-470f-8390-79ca16839d15, Hoàng Việt Hưng, True, 12/9/2003 9:35:09 PM

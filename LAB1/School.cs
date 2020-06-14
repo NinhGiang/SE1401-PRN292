@@ -38,7 +38,7 @@ namespace LAB1
         //Save student list
         public void saveStudent(string filename)
         {
-            String content = "UUID, Fullname, Gender, Birthday\n";
+            String content = "UUID, Fullname, Gender, Birthday, Class\n";
             if (Path.GetExtension(filename) == ".csv")
             {
 
@@ -88,7 +88,7 @@ namespace LAB1
             }
             else if (Path.GetExtension(filename) == ".json")
             {
-                content = JsonConvert.SerializeObject(this._levels_list, Formatting.Indented);
+                content = JsonConvert.SerializeObject(this._rooms_list, Formatting.Indented);
             }
             File.WriteAllText(filename, content);
         }
