@@ -44,7 +44,7 @@ namespace LAB1
 
                 foreach (Student student in _students_list)
                 {
-                    content += student.UUID + ", " + student.FullName + ", " + student.Gender + ", " + student.Birthday + "\n";
+                    content += student.UUID + ", " + student.FullName + ", " + student.Gender + ", " + student.Birthday + ", " + student.Class + "\n";
                 }
 
             }
