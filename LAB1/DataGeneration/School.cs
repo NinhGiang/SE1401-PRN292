@@ -17,8 +17,7 @@ class School
     private List<Room> _room_list;
     private List<Level> _level_list;
     private List<Classes> _classes_list;
-   
-    public List<Student> Shools { get { return _student_list; } }
+    private List<Field> _field_list;
     /// <summary>
     /// The ctor of School 
     /// Has one blank ctor
@@ -27,19 +26,20 @@ class School
     /// <param name="room_list">An array of Room</param>
     /// <param name="level_list">An array of Level</param>
     /// <param name="classes_list">An array of Classes</param>
-    public School(){ }
-    public School(Student[] student_list, Room[] room_list, Level[] level_list, Classes[] classes_list)
+    public School() { }
+    public School(Student[] student_list, Room[] room_list, Level[] level_list, Classes[] classes_list, Field[] field_list)
     {
         _student_list = new List<Student>(student_list);
         _room_list = new List<Room>(room_list);
         _level_list = new List<Level>(level_list);
         _classes_list = new List<Classes>(classes_list);
+        _field_list = new List<Field>(field_list);
     }
     public List<Student> GetStudents()
     {
         return _student_list;
     }
-    public void setStudents(Student[] students)
+    public void SetStudents(Student[] students)
     {
         _student_list = new List<Student>(students);
     }
@@ -48,7 +48,7 @@ class School
     {
         return _room_list;
     }
-    public void setRooms(Room[] rooms)
+    public void SetRooms(Room[] rooms)
     {
         _room_list = new List<Room>(rooms);
     }
@@ -57,7 +57,7 @@ class School
     {
         return _level_list;
     }
-    public void setLevels(Level[] levels)
+    public void SetLevels(Level[] levels)
     {
         _level_list = new List<Level>(levels);
     }
@@ -66,9 +66,17 @@ class School
     {
         return _classes_list;
     }
-    public void setClasses(Classes[] classes)
+    public void SetClasses(Classes[] classes)
     {
         _classes_list = new List<Classes>(classes);
+    }
+    public List<Field> GetField()
+    {
+        return _field_list;
+    }
+    public void setField(Field[] fields)
+    {
+        _field_list = new List<Field>(fields);
     }
     public void saveStudent(string filename)
     {
@@ -82,7 +90,6 @@ class School
                 {
                     _student_list = new List<Student>();
                 }
-
                 foreach (Student student in _student_list)
                 {
                     content += student.Uuid + ", ";
@@ -99,7 +106,7 @@ class School
         }
         if (Path.GetExtension(filename) == ".json")
         {
-            content = JsonConvert.SerializeObject(this, Formatting.Indented); 
+            content = JsonConvert.SerializeObject(_student_list, Formatting.Indented);
         }
         File.WriteAllText(filename, content);
     }
@@ -107,69 +114,126 @@ class School
 
     public void saveRoom(string filename)
     {
-        string content = "ID, Class, No\n";
-
-        try
+        string content = "";
+        if (Path.GetExtension(filename) == ".csv")
         {
-            if (_room_list == null)
+            content = "ID, Class, No\n";
+            try
             {
-                _room_list = new List<Room>();
+                if (_room_list == null)
+                {
+                    _room_list = new List<Room>();
+                }
+                foreach (Room room in _room_list)
+                {
+                    content += room.Uuid + ", ";
+                    content += room.Class_info + ", ";
+                    content += room.No + "\n";
+                }   
             }
-            foreach (Room room in _room_list)
+            catch (NullReferenceException ex)
             {
-                content += room.Uuid + ", ";
-                content += room.Class_info + ", ";
-                content += room.No + "\n";
+                Console.WriteLine("Error in saveRoom: " + ex.Message);
             }
-            File.WriteAllText(filename, content);
         }
-        catch (NullReferenceException ex)
+        if (Path.GetExtension(filename) == ".json")
         {
-            Console.WriteLine("Error in saveRoom: " + ex.Message);
+            content = JsonConvert.SerializeObject(_room_list, Formatting.Indented);
         }
+        File.WriteAllText(filename, content);
     }
     public void saveLevel(string filename)
     {
-        string content = "ID, Name\n";
-        try
+        string content = "";
+        if (Path.GetExtension(filename) == ".csv") 
         {
-            if (_level_list == null)
+            content = "ID, Name\n";
+            try
             {
-                _level_list = new List<Level>();
+                if (_level_list == null)
+                {
+                    _level_list = new List<Level>();
+                }
+                foreach (Level level in _level_list)
+                {
+                    content += level.Uuid + ", ";
+                    content += level.Name + "\n";
+                }  
             }
-            foreach (Level level in _level_list)
+            catch (NullReferenceException ex)
             {
-                content += level.Uuid + ", ";
-                content += level.Name + "\n";
+                Console.WriteLine("Error in saveLevel:" + ex.Message);
             }
-            File.WriteAllText(filename, content);
         }
-        catch (NullReferenceException ex)
+        if (Path.GetExtension(filename) == ".json")
         {
-            Console.WriteLine("Error in saveLevel:" + ex.Message);
+            content = JsonConvert.SerializeObject(_level_list, Formatting.Indented);
         }
+        File.WriteAllText(filename, content);
     }
     public void saveClasses(string filename)
     {
-        string content = "ID, Level, Room, Name\n";
-        try
+        string content = "";
+        if (Path.GetExtension(filename) == ".csv")
         {
-            if (_classes_list == null)
-                _classes_list = new List<Classes>();
-            foreach (Classes classs in _classes_list)
+            content = "ID, Level, Room, Name\n";
+            try
             {
-                content += classs.Uuid + ", ";
-                content += classs.Level + ", ";
-                content += classs.Room + ", ";
-                content += classs.Name + "\n";
+                if (_classes_list == null)
+                    _classes_list = new List<Classes>();
+                foreach (Classes classs in _classes_list)
+                {
+                    content += classs.Uuid + ", ";
+                    content += classs.Level + ", ";
+                    content += classs.Room + ", ";
+                    content += classs.Name + "\n";
+                }
             }
-            File.WriteAllText(filename, content);
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine("Error in saveClasses: " + ex.Message);
+            }
         }
-        catch (NullReferenceException ex)
+        if (Path.GetExtension(filename) == ".json")
         {
-            Console.WriteLine("Error in saveClasses: " + ex.Message);
+            content = JsonConvert.SerializeObject(_classes_list, Formatting.Indented);
+        }
+        File.WriteAllText(filename, content);
+    }
+    public void saveField(string filename)
+    {
+        string content = "";
+        if (Path.GetExtension(filename) == ".csv")
+        {
+            content = "ID, Name\n";
+            try
+            {
+                if (_field_list == null)
+                    _field_list = new List<Field>();
+                    foreach (Field field in _field_list)
+                    {
+                        content += field.Uuid + ", ";
+                        content += field.Name + "\n";
+                    }   
+            }
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine("Error in saveField: " + ex.Message);
+            }
+        }
+        if (Path.GetExtension(filename) == ".json")
+        {
+            content = JsonConvert.SerializeObject(_field_list, Formatting.Indented);
+        }
+        File.WriteAllText(filename, content);
+    }
+    public void saveSubject(string filename)
+    {
+        string content = "";
+        if (Path.GetExtension(filename) == ".csv")
+        {
+           
         }
     }
-
 }
 

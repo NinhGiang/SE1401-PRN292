@@ -64,7 +64,7 @@ namespace LAB1.DataGeneration
         }
         public static string getFieldName(uint index)
         {   
-            return fieldDB.FieldNameSet[index].ToString();
+            return fieldDB.FieldNameSet[index];
         }
     }
 }

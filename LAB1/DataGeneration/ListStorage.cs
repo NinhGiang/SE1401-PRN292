@@ -88,47 +88,47 @@ namespace LAB1.DataGeneration
         }
         public static List<string> GetSubjectListByField(string fieldID)
         {
-            string link = @"..\..\..\DataGeneration\Subject.csv";
+            string link = @"..\..\..\DataGeneration\FPT\Subject.csv";
             int column = GetColumn(link, "Field");
             return GetDataInColumn(link, fieldID, column);
         }
 
         public static List<string> GetClassesIDByRoom()
         {
-            string link = @"..\..\..\DataGeneration\Room.csv";
+            string link = @"..\..\..\DataGeneration\FPT\Room.csv";
             int column = GetColumn(link, "Class");
             return GetDataInColumn(link, column);
         }
 
         public static List<string> GetRoomIDByRoom()
         {
-            string link = @"..\..\..\DataGeneration\Room.csv";
+            string link = @"..\..\..\DataGeneration\FPT\Room.csv";
             int column = GetColumn(link, "ID");
             return GetDataInColumn(link, column);
         }
 
         public static List<string> GetLevelNameByLevel()
         {
-            string link = @"..\..\..\DataGeneration\Level.csv";
+            string link = @"..\..\..\DataGeneration\FPT\Level.csv";
             int column = GetColumn(link, "Name");
             return GetDataInColumn(link, column);
         }
 
         public static List<string> GetLevelIDByLevel()
         {
-            string link = @"..\..\..\DataGeneration\Level.csv";
+            string link = @"..\..\..\DataGeneration\FPT\Level.csv";
             int column = GetColumn(link, "ID");
             return GetDataInColumn(link, column);
         }
         public static List<string> GetListOfClassByLevel(string levelId)
         {
-            string path = @"..\..\..\DataGeneration\Class.csv";
+            string path = @"..\..\..\DataGeneration\FPT\Class.csv";
             int column = GetColumn(path, "Level");
             return GetDataInColumn(path, levelId, column);
         }
         public static List<string> GetListofSubjectByClass(string classID)
         {
-            string link = @"..\..\..\DataGeneration\Attendance.csv";
+            string link = @"..\..\..\DataGeneration\FPT\Attendance.csv";
             int column = GetColumn(link, "Class");
             return GetDataInColumn(link, classID, column);
         }
@@ -159,23 +159,23 @@ namespace LAB1.DataGeneration
 
         public static List<string> GetLevelList()
         {
-            return CsvReader(@"..\..\..\DataGeneration\Level.csv");
+            return CsvReader(@"..\..\..\DataGeneration\FPT\Level.csv");
         }
         public static List<string> GetRoomList()
         {
-            return CsvReader(@"..\..\..\DataGeneration\Room.csv");
+            return CsvReader(@"..\..\..\DataGeneration\FPT\Room.csv");
         }
         public static List<string> GetFieldList()
         {
-            return CsvReader(@"..\..\..\DataGeneration\Field.csv");
+            return CsvReader(@"..\..\..\DataGeneration\FPT\Field.csv");
         }
         public  static List<string> GetTeacherList()
         {
-            return CsvReader(@"..\..\..\DataGeneration\Teacher.csv");
+            return CsvReader(@"..\..\..\DataGeneration\FPT\Teacher.csv");
         }
         public static List<string> GetStudentList()
         {
-            return CsvReader(@"..\..\..\DataGeneration\FPT大学.csv");
+            return CsvReader(@"..\..\..\DataGeneration\FPT\FPT大学.csv");
         }
     }
 }

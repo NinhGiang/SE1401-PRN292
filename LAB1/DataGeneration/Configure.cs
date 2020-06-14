@@ -23,5 +23,5 @@ class ClassDataSet
 }
 class FieldDataSet
 {
-    public string[] FieldNameSet { get; set; }
+   public string[] FieldNameSet { get; set; }
 }

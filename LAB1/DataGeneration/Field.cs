@@ -47,11 +47,11 @@ namespace LAB1.DataGeneration
         /// Creates a random list of field and returns the result
         /// </summary>
         /// <returns>An array of fields</returns>
-        public Field[] createField()
+        public static Field[] createField()
         {
             List<Field> result = new List<Field>();
-            int size = DataGenerator.getFieldLength();
-            for (uint i = 0; i < size; i++)
+            int fieldSize = DataGenerator.getFieldLength();
+            for (uint i = 0; i < fieldSize; i++)
             {
                 string uuid = Guid.NewGuid().ToString();
                 string fieldName = DataGenerator.getFieldName(i);
