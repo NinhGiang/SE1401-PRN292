@@ -50,6 +50,32 @@ namespace LAB1
             return full_name;
         }
 
+        public static string randMaleTeacherName(TeacherConfigure config)
+        {
+            Random rnd = new Random();
+            TeacherNameConfig _ = config.TeacherNameConfig;
+            int last_name_index = rnd.Next(_.last_name_set.Length);
+            int first_name_index = rnd.Next(_.first_male_name_set.Length);
+            int middle_name_index = rnd.Next(_.middle_male_name_set.Length);
+            string full_name = _.last_name_set[last_name_index] + " ";
+            full_name += _.middle_male_name_set[middle_name_index] + " ";
+            full_name += _.first_male_name_set[first_name_index];
+            return full_name;
+        }
+
+        public static string randFemaleTeacherName(TeacherConfigure config)
+        {
+            Random rnd = new Random();
+            TeacherNameConfig _ = config.TeacherNameConfig;
+            int last_name_index = rnd.Next(_.last_name_set.Length);
+            int first_name_index = rnd.Next(_.first_female_name_set.Length);
+            int middle_name_index = rnd.Next(_.middle_female_name_set.Length);
+            string full_name = _.last_name_set[last_name_index] + " ";
+            full_name += _.middle_female_name_set[middle_name_index] + " ";
+            full_name += _.first_female_name_set[first_name_index];
+            return full_name;
+        }
+
         public static string randLevelName(LevelConfigure config)
         {
             Random rnd = new Random();
@@ -57,6 +83,14 @@ namespace LAB1
             int level_index = rnd.Next(_.level_name_set.Length);
             string level = _.level_name_set[level_index];
             return level;
+        }
+
+        public static string randFieldUUID(List<Field> fields)
+        {
+            Random rnd = new Random();
+            Field[] field_list = fields.ToArray();
+            string field_uuid = field_list[rnd.Next(field_list.Length)].Name;
+            return field_uuid;
         }
         public static bool randGender()
         {

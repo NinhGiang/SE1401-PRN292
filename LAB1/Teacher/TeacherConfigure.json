@@ -1,0 +1,83 @@
+﻿{
+  "TeacherNameConfig": {
+    "last_name_set": [
+      "Nguyễn",
+      "Lê",
+      "Trần",
+      "Hồ",
+      "Nguyễn",
+      "Võ",
+      "Đặng",
+      "Đoàn",
+      "Hoàng",
+      "Nguyễn",
+      "Lưu",
+      "Phạm",
+      "Nguyễn"
+    ],
+    "middle_male_name_set": [
+      "Văn",
+      "Hoàng",
+      "Anh",
+      "Minh",
+      "Gia",
+      "Xuân",
+      "Đăng",
+      "Thiên",
+      "Thái",
+      "Việt",
+      "Đình",
+      "Bá",
+      "Thái"
+    ],
+    "first_male_name_set": [
+      "Thông",
+      "Lộc",
+      "Tấn",
+      "Dũng",
+      "Thành",
+      "Bình",
+      "Quang",
+      "Hùng",
+      "Hoàng",
+      "Anh",
+      "Sơn",
+      "Hưng",
+      "Khánh",
+      "Duy",
+      "Tuấn"
+    ],
+    "middle_female_name_set": [
+      "Thị",
+      "Lan",
+      "Ngọc",
+      "Quỳnh",
+      "Hồng",
+      "Minh",
+      "Hương",
+      "Phương",
+      "Kim",
+      "Cẩm",
+      "Thu",
+      "Thanh"
+    ],
+    "first_female_name_set": [
+      "Giang",
+      "Tuyết",
+      "Anh",
+      "Châu",
+      "Hương",
+      "Thủy",
+      "Vân",
+      "Ngọc",
+      "Như",
+      "Mai",
+      "Lan",
+      "Trang",
+      "Loan",
+      "Thanh",
+      "Uyên",
+      "Hoa"
+    ]
+  }
+}

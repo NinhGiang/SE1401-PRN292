@@ -11,6 +11,9 @@ namespace LAB1
         private List<Level> _levels_list;
         private List<Class> _classes_list;
         private List<Room> _rooms_list;
+        private List<Field> _fields_list;
+        private List<Subject> _subjects_list;
+        private List<Teacher> _teachers_list;
         public School(Student[] students, Level[] levels, Class[] classes, Room[] rooms)
         {
             _students_list = new List<Student>(students);
@@ -22,12 +25,11 @@ namespace LAB1
         public List<Level> LevelList { get { return _levels_list; } set { _levels_list = value; } }
         public List<Class> ClassList { get { return _classes_list; } set { _classes_list = value; } }
         public List<Room> RoomList { get { return _rooms_list; } set { _rooms_list = value; } }
+        public List<Field> FieldList { get { return _fields_list; } set { _fields_list = value; } }
+        public List<Subject> SubjectList { get { return _subjects_list; } set { _subjects_list = value; } }
+        public List<Teacher> TeacherList { get { return _teachers_list; } set { _teachers_list = value; } }
         public School()
         {
-            _students_list = new List<Student>();
-            _levels_list = new List<Level>();
-            _classes_list = new List<Class>();
-            _rooms_list = new List<Room>();
         }
         public string createSchoolDir(String schoolName)
         {
@@ -38,13 +40,13 @@ namespace LAB1
         //Save student list
         public void saveStudent(string filename)
         {
-            String content = "UUID, Fullname, Gender, Birthday, Class\n";
+            String content = "UUID, Name, Gender, Birthday, Class\n";
             if (Path.GetExtension(filename) == ".csv")
             {
 
                 foreach (Student student in _students_list)
                 {
-                    content += student.UUID + ", " + student.FullName + ", " + student.Gender + ", " + student.Birthday + ", " + student.Class + "\n";
+                    content += student.UUID + ", " + student.Name + ", " + student.Gender + ", " + student.Birthday + ", " + student.Class + "\n";
                 }
 
             }
@@ -108,6 +110,60 @@ namespace LAB1
             else if (Path.GetExtension(filename) == ".json")
             {
                 content = JsonConvert.SerializeObject(this._classes_list, Formatting.Indented);
+            }
+            File.WriteAllText(filename, content);
+        }
+        //Save field list
+        public void saveField(string filename)
+        {
+            String content = "UUID, Name\n";
+            if (Path.GetExtension(filename) == ".csv")
+            {
+
+                foreach (Field fld in _fields_list)
+                {
+                    content += fld.UUID + ", " + fld.Name + "\n";
+                }
+
+            }
+            else if (Path.GetExtension(filename) == ".json")
+            {
+                content = JsonConvert.SerializeObject(this._fields_list, Formatting.Indented);
+            }
+            File.WriteAllText(filename, content);
+        }
+        //Save subject list
+        public void saveSubject(string filename)
+        {
+            String content = "Level, Field, Name\n";
+            if (Path.GetExtension(filename) == ".csv")
+            {
+                foreach (Subject sbj in _subjects_list)
+                {
+                    content += sbj.Level + ", " + sbj.Field + ", " + sbj.Name + "\n";
+                }
+            }
+            else if (Path.GetExtension(filename) == ".json")
+            {
+                content = JsonConvert.SerializeObject(this._subjects_list, Formatting.Indented);
+            }
+            File.WriteAllText(filename, content);
+        }
+
+        //Save teacher list
+        public void saveTeacher(string filename)
+        {
+            String content = "UUID, Name, Gender, Field\n";
+            if (Path.GetExtension(filename) == ".csv")
+            {
+                foreach (Teacher tchr in _teachers_list)
+                {
+                    content += tchr.UUID + ", " + tchr.Name + ", " + tchr.Gender + ", " + tchr.Field + "\n";
+                }
+            }
+            else if (Path.GetExtension(filename) == ".json")
+            {
+                content = JsonConvert.SerializeObject(this._teachers_list, Formatting.Indented);
             }
             File.WriteAllText(filename, content);
         }

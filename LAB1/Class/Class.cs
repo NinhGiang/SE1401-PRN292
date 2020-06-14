@@ -33,7 +33,7 @@ namespace LAB1
         {
             CreateTempRoom(number_class);
             //Get room (temp) list from RoomConfigure.json
-            string content_room = File.ReadAllText(@"..\..\..\Room\RoomConfigure.json");
+            string content_room = File.ReadAllText(@"..\..\..\Room\RoomTemp.json");
             List<Room> rooms = JsonConvert.DeserializeObject<List<Room>>(content_room);
             //Get level list from Levels.json
             string content_level = File.ReadAllText(@"..\..\..\Whatever\Levels.json");
@@ -62,12 +62,10 @@ namespace LAB1
                 result[count] = new Class(level, uuid, room, name);
                 count++;
             }
-            //Class.saveClassesTemp(result);
             return result;
         }
         public static void CreateTempRoom(uint number_room)
         {
-            //Room[] result = new Room[number_room];
             List<Room> result = new List<Room>();
             string content = File.ReadAllText(@"..\..\..\Class\ClassConfigure.json");
             ClassConfigure config_class = JsonSerializer.Deserialize<ClassConfigure>(content);
@@ -78,21 +76,18 @@ namespace LAB1
                 if (count < number_room)
                 {
                     string id = RandomGenerator.randUUID();
-                    //result[count] = new Room(id, config_class.ClassNameConfig.grade_10_name_set[i], count);
                     result.Add(new Room(id, config_class.ClassNameConfig.grade_10_name_set[i], count));
                     count++;
                 }
                 if (count < number_room)
                 {
                     string id = RandomGenerator.randUUID();
-                    //result[count] = new Room(id, config_class.ClassNameConfig.grade_11_name_set[i], count);
                     result.Add(new Room(id, config_class.ClassNameConfig.grade_11_name_set[i], count));
                     count++;
                 }
                 if (count < number_room)
                 {
                     string id = RandomGenerator.randUUID();
-                    //result[count] = new Room(id, config_class.ClassNameConfig.grade_12_name_set[i], count);
                     result.Add(new Room(id, config_class.ClassNameConfig.grade_12_name_set[i], count));
                     count++;
                 }

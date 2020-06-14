@@ -13,19 +13,19 @@ namespace LAB1
 {
     class Student
     {
-        protected string _fullname;
+        protected string _name;
         protected DateTime _birthday;
         protected string _uuid;
         protected bool _gender;
         protected string _class;
-        public string FullName { get { return _fullname; } }
+        public string Name { get { return _name; } }
         public DateTime Birthday { get { return _birthday; } }
         public string UUID { get { return _uuid; } }
         public bool Gender { get { return _gender; } }
         public string Class { get { return _class; } set { _class = value; } }
-        protected Student(string FullName, bool Gender, DateTime Birthday, string UUID, string Class)
+        protected Student(string Name, bool Gender, DateTime Birthday, string UUID, string Class)
         {
-            _fullname = FullName;
+            _name = Name;
             _birthday = Birthday;
             _uuid = UUID;
             _gender = Gender;
@@ -101,7 +101,7 @@ namespace LAB1
                                 {
                                     if (student_list[i].Birthday.Year > 2001 && student_list[i].Birthday.Year < 2007)
                                     {
-                                        student_list[i].Class = class_list[classcount].Name;
+                                        student_list[i].Class = class_list[classcount].UUID;
                                         currentsize++;
                                         students.Remove(student_list[i]);
                                     }
@@ -120,7 +120,7 @@ namespace LAB1
                                 {
                                     if (student_list[i].Birthday.Year > 2000 && student_list[i].Birthday.Year < 2006)
                                     {
-                                        student_list[i].Class = class_list[classcount].Name;
+                                        student_list[i].Class = class_list[classcount].UUID;
                                         currentsize++;
                                         students.Remove(student_list[i]);
                                     }
@@ -139,7 +139,7 @@ namespace LAB1
                                 {
                                     if (student_list[i].Birthday.Year > 1999 && student_list[i].Birthday.Year < 2005)
                                     {
-                                        student_list[i].Class = class_list[classcount].Name;
+                                        student_list[i].Class = class_list[classcount].UUID;
                                         currentsize++;
                                         students.Remove(student_list[i]);
                                     }
@@ -158,7 +158,7 @@ namespace LAB1
 
         public void print()
         {
-            Console.WriteLine(_class + " | " + _fullname + " | " + _birthday + " | " + _uuid);
+            Console.WriteLine(_class + " | " + _name + " | " + _birthday + " | " + _uuid);
         }
     }
 }

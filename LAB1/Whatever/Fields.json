@@ -1,0 +1,58 @@
+[
+  {
+    "UUID": "288b2065-a67b-44fc-a026-f1df1e2b6b41",
+    "Name": "Toán"
+  },
+  {
+    "UUID": "742c26cc-3671-4c93-9118-ce057327f2ee",
+    "Name": "Vật Lý"
+  },
+  {
+    "UUID": "25266da1-1e3a-4ba6-8bb9-09b8ab8173e6",
+    "Name": "Hóa Học"
+  },
+  {
+    "UUID": "4fa64d6e-1481-4138-8129-87d3f08ce7db",
+    "Name": "Sinh Học"
+  },
+  {
+    "UUID": "8759199c-bfe9-438f-8188-40e50cf873d9",
+    "Name": "Ngữ Văn"
+  },
+  {
+    "UUID": "bdf90d48-e5ec-46ae-adce-1d4a8c5c2dad",
+    "Name": "Tiếng Anh"
+  },
+  {
+    "UUID": "d9b871fc-edd2-4f25-800a-ee5141bdc0c2",
+    "Name": "Tin Học"
+  },
+  {
+    "UUID": "79c50aa5-e3ab-4f04-9d6f-0e2458466888",
+    "Name": "Lịch Sử"
+  },
+  {
+    "UUID": "d672b1f4-5943-4a1c-a36e-a7bc298e6438",
+    "Name": "Địa Lý"
+  },
+  {
+    "UUID": "3fb68dc5-3aa2-432c-bcc1-442c90e2b7f8",
+    "Name": "Giáo Dục Công Dân"
+  },
+  {
+    "UUID": "b6b18ebf-1b00-46ff-927d-634c2e2ebc02",
+    "Name": "Giáo Dục Quốc Phòng"
+  },
+  {
+    "UUID": "adec535c-6de3-4372-be38-8ec7bb498730",
+    "Name": "Thể Dục"
+  },
+  {
+    "UUID": "0985b02e-aefb-4426-a4e2-fa9a62ce51d9",
+    "Name": "Công Nghệ"
+  },
+  {
+    "UUID": "fb452584-60ee-4a7b-9727-966f15c66114",
+    "Name": "Tiếng Đức"
+  }
+]

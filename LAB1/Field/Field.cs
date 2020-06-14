@@ -28,7 +28,7 @@ namespace LAB1
             {
                 //generate random uuid
                 string id = RandomGenerator.randUUID();
-                //generate field name (fixed 5 fields)
+                //generate field name (fixed 14 fields)
                 string field_name = config.FieldNameConfig.field_name_set[i];
                 result[i] = new Field(id, field_name);
             }

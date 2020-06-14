@@ -15,11 +15,7 @@ namespace LAB1
             School ABC = new School();
             //Create directory
             string dir = ABC.createSchoolDir("Whatever");
-            //Create student list, save csv and json
-            Student[] student_list = Student.Create(1000);
-            ABC.StudentList = new List<Student>(student_list); //add for other usage
-            ABC.saveStudent(dir + "/Students.csv");
-            ABC.saveStudent(dir + "/Students.json");
+            
             //Create level list, save csv and json
             Level[] level_list = Level.Create(3);
             ABC.LevelList = new List<Level>(level_list); //add for other usage
@@ -36,7 +32,29 @@ namespace LAB1
             ABC.saveRoom(dir + "/Rooms.csv");
             ABC.saveRoom(dir + "/Rooms.json");
             //Fill the ABC
-            Field[] field_list = Field.Create(5);
+            //Create student list ONLY AFTER save classes.json
+            Student[] student_list = Student.Create(200);
+            ABC.StudentList = new List<Student>(student_list); //add for other usage
+            ABC.saveStudent(dir + "/Students.csv");
+            ABC.saveStudent(dir + "/Students.json");
+
+
+            //Create field list, save csv and json
+            Field[] field_list = Field.Create(14);
+            ABC.FieldList = new List<Field>(field_list); //add for other usage
+            ABC.saveField(dir + "/Fields.csv");
+            ABC.saveField(dir + "/Fields.json");
+            //Create subject list ONLY AFTER save fields.json
+            Subject[] subject_list = Subject.Create();
+            ABC.SubjectList = new List<Subject>(subject_list); //add for other usage
+            ABC.saveSubject(dir + "/Subjects.csv");
+            ABC.saveSubject(dir + "/Subjects.json");
+            //Create teacher list ONLY AFTER save fields.json
+            Teacher[] teacher_list = Teacher.Create(42);
+            ABC.TeacherList = new List<Teacher>(teacher_list); //add for other usage
+            ABC.saveTeacher(dir + "/Teachers.csv");
+            ABC.saveTeacher(dir + "/Teachers.json");
+
             foreach (Student std in student_list)
             {
                 std.print();
@@ -48,6 +66,10 @@ namespace LAB1
             foreach (Field fd in field_list)
             {
                 fd.print();
+            }
+            foreach (Subject sbj in subject_list)
+            {
+                sbj.print();
             }
         }
     }

@@ -1,30 +1,74 @@
 ﻿{
   "SubjectNameConfig": {
-    "experimentalscience_subject_name_set": [
-      "Vật Lý",
-      "Hóa Học",
-      "Sinh Học"
-    ],
-    "language_subject_name_set": [
-      "Ngữ Văn",
-      "Tiếng Anh",
-      "Tiếng Đức"
-    ],
     "math_subject_name_set": [
-      "Đại Số",
-      "Hình Học",
-      "Giải Tích"
+      "Toán 10",
+      "Toán 11",
+      "Toán 12"
     ],
-    "miscellaneous_subject_name_set": [
-      "Công Nghệ",
-      "Thể Dục",
-      "Tin Học",
-      "Giáo Dục Quốc Phòng"
+    "physics_subject_name_set": [
+      "Vật Lý 10",
+      "Vật Lý 11",
+      "Vật Lý 12"
     ],
-    "socialscience_subject_name_set": [
-      "Lịch Sử",
-      "Địa Lý",
-      "Giáo Dục Công Dân"
+    "chemistry_subject_name_set": [
+      "Hóa Học 10",
+      "Hóa Học 11",
+      "Hóa Học 12"
+    ],
+    "biology_subject_name_set": [
+      "Sinh Học 10",
+      "Sinh Học 11",
+      "Sinh Học 12"
+    ],
+    "literature_subject_name_set": [
+      "Ngữ Văn 10",
+      "Ngữ Văn 11",
+      "Ngữ Văn 12"
+    ],
+    "english_subject_name_set": [
+      "Tiếng Anh 10",
+      "Tiếng Anh 11",
+      "Tiếng Anh 12"
+    ],
+    "it_subject_name_set": [
+      "Tin Học 10",
+      "Tin Học 11",
+      "Tin Học 12"
+    ],
+    "history_subject_name_set": [
+      "Lịch Sử 10",
+      "Lịch Sử 11",
+      "Lịch Sử 12"
+    ],
+    "geography_subject_name_set": [
+      "Địa Lý 10",
+      "Địa Lý 11",
+      "Địa Lý 12"
+    ],
+    "civicedu_subject_name_set": [
+      "Giáo Dục Công Dân 10",
+      "Giáo Dục Công Dân 11",
+      "Giáo Dục Công Dân 12"
+    ],
+    "defenseedu_subject_name_set": [
+      "Giáo Dục Quốc Phòng 10",
+      "Giáo Dục Quốc Phòng 11",
+      "Giáo Dục Quốc Phòng 12"
+    ],
+    "physicaledu_subject_name_set": [
+      "Thể Dục 10",
+      "Thể Dục 11",
+      "Thể Dục 12"
+    ],
+    "technology_subject_name_set": [
+      "Công Nghệ 10",
+      "Công Nghệ 11",
+      "Công Nghệ 12"
+    ],
+    "german_subject_name_set": [
+      "Tiếng Đức 10",
+      "Tiếng Đức 11",
+      "Tiếng Đức 12"
     ]
   }
 }

@@ -1,11 +1,20 @@
 ﻿{
   "FieldNameConfig": {
     "field_name_set": [
-      "Khoa Học Tự Nhiên",
-      "Khoa Học Xã Hội",
-      "Văn Học và Ngoại Ngữ",
       "Toán",
-      "Khác"
+      "Vật Lý",
+      "Hóa Học",
+      "Sinh Học",
+      "Ngữ Văn",
+      "Tiếng Anh",
+      "Tin Học",
+      "Lịch Sử",
+      "Địa Lý",
+      "Giáo Dục Công Dân",
+      "Giáo Dục Quốc Phòng",
+      "Thể Dục",
+      "Công Nghệ",
+      "Tiếng Đức"
     ]
   }
 }
